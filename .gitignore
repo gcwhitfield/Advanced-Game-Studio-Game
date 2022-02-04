@@ -58,3 +58,14 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+.vscode
+*.log
+UserSettings/EditorUserSettings.asset
+Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset
+fmod_editor.log
+fmod_editor.log
+/UserSettings/EditorUserSettings.asset
+.DS_Store
+
+
+
