@@ -12,6 +12,10 @@ public class PlayerController : MonoBehaviour
     private float moveSpeed;
 
     private CharacterController cc;
+    public KeyCode up;
+    public KeyCode down;
+    public KeyCode left;
+    public KeyCode right;
 
     private void Start()
     {
@@ -22,19 +26,19 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Vector3 movement = new Vector3(0, 0, 0);
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(up))
         {
             movement += new Vector3(0, 0, 1);
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(left))
         {
             movement += new Vector3(-1, 0, 0);
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(down))
         {
             movement += new Vector3(0, 0, -1);
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(right))
         {
             movement += new Vector3(1, 0, 0);
         }

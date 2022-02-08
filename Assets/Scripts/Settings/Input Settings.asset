@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Input Settings
+  m_EditorClassIdentifier: Assembly-CSharp::InputSettings
+  P1Up: 119
+  P1Down: 115
+  P1Left: 97
+  P1Right: 100
+  P2Up: 273
+  P2Down: 274
+  P2Left: 276
+  P2Right: 275
