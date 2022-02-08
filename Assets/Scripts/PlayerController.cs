@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
@@ -23,19 +24,19 @@ public class PlayerController : MonoBehaviour
         Vector3 movement = new Vector3(0, 0, 0);
         if (Input.GetKey(KeyCode.W))
         {
-            movement += new Vector3(1, 0, 0);
+            movement += new Vector3(0, 0, 1);
         }
         if (Input.GetKey(KeyCode.A))
         {
-            movement += new Vector3(0, -1, 0);
+            movement += new Vector3(-1, 0, 0);
         }
         if (Input.GetKey(KeyCode.S))
         {
-            movement += new Vector3(-1, 0, 0);
+            movement += new Vector3(0, 0, -1);
         }
         if (Input.GetKey(KeyCode.D))
         {
-            movement += new Vector3(0, 1, 0);
+            movement += new Vector3(1, 0, 0);
         }
         if (animator)
         {
@@ -47,6 +48,6 @@ public class PlayerController : MonoBehaviour
                 animator.SetInteger("Speed", 0);
             }
         }
-        cc.Move(movement * moveSpeed);
+        cc.Move(movement * moveSpeed * Time.deltaTime);
     }
 }
