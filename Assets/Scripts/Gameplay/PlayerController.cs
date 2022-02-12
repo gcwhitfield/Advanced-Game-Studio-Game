@@ -11,6 +11,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float moveSpeed;
 
+    [SerializeField]
+    private float rotateSpeed;
+
     private CharacterController cc;
     public KeyCode up;
     public KeyCode down;
@@ -25,6 +28,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //character translation
         Vector3 movement = new Vector3(0, 0, 0);
         if (Input.GetKey(up))
         {
@@ -53,5 +57,11 @@ public class PlayerController : MonoBehaviour
             }
         }
         cc.Move(movement * moveSpeed * Time.deltaTime);
+
+        //character rotation
+        if (movement != Vector3.zero) {
+            Quaternion toRoration = Quaternion.LookRotation(movement, Vector3.up);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRoration, rotateSpeed * Time.deltaTime);
+        }
     }
 }
