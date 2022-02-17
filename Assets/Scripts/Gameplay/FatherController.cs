@@ -18,15 +18,6 @@ public class FatherController : PlayerController
         if (!Instance) Instance = this as FatherController;
     }
 
-    private new void Start()
-    {
-        base.Start();
-        Debug.Log("father start called");
-        //PlayerInputManagerReference.Instance.playerInputManager.playerPrefab = fatherInputHandlerPrefab;
-        //playerIndex = 0;
-        //PlayerInputManagerReference.Instance.playerInputManager.JoinPlayer(playerIndex);
-    }
-
     //private void Update()
     //{
     //    if (Input.GetButtonDown("Fire1")) {
