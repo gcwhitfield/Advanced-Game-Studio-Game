@@ -7,6 +7,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5519051575353914596, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5519051575353914596, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5519051575353914596, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnMove
+      objectReference: {fileID: 0}
+    - target: {fileID: 5519051575353914596, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5519051575353914596, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7121009889559279132, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: up
       value: 119
@@ -77,3 +97,27 @@ PrefabInstance:
       objectReference: {fileID: 8400000, guid: 2efb2f320c1b64ba1b2cf36fab29f2c4, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+--- !u!1 &4014819055372325451 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7121009889559279138, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+  m_PrefabInstance: {fileID: 6153439282659239017}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6537345629051514830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4014819055372325451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 864da863e1b2b4dd594ce727a1948c6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  moveSpeed: 1
+  rotateSpeed: 0
+  fatherInputHandlerPrefab: {fileID: 7204607899274062703, guid: db7e580f676c74bdd9145ce931d84bc6, type: 3}
+  fireSpawn: {fileID: 0}
+  bulletPrefab: {fileID: 0}
+  bulletForce: 20

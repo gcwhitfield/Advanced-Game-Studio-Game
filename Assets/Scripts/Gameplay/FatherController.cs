@@ -4,16 +4,35 @@ using UnityEngine;
 
 public class FatherController : PlayerController
 {
+    public static FatherController Instance { get; private set; }
+
+    [SerializeField]
+    private GameObject fatherInputHandlerPrefab;
+
     public Transform fireSpawn;
     public GameObject bulletPrefab;
     public float bulletForce = 20.0f;
 
-    private void Update()
+    private void Awake()
     {
-        if (Input.GetButtonDown("Fire1")) {
-            shoot();
-        }
+        if (!Instance) Instance = this as FatherController;
     }
+
+    private new void Start()
+    {
+        base.Start();
+        Debug.Log("father start called");
+        //PlayerInputManagerReference.Instance.playerInputManager.playerPrefab = fatherInputHandlerPrefab;
+        //playerIndex = 0;
+        //PlayerInputManagerReference.Instance.playerInputManager.JoinPlayer(playerIndex);
+    }
+
+    //private void Update()
+    //{
+    //    if (Input.GetButtonDown("Fire1")) {
+    //        shoot();
+    //    }
+    //}
 
     void shoot() {
         GameObject bullet = Instantiate(bulletPrefab,fireSpawn.position,fireSpawn.rotation);

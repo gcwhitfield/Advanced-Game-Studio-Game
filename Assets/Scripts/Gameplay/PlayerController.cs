@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.InputSystem.InputAction;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
@@ -15,37 +17,30 @@ public class PlayerController : MonoBehaviour
     private float rotateSpeed;
 
     private CharacterController cc;
-    public KeyCode up;
-    public KeyCode down;
-    public KeyCode left;
-    public KeyCode right;
 
-    private void Start()
+    // the value of playerIndex will be set inside of DaughterController.cs or FatherController.cs
+    public int playerIndex { get; set; }
+
+    private Vector3 movement;
+
+    protected PlayerInput playerInput;
+
+    protected void Start()
     {
         cc = GetComponent<CharacterController>();
+    }
+
+    public void OnMove(CallbackContext context)
+    {
+        Debug.Log("OnMove");
+        Vector2 movement2D = context.ReadValue<Vector2>();
+        movement = new Vector3(movement2D.x, 0, movement2D.y);
     }
 
     // Update is called once per frame
     void Update()
     {
         //character translation
-        Vector3 movement = new Vector3(0, 0, 0);
-        if (Input.GetKey(up))
-        {
-            movement += new Vector3(0, 0, 1);
-        }
-        if (Input.GetKey(left))
-        {
-            movement += new Vector3(-1, 0, 0);
-        }
-        if (Input.GetKey(down))
-        {
-            movement += new Vector3(0, 0, -1);
-        }
-        if (Input.GetKey(right))
-        {
-            movement += new Vector3(1, 0, 0);
-        }
         if (animator)
         {
             if (movement != Vector3.zero)
@@ -56,12 +51,12 @@ public class PlayerController : MonoBehaviour
                 animator.SetInteger("Speed", 0);
             }
         }
-        cc.Move(movement * moveSpeed * Time.deltaTime);
 
-        //character rotation
         if (movement != Vector3.zero) {
-            Quaternion toRoration = Quaternion.LookRotation(movement, Vector3.up);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRoration, rotateSpeed * Time.deltaTime);
+            cc.Move(movement * moveSpeed * Time.deltaTime);
+            //character rotation
+            //Quaternion toRoration = Quaternion.LookRotation(movement, Vector3.up);
+            //transform.rotation = Quaternion.RotateTowards(transform.rotation, toRoration, rotateSpeed * Time.deltaTime);
         }
     }
 }
