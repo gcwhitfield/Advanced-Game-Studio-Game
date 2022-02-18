@@ -291,10 +291,7 @@ MonoBehaviour:
   animator: {fileID: 676939334}
   moveSpeed: 2
   rotateSpeed: 720
-  up: 119
-  down: 115
-  left: 97
-  right: 100
+  fatherInputHandlerPrefab: {fileID: 0}
   fireSpawn: {fileID: 203251191}
   bulletPrefab: {fileID: 3630579012413559642, guid: b747cc2e39c84eb4c86ca8baf28dd776, type: 3}
   bulletForce: 20
@@ -571,11 +568,11 @@ Transform:
   - {fileID: 1816787731}
   - {fileID: 1320446785}
   - {fileID: 1382346073}
-  - {fileID: 1751733955}
+  - {fileID: 1498419501}
   - {fileID: 2077024277}
+  - {fileID: 1751733955}
   - {fileID: 557303244}
   - {fileID: 1598647625}
-  - {fileID: 1498419501}
   - {fileID: 739696411}
   - {fileID: 269282953}
   - {fileID: 232684506}
@@ -1937,7 +1934,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -52.099976, y: 0}
+  m_AnchoredPosition: {x: -52.100006, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1057692269
@@ -2257,6 +2254,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Daughter
       objectReference: {fileID: 0}
+    - target: {fileID: 8108555306124955871, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 2110572870}
     m_RemovedComponents:
     - {fileID: 295366174211155268, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}

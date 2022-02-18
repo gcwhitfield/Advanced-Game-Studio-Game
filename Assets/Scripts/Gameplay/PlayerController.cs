@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
-    private Animator animator; // the animator for the character's art
+    private Animator animator2; // the animator for the character's art
 
     [SerializeField]
     private float moveSpeed;
@@ -41,14 +41,14 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //character translation
-        if (animator)
+        if (animator2)
         {
             if (movement != Vector3.zero)
             {
-                animator.SetInteger("Speed", 1);
+                animator2.SetInteger("Speed", 1);
             } else
             {
-                animator.SetInteger("Speed", 0);
+                animator2.SetInteger("Speed", 0);
             }
         }
 
