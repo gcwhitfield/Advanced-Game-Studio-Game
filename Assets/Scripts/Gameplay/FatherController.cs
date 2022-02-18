@@ -7,9 +7,6 @@ public class FatherController : PlayerController
 {
     public static FatherController Instance { get; private set; }
 
-    [SerializeField]
-    private GameObject fatherInputHandlerPrefab;
-
     public Transform fireSpawn;
     public GameObject bulletPrefab;
     public float bulletForce = 20.0f;

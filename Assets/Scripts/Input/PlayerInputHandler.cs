@@ -33,8 +33,11 @@ public class PlayerInputHandler : MonoBehaviour
         // if player is "father"
         if (player == FatherController.Instance)
         {
-            FatherController f = player as FatherController;
-            f.Shoot();
+            if (context.ReadValueAsButton())
+            {
+                FatherController f = player as FatherController;
+                f.Shoot();
+            }
         }
 
     }

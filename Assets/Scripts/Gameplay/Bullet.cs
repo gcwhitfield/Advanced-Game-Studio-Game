@@ -6,10 +6,14 @@ public class Bullet : MonoBehaviour
 {
     public GameObject hitEffect;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        GameObject exposion = Instantiate(hitEffect, transform.position, Quaternion.identity);
-        Destroy(exposion,1f);
-        Destroy(gameObject);
+        Debug.Log("Bullet has hit " + other.gameObject.name.ToString());
+        if (other.gameObject.tag != "Player")
+        {
+            GameObject exposion = Instantiate(hitEffect, transform.position, Quaternion.identity);
+            Destroy(exposion,1f);
+            Destroy(gameObject);
+        }
     }
 }
