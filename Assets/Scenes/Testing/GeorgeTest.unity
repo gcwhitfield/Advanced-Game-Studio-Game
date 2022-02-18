@@ -493,9 +493,21 @@ PrefabInstance:
       value: 720
       objectReference: {fileID: 0}
     - target: {fileID: 4512776908498601901, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
+      propertyPath: m_Size.x
+      value: 4.2200003
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512776908498601901, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
+      propertyPath: m_Size.y
+      value: 10.190001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512776908498601901, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1167359333, guid: dd08abe646e175f4ebfcdbb4e46eaf73, type: 3}
+      objectReference: {fileID: 2086030459, guid: 6b735a98369f54147a128624fec77381, type: 3}
+    - target: {fileID: 4512776908498601901, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6537345629051514830, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
       propertyPath: animator
       value: 
