@@ -6,7 +6,6 @@ using UnityEngine.AI;
 
 public class DaughterController : PlayerController
 {
-    public Animator animator; 
     public static DaughterController Instance { get; private set; }
     public bool Hidden = false;
     private void Awake()
@@ -32,8 +31,19 @@ public class DaughterController : PlayerController
         }
     }
 
-    void FixedUpdate()
+    private void ResetAnimatorDirections()
     {
+        animator.SetBool("RunNW", false);
+        animator.SetBool("RunW", false);
+        animator.SetBool("RunSW", false);
+        animator.SetBool("RunS", false);
+        animator.SetBool("RunN", false);
+    }
+
+    private new void Update()
+    {
+        base.Update();
+
         var gamepad = Gamepad.current;
         var keyboard = Keyboard.current;
         float hor = 0;
@@ -76,13 +86,14 @@ public class DaughterController : PlayerController
 
         if(hor == 0 && ver == 0)
         {
-            animator.SetFloat("Speed", 0);
+            //animator.SetFloat("Speed", 0);
             animator.SetBool("TurnEast", true);
         }
 
         else 
         {
-            Vector2 movement2 = movement1.normalized; //making it into a unit vector
+            //Vector2 movement2 = movement1.normalized; //making it into a unit vector
+            Vector2 movement2 = new Vector2(movement.x, movement.z).normalized;
             float newhor = movement2[0]; //horizontal portion of unit vector
             float newver = movement2[1]; //vertical portion of unit vector
             float angle = Mathf.Rad2Deg*Mathf.Atan(newver/newhor); //create angle using unit vector and make it into degrees
@@ -90,41 +101,49 @@ public class DaughterController : PlayerController
             if(angle <= 10 || angle >= 350) // go east
             {
                 animator.SetFloat("Speed", 1);
+                ResetAnimatorDirections();
                 animator.SetBool("RunW", true);
             }
             else if (angle > 10 && angle < 80) //go northeast
             {
                 animator.SetFloat("Speed", 1);
+                ResetAnimatorDirections();
                 animator.SetBool("RunNW", true);
             }
             else if(angle >= 80 && angle <= 100) //go north
             {
                 animator.SetFloat("Speed", 1);
+                ResetAnimatorDirections();
                 animator.SetBool("RunN", true);
             }
             else if(angle > 100 && angle < 170) //go northwest
             {
                 animator.SetFloat("Speed", 1);
+                ResetAnimatorDirections();
                 animator.SetBool("RunNW", true);
             }
             else if(angle >= 170 && angle <= 190) //go west
             {
                 animator.SetFloat("Speed", 1);
+                ResetAnimatorDirections();
                 animator.SetBool("RunW", true);
             }
             else if(angle > 190 && angle < 260) //go southwest
             {
                 animator.SetFloat("Speed", 1);
+                ResetAnimatorDirections();
                 animator.SetBool("RunSW", true);
             }
             else if(angle >= 260 && angle <= 280) //go south
             {
                 animator.SetFloat("Speed", 1);
+                ResetAnimatorDirections();
                 animator.SetBool("RunS", true);
             }
             else //go southeast
             {
                 animator.SetFloat("Speed", 1);
+                ResetAnimatorDirections();
                 animator.SetBool("RunSW", true);
             }
         }

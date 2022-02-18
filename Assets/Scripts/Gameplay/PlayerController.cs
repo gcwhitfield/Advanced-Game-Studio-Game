@@ -7,22 +7,20 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]
-    private Animator animator2; // the animator for the character's art
+    public Animator animator;
 
     [SerializeField]
-    private float moveSpeed;
+    protected float moveSpeed;
 
     [SerializeField]
-    private float rotateSpeed;
+    protected float rotateSpeed;
 
     private CharacterController cc;
 
     // the value of playerIndex will be set inside of DaughterController.cs or FatherController.cs
     public int playerIndex { get; set; }
 
-    private Vector3 movement;
-
+    protected Vector3 movement;
     protected PlayerInput playerInput;
 
     protected void Start()
@@ -38,17 +36,17 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    protected void Update()
     {
         //character translation
-        if (animator2)
+        if (animator)
         {
             if (movement != Vector3.zero)
             {
-                animator2.SetInteger("Speed", 1);
+                animator.SetFloat("Speed", 1);
             } else
             {
-                animator2.SetInteger("Speed", 0);
+                animator.SetFloat("Speed", 0);
             }
         }
 
