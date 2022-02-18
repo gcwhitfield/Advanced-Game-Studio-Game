@@ -7,10 +7,17 @@ using UnityEngine.AI;
 public class DaughterController : PlayerController
 {
     public static DaughterController Instance { get; private set; }
-    public bool Hidden = false;
+
+    public bool hidden { get; private set; } = false;
+
     private void Awake()
     {
         if (!Instance) Instance = this as DaughterController;
+    }
+
+    public void Hide()
+    {
+        hidden = true;
     }
 
     private void OnTriggerEnter(Collider collision) {
@@ -19,7 +26,7 @@ public class DaughterController : PlayerController
         if (collision.gameObject.CompareTag("HiddenSpot")) {
             //NavMeshAgent monster = GameObject.FindGameObjectWithTag("Monsters").GetComponent<NavMeshAgent>();
             //monster.ResetPath();
-            Hidden = true;
+            Hide();
         }
     }
 
@@ -27,7 +34,7 @@ public class DaughterController : PlayerController
     {
         if (collision.gameObject.CompareTag("HiddenSpot"))
         {
-            Hidden = false;
+            hidden = false;
         }
     }
 
@@ -42,7 +49,7 @@ public class DaughterController : PlayerController
 
     private new void Update()
     {
-        base.Update();
+        base.Update(); // calls PlayerController.Update()
 
         var gamepad = Gamepad.current;
         var keyboard = Keyboard.current;

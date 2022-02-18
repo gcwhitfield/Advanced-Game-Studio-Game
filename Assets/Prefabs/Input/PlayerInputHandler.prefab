@@ -73,6 +73,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 271318ac-c02d-47c6-b089-1cb54ca84e47
     m_ActionName: PlayMovement/Movement[/XboxGamepadMacOS/leftStick,/XboxGamepadMacOS1/leftStick,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8163137030412972246}
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
+        m_MethodName: OnHide
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0aa6a1c8-e542-4682-9f91-01b2745b07ea
+    m_ActionName: PlayMovement/Hide[/Keyboard/e,/XboxGamepadMacOS/buttonWest,/XboxGamepadMacOS1/buttonWest]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8163137030412972246}
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
+        m_MethodName: OnShoot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 16b679d6-e599-4421-8f87-2264aa5218fe
+    m_ActionName: PlayMovement/Shoot[/Keyboard/e,/XboxGamepadMacOS/buttonWest,/XboxGamepadMacOS1/buttonWest]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayMovement
@@ -90,3 +122,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af8f6eb692b2247e3bc5810a9a050b45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}

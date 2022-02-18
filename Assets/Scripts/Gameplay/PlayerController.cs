@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     protected void Update()
     {
-        //character translation
+        //character translation animation
         if (animator)
         {
             if (movement != Vector3.zero)
@@ -47,9 +47,10 @@ public class PlayerController : MonoBehaviour
             } else
             {
                 animator.SetFloat("Speed", 0);
-            }
+            }    
         }
 
+        // move the character based on the movement input vector
         if (movement != Vector3.zero) {
             cc.Move(movement * moveSpeed * Time.deltaTime);
             //character rotation

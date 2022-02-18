@@ -27,7 +27,7 @@ public class MonsterController : MonoBehaviour
     void Update()
     {
         distance = Vector3.Distance(player.position, transform.position);
-        if (distance <= LookRadius && !daughter.Hidden)
+        if (distance <= LookRadius && !daughter.hidden)
         {
             Chase();
         }

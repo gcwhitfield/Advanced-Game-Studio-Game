@@ -8,6 +8,7 @@ using static UnityEngine.InputSystem.InputAction;
 public class PlayerInputHandler : MonoBehaviour
 {
     PlayerInput playerInput;
+    [HideInInspector]
     public PlayerController player;
 
     private void Start()
@@ -25,5 +26,26 @@ public class PlayerInputHandler : MonoBehaviour
     public void OnMove(CallbackContext context)
     {
         player.OnMove(context);
+    }
+
+    public void OnShoot(CallbackContext context)
+    {
+        // if player is "father"
+        if (player == FatherController.Instance)
+        {
+            FatherController f = player as FatherController;
+            f.Shoot();
+        }
+
+    }
+
+    public void OnHide(CallbackContext context)
+    {
+        // if player is "daughter"
+        if (player == DaughterController.Instance)
+        {
+            DaughterController d = player as DaughterController;
+            d.Hide();
+        }
     }
 }

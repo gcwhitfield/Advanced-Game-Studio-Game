@@ -26,7 +26,7 @@ public class FatherController : PlayerController
     //    }
     //}
 
-    void shoot() {
+    public void Shoot() {
         GameObject bullet = Instantiate(bulletPrefab,fireSpawn.position,fireSpawn.rotation);
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         rb.AddForce(fireSpawn.up * bulletForce, ForceMode.Impulse);
