@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnMove(CallbackContext context)
     {
-        Debug.Log("OnMove");
+        //Debug.Log("OnMove");
         Vector2 movement2D = context.ReadValue<Vector2>();
         movement = new Vector3(movement2D.x, 0, movement2D.y);
     }
