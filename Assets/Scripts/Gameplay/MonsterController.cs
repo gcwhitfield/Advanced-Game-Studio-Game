@@ -10,15 +10,19 @@ public class MonsterController : MonoBehaviour
     public DaughterController daughter;
     public Transform[] waypoints;
     int waypointsIndex;
-    Vector3 destination;
+    Vector3 waypointDestination;
     Transform player;
     float distance;
+    bool isPatrol;
     
     // Start is called before the first frame update
     void Start()
     {
         player = PlayerManager.instance.Daughter.transform;
         //Initialize Patrol
+        waypointsIndex = 0;
+        agent.stoppingDistance = 0.5f;
+        isPatrol = true;
         IterateWaypoints();
         MoveToDestination();
     }
@@ -29,10 +33,17 @@ public class MonsterController : MonoBehaviour
         distance = Vector3.Distance(player.position, transform.position);
         if (distance <= LookRadius && !daughter.hidden)
         {
+            agent.stoppingDistance = 2.5f;
             Chase();
+            isPatrol = false;
         }
         else {
             //agent.ResetPath();
+            if (!isPatrol) {
+                agent.stoppingDistance = 0.5f;
+                MoveToDestination();
+                isPatrol = true;
+            }    
             Patrol();
         }
     }
@@ -61,18 +72,18 @@ public class MonsterController : MonoBehaviour
 
     //Patrol function
     void Patrol() {
-        if (Vector3.Distance(transform.position, destination) < 3) {
+        if (Vector3.Distance(transform.position, waypointDestination) < 3) {
             IterateWaypoints();
             MoveToDestination();
         }
     }
     void MoveToDestination() {
-        destination = waypoints[waypointsIndex].position;
-        agent.SetDestination(destination);
+        waypointDestination = waypoints[waypointsIndex].position;
+        agent.SetDestination(waypointDestination);
     }
     void IterateWaypoints() {
         waypointsIndex++;
-        if (waypointsIndex == waypoints.Length) {
+        if (waypointsIndex >= waypoints.Length) {
             waypointsIndex = 0;
         }
     }

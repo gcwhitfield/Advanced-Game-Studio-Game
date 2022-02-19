@@ -8,7 +8,8 @@ public class DaughterController : PlayerController
 {
     public static DaughterController Instance { get; private set; }
 
-    public bool hidden { get; private set; } = false;
+    //public bool hidden { get; private set; } = false;
+    public bool hidden;
 
     private void Awake()
     {
