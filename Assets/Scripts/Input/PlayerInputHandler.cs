@@ -14,7 +14,7 @@ public class PlayerInputHandler : MonoBehaviour
     private void Start()
     {
         playerInput = GetComponent<PlayerInput>();
-        if (playerInput.playerIndex == FatherController.Instance.playerIndex)
+        if (playerInput.playerIndex == DaughterController.Instance.playerIndex)
         {
             //player = FatherController.Instance;
             player = DaughterController.Instance;
