@@ -29,7 +29,16 @@ public class FatherController : PlayerController
         //Rigidbody rb = bullet.GetComponent<Rigidbody>();
         //rb.AddForce(fireSpawn.up * bulletForce, ForceMode.Impulse);
         Debug.Log("Shoot");
-        if (Physics.Raycast(gameObject.transform.posi))
+        float rayLength = 3.0f;
+        RaycastHit hit;
+        if (Physics.Raycast(gameObject.transform.position, lookDirection * rayLength, out hit))
+        {
+            DestroyableBranches branches = hit.transform.GetComponent<DestroyableBranches>();
+            if (branches)
+            {
+                branches.DestroyBranches();
+            }
+        }
 
     }
 }
