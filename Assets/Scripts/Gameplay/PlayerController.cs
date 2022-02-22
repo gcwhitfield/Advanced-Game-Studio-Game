@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     // the value of playerIndex will be set inside of DaughterController.cs or FatherController.cs
     public int playerIndex { get; set; }
 
-    protected Vector3 movement;
+    protected Vector3 movement; // the direction that the player is currently moving
     protected PlayerInput playerInput;
 
     protected void Start()

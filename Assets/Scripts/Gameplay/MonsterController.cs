@@ -18,7 +18,7 @@ public class MonsterController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = PlayerManager.instance.Daughter.transform;
+        player = DaughterController.Instance.transform;
         //Initialize Patrol
         waypointsIndex = 0;
         agent.stoppingDistance = 0.5f;

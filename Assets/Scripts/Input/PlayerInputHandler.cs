@@ -11,23 +11,28 @@ public class PlayerInputHandler : MonoBehaviour
     [HideInInspector]
     public PlayerController player;
 
-    private void Start()
+    private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
         if (playerInput.playerIndex == DaughterController.Instance.playerIndex)
         {
-            //player = FatherController.Instance;
             player = DaughterController.Instance;
         } else
         {
             player = FatherController.Instance;
-            //player = DaughterController.Instance;
         }
     }
 
     public void OnMove(CallbackContext context)
     {
-        player.OnMove(context);
+        if (player)
+        {
+            player.OnMove(context);
+        }
+        else
+        {
+            Debug.LogError("Instance of player not set in PlayerInputHandler");
+        }
     }
 
     public void OnShoot(CallbackContext context)

@@ -30,7 +30,7 @@ Transform:
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 295366172609831811}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &889826910
 SpriteRenderer:
@@ -249,4 +249,3 @@ MonoBehaviour:
   animator: {fileID: 889826909}
   moveSpeed: 3
   rotateSpeed: 0
-  Hidden: 0
