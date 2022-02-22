@@ -31,6 +31,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Collect",
+                    "type": "Button",
+                    "id": "e6238423-07a0-4553-b767-67cf6d96e97d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -158,7 +167,7 @@
                 {
                     "name": "",
                     "id": "7777cd4d-0421-4ef8-856e-8a3f7c52eb83",
-                    "path": "<Keyboard>/h",
+                    "path": "<Keyboard>/q",
                     "interactions": "Hold",
                     "processors": "",
                     "groups": "",
@@ -169,7 +178,7 @@
                 {
                     "name": "",
                     "id": "5129f4c5-c09c-4559-b9f3-204235c4e4ff",
-                    "path": "<Gamepad>/buttonWest",
+                    "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -196,6 +205,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "11021373-0233-4cca-8111-3c639367fb74",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Collect",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e65aba86-a5dc-4ecc-916f-ddd618c5b508",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Collect",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -58,4 +58,14 @@ public class PlayerInputHandler : MonoBehaviour
             d.Hide();
         }
     }
+
+    public void OnCollect(CallbackContext context)
+    {
+        // if player is "daughter"
+        if (player == DaughterController.Instance)
+        {
+            DaughterController d = player as DaughterController;
+            d.Collect();
+        }
+    }
 }

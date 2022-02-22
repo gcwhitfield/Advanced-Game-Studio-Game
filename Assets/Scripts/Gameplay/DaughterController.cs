@@ -8,6 +8,12 @@ public class DaughterController : PlayerController
 {
     public static DaughterController Instance { get; private set; }
 
+    // 'collectableObject' is a refernece to the item that the daughter can currently collect
+    // if it is null, then the daughter is not standing nearby any collectbale objects
+    // if it is not null, then 'collectableObject' will refer to the Collectable component that
+    // she can collect.
+    Collectable collectableObject = null;
+    
     //public bool hidden { get; private set; } = false;
     public bool hidden;
 
@@ -16,26 +22,54 @@ public class DaughterController : PlayerController
         if (!Instance) Instance = this as DaughterController;
     }
 
+    // called when the daughter presses the "Hide" key
     public void Hide()
     {
         hidden = true;
     }
 
-    private void OnTriggerEnter(Collider collision) {
-        // TO-DO: press some button to trigger
-        // detect only hide spot
-        if (collision.gameObject.CompareTag("HiddenSpot")) {
-            //NavMeshAgent monster = GameObject.FindGameObjectWithTag("Monsters").GetComponent<NavMeshAgent>();
-            //monster.ResetPath();
-            Hide();
+    // called when the daughter presses the "Collect" key
+    public void Collect()
+    {
+        Debug.Log("Collect");
+        if (collectableObject)
+        {
+            collectableObject.Collect();
+            Destroy(collectableObject);
+            collectableObject = null;
         }
     }
 
-    private void OnTriggerExit(Collider collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("HiddenSpot"))
+        // TO-DO: press some button to trigger
+        // detect only hide spot
+        if (other.gameObject.CompareTag("HiddenSpot"))
+        {
+            //NavMeshAgent monster = GameObject.FindGameObjectWithTag("Monsters").GetComponent<NavMeshAgent>();
+            //monster.ResetPath();
+            Hide();
+            return;
+        }
+
+        Collectable c = other.GetComponent<Collectable>();
+        if (c)
+        {
+            collectableObject = c;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("HiddenSpot"))
         {
             hidden = false;
+        }
+
+        Collectable c = other.GetComponent<Collectable>();
+        if (c)
+        {
+            collectableObject = null;
         }
     }
 
