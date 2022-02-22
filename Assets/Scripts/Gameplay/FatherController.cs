@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using FMODUnity;
 
 public class FatherController : PlayerController
 {
@@ -33,12 +34,22 @@ public class FatherController : PlayerController
         RaycastHit hit;
         if (Physics.Raycast(gameObject.transform.position, lookDirection * rayLength, out hit))
         {
+            Debug.Log("The raycast has hit " + hit.transform.name);
             DestroyableBranches branches = hit.transform.GetComponent<DestroyableBranches>();
             if (branches)
             {
                 branches.DestroyBranches();
+            } else
+            {
+                Debug.Log("did NOT hit branches");
             }
         }
 
+        // play the shooting sound
+        //FMOD.Studio.EventInstance shootSound;
+        //shootSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/FatherShoot");
+        //shootSound.start();
+        //shootSound.setPaused(true);
+        //shootSound.release();
     }
 }
