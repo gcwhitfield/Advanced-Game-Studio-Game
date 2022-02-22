@@ -21,11 +21,13 @@ public class PlayerController : MonoBehaviour
     public int playerIndex { get; set; }
 
     protected Vector3 movement; // the direction that the player is currently moving
+    protected Vector3 lookDirection; // the direction that the player is currently looking
     protected PlayerInput playerInput;
 
     protected void Start()
     {
         cc = GetComponent<CharacterController>();
+        lookDirection = gameObject.transform.forward;
     }
 
     public void OnMove(CallbackContext context)
@@ -53,6 +55,7 @@ public class PlayerController : MonoBehaviour
         // move the character based on the movement input vector
         if (movement != Vector3.zero) {
             cc.Move(movement * moveSpeed * Time.deltaTime);
+            lookDirection = movement;
             //character rotation
             //Quaternion toRoration = Quaternion.LookRotation(movement, Vector3.up);
             //transform.rotation = Quaternion.RotateTowards(transform.rotation, toRoration, rotateSpeed * Time.deltaTime);

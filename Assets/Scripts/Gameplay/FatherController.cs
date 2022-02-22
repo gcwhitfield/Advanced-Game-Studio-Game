@@ -10,7 +10,6 @@ public class FatherController : PlayerController
     public Transform fireSpawn;
     public GameObject bulletPrefab;
     public float bulletForce = 20.0f;
-    public Vector3 lookDirection; // used to determnie where to shoot the father's gun
 
     private void Awake()
     {
@@ -21,7 +20,7 @@ public class FatherController : PlayerController
     {
         base.Update();
 
-        Debug.DrawRay(gameObject.transform.position, gameObject.transform.forward, Color.white, 5.0f);
+        Debug.DrawRay(gameObject.transform.position, lookDirection * 10.0f, Color.white, 1.0f);
     }
 
     public void Shoot() {
@@ -30,6 +29,7 @@ public class FatherController : PlayerController
         //Rigidbody rb = bullet.GetComponent<Rigidbody>();
         //rb.AddForce(fireSpawn.up * bulletForce, ForceMode.Impulse);
         Debug.Log("Shoot");
+        if (Physics.Raycast(gameObject.transform.posi))
 
     }
 }
