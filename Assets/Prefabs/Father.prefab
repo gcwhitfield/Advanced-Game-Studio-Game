@@ -55,13 +55,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1531176394709503021}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.11602, y: 1.15, z: 0}
+  m_LocalRotation: {x: 0, y: -0.1564345, z: 0, w: 0.98768836}
+  m_LocalPosition: {x: -0.11602064, y: 1.1499996, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 4014819056123113249}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -18, z: 0}
 --- !u!212 &4512776908498601901
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -223,6 +223,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Father
       objectReference: {fileID: 0}
+    - target: {fileID: 7121009890443627916, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7121009890443627918, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_TargetTexture
       value: 
@@ -249,6 +253,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7121009889882229576, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
   m_PrefabInstance: {fileID: 6153439282659239017}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &-9067867262828591972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4014819055372325451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
+  ListenerNumber: -1
 --- !u!114 &6537345629051514830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,17 +292,3 @@ MonoBehaviour:
       Data3: -1273620589
       Data4: 625665378
     Path: event:/SFX/Shoot
---- !u!114 &-9067867262828591972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4014819055372325451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 0}
-  ListenerNumber: -1

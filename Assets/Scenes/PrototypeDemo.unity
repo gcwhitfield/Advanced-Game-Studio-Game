@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 3
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SubtractiveShadowColor: {r: 0.4279548, g: 0.46436486, b: 0.5566038, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -1063,6 +1063,34 @@ PrefabInstance:
     - target: {fileID: 6537345629051514830, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
       propertyPath: footAudio.Guid.Data4
       value: -92778324
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391636475874530711, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.11602064
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391636475874530711, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391636475874530711, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.98768836
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391636475874530711, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391636475874530711, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.1564345
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391636475874530711, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391636475874530711, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
