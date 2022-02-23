@@ -18,30 +18,31 @@ public class DaughterController : PlayerController
     [HideInInspector]
     public bool hidden;
 
-    public EventReference footAudio;
-    private FMOD.Studio.EventInstance footStepAudio;
+    public EventReference footStepAudio;
+    private FMOD.Studio.EventInstance footStepInstance;
 
     private void Awake()
     {
         if (!Instance) Instance = this as DaughterController;
 
-        footStepAudio = RuntimeManager.CreateInstance(footAudio);
-        FMODUnity.RuntimeManager.AttachInstanceToGameObject(footStepAudio, GetComponent<Transform>(), GetComponent<Rigidbody>());
-        //footStepAudio.start();
+        footStepInstance = RuntimeManager.CreateInstance(footStepAudio);
+        RuntimeManager.AttachInstanceToGameObject(footStepInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
+        //footStepInstance.start();
+        InvokeRepeating("PlayFootstepAudio", 0, 0.75f);
     }
 
     public void PlayFootstepAudio()
     {
-        footStepAudio.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
-        //footStepAudio.start();
+        footStepInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        //footStepInstance.start();
         if (movement != Vector3.zero)
         {
-            footStepAudio.start();
-            //footStepAudio.release();
+            footStepInstance.start();
+            //footStepInstance.release();
         }
         else
         {
-            //footStepAudio.setPaused(true);
+            //footStepInstance.setPaused(true);
         }
     }
 
@@ -108,7 +109,6 @@ public class DaughterController : PlayerController
     private new void Update()
     {
         base.Update(); // calls PlayerController.Update()
-        PlayFootstepAudio();
 
         var gamepad = Gamepad.current;
         var keyboard = Keyboard.current;

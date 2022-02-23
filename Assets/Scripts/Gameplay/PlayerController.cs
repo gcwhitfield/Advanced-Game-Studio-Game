@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.InputSystem.InputAction;
 using UnityEngine.InputSystem;
-using FMODUnity;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
@@ -24,6 +23,7 @@ public class PlayerController : MonoBehaviour
     protected Vector3 movement; // the direction that the player is currently moving
     protected Vector3 lookDirection; // the direction that the player is currently looking
     protected PlayerInput playerInput;
+
     protected void Start()
     {
         cc = GetComponent<CharacterController>();
@@ -46,10 +46,11 @@ public class PlayerController : MonoBehaviour
             if (movement != Vector3.zero)
             {
                 animator.SetFloat("Speed", 1);
-            } else
+            }
+            else
             {
                 animator.SetFloat("Speed", 0);
-            }    
+            }
         }
 
         // move the character based on the movement input vector

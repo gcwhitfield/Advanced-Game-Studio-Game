@@ -7,7 +7,8 @@ using static UnityEngine.InputSystem.InputAction;
 [RequireComponent(typeof(PlayerInput))]
 public class PlayerInputHandler : MonoBehaviour
 {
-    PlayerInput playerInput;
+    private PlayerInput playerInput;
+
     [HideInInspector]
     public PlayerController player;
 
@@ -16,9 +17,10 @@ public class PlayerInputHandler : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         if (playerInput.playerIndex == DaughterController.Instance.playerIndex)
         {
-            player = DaughterController.Instance;
-            //player = FatherController.Instance;
-        } else
+            //player = DaughterController.Instance;
+            player = FatherController.Instance;
+        }
+        else
         {
             player = FatherController.Instance;
         }
@@ -47,7 +49,6 @@ public class PlayerInputHandler : MonoBehaviour
                 f.Shoot();
             }
         }
-
     }
 
     public void OnHide(CallbackContext context)

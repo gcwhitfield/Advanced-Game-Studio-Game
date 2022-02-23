@@ -587,7 +587,6 @@ GameObject:
   m_Component:
   - component: {fileID: 155297981}
   - component: {fileID: 155297980}
-  - component: {fileID: 155297979}
   - component: {fileID: 155297978}
   m_Layer: 0
   m_Name: Main Camera
@@ -656,20 +655,6 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
---- !u!114 &155297979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 155297977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 0}
-  ListenerNumber: -1
 --- !u!20 &155297980
 Camera:
   m_ObjectHideFlags: 0
@@ -952,24 +937,42 @@ PrefabInstance:
       value: event:/SFX/FootSteps
       objectReference: {fileID: 0}
     - target: {fileID: 8108555306124955871, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
+      propertyPath: footStepAudio.Path
+      value: event:/SFX/FootSteps
+      objectReference: {fileID: 0}
+    - target: {fileID: 8108555306124955871, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
       propertyPath: footAudio.Guid.Data1
-      value: -1405520950
+      value: -1133648932
       objectReference: {fileID: 0}
     - target: {fileID: 8108555306124955871, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
       propertyPath: footAudio.Guid.Data2
-      value: 1174048459
+      value: 1323326594
       objectReference: {fileID: 0}
     - target: {fileID: 8108555306124955871, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
       propertyPath: footAudio.Guid.Data3
-      value: -474811007
+      value: -2088862807
       objectReference: {fileID: 0}
     - target: {fileID: 8108555306124955871, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
       propertyPath: footAudio.Guid.Data4
-      value: -92778324
+      value: 1755499379
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 295366174211155268, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
-    - {fileID: 8176930297999617356, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
+    - target: {fileID: 8108555306124955871, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
+      propertyPath: footStepAudio.Guid.Data1
+      value: -1133648932
+      objectReference: {fileID: 0}
+    - target: {fileID: 8108555306124955871, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
+      propertyPath: footStepAudio.Guid.Data2
+      value: 1323326594
+      objectReference: {fileID: 0}
+    - target: {fileID: 8108555306124955871, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
+      propertyPath: footStepAudio.Guid.Data3
+      value: -2088862807
+      objectReference: {fileID: 0}
+    - target: {fileID: 8108555306124955871, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
+      propertyPath: footStepAudio.Guid.Data4
+      value: 1755499379
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
 --- !u!114 &227674382 stripped
 MonoBehaviour:
