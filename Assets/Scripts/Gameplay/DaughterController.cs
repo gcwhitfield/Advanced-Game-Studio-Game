@@ -112,46 +112,11 @@ public class DaughterController : PlayerController
         base.Update(); // calls PlayerController.Update()
         PlayFootstepAudio();
 
-        var gamepad = Gamepad.current;
-        var keyboard = Keyboard.current;
-        float hor = 0;
-        float ver = 0;
-        Vector2 movement1 = new Vector2(0, 0);
-        if (gamepad != null)
-        {
-            movement1 = Gamepad.current.leftStick.ReadValue();
-            hor = Gamepad.current.leftStick.x.ReadValue();  //getting right/left
-            ver = Gamepad.current.leftStick.y.ReadValue(); //getting up/down
-        }
-        else
-        {
-            hor = 0;
-            ver = 0;
-            bool wkey = keyboard.wKey.isPressed;
-            bool dkey = keyboard.dKey.isPressed;
-            bool skey = keyboard.sKey.isPressed;
-            bool akey = keyboard.aKey.isPressed;
+        Vector2 movement2 = new Vector2(movement.x, movement.z).normalized; //getting movement vector from playercontroller.cs
+        float newhor = movement2[0]; //horizontal portion of unit vector
+        float newver = movement2[1];
 
-            if (wkey)
-            {
-                ver++;
-            }
-            if (dkey)
-            {
-                hor++;
-            }
-            if (skey)
-            {
-                ver--;
-            }
-            if (akey)
-            {
-                ver--;
-            }
-            movement1 = new Vector2(hor, ver);
-        }
-
-        if (hor == 0 && ver == 0)
+        if (newhor == 0 && newver == 0) //character is idle
         {
             //animator.SetFloat("Speed", 0);
             animator.SetBool("TurnEast", true);
@@ -159,54 +124,58 @@ public class DaughterController : PlayerController
         else
         {
             //Vector2 movement2 = movement1.normalized; //making it into a unit vector
-            Vector2 movement2 = new Vector2(movement.x, movement.z).normalized;
+            /*Vector2 movement2 = new Vector2(movement.x, movement.z).normalized; //getting movement vector from playercontroller.cs
             float newhor = movement2[0]; //horizontal portion of unit vector
-            float newver = movement2[1]; //vertical portion of unit vector
-            float angle = Mathf.Rad2Deg * Mathf.Atan(newver / newhor); //create angle using unit vector and make it into degrees
-
-            if (angle <= 10 || angle >= 350) // go east
+            float newver = movement2[1]; //vertical portion of unit vector */
+            float angle = Mathf.Rad2Deg * Mathf.Atan2(newver, newhor); //create angle using unit vector and make it into degrees
+            if(angle < 0)
+            {
+              angle = 360 + angle;
+            }
+            Debug.Log(angle);
+            if (angle <= 10 || angle >= 350) // go east, 20 degree angle
             {
                 animator.SetFloat("Speed", 1);
                 ResetAnimatorDirections();
                 animator.SetBool("RunW", true);
             }
-            else if (angle > 10 && angle < 80) //go northeast
+            else if (angle > 10 && angle < 80) //go northeast, 70 degree angle
             {
                 animator.SetFloat("Speed", 1);
                 ResetAnimatorDirections();
                 animator.SetBool("RunNW", true);
             }
-            else if (angle >= 80 && angle <= 100) //go north
+            else if (angle >= 80 && angle <= 100) //go north, 20 degree angle
             {
                 animator.SetFloat("Speed", 1);
                 ResetAnimatorDirections();
                 animator.SetBool("RunN", true);
             }
-            else if (angle > 100 && angle < 170) //go northwest
+            else if (angle > 100 && angle < 170) //go northwest, 70 degree angle
             {
                 animator.SetFloat("Speed", 1);
                 ResetAnimatorDirections();
                 animator.SetBool("RunNW", true);
             }
-            else if (angle >= 170 && angle <= 190) //go west
+            else if (angle >= 170 && angle <= 190) //go west, 20 degree angle
             {
                 animator.SetFloat("Speed", 1);
                 ResetAnimatorDirections();
                 animator.SetBool("RunW", true);
             }
-            else if (angle > 190 && angle < 260) //go southwest
+            else if (angle > 190 && angle < 260) //go southwest, 70 degree angle
             {
                 animator.SetFloat("Speed", 1);
                 ResetAnimatorDirections();
                 animator.SetBool("RunSW", true);
             }
-            else if (angle >= 260 && angle <= 280) //go south
+            else if (angle >= 260 && angle <= 280) //go south, 20 degree angle
             {
                 animator.SetFloat("Speed", 1);
                 ResetAnimatorDirections();
                 animator.SetBool("RunS", true);
             }
-            else //go southeast
+            else //go southeast, 70 degree angle
             {
                 animator.SetFloat("Speed", 1);
                 ResetAnimatorDirections();
