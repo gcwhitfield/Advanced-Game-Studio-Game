@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -947,6 +947,26 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8108555306124955871, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
+      propertyPath: footAudio.Path
+      value: event:/SFX/FootSteps
+      objectReference: {fileID: 0}
+    - target: {fileID: 8108555306124955871, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
+      propertyPath: footAudio.Guid.Data1
+      value: -1405520950
+      objectReference: {fileID: 0}
+    - target: {fileID: 8108555306124955871, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
+      propertyPath: footAudio.Guid.Data2
+      value: 1174048459
+      objectReference: {fileID: 0}
+    - target: {fileID: 8108555306124955871, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
+      propertyPath: footAudio.Guid.Data3
+      value: -474811007
+      objectReference: {fileID: 0}
+    - target: {fileID: 8108555306124955871, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
+      propertyPath: footAudio.Guid.Data4
+      value: -92778324
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 295366174211155268, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
     - {fileID: 8176930297999617356, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
@@ -956,17 +976,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8108555306124955871, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
   m_PrefabInstance: {fileID: 227674381}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 227674384}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7bcb29833b1c44840a5f455e9946038c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &227674384 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 295366173201227497, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
-  m_PrefabInstance: {fileID: 227674381}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &245685154
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1026,13 +1041,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6537345629051514830, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
+      propertyPath: footAudio.Path
+      value: event:/SFX/FootSteps
+      objectReference: {fileID: 0}
+    - target: {fileID: 6537345629051514830, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
+      propertyPath: footAudio.Guid.Data1
+      value: -1405520950
+      objectReference: {fileID: 0}
+    - target: {fileID: 6537345629051514830, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
+      propertyPath: footAudio.Guid.Data2
+      value: 1174048459
+      objectReference: {fileID: 0}
+    - target: {fileID: 6537345629051514830, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
+      propertyPath: footAudio.Guid.Data3
+      value: -474811007
+      objectReference: {fileID: 0}
+    - target: {fileID: 6537345629051514830, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
+      propertyPath: footAudio.Guid.Data4
+      value: -92778324
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
---- !u!1 &245685155 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4014819055372325451, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
-  m_PrefabInstance: {fileID: 245685154}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &294585809
 GameObject:
   m_ObjectHideFlags: 0
@@ -1727,86 +1757,6 @@ Transform:
   m_Father: {fileID: 2105865068}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &778067690
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 778067693}
-  - component: {fileID: 778067692}
-  - component: {fileID: 778067691}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &778067691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778067690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -1405520950
-      Data2: 1174048459
-      Data3: -474811007
-      Data4: -92778324
-    Path: event:/mixkit-footsteps-in-the-forest-ground-1230
-  Event: 
-  PlayEvent: 1
-  StopEvent: 2
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
---- !u!114 &778067692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778067690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LoadEvent: 1
-  UnloadEvent: 2
-  Banks:
-  - Master
-  CollisionTag: 
-  PreloadSamples: 0
---- !u!4 &778067693
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778067690}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 401.5, y: 226, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &783010238
 GameObject:
   m_ObjectHideFlags: 0
@@ -2365,7 +2315,7 @@ Transform:
   - {fileID: 2020093396}
   - {fileID: 2105865068}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 170.692, z: 0}
 --- !u!1 &1554478518
 GameObject:
@@ -2507,7 +2457,7 @@ Transform:
   - {fileID: 418656409}
   - {fileID: 530479029}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1846103472
 GameObject:
@@ -2799,7 +2749,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.19552, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2020093395
 PrefabInstance:
@@ -3001,49 +2951,4 @@ Transform:
   - {fileID: 151639249}
   m_Father: {fileID: 1304232589}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2127034894
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2127034896}
-  - component: {fileID: 2127034895}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2127034895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2127034894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e37925f5370da1408df99d25a7f6ff4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Father: {fileID: 245685155}
-  Daughter: {fileID: 227674384}
---- !u!4 &2127034896
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2127034894}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.806942, y: 2.0522788, z: 37.150036}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

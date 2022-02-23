@@ -46,9 +46,9 @@ public class FatherController : PlayerController
         }
 
         // play the shooting sound
-        //FMOD.Studio.EventInstance shootSound;
-        //shootSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/FatherShoot");
-        //shootSound.start();
+        FMOD.Studio.EventInstance shootSound;
+        shootSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Shoot");
+        shootSound.start();
         //shootSound.setPaused(true);
         //shootSound.release();
     }

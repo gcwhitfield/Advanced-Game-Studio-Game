@@ -2,13 +2,13 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{ac3973ca-8ecb-45fa-81f5-b2e3ac5078fa}">
 		<property name="name">
-			<value>mixkit-footsteps-in-the-forest-ground-1230</value>
+			<value>FootSteps</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
 		</property>
 		<relationship name="folder">
-			<destination>{0c223a5b-d271-423b-b885-12ee00401e52}</destination>
+			<destination>{8a264884-4e0c-4bf1-b66c-f882435d6d1e}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{a6f3e10d-8681-4fb9-8ca1-888584a4b220}</destination>
@@ -80,6 +80,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{10f52385-1082-46c4-bb70-48135a4390a0}">
+		<property name="volume">
+			<value>-8</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{466d6621-b8d0-4500-8b4f-0402bac3aa0c}</destination>
 		</relationship>
@@ -135,6 +138,10 @@
 	</object>
 	<object class="MixerBusPanner" id="{19dca8d2-476e-4a7c-b449-8d98b5db5cac}" />
 	<object class="MixerBusFader" id="{bb7eccc9-80f9-4c17-8a7a-167383e4d31a}" />
-	<object class="SpatialiserEffect" id="{422031ef-5602-4c0f-a65a-e8cc22c83ec8}" />
+	<object class="SpatialiserEffect" id="{422031ef-5602-4c0f-a65a-e8cc22c83ec8}">
+		<property name="distanceRolloffType">
+			<value>3</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{4ecb4646-d9d4-4c64-ac6a-7a10e8113ca8}" />
 </objects>

@@ -17,6 +17,7 @@ public class PlayerInputHandler : MonoBehaviour
         if (playerInput.playerIndex == DaughterController.Instance.playerIndex)
         {
             player = DaughterController.Instance;
+            //player = FatherController.Instance;
         } else
         {
             player = FatherController.Instance;

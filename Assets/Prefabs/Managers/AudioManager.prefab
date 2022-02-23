@@ -69,7 +69,7 @@ MonoBehaviour:
       Data2: 1174048459
       Data3: -474811007
       Data4: -92778324
-    Path: event:/mixkit-footsteps-in-the-forest-ground-1230
+    Path: event:/SFX/FootSteps
   Event: 
   PlayEvent: 1
   StopEvent: 2

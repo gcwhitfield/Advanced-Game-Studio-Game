@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.AI;
+using FMODUnity;
 
 public class DaughterController : PlayerController
 {
@@ -12,14 +13,36 @@ public class DaughterController : PlayerController
     // if it is null, then the daughter is not standing nearby any collectbale objects
     // if it is not null, then 'collectableObject' will refer to the Collectable component that
     // she can collect.
-    Collectable collectableObject = null;
-    
-    //public bool hidden { get; private set; } = false;
+    private Collectable collectableObject = null;
+
+    [HideInInspector]
     public bool hidden;
+
+    public EventReference footAudio;
+    private FMOD.Studio.EventInstance footStepAudio;
 
     private void Awake()
     {
         if (!Instance) Instance = this as DaughterController;
+
+        footStepAudio = RuntimeManager.CreateInstance(footAudio);
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(footStepAudio, GetComponent<Transform>(), GetComponent<Rigidbody>());
+        //footStepAudio.start();
+    }
+
+    public void PlayFootstepAudio()
+    {
+        footStepAudio.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        //footStepAudio.start();
+        if (movement != Vector3.zero)
+        {
+            footStepAudio.start();
+            //footStepAudio.release();
+        }
+        else
+        {
+            //footStepAudio.setPaused(true);
+        }
     }
 
     // called when the daughter presses the "Hide" key
@@ -85,62 +108,61 @@ public class DaughterController : PlayerController
     private new void Update()
     {
         base.Update(); // calls PlayerController.Update()
+        PlayFootstepAudio();
 
         var gamepad = Gamepad.current;
         var keyboard = Keyboard.current;
         float hor = 0;
         float ver = 0;
-        Vector2 movement1 = new Vector2(0,0);
-        if(gamepad != null)
+        Vector2 movement1 = new Vector2(0, 0);
+        if (gamepad != null)
         {
             movement1 = Gamepad.current.leftStick.ReadValue();
             hor = Gamepad.current.leftStick.x.ReadValue();  //getting right/left
             ver = Gamepad.current.leftStick.y.ReadValue(); //getting up/down
         }
-       
         else
         {
-           hor = 0;
-           ver = 0;
-           bool wkey = keyboard.wKey.isPressed;
-           bool dkey = keyboard.dKey.isPressed;
-           bool skey = keyboard.sKey.isPressed;
-           bool akey = keyboard.aKey.isPressed;
+            hor = 0;
+            ver = 0;
+            bool wkey = keyboard.wKey.isPressed;
+            bool dkey = keyboard.dKey.isPressed;
+            bool skey = keyboard.sKey.isPressed;
+            bool akey = keyboard.aKey.isPressed;
 
-           if(wkey)
-           {
-               ver++;
-           }
-           if(dkey)
-           {
-               hor++;
-           }
-           if(skey)
-           {
-               ver--;
-           }
-           if(akey)
-           {
-               ver--;
-           }
-           movement1 = new Vector2(hor,ver);
+            if (wkey)
+            {
+                ver++;
+            }
+            if (dkey)
+            {
+                hor++;
+            }
+            if (skey)
+            {
+                ver--;
+            }
+            if (akey)
+            {
+                ver--;
+            }
+            movement1 = new Vector2(hor, ver);
         }
 
-        if(hor == 0 && ver == 0)
+        if (hor == 0 && ver == 0)
         {
             //animator.SetFloat("Speed", 0);
             animator.SetBool("TurnEast", true);
         }
-
-        else 
+        else
         {
             //Vector2 movement2 = movement1.normalized; //making it into a unit vector
             Vector2 movement2 = new Vector2(movement.x, movement.z).normalized;
             float newhor = movement2[0]; //horizontal portion of unit vector
             float newver = movement2[1]; //vertical portion of unit vector
-            float angle = Mathf.Rad2Deg*Mathf.Atan(newver/newhor); //create angle using unit vector and make it into degrees
+            float angle = Mathf.Rad2Deg * Mathf.Atan(newver / newhor); //create angle using unit vector and make it into degrees
 
-            if(angle <= 10 || angle >= 350) // go east
+            if (angle <= 10 || angle >= 350) // go east
             {
                 animator.SetFloat("Speed", 1);
                 ResetAnimatorDirections();
@@ -152,31 +174,31 @@ public class DaughterController : PlayerController
                 ResetAnimatorDirections();
                 animator.SetBool("RunNW", true);
             }
-            else if(angle >= 80 && angle <= 100) //go north
+            else if (angle >= 80 && angle <= 100) //go north
             {
                 animator.SetFloat("Speed", 1);
                 ResetAnimatorDirections();
                 animator.SetBool("RunN", true);
             }
-            else if(angle > 100 && angle < 170) //go northwest
+            else if (angle > 100 && angle < 170) //go northwest
             {
                 animator.SetFloat("Speed", 1);
                 ResetAnimatorDirections();
                 animator.SetBool("RunNW", true);
             }
-            else if(angle >= 170 && angle <= 190) //go west
+            else if (angle >= 170 && angle <= 190) //go west
             {
                 animator.SetFloat("Speed", 1);
                 ResetAnimatorDirections();
                 animator.SetBool("RunW", true);
             }
-            else if(angle > 190 && angle < 260) //go southwest
+            else if (angle > 190 && angle < 260) //go southwest
             {
                 animator.SetFloat("Speed", 1);
                 ResetAnimatorDirections();
                 animator.SetBool("RunSW", true);
             }
-            else if(angle >= 260 && angle <= 280) //go south
+            else if (angle >= 260 && angle <= 280) //go south
             {
                 animator.SetFloat("Speed", 1);
                 ResetAnimatorDirections();
@@ -190,5 +212,4 @@ public class DaughterController : PlayerController
             }
         }
     }
-
 }
