@@ -59,7 +59,7 @@ public class DaughterController : PlayerController
         if (collectableObject)
         {
             collectableObject.Collect();
-            Destroy(collectableObject);
+            Destroy(collectableObject.gameObject);
             collectableObject = null;
         }
     }
@@ -70,8 +70,6 @@ public class DaughterController : PlayerController
         // detect only hide spot
         if (other.gameObject.CompareTag("HiddenSpot"))
         {
-            //NavMeshAgent monster = GameObject.FindGameObjectWithTag("Monsters").GetComponent<NavMeshAgent>();
-            //monster.ResetPath();
             Hide();
             return;
         }
@@ -79,6 +77,7 @@ public class DaughterController : PlayerController
         Collectable c = other.GetComponent<Collectable>();
         if (c)
         {
+            Debug.Log("Collectable has been set");
             collectableObject = c;
         }
     }
