@@ -19,7 +19,7 @@ public class FatherController : PlayerController
     {
         if (!Instance) Instance = this as FatherController;
         shootInstance = RuntimeManager.CreateInstance(shootAudio);
-        RuntimeManager.AttachInstanceToGameObject(shootInstance, GetComponent<Transform>(), bulletPrefab.GetComponent<Rigidbody>());
+        RuntimeManager.AttachInstanceToGameObject(shootInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
     }
 
     public new void Update()
