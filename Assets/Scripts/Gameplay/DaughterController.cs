@@ -42,7 +42,6 @@ public class DaughterController : PlayerController
                 //footStepInstance.release();
                 timer = 0.0f;
             }
-            Debug.Log(timer);
             timer += Time.deltaTime;
         }
     }

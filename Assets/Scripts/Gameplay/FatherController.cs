@@ -32,23 +32,14 @@ public class FatherController : PlayerController
     public void Shoot()
     {
         // OLD shooting code (instantiates bullet prefab)
-        //GameObject bullet = Instantiate(bulletPrefab,fireSpawn.position,fireSpawn.rotation);
-        //Rigidbody rb = bullet.GetComponent<Rigidbody>();
-        //rb.AddForce(fireSpawn.up * bulletForce, ForceMode.Impulse);
-        Debug.Log("Shoot");
         float rayLength = 3.0f;
         RaycastHit hit;
         if (Physics.Raycast(gameObject.transform.position, lookDirection * rayLength, out hit))
         {
-            Debug.Log("The RayCast has hit " + hit.transform.name);
             DestroyableBranches branches = hit.transform.GetComponent<DestroyableBranches>();
             if (branches)
             {
                 branches.DestroyBranches();
-            }
-            else
-            {
-                Debug.Log("did NOT hit branches");
             }
         }
 
