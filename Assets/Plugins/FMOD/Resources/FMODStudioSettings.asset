@@ -271,10 +271,10 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 0
   HasPlatforms: 0
-  sourceProjectPath: ../AGS_FMOD/AGS_FMOD.fspro
+  sourceProjectPath: AGS_FMOD/AGS/AGS.fspro
   sourceBankPath: Assets/FMODbank/Desktop
   SourceBankPathUnformatted: 
-  BankRefreshCooldown: 5
+  BankRefreshCooldown: 1
   ShowBankRefreshWindow: 0
   AutomaticEventLoading: 1
   BankLoadType: 0
@@ -358,8 +358,8 @@ MonoBehaviour:
       Value: 
       HasValue: 0
     SpeakerMode:
-      Value: 3
-      HasValue: 1
+      Value: 0
+      HasValue: 0
     VirtualChannelCount:
       Value: 0
       HasValue: 0

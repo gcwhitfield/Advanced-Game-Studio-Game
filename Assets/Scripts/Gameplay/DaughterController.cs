@@ -126,9 +126,9 @@ public class DaughterController : PlayerController
             float newhor = movement2[0]; //horizontal portion of unit vector
             float newver = movement2[1]; //vertical portion of unit vector */
             float angle = Mathf.Rad2Deg * Mathf.Atan2(newver, newhor); //create angle using unit vector and make it into degrees
-            if(angle < 0)
+            if (angle < 0)
             {
-              angle = 360 + angle;
+                angle = 360 + angle;
             }
             Debug.Log(angle);
             if (angle <= 10 || angle >= 350) // go east, 20 degree angle
