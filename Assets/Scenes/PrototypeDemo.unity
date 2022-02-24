@@ -1057,6 +1057,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4512776908498601901, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1475300310713671028, guid: 1b7ee01b7fb334c7885d27be7c5218e3, type: 3}
+    - target: {fileID: 4512776908498601901, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6537345629051514830, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
       propertyPath: footAudio.Path
       value: event:/SFX/FootSteps
@@ -1077,6 +1085,10 @@ PrefabInstance:
       propertyPath: footAudio.Guid.Data4
       value: -92778324
       objectReference: {fileID: 0}
+    - target: {fileID: 6918751744163230094, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 705dbd0a8a7a343e39ff5f7dced699e5, type: 2}
     - target: {fileID: 7391636475874530711, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.11602064
@@ -3265,6 +3277,18 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[5]
       value: 
       objectReference: {fileID: 151639249}
+    - target: {fileID: 8589097151914952797, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
+      propertyPath: m_Height
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589097151914952797, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589097151914952797, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
+      propertyPath: m_Center.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8589097151914952798, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
       propertyPath: m_RootOrder
       value: 0
