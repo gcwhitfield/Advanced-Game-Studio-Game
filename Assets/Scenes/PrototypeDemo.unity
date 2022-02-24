@@ -3265,6 +3265,18 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[5]
       value: 
       objectReference: {fileID: 151639249}
+    - target: {fileID: 8589097151914952797, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
+      propertyPath: m_Height
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589097151914952797, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589097151914952797, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
+      propertyPath: m_Center.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8589097151914952798, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
       propertyPath: m_RootOrder
       value: 0
