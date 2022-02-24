@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using FMODUnity;
 
 public class FatherController : PlayerController
 {
@@ -12,19 +11,18 @@ public class FatherController : PlayerController
     public GameObject bulletPrefab;
     public float bulletForce = 20.0f;
 
-    public EventReference shootAudio;
-    private FMOD.Studio.EventInstance shootInstance;
-
     private void Awake()
     {
-        if (!Instance) Instance = this as FatherController;
-        shootInstance = RuntimeManager.CreateInstance(shootAudio);
-        RuntimeManager.AttachInstanceToGameObject(shootInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
+        if (!Instance) Instance = this;
+        else Destroy(gameObject);
     }
 
     public new void Update()
     {
         base.Update();
+
+        // footstep audio
+        AudioManager.Instance.FootstepAudio(gameObject, movement, moveSpeed);
 
         Debug.DrawRay(gameObject.transform.position, lookDirection * 10.0f, Color.white, 1.0f);
     }
@@ -44,7 +42,6 @@ public class FatherController : PlayerController
         }
 
         // play the shooting sound
-        shootInstance.start();
-        //shootInstance.release();
+        AudioManager.Instance.ShootAudio(gameObject);
     }
 }
