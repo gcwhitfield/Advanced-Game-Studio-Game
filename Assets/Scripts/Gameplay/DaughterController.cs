@@ -17,6 +17,8 @@ public class DaughterController : PlayerController
     [HideInInspector]
     public bool hidden;
 
+    public GameObject flashlight;
+
     private void Awake()
     {
         if (!Instance) Instance = this;
@@ -89,8 +91,12 @@ public class DaughterController : PlayerController
     {
         base.Update(); // calls PlayerController.Update()
 
+
         // footstep audio
         AudioManager.Instance.FootstepAudio(gameObject, movement, moveSpeed);
+
+        // set flashlight look direction
+        flashlight.transform.rotation = Quaternion.Euler(new Vector3(0, Mathf.Rad2Deg * Mathf.Atan2(lookDirection.x, lookDirection.z), 0));
 
         Vector2 movement2 = new Vector2(movement.x, movement.z).normalized; //getting movement vector from playercontroller.cs
         float newhor = movement2[0]; //horizontal portion of unit vector

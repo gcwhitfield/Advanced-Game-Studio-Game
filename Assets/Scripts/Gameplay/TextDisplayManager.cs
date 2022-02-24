@@ -10,12 +10,18 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
     [SerializeField] private Animator daughterTextAnimator;
     [SerializeField] private TMP_Text daughterText;
 
+    [System.Serializable]
     public enum TextType
     {
         FATHER, // text only on father's side
         DAUGHTER, // text only on daughter's side
         CENTER // text in the center of screen [not yet implemented]
     };
+
+    public void ShowTestText()
+    {
+        ShowText(TextType.FATHER, "Bagels are my favorite food! :^)");
+    }
 
     public void ShowText(TextType type, string text)
     {

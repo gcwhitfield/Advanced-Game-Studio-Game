@@ -30,11 +30,16 @@ public class PlayerController : MonoBehaviour
         lookDirection = gameObject.transform.forward;
     }
 
-    public void OnMove(CallbackContext context)
+    public void Move(CallbackContext context)
     {
-        //Debug.Log("OnMove");
         Vector2 movement2D = context.ReadValue<Vector2>();
         movement = new Vector3(movement2D.x, 0, movement2D.y);
+    }
+
+    // called when the player needs to confirm an action in the UI or in the environment
+    public void Submit()
+    {
+
     }
 
     // Update is called once per frame

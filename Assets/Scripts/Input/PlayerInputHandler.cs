@@ -45,7 +45,7 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if (player)
         {
-            player.OnMove(context);
+            player.Move(context);
         }
         else
         {
@@ -84,5 +84,10 @@ public class PlayerInputHandler : MonoBehaviour
             DaughterController d = player as DaughterController;
             d.Collect();
         }
+    }
+
+    public void OnSubmit(CallbackContext context)
+    {
+        player.Submit();
     }
 }

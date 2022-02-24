@@ -11,8 +11,11 @@ public class AudioManager : MonoBehaviour
     public EventReference footStepAudio;
     public EventReference ambientAudio;
     public EventReference themeAudio;
+    public EventReference lanternWalkingAduio;
+    //public EventReference lanternLaunchAduio;
 
-    private float timer = 0.0f;
+    private float footstepTimer = 0.0f;
+    private float lanternTimer = 0.0f;
 
     private void Awake()
     {
@@ -25,7 +28,7 @@ public class AudioManager : MonoBehaviour
         AmbientAudio();
     }
 
-    private void playAudio(EventReference audio, GameObject gb)
+    private void PlayAudio(EventReference audio, GameObject gb)
     {
         FMOD.Studio.EventInstance audioInstance;
         audioInstance = RuntimeManager.CreateInstance(audio);
@@ -37,24 +40,42 @@ public class AudioManager : MonoBehaviour
 
     public void ShootAudio(GameObject gb)
     {
-        playAudio(shootAudio, gb);
+        PlayAudio(shootAudio, gb);
     }
 
     public void FootstepAudio(GameObject gb, Vector3 movement, float moveSpeed)
     {
         if (movement != Vector3.zero)
         {
-            if (timer > 1)
+            if (footstepTimer > 1)
             {
-                playAudio(footStepAudio, gb);
-                timer = 0.0f;
+                PlayAudio(footStepAudio, gb);
+                footstepTimer = 0.0f;
             }
-            timer += Time.deltaTime * moveSpeed;
+            footstepTimer += Time.deltaTime * moveSpeed;
         }
     }
 
     public void AmbientAudio()
     {
-        playAudio(ambientAudio, gameObject);
+        PlayAudio(ambientAudio, gameObject);
+    }
+
+    public void LanternWalkingAudio(GameObject gb, Vector3 movement)
+    {
+        if (movement != Vector3.zero)
+        {
+            if (lanternTimer > 30)
+            {
+                PlayAudio(lanternWalkingAduio, gb);
+                lanternTimer = 0.0f;
+            }
+            lanternTimer += Time.deltaTime * Random.Range(0f, 10.0f);
+
+        }
+    }
+
+    public void LanternLanuchAudio()
+    {
     }
 }

@@ -121,6 +121,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: e6238423-07a0-4553-b767-67cf6d96e97d
     m_ActionName: PlayMovement/Collect[/XboxGamepadMacOS/buttonWest,/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 71806d05-bddd-4e5e-b88c-bf1c3f1aa083
+    m_ActionName: PlayMovement/Confirm[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayMovement
