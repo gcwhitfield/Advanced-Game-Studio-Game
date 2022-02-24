@@ -14,7 +14,8 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        if (!Instance) Instance = this as AudioManager;
+        if (!Instance) Instance = this;
+        else Destroy(gameObject);
     }
 
     public void ShootAudio(GameObject gb)
@@ -41,7 +42,6 @@ public class AudioManager : MonoBehaviour
                 footStepInstance.release();
                 timer = 0.0f;
             }
-            Debug.Log(timer);
             timer += Time.deltaTime * moveSpeed;
         }
     }

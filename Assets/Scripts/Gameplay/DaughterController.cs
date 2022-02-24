@@ -19,7 +19,8 @@ public class DaughterController : PlayerController
 
     private void Awake()
     {
-        if (!Instance) Instance = this as DaughterController;
+        if (!Instance) Instance = this;
+        else Destroy(gameObject);
     }
 
     // called when the daughter presses the "Hide" key

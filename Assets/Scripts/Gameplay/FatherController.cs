@@ -13,7 +13,8 @@ public class FatherController : PlayerController
 
     private void Awake()
     {
-        if (!Instance) Instance = this as FatherController;
+        if (!Instance) Instance = this;
+        else Destroy(gameObject);
     }
 
     public new void Update()
