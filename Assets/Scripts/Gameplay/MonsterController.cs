@@ -7,16 +7,15 @@ public class MonsterController : MonoBehaviour
 {
     public NavMeshAgent agent;
     public float LookRadius = 10f;
-    public DaughterController daughter;
     public Transform[] waypoints;
-    int waypointsIndex;
-    Vector3 waypointDestination;
-    Transform player;
-    float distance;
-    bool isPatrol;
-    
+    private int waypointsIndex;
+    private Vector3 waypointDestination;
+    private Transform player;
+    private float distance;
+    private bool isPatrol;
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         player = DaughterController.Instance.transform;
         //Initialize Patrol
@@ -28,34 +27,38 @@ public class MonsterController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         distance = Vector3.Distance(player.position, transform.position);
-        if (distance <= LookRadius && !daughter.hidden)
+        if (distance <= LookRadius && !DaughterController.Instance.hidden)
         {
             agent.stoppingDistance = 2.5f;
             Chase();
             isPatrol = false;
         }
-        else {
+        else
+        {
             //agent.ResetPath();
-            if (!isPatrol) {
+            if (!isPatrol)
+            {
                 agent.stoppingDistance = 0.5f;
                 MoveToDestination();
                 isPatrol = true;
-            }    
+            }
             Patrol();
         }
     }
+
     //Draw the search range
-    void OnDrawGizmosSelected()
+    private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, LookRadius);
     }
 
     //Chase function
-    void Chase() {
+    private void Chase()
+    {
         agent.SetDestination(player.position);
         if (distance <= agent.stoppingDistance)
         {
@@ -64,26 +67,35 @@ public class MonsterController : MonoBehaviour
             FaceTarget();
         }
     }
-    void FaceTarget() {
+
+    private void FaceTarget()
+    {
         Vector3 direction = (player.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5);
     }
 
     //Patrol function
-    void Patrol() {
-        if (Vector3.Distance(transform.position, waypointDestination) < 3) {
+    private void Patrol()
+    {
+        if (Vector3.Distance(transform.position, waypointDestination) < 3)
+        {
             IterateWaypoints();
             MoveToDestination();
         }
     }
-    void MoveToDestination() {
+
+    private void MoveToDestination()
+    {
         waypointDestination = waypoints[waypointsIndex].position;
         agent.SetDestination(waypointDestination);
     }
-    void IterateWaypoints() {
+
+    private void IterateWaypoints()
+    {
         waypointsIndex++;
-        if (waypointsIndex >= waypoints.Length) {
+        if (waypointsIndex >= waypoints.Length)
+        {
             waypointsIndex = 0;
         }
     }

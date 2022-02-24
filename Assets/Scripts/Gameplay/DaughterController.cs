@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.AI;
-using FMODUnity;
 
 public class DaughterController : PlayerController
 {
@@ -18,32 +17,9 @@ public class DaughterController : PlayerController
     [HideInInspector]
     public bool hidden;
 
-    public EventReference footStepAudio;
-    private FMOD.Studio.EventInstance footStepInstance;
-    private float timer = 0.0f;
-
     private void Awake()
     {
         if (!Instance) Instance = this as DaughterController;
-
-        footStepInstance = RuntimeManager.CreateInstance(footStepAudio);
-        RuntimeManager.AttachInstanceToGameObject(footStepInstance, GetComponent<Transform>());
-        //InvokeRepeating("PlayFootstepAudio", 0, 0.75f);
-    }
-
-    public void PlayFootstepAudio()
-    {
-        footStepInstance.set3DAttributes(RuntimeUtils.To3DAttributes(transform.position));
-        if (movement != Vector3.zero)
-        {
-            if (timer > moveSpeed / 9)
-            {
-                footStepInstance.start();
-                //footStepInstance.release();
-                timer = 0.0f;
-            }
-            timer += Time.deltaTime;
-        }
     }
 
     // called when the daughter presses the "Hide" key
@@ -108,7 +84,9 @@ public class DaughterController : PlayerController
     private new void Update()
     {
         base.Update(); // calls PlayerController.Update()
-        PlayFootstepAudio();
+
+        // footstep audio
+        AudioManager.Instance.FootstepAudio(gameObject, movement, moveSpeed);
 
         Vector2 movement2 = new Vector2(movement.x, movement.z).normalized; //getting movement vector from playercontroller.cs
         float newhor = movement2[0]; //horizontal portion of unit vector
@@ -130,7 +108,7 @@ public class DaughterController : PlayerController
             {
                 angle = 360 + angle;
             }
-            Debug.Log(angle);
+            //Debug.Log(angle);
             if (angle <= 10 || angle >= 350) // go east, 20 degree angle
             {
                 animator.SetFloat("Speed", 1);
