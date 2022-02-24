@@ -20,21 +20,23 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
 
     public void ShowTestText()
     {
-        ShowText(TextType.FATHER, "Bagels are my favorite food! :^)");
+        ShowText(TextType.FATHER, "Bagels are my favorite food! :^)", 5.0f);
     }
 
-    public void ShowText(TextType type, string text)
+    public void ShowText(TextType type, string text, float textHoldTime)
     {
         ScrollingTextParams textParams;
         textParams.type = type;
         textParams.text = text;
+        textParams.textHoldTime = textHoldTime;
         StartCoroutine("DisplayScrollingText", textParams);
     }
 
     struct ScrollingTextParams
     {
-        public TextType type;
-        public string text;
+        public TextType type; // the location to display the text on the screen
+        public string text; // the text to display
+        public float textHoldTime; // the duration to hold the text on the screen
     }
 
     IEnumerator DisplayScrollingText(ScrollingTextParams textParams)
@@ -68,22 +70,39 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
         }
 
         // play the open animation    
+        animator.gameObject.SetActive(true);
         animator.SetTrigger("Open");
         
         // display scrolling text
         float timeBetweenChars = 0.05f; // in seconds
-        int i = 0;
         text.text = "";
-        while (i < textParams.text.Length)
+        for (int i = 0; i < textParams.text.Length; i++)
         {
             text.text = text.text + textParams.text[i];
             yield return new WaitForSeconds(timeBetweenChars);
         }
         yield return null;
 
+        // hold the text for the hold time
+        float timer = 0;
+        while (timer < textParams.textHoldTime)
+        {
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
         // play close animation, disable the textbox
         animator.SetTrigger("Close");
-        float timer = 0;
+
+        // wait a second for the animator to transition into next state
+        timer = 0;
+        while (timer < 0.5f)
+        {
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        timer = 0;
         while (timer < animator.GetCurrentAnimatorClipInfo(0)[0].clip.length + 0.1f) // wait additional 0.1 sec after finish
         {
             timer += Time.deltaTime;

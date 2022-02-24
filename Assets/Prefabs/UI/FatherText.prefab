@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2462924072716587325}
   - component: {fileID: 2462924072716587326}
   - component: {fileID: 2598869049271146184}
+  - component: {fileID: 542457450277389687}
   m_Layer: 5
   m_Name: FatherText
   m_TagString: Untagged
@@ -87,15 +88,27 @@ Animator:
   m_GameObject: {fileID: 2462924072716587264}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f58716db15e1f45bba3fc377c3bc1baf, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!225 &542457450277389687
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2462924072716587264}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2462924072803402383
 GameObject:
   m_ObjectHideFlags: 0
