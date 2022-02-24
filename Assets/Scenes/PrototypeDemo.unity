@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.4279548, g: 0.46436486, b: 0.5566038, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -992,10 +992,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4014819054487939557, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 4014819055372325451, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
       propertyPath: m_Name
       value: Father
@@ -1043,54 +1039,6 @@ PrefabInstance:
     - target: {fileID: 4014819055372325492, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6537345629051514830, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
-      propertyPath: footAudio.Path
-      value: event:/SFX/FootSteps
-      objectReference: {fileID: 0}
-    - target: {fileID: 6537345629051514830, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
-      propertyPath: footAudio.Guid.Data1
-      value: -1405520950
-      objectReference: {fileID: 0}
-    - target: {fileID: 6537345629051514830, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
-      propertyPath: footAudio.Guid.Data2
-      value: 1174048459
-      objectReference: {fileID: 0}
-    - target: {fileID: 6537345629051514830, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
-      propertyPath: footAudio.Guid.Data3
-      value: -474811007
-      objectReference: {fileID: 0}
-    - target: {fileID: 6537345629051514830, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
-      propertyPath: footAudio.Guid.Data4
-      value: -92778324
-      objectReference: {fileID: 0}
-    - target: {fileID: 7391636475874530711, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.11602064
-      objectReference: {fileID: 0}
-    - target: {fileID: 7391636475874530711, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.1499996
-      objectReference: {fileID: 0}
-    - target: {fileID: 7391636475874530711, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.98768836
-      objectReference: {fileID: 0}
-    - target: {fileID: 7391636475874530711, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7391636475874530711, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.1564345
-      objectReference: {fileID: 0}
-    - target: {fileID: 7391636475874530711, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7391636475874530711, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
