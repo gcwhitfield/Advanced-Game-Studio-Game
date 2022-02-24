@@ -18,8 +18,6 @@ public class PlayerInputHandler : MonoBehaviour
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
-        Debug.Log(DaughterController.Instance.playerIndex);
-        Debug.Log(FatherController.Instance.playerIndex);
         if (debugMode)
         {
             if (fatherOn)

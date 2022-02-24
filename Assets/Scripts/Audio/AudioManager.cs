@@ -35,13 +35,14 @@ public class AudioManager : MonoBehaviour
         //footStepInstance.set3DAttributes(RuntimeUtils.To3DAttributes(gb.transform.position));
         if (movement != Vector3.zero)
         {
-            if (timer > moveSpeed / 12)
+            if (timer > 1)
             {
                 footStepInstance.start();
                 footStepInstance.release();
                 timer = 0.0f;
             }
-            timer += Time.deltaTime;
+            Debug.Log(timer);
+            timer += Time.deltaTime * moveSpeed;
         }
     }
 }
