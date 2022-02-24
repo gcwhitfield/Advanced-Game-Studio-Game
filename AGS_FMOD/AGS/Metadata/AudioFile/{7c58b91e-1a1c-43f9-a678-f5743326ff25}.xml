@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{7c58b91e-1a1c-43f9-a678-f5743326ff25}">
 		<property name="assetPath">
-			<value>Owl sound effect I Merle s Channel.mp3</value>
+			<value>Ambient/owl.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

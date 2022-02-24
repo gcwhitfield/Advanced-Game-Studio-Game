@@ -9,6 +9,8 @@ public class AudioManager : MonoBehaviour
 
     public EventReference shootAudio;
     public EventReference footStepAudio;
+    public EventReference ambientAudio;
+    public EventReference themeAudio;
 
     private float timer = 0.0f;
 
@@ -18,31 +20,41 @@ public class AudioManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
+    private void Start()
+    {
+        AmbientAudio();
+    }
+
+    private void playAudio(EventReference audio, GameObject gb)
+    {
+        FMOD.Studio.EventInstance audioInstance;
+        audioInstance = RuntimeManager.CreateInstance(audio);
+        RuntimeManager.AttachInstanceToGameObject(audioInstance, gb.transform);
+        //footStepInstance.set3DAttributes(RuntimeUtils.To3DAttributes(gb.transform.position));
+        audioInstance.start();
+        audioInstance.release();
+    }
+
     public void ShootAudio(GameObject gb)
     {
-        FMOD.Studio.EventInstance shootInstance;
-        shootInstance = RuntimeManager.CreateInstance(shootAudio);
-        RuntimeManager.AttachInstanceToGameObject(shootInstance, gb.transform);
-
-        shootInstance.start();
-        shootInstance.release();
+        playAudio(shootAudio, gb);
     }
 
     public void FootstepAudio(GameObject gb, Vector3 movement, float moveSpeed)
     {
-        FMOD.Studio.EventInstance footStepInstance;
-        footStepInstance = RuntimeManager.CreateInstance(footStepAudio);
-        RuntimeManager.AttachInstanceToGameObject(footStepInstance, gb.transform);
-        //footStepInstance.set3DAttributes(RuntimeUtils.To3DAttributes(gb.transform.position));
         if (movement != Vector3.zero)
         {
             if (timer > 1)
             {
-                footStepInstance.start();
-                footStepInstance.release();
+                playAudio(footStepAudio, gb);
                 timer = 0.0f;
             }
             timer += Time.deltaTime * moveSpeed;
         }
+    }
+
+    public void AmbientAudio()
+    {
+        playAudio(ambientAudio, gameObject);
     }
 }

@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{8f576860-0617-4d35-9352-edf6930bd755}">
 		<property name="assetPath">
-			<value>FootStep/mixkit-footsteps-in-woods-loop-533.wav</value>
+			<value>FootStep/wood.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
