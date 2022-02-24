@@ -79,6 +79,9 @@ public class DaughterController : PlayerController
         animator.SetBool("RunSW", false);
         animator.SetBool("RunS", false);
         animator.SetBool("RunN", false);
+        animator.SetBool("RunE", false);
+        animator.SetBool("RunNE", false);
+        animator.SetBool("RunSE", false);
     }
 
     private new void Update()
@@ -94,8 +97,8 @@ public class DaughterController : PlayerController
 
         if (newhor == 0 && newver == 0) //character is idle
         {
-            //animator.SetFloat("Speed", 0);
-            animator.SetBool("TurnEast", true);
+            animator.SetFloat("Speed", 0);
+            //animator.SetBool("TurnEast", true);
         }
         else
         {
@@ -113,13 +116,13 @@ public class DaughterController : PlayerController
             {
                 animator.SetFloat("Speed", 1);
                 ResetAnimatorDirections();
-                animator.SetBool("RunW", true);
+                animator.SetBool("RunE", true);
             }
             else if (angle > 10 && angle < 80) //go northeast, 70 degree angle
             {
                 animator.SetFloat("Speed", 1);
                 ResetAnimatorDirections();
-                animator.SetBool("RunNW", true);
+                animator.SetBool("RunNE", true);
             }
             else if (angle >= 80 && angle <= 100) //go north, 20 degree angle
             {
@@ -155,7 +158,7 @@ public class DaughterController : PlayerController
             {
                 animator.SetFloat("Speed", 1);
                 ResetAnimatorDirections();
-                animator.SetBool("RunSW", true);
+                animator.SetBool("RunSE", true);
             }
         }
     }
