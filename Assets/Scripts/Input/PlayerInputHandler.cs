@@ -12,17 +12,34 @@ public class PlayerInputHandler : MonoBehaviour
     [HideInInspector]
     public PlayerController player;
 
+    public bool debugMode = true;
+    public bool fatherOn = false;
+
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
-        if (playerInput.playerIndex == DaughterController.Instance.playerIndex)
+        Debug.Log(DaughterController.Instance.playerIndex);
+        Debug.Log(FatherController.Instance.playerIndex);
+        if (debugMode)
         {
-            player = DaughterController.Instance;
-            //player = FatherController.Instance;
+            if (fatherOn)
+            {
+                player = FatherController.Instance;
+            }
+            else {
+                player = DaughterController.Instance;
+            }
         }
-        else
-        {
-            player = FatherController.Instance;
+        else {
+            if (playerInput.playerIndex == DaughterController.Instance.playerIndex)
+            {
+                player = DaughterController.Instance;
+                //player = FatherController.Instance;
+            }
+            else
+            {
+                player = FatherController.Instance;
+            }
         }
     }
 
