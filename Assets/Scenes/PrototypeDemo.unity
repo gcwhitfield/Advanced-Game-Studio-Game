@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -868,6 +868,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 889826909, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 889826910, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -1652,6 +1656,14 @@ PrefabInstance:
       value: event:/SFX/Shoot
       objectReference: {fileID: 0}
     - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
+      propertyPath: themeAudio.Path
+      value: event:/Music/Theme-sad
+      objectReference: {fileID: 0}
+    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
+      propertyPath: ambientAudio.Path
+      value: event:/Music/Ambient-Night
+      objectReference: {fileID: 0}
+    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
       propertyPath: footStepAudio.Path
       value: event:/SFX/FootSteps
       objectReference: {fileID: 0}
@@ -1670,6 +1682,38 @@ PrefabInstance:
     - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
       propertyPath: shootAudio.Guid.Data4
       value: 625665378
+      objectReference: {fileID: 0}
+    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
+      propertyPath: themeAudio.Guid.Data1
+      value: -1520312755
+      objectReference: {fileID: 0}
+    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
+      propertyPath: themeAudio.Guid.Data2
+      value: 1086289450
+      objectReference: {fileID: 0}
+    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
+      propertyPath: themeAudio.Guid.Data3
+      value: -624724077
+      objectReference: {fileID: 0}
+    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
+      propertyPath: themeAudio.Guid.Data4
+      value: 1985101665
+      objectReference: {fileID: 0}
+    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
+      propertyPath: ambientAudio.Guid.Data1
+      value: -837340117
+      objectReference: {fileID: 0}
+    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
+      propertyPath: ambientAudio.Guid.Data2
+      value: 1213720067
+      objectReference: {fileID: 0}
+    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
+      propertyPath: ambientAudio.Guid.Data3
+      value: 782525882
+      objectReference: {fileID: 0}
+    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
+      propertyPath: ambientAudio.Guid.Data4
+      value: 624324812
       objectReference: {fileID: 0}
     - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
       propertyPath: footStepAudio.Guid.Data1

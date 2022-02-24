@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{2831ae87-3ff4-49d6-a7cd-3e5215f43af2}">
 		<property name="assetPath">
-			<value>FootStep/mixkit-footsteps-in-the-forest-ground-1230.wav</value>
+			<value>FootStep/forest.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
