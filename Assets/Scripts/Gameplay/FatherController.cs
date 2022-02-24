@@ -21,8 +21,10 @@ public class FatherController : PlayerController
     {
         base.Update();
 
-        // footstep audio
+        // play the footstep audio
         AudioManager.Instance.FootstepAudio(gameObject, movement, moveSpeed);
+        // play the lantern sound
+        AudioManager.Instance.LanternWalkingAudio(gameObject, movement);
 
         Debug.DrawRay(gameObject.transform.position, lookDirection * 10.0f, Color.white, 1.0f);
     }

@@ -1788,6 +1788,26 @@ PrefabInstance:
       propertyPath: footStepAudio.Guid.Data4
       value: 1755499379
       objectReference: {fileID: 0}
+    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
+      propertyPath: lanternWalkingAduio.Path
+      value: event:/SFX/LanternWalking
+      objectReference: {fileID: 0}
+    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
+      propertyPath: lanternWalkingAduio.Guid.Data1
+      value: 671769237
+      objectReference: {fileID: 0}
+    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
+      propertyPath: lanternWalkingAduio.Guid.Data2
+      value: 1255321237
+      objectReference: {fileID: 0}
+    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
+      propertyPath: lanternWalkingAduio.Guid.Data3
+      value: 1211098044
+      objectReference: {fileID: 0}
+    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
+      propertyPath: lanternWalkingAduio.Guid.Data4
+      value: -196068592
+      objectReference: {fileID: 0}
     - target: {fileID: 8557451002179679963, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
       propertyPath: m_RootOrder
       value: 1
