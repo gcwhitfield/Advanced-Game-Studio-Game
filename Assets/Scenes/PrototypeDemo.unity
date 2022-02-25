@@ -1066,6 +1066,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6537345629051514830, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1991436452}
+    - target: {fileID: 6537345629051514830, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
       propertyPath: footAudio.Path
       value: event:/SFX/FootSteps
       objectReference: {fileID: 0}
@@ -3117,6 +3121,11 @@ Transform:
   m_Father: {fileID: 1555851799}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1991436452 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6918751744163230094, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
+  m_PrefabInstance: {fileID: 245685154}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2002270273
 GameObject:
   m_ObjectHideFlags: 0
