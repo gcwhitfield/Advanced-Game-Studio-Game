@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController cc;
 
+
     // the value of playerIndex will be set inside of DaughterController.cs or FatherController.cs
     public int playerIndex { get; set; }
 
@@ -58,11 +59,24 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        // apply gravity
+        if (!cc.isGrounded)
+        {
+            movement.y += Physics.gravity.y/10;
+        } else
+        {
+            movement.y = 0.0f;
+        }
+
         // move the character based on the movement input vector
         if (movement != Vector3.zero)
         {
             cc.Move(movement * moveSpeed * Time.deltaTime);
             lookDirection = movement;
         }
+
+        // lerp camera position
+
+
     }
 }

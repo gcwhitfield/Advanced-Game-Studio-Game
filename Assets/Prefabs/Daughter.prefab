@@ -383,6 +383,10 @@ PrefabInstance:
       value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 7121009890443627918, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+      propertyPath: field of view
+      value: 29.119097
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121009890443627918, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_TargetTexture
       value: 
       objectReference: {fileID: 8400000, guid: 4fde9b9516794439f8b63b174849b4ea, type: 2}
