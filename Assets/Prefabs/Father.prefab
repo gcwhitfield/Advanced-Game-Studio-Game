@@ -110,7 +110,7 @@ SpriteRenderer:
   m_Size: {x: 4.2200003, y: 10.190001}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &6918751744163230094
@@ -219,6 +219,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7121009889559279135, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+      propertyPath: m_SlopeLimit
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 7121009889559279138, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_Name
       value: Father
@@ -285,10 +289,3 @@ MonoBehaviour:
   fireSpawn: {fileID: 2059756972}
   bulletPrefab: {fileID: 3630579012413559642, guid: b747cc2e39c84eb4c86ca8baf28dd776, type: 3}
   bulletForce: 20
-  shootAudio:
-    Guid:
-      Data1: 1160458788
-      Data2: 1093244894
-      Data3: -1273620589
-      Data4: 625665378
-    Path: event:/SFX/Shoot

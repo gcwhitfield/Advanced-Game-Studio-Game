@@ -41,6 +41,8 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
 
     IEnumerator DisplayScrollingText(ScrollingTextParams textParams)
     {
+        Debug.Log("Display scrolling text called");
+
         Animator animator = null;
         TMP_Text text = null;
         switch(textParams.type)
@@ -83,6 +85,7 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
         }
         yield return null;
 
+
         // hold the text for the hold time
         float timer = 0;
         while (timer < textParams.textHoldTime)
@@ -94,17 +97,9 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
         // play close animation, disable the textbox
         animator.SetTrigger("Close");
 
-        // wait a second for the animator to transition into next state
         timer = 0;
-        while (timer < 0.5f)
-        {
-            timer += Time.deltaTime;
-            yield return null;
-        }
-
-        timer = 0;
-        while (timer < animator.GetCurrentAnimatorClipInfo(0)[0].clip.length + 0.1f) // wait additional 0.1 sec after finish
-        {
+        float waitTime = 2; // time to wait before removing the text
+        while (timer < waitTime) {
             timer += Time.deltaTime;
             yield return null;
         }
