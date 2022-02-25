@@ -102,7 +102,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8793639957104055765, guid: 6b735a98369f54147a128624fec77381, type: 3}
+  m_Sprite: {fileID: 1475300310713671028, guid: 1b7ee01b7fb334c7885d27be7c5218e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -123,7 +123,7 @@ Animator:
   m_GameObject: {fileID: 1531176394709503021}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c55b3a79528009646bce11ea9bc53ca6, type: 2}
+  m_Controller: {fileID: 9100000, guid: 705dbd0a8a7a343e39ff5f7dced699e5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -180,16 +180,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7121009889559279133, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8500001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121009889559279133, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.85000014
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121009889559279133, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8499999
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121009889559279133, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 210.55156
+      value: 132.90741
       objectReference: {fileID: 0}
     - target: {fileID: 7121009889559279133, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.1
+      value: 0.35248756
       objectReference: {fileID: 0}
     - target: {fileID: 7121009889559279133, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 718.5959
+      value: -121.51349
       objectReference: {fileID: 0}
     - target: {fileID: 7121009889559279133, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_LocalRotation.w
@@ -205,7 +217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7121009889559279133, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 1.4551915e-11
       objectReference: {fileID: 0}
     - target: {fileID: 7121009889559279133, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -283,7 +295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 864da863e1b2b4dd594ce727a1948c6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 5866666021909216657, guid: c3456434be3254af28b2e21ab5576e15, type: 3}
+  animator: {fileID: 6918751744163230094}
   moveSpeed: 2
   rotateSpeed: 0
   fireSpawn: {fileID: 2059756972}
