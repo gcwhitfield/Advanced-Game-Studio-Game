@@ -17,7 +17,6 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController cc;
 
-
     // the value of playerIndex will be set inside of DaughterController.cs or FatherController.cs
     public int playerIndex { get; set; }
 

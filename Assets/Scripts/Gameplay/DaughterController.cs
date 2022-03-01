@@ -18,6 +18,13 @@ public class DaughterController : PlayerController
     public bool hidden;
 
     public GameObject flashlight;
+    Vector3 prevLookDirection;
+
+    private new void Start()
+    {
+        base.Start();
+        prevLookDirection = lookDirection;
+    }
 
     private void Awake()
     {
@@ -91,12 +98,14 @@ public class DaughterController : PlayerController
     {
         base.Update(); // calls PlayerController.Update()
 
+        // set flashlight look direction. Use Lerp to smoothly transition rotation
+        Quaternion desiredRotation = Quaternion.Euler(new Vector3(0, Mathf.Rad2Deg * Mathf.Atan2(lookDirection.x, lookDirection.z), 0));
+        Quaternion currRotation = flashlight.transform.rotation;
+        flashlight.transform.rotation = Quaternion.Lerp(currRotation, desiredRotation, 0.5f);
 
         // footstep audio
         AudioManager.Instance.FootstepAudio(gameObject, movement, moveSpeed);
 
-        // set flashlight look direction
-        flashlight.transform.rotation = Quaternion.Euler(new Vector3(0, Mathf.Rad2Deg * Mathf.Atan2(lookDirection.x, lookDirection.z), 0));
 
         Vector2 movement2 = new Vector2(movement.x, movement.z).normalized; //getting movement vector from playercontroller.cs
         float newhor = movement2[0]; //horizontal portion of unit vector

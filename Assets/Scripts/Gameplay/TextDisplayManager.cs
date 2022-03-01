@@ -73,7 +73,7 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
 
         // play the open animation    
         animator.gameObject.SetActive(true);
-        animator.SetTrigger("Open");
+        //animator.SetTrigger("Open");
         
         // display scrolling text
         float timeBetweenChars = 0.05f; // in seconds
@@ -95,7 +95,7 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
         }
 
         // play close animation, disable the textbox
-        animator.SetTrigger("Close");
+        //animator.SetTrigger("Close");
 
         timer = 0;
         float waitTime = 2; // time to wait before removing the text
