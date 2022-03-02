@@ -61,10 +61,6 @@ Shader "Unlit/ToonPostProcess"
                 lum = floor(lum);
             
                 // snap color vals to light level
-                float lightLevel = lum;
-                // return col * (lightLevel/_LightLevels);
-
-                
                 return pow(col * (lum/_LightLevels) + _BrightnessOffset, _Exposure);
             }
             ENDCG
