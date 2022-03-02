@@ -1,7 +1,31 @@
 fileFormatVersion: 2
-guid: 7c3617325a90c3b4dba0380cb8fa0795
+guid: 0d7913b5e13124bdebc2f6121c3ace9d
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1037683185877842813
+    second: Daughter Run W_0
+  - first:
+      213: 177056495161484567
+    second: Daughter Run W_1
+  - first:
+      213: 5774451879639241846
+    second: Daughter Run W_2
+  - first:
+      213: -4278496592152410582
+    second: Daughter Run W_3
+  - first:
+      213: -2044053259392504295
+    second: Daughter Run W_4
+  - first:
+      213: -560374311645785912
+    second: Daughter Run W_5
+  - first:
+      213: 3898654526043488843
+    second: Daughter Run W_6
+  - first:
+      213: -363787795754858169
+    second: Daughter Run W_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -24,7 +48,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -88,29 +111,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Server
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: northwest_0
+      name: Daughter Run W_0
       rect:
         serializedVersion: 2
-        x: 303
-        y: 197
-        width: 363
-        height: 653
+        x: 338
+        y: 174
+        width: 426
+        height: 652
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,125 +129,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26cd0db2fd7a0164dac2bfebf662b56d
-      internalID: -377909453
+      spriteID: 3840b5ce3a86991f0800000000000000
+      internalID: -1037683185877842813
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: northwest_1
+      name: Daughter Run W_1
       rect:
         serializedVersion: 2
-        x: 1240
-        y: 201
-        width: 301
-        height: 645
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c53de24793b54b74888b3a5f4e55aea2
-      internalID: 2029251489
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: northwest_2
-      rect:
-        serializedVersion: 2
-        x: 2162
-        y: 170
-        width: 305
-        height: 641
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4e04ded391ff65d4b9ccd62b0b3b8cd6
-      internalID: 163281466
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: northwest_3
-      rect:
-        serializedVersion: 2
-        x: 3225
-        y: 107
-        width: 351
-        height: 743
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 00a49b88d2af2fe4c9f3acae676dd3c0
-      internalID: 1178790823
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: northwest_4
-      rect:
-        serializedVersion: 2
-        x: 4162
-        y: 115
-        width: 445
-        height: 731
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b90e17d5a2b74d84aa3e90fbae6726a5
-      internalID: 97638517
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: northwest_5
-      rect:
-        serializedVersion: 2
-        x: 5240
-        y: 147
-        width: 399
-        height: 703
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 701a8a6afa8e10c4199d53a904cbee16
-      internalID: -177654735
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: northwest_6
-      rect:
-        serializedVersion: 2
-        x: 6264
+        x: 1170
         y: 119
-        width: 351
-        height: 688
+        width: 371
+        height: 714
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93705860a4bfa6345b5d521914dbfbeb
-      internalID: 909302559
+      spriteID: 715a64bb1f7057200800000000000000
+      internalID: 177056495161484567
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: northwest_7
+      name: Daughter Run W_2
       rect:
         serializedVersion: 2
-        x: 7307
-        y: 88
-        width: 293
-        height: 734
+        x: 2025
+        y: 123
+        width: 344
+        height: 672
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,8 +171,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21622892fa54964498ce06a306d7183e
-      internalID: -1769636728
+      spriteID: 674db72e369f22050800000000000000
+      internalID: 5774451879639241846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Daughter Run W_3
+      rect:
+        serializedVersion: 2
+        x: 2744
+        y: 127
+        width: 406
+        height: 680
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a264904940abf94c0800000000000000
+      internalID: -4278496592152410582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Daughter Run W_4
+      rect:
+        serializedVersion: 2
+        x: 3615
+        y: 150
+        width: 446
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e2ee3f36012a3e0800000000000000
+      internalID: -2044053259392504295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Daughter Run W_5
+      rect:
+        serializedVersion: 2
+        x: 4607
+        y: 111
+        width: 434
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c0591558862938f0800000000000000
+      internalID: -560374311645785912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Daughter Run W_6
+      rect:
+        serializedVersion: 2
+        x: 5447
+        y: 100
+        width: 363
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b428acea2adca1630800000000000000
+      internalID: 3898654526043488843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Daughter Run W_7
+      rect:
+        serializedVersion: 2
+        x: 6166
+        y: 107
+        width: 441
+        height: 680
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 749c86c5de093faf0800000000000000
+      internalID: -363787795754858169
       vertices: []
       indices: 
       edges: []
@@ -274,22 +285,13 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: fd2d30596c7854f41aedfc98fca48896
+    spriteID: 7602262f7d8c540f693ff56a68fa8761
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      northwest_6: 909302559
-      northwest_5: -177654735
-      northwest_2: 163281466
-      northwest_4: 97638517
-      northwest_0: -377909453
-      northwest_1: 2029251489
-      northwest_7: -1769636728
-      northwest_3: 1178790823
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
