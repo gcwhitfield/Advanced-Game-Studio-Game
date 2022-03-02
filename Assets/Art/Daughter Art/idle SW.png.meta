@@ -1,7 +1,31 @@
 fileFormatVersion: 2
-guid: 83c44ffddd4531342871403900e6fbad
+guid: 5e0ca988005844bb2bc4041ff5165f04
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8448165900695717965
+    second: newdaughteridle_0
+  - first:
+      213: 1649677423331227370
+    second: newdaughteridle_1
+  - first:
+      213: -9189045994357181228
+    second: newdaughteridle_2
+  - first:
+      213: 4361943555446383199
+    second: newdaughteridle_3
+  - first:
+      213: 4938790747889401667
+    second: newdaughteridle_4
+  - first:
+      213: -1327334577548675977
+    second: newdaughteridle_5
+  - first:
+      213: 4551794877200840710
+    second: newdaughteridle_6
+  - first:
+      213: 1859474720700912401
+    second: newdaughteridle_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -24,7 +48,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -88,29 +111,59 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Server
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: north_0
+      name: newdaughteridle_0
       rect:
         serializedVersion: 2
-        x: 342
+        x: 334
+        y: 123
+        width: 301
+        height: 703
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d48498a502aed3570800000000000000
+      internalID: 8448165900695717965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newdaughteridle_1
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 127
+        width: 281
+        height: 691
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae6b3ab40e4d4e610800000000000000
+      internalID: 1649677423331227370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newdaughteridle_2
+      rect:
+        serializedVersion: 2
+        x: 1729
         y: 104
-        width: 363
-        height: 710
+        width: 335
+        height: 714
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,104 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0ec79a7a5b9f20488dc85bf6110123d
-      internalID: 1870324466
+      spriteID: 4d43d919a53f97080800000000000000
+      internalID: -9189045994357181228
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: north_1
+      name: newdaughteridle_3
       rect:
         serializedVersion: 2
-        x: 1334
-        y: 131
-        width: 391
-        height: 680
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3998bbfed57aa4543a312376347172cc
-      internalID: -1712995890
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: north_2
-      rect:
-        serializedVersion: 2
-        x: 2432
-        y: 139
-        width: 367
-        height: 621
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c1debf35145fadf489d4d856063dd8df
-      internalID: -234224643
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: north_3
-      rect:
-        serializedVersion: 2
-        x: 3463
-        y: 88
-        width: 355
-        height: 715
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 857b654ce0ea1d54dbd61ad3a7a170b0
-      internalID: -1403356259
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: north_4
-      rect:
-        serializedVersion: 2
-        x: 4521
-        y: 111
-        width: 364
-        height: 684
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: af7364462a74e054fb1bb28395347f72
-      internalID: -1876821126
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: north_5
-      rect:
-        serializedVersion: 2
-        x: 5584
+        x: 2439
         y: 115
-        width: 383
-        height: 684
+        width: 325
+        height: 687
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,20 +192,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e2c669a8aa15cb42a100504046c2fbd
-      internalID: 962147368
+      spriteID: f52afa89d8cb88c30800000000000000
+      internalID: 4361943555446383199
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: north_6
+      name: newdaughteridle_4
       rect:
         serializedVersion: 2
-        x: 6494
-        y: 111
+        x: 3061
+        y: 123
+        width: 339
+        height: 703
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34ffee3b40c1a8440800000000000000
+      internalID: 4938790747889401667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newdaughteridle_5
+      rect:
+        serializedVersion: 2
+        x: 3693
+        y: 127
         width: 340
-        height: 668
+        height: 687
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,20 +234,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f4b349bceacbf442972a7c9fc5c8e14
-      internalID: -141641766
+      spriteID: 7743e17fb3c549de0800000000000000
+      internalID: -1327334577548675977
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: north_7
+      name: newdaughteridle_6
       rect:
         serializedVersion: 2
-        x: 7303
-        y: 74
-        width: 367
-        height: 717
+        x: 4439
+        y: 115
+        width: 313
+        height: 703
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,8 +255,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 440a6e3e5d6215245a9be309a9de5411
-      internalID: -645807886
+      spriteID: 608bff903593b2f30800000000000000
+      internalID: 4551794877200840710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newdaughteridle_7
+      rect:
+        serializedVersion: 2
+        x: 5166
+        y: 127
+        width: 301
+        height: 695
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1135234186e2ec910800000000000000
+      internalID: 1859474720700912401
       vertices: []
       indices: 
       edges: []
@@ -274,22 +285,13 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 1011f0b841843174b9af794d477cadbb
+    spriteID: 1f13942c582f44c8a85af630127e8442
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      north_1: -1712995890
-      north_2: -234224643
-      north_6: -141641766
-      north_3: -1403356259
-      north_7: -645807886
-      north_5: 962147368
-      north_0: 1870324466
-      north_4: -1876821126
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

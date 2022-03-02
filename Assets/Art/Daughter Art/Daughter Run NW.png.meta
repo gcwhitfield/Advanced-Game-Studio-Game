@@ -1,7 +1,31 @@
 fileFormatVersion: 2
-guid: ab5c621545f5447448c1f698e384694f
+guid: a1479845d1de84669835c523d16f2bc1
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8004148782970685647
+    second: Daughter Run NW_0
+  - first:
+      213: -2765030995888353465
+    second: Daughter Run NW_1
+  - first:
+      213: -981777646341755411
+    second: Daughter Run NW_2
+  - first:
+      213: -8984130077735943083
+    second: Daughter Run NW_3
+  - first:
+      213: 2958230711028903771
+    second: Daughter Run NW_4
+  - first:
+      213: -1183025441010894774
+    second: Daughter Run NW_5
+  - first:
+      213: 9121878362847486553
+    second: Daughter Run NW_6
+  - first:
+      213: -1030570790876430603
+    second: Daughter Run NW_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -24,7 +48,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -88,28 +111,121 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Server
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: south_0
+      name: Daughter Run NW_0
       rect:
         serializedVersion: 2
-        x: 318
-        y: 104
-        width: 391
+        x: 350
+        y: 197
+        width: 363
+        height: 653
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc8c75a09e2741f60800000000000000
+      internalID: 8004148782970685647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Daughter Run NW_1
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 201
+        width: 297
+        height: 645
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f412185f2a0a9d0800000000000000
+      internalID: -2765030995888353465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Daughter Run NW_2
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 170
+        width: 308
+        height: 641
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ded616dae660062f0800000000000000
+      internalID: -981777646341755411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Daughter Run NW_3
+      rect:
+        serializedVersion: 2
+        x: 2588
+        y: 107
+        width: 355
+        height: 743
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55485a45b45f15380800000000000000
+      internalID: -8984130077735943083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Daughter Run NW_4
+      rect:
+        serializedVersion: 2
+        x: 3338
+        y: 107
+        width: 351
+        height: 743
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5f6786882fbd0920800000000000000
+      internalID: 2958230711028903771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Daughter Run NW_5
+      rect:
+        serializedVersion: 2
+        x: 4076
+        y: 147
+        width: 402
         height: 703
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -118,20 +234,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0358cad36d1238848949fb4528d9feed
-      internalID: -228633092
+      spriteID: a48bb4c11ac059fe0800000000000000
+      internalID: -1183025441010894774
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: south_1
+      name: Daughter Run NW_6
       rect:
         serializedVersion: 2
-        x: 1292
-        y: 80
-        width: 378
-        height: 730
+        x: 4803
+        y: 119
+        width: 355
+        height: 688
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +255,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6d01ae3a3a93524ab591bb27f05bc49
-      internalID: 1780226968
+      spriteID: 952a8dd8a0c679e70800000000000000
+      internalID: 9121878362847486553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: south_2
+      name: Daughter Run NW_7
       rect:
         serializedVersion: 2
-        x: 2318
-        y: 111
-        width: 379
-        height: 684
+        x: 5604
+        y: 88
+        width: 292
+        height: 734
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,113 +276,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c560b561aab900246a5ea27edf2a03b5
-      internalID: 686298677
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: south_3
-      rect:
-        serializedVersion: 2
-        x: 3315
-        y: 158
-        width: 378
-        height: 649
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d7db95f85662404fab37e090fc29e62
-      internalID: -2124931049
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: south_4
-      rect:
-        serializedVersion: 2
-        x: 4268
-        y: 131
-        width: 386
-        height: 676
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ff7dfa93e88a0e540a4799d1ca17b5ea
-      internalID: 1932199305
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: south_5
-      rect:
-        serializedVersion: 2
-        x: 5248
-        y: 72
-        width: 387
-        height: 766
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d1116cb5e18700489392f142e18d739
-      internalID: 1067851091
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: south_6
-      rect:
-        serializedVersion: 2
-        x: 6143
-        y: 111
-        width: 375
-        height: 664
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0f559912093fb7b4b82d96d9e9b78836
-      internalID: 597157553
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: south_7
-      rect:
-        serializedVersion: 2
-        x: 7221
-        y: 143
-        width: 406
-        height: 664
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4e56e7e3c3dbedd48b646fa0687b8153
-      internalID: -2021641994
+      spriteID: 5febaed635da2b1f0800000000000000
+      internalID: -1030570790876430603
       vertices: []
       indices: 
       edges: []
@@ -274,22 +285,13 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 7157c10291f52424f974f1a02972b85b
+    spriteID: feaca9682bb164e6db649b9d05f4b0c4
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      south_1: 1780226968
-      south_7: -2021641994
-      south_5: 1067851091
-      south_6: 597157553
-      south_0: -228633092
-      south_3: -2124931049
-      south_2: 686298677
-      south_4: 1932199305
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
