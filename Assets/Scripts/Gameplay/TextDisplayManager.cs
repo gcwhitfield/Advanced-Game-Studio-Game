@@ -10,6 +10,9 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
     [SerializeField] private Animator daughterTextAnimator;
     [SerializeField] private TMP_Text daughterText;
 
+    bool daughterContinue = false;
+    bool fatherContinue = false;
+
     [System.Serializable]
     public enum TextType
     {
@@ -37,6 +40,20 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
         public TextType type; // the location to display the text on the screen
         public string text; // the text to display
         public float textHoldTime; // the duration to hold the text on the screen
+    }
+
+    // this function will be called from DaughterController.cs. when the player presses their
+    // controller to advance to the next dialogue option
+    public void DaughterContinueToNextLine()
+    {
+        daughterContinue = true;
+    }
+
+    // this function will be called from FatherController.cs. when the player presses their
+    // controller to advance to the next dialogue option
+    public void FatherContinueToNextLine()
+    {
+        fatherContinue = true;
     }
 
     IEnumerator DisplayScrollingText(ScrollingTextParams textParams)
@@ -71,38 +88,57 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
             yield break;
         }
 
+        // create a list of lines based on the return character from input string
+        char []separator = { '\n' };
+        string []lines = textParams.text.Split(separator);
+        
         // play the open animation    
         animator.gameObject.SetActive(true);
-        //animator.SetTrigger("Open");
-        
-        // display scrolling text
-        float timeBetweenChars = 0.05f; // in seconds
-        text.text = "";
-        for (int i = 0; i < textParams.text.Length; i++)
-        {
-            text.text = text.text + textParams.text[i];
-            yield return new WaitForSeconds(timeBetweenChars);
-        }
-        yield return null;
+        animator.SetTrigger("Open");
 
-
-        // hold the text for the hold time
-        float timer = 0;
-        while (timer < textParams.textHoldTime)
+        for (int l = 0; l < lines.Length; l++)
         {
-            timer += Time.deltaTime;
+            // display scrolling text
+            float timeBetweenChars = 0.05f; // in seconds
+            text.text = "";
+            for (int i = 0; i < lines[l].Length; i++)
+            {
+                text.text = text.text + lines[l][i];
+                yield return new WaitForSeconds(timeBetweenChars);
+            }
             yield return null;
+
+            // wait for the user to continue
+            // 'continueToNextLine' will be set to true when the user presses their controller
+            bool cont = false;
+            while (!cont) 
+            {
+                switch(textParams.type)
+                {
+                    case TextType.FATHER:
+                        cont = fatherContinue;
+                        break;
+                    case TextType.DAUGHTER:
+                        cont = daughterContinue;
+                        break;
+                    default:
+                        cont = daughterContinue;
+                        break;
+                }
+                yield return null;
+            }
         }
 
         // play close animation, disable the textbox
-        //animator.SetTrigger("Close");
+        animator.SetTrigger("Close");
 
-        timer = 0;
+        float timer = 0;
         float waitTime = 2; // time to wait before removing the text
         while (timer < waitTime) {
             timer += Time.deltaTime;
             yield return null;
         }
+        animator.Rebind();
         animator.gameObject.SetActive(false);
     }
 }
