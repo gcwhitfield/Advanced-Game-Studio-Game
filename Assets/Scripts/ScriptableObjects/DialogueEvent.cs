@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Dialogue Item", menuName = "Dialogue/Dialogue Item")]
+[CreateAssetMenu(fileName = "New Dialogue Item", menuName = "Dialogue/Dialogue Event")]
 public class DialogueEvent : ScriptableObject
 {
     [Tooltip("The order in which the text entries are defined in dialogueLines will determine " +
