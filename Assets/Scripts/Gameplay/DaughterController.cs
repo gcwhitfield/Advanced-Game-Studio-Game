@@ -36,6 +36,7 @@ public class DaughterController : PlayerController
     public void Hide()
     {
         hidden = true;
+        animator.SetBool("Hide", true);
     }
 
     // called when the daughter presses the "Collect" key
@@ -73,6 +74,7 @@ public class DaughterController : PlayerController
         if (other.gameObject.CompareTag("HiddenSpot"))
         {
             hidden = false;
+            animator.SetBool("Hide", false);
         }
 
         Collectable c = other.GetComponent<Collectable>();
