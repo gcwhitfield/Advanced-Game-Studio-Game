@@ -7,6 +7,7 @@ Shader "Unlit/ToonPostProcess"
         _BrightnessOffset("Brightness Offset", float) = 0.2
         _LightSpreadFactor("Light Spread Factor", float) = 0.5
         _Exposure("Exposure", float) = 1
+        _ColorLevels("Color Levels", int) = 10
     }
     SubShader
     {
@@ -38,10 +39,11 @@ Shader "Unlit/ToonPostProcess"
             sampler2D _MainTex;
             float4 _MainTex_ST;
             int _LightLevels;
+            int _ColorLevels;
             float _BrightnessOffset;
             float _LightSpreadFactor;
             float _Exposure;
-
+            
             v2f vert (appdata v)
             {
                 v2f o;
@@ -55,10 +57,17 @@ Shader "Unlit/ToonPostProcess"
                 // sample the texture
                 fixed4 col = tex2D(_MainTex, i.uv);
 
-                // determine how bright the image is
+                // determine how bright the image is, snap luminance based on light levels
                 float lum = log(Luminance(col) + 1 + _LightSpreadFactor);
                 lum *= _LightLevels;
                 lum = floor(lum);
+
+                // snap image to color bin
+                //col = (float)col;
+                float binSize = 1.0f / (float)_ColorLevels;
+                float4 colorBin = col / binSize;
+                colorBin = floor(colorBin);
+                col = colorBin/(float)_ColorLevels;
             
                 // snap color vals to light level
                 return pow(col * (lum/_LightLevels) + _BrightnessOffset, _Exposure);

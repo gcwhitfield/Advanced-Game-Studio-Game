@@ -7,10 +7,12 @@ public class ToonPostProcessBlit : MonoBehaviour
 {
     [SerializeField] private Material toonPostProcessMaterial;
 
-    public int lightLevels;
+    [Range(1, 10)] public int lightLevels;
+    [Range(1, 40)] public int colorLevels;
     [Range(0, 1)] public float brightnessOffset;
     [Range(0, 2)] public float lightSpreadFactor;
     [Range(0, 5)] public float exposure;
+    
 
     public void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
@@ -18,6 +20,7 @@ public class ToonPostProcessBlit : MonoBehaviour
         toonPostProcessMaterial.SetFloat("_BrightnessOffset", brightnessOffset);
         toonPostProcessMaterial.SetFloat("_LightSpreadFactor", lightSpreadFactor);
         toonPostProcessMaterial.SetFloat("_Exposure", exposure);
+        toonPostProcessMaterial.SetFloat("_ColorLevels", colorLevels);
         Graphics.Blit(source, destination, toonPostProcessMaterial);
     }
 }
