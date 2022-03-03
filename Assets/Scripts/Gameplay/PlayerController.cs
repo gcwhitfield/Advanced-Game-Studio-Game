@@ -37,10 +37,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // called when the player needs to confirm an action in the UI or in the environment
-    public void Submit()
-    {
-
-    }
+    public void Submit() { } // function is overwritten by child class
 
     // Update is called once per frame
     protected void Update()

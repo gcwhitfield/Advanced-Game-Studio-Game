@@ -88,6 +88,17 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
             yield break;
         }
 
+        // initialize fatherContinue and daughterContinue
+        switch (textParams.type)
+        {
+            case TextType.FATHER:
+                fatherContinue = false;
+                break;
+            case TextType.DAUGHTER:
+                daughterContinue = false;
+                break;
+        }
+
         // create a list of lines based on the return character from input string
         char []separator = { '\n' };
         string []lines = textParams.text.Split(separator);
@@ -126,6 +137,15 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
                         break;
                 }
                 yield return null;
+            }
+            switch (textParams.type)
+            {
+                case TextType.FATHER:
+                    fatherContinue = false;
+                    break;
+                case TextType.DAUGHTER:
+                    daughterContinue = false;
+                    break;
             }
         }
 

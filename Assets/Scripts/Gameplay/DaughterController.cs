@@ -51,6 +51,13 @@ public class DaughterController : PlayerController
         }
     }
 
+    // called when the player presses the submit button
+    public new void Submit()
+    {
+        TextDisplayManager.Instance.DaughterContinueToNextLine();
+        Debug.Log("Continue!");
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         // TO-DO: press some button to trigger

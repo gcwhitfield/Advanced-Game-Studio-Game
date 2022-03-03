@@ -88,6 +88,14 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnSubmit(CallbackContext context)
     {
-        player.Submit();
+        if (player == DaughterController.Instance)
+        {
+            DaughterController d = player as DaughterController;
+            d.Submit();
+        } else
+        {
+            FatherController f = player as FatherController;
+            f.Submit();
+        }
     }
 }
