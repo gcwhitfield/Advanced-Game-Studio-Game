@@ -2538,9 +2538,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1965466112}
     m_Modifications:
+    - target: {fileID: 732313364682330942, guid: b83d1726da180498b8d6e3559a9cf8da, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 927252033528852522, guid: b83d1726da180498b8d6e3559a9cf8da, type: 3}
       propertyPath: m_Name
       value: DestroyableBranches
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825563401674681267, guid: b83d1726da180498b8d6e3559a9cf8da, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855999042099294886, guid: b83d1726da180498b8d6e3559a9cf8da, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7088652704916768046, guid: b83d1726da180498b8d6e3559a9cf8da, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7907709624942613827, guid: b83d1726da180498b8d6e3559a9cf8da, type: 3}
       propertyPath: m_RootOrder

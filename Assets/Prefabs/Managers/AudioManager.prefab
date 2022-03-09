@@ -50,3 +50,31 @@ MonoBehaviour:
       Data3: -1273620589
       Data4: 625665378
     Path: event:/SFX/Shoot
+  footStepAudio:
+    Guid:
+      Data1: -1133648932
+      Data2: 1323326594
+      Data3: -2088862807
+      Data4: 1755499379
+    Path: event:/SFX/FootSteps
+  ambientAudio:
+    Guid:
+      Data1: -837340117
+      Data2: 1213720067
+      Data3: 782525882
+      Data4: 624324812
+    Path: event:/Music/Ambient-Night
+  themeAudio:
+    Guid:
+      Data1: -1520312755
+      Data2: 1086289450
+      Data3: -624724077
+      Data4: 1985101665
+    Path: event:/Music/Theme-sad
+  lanternWalkingAduio:
+    Guid:
+      Data1: 671769237
+      Data2: 1255321237
+      Data3: 1211098044
+      Data4: -196068592
+    Path: event:/SFX/LanternWalking
