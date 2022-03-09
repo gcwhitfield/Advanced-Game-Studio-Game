@@ -2850,17 +2850,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550261702}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaeedd9d7766d4a0bab1d81414e7f0f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   toonPostProcessMaterial: {fileID: 2100000, guid: 8bf3d00b5cc0d4e87944be63eb64325b, type: 2}
-  lightLevels: 2
-  colorLevels: 16
-  brightnessOffset: 0
-  lightSpreadFactor: 1.69
-  exposure: 1
+  lightLevels: 3
+  colorLevels: 15
+  brightnessOffset: 0.072
+  lightSpreadFactor: 0.95
+  exposure: 0.99
 --- !u!114 &1550261704
 MonoBehaviour:
   m_ObjectHideFlags: 0
