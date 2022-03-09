@@ -1,3 +1,6 @@
+// credits to Opaque Objects Making It Hard to See? Fade Them Out With the Standard Shader | Unity Tutorial
+// https://www.youtube.com/watch?v=dIC4wbUgt5M&t=818s
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -54,6 +57,7 @@ public class FadeObjectBlockingObject : MonoBehaviour
                 for (int i = 0; i < hits; i++)
                 {
                     FadingObject fadingObject = GetFadingObjectFromHit(Hits[i]);
+                    //Debug.Log(Hits[i].collider.gameObject.GetComponent<Terrain>().terrainData.treeInstances.Length);
                     if (fadingObject != null && !ObjectsBlockingView.Contains(fadingObject))
                     {
                         if (RunningCoroutines.ContainsKey(fadingObject))
