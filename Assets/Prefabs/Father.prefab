@@ -102,15 +102,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1475300310713671028, guid: 1b7ee01b7fb334c7885d27be7c5218e3, type: 3}
+  m_Sprite: {fileID: -5198279169488577233, guid: 7d6c8d4bffbcb47ea8dc2efc19534e13, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.2200003, y: 10.190001}
+  m_Size: {x: 5.04, y: 9.84}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &6918751744163230094
@@ -140,8 +140,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 87192642136413696, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+      propertyPath: m_Range
+      value: 18.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 87192642136413696, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_Intensity
-      value: 2
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 5519051575353914596, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -162,6 +166,14 @@ PrefabInstance:
     - target: {fileID: 5519051575353914596, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6882148641542900949, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6882148641542900949, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.29
       objectReference: {fileID: 0}
     - target: {fileID: 7121009889559279132, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: up

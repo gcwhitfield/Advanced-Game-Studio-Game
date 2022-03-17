@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.016776435, g: 0.025955236, b: 0.122641504, a: 1}
+  m_AmbientSkyColor: {r: 0.040227838, g: 0.0754717, b: 0.04941136, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -3577,10 +3577,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toonPostProcessMaterial: {fileID: 2100000, guid: 8bf3d00b5cc0d4e87944be63eb64325b, type: 2}
   lightLevels: 1
-  colorLevels: 16
+  colorLevels: 20
   brightnessOffset: 0
-  lightSpreadFactor: 1.69
-  exposure: 1
+  lightSpreadFactor: 1.63
+  exposure: 0.9
 --- !u!114 &1829775104
 MonoBehaviour:
   m_ObjectHideFlags: 0
