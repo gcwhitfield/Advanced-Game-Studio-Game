@@ -71,7 +71,6 @@ public class AudioManager : MonoBehaviour
                 lanternTimer = 0.0f;
             }
             lanternTimer += Time.deltaTime * Random.Range(0f, 10.0f);
-
         }
     }
 

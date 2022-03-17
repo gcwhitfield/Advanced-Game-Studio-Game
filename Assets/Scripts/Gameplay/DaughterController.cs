@@ -18,7 +18,7 @@ public class DaughterController : PlayerController
     public bool hidden;
 
     public GameObject flashlight;
-    Vector3 prevLookDirection;
+    private Vector3 prevLookDirection;
 
     private new void Start()
     {
@@ -114,7 +114,6 @@ public class DaughterController : PlayerController
 
         // footstep audio
         AudioManager.Instance.FootstepAudio(gameObject, movement, moveSpeed);
-
 
         Vector2 movement2 = new Vector2(movement.x, movement.z).normalized; //getting movement vector from playercontroller.cs
         float newhor = movement2[0]; //horizontal portion of unit vector
