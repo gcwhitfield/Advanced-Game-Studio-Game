@@ -80,7 +80,7 @@ SpriteRenderer:
   m_Size: {x: 3.0100002, y: 7.03}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &889826909
@@ -220,7 +220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 87192642136413696, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_Intensity
-      value: 1.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 87192642136413696, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_SpotAngle

@@ -56,6 +56,19 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
         fatherContinue = true;
     }
 
+    private void ResetTextContinueInput(ScrollingTextParams textParams)
+    {
+        switch (textParams.type)
+        {
+            case TextType.FATHER:
+                fatherContinue = false;
+                break;
+            case TextType.DAUGHTER:
+                daughterContinue = false;
+                break;
+        }
+    }
+
     IEnumerator DisplayScrollingText(ScrollingTextParams textParams)
     {
         Debug.Log("Display scrolling text called");
@@ -88,17 +101,6 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
             yield break;
         }
 
-        // initialize fatherContinue and daughterContinue
-        switch (textParams.type)
-        {
-            case TextType.FATHER:
-                fatherContinue = false;
-                break;
-            case TextType.DAUGHTER:
-                daughterContinue = false;
-                break;
-        }
-
         // create a list of lines based on the return character from input string
         char []separator = { '\n' };
         string []lines = textParams.text.Split(separator);
@@ -119,9 +121,13 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
             }
             yield return null;
 
+            // initialize fatherContinue and daughterContinue
+            ResetTextContinueInput(textParams);
+
             // wait for the user to continue
             // 'continueToNextLine' will be set to true when the user presses their controller
             bool cont = false;
+
             while (!cont) 
             {
                 switch(textParams.type)
@@ -138,15 +144,8 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
                 }
                 yield return null;
             }
-            switch (textParams.type)
-            {
-                case TextType.FATHER:
-                    fatherContinue = false;
-                    break;
-                case TextType.DAUGHTER:
-                    daughterContinue = false;
-                    break;
-            }
+
+            ResetTextContinueInput(textParams);
         }
 
         // play close animation, disable the textbox

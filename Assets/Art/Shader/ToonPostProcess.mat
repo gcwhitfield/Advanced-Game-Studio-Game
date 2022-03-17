@@ -66,7 +66,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _LightLevels: 2
+    - _LightLevels: 1
     - _LightSpreadFactor: 1.69
     - _Metallic: 0
     - _Mode: 0
