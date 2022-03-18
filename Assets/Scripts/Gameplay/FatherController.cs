@@ -115,6 +115,7 @@ public class FatherController : PlayerController
 
     public void Shoot()
     {
+        animator.SetTrigger("Shoot");
         // OLD shooting code (instantiates bullet prefab)
         float rayLength = 3.0f;
         RaycastHit hit;
