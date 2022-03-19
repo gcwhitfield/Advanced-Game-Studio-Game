@@ -19,8 +19,6 @@ public class TextDisplayOnTriggerEnter : MonoBehaviour
     [Tooltip("This determines when the text display is triggered")]
     public ActivationTrigger activationTrigger;
     public DialogueEvent textToDisplay;
-    [Tooltip("The duration that the text will be displayed on the screen before disappearing")]
-    public float textHoldTime;
 
     bool triggered = false;
 
@@ -56,6 +54,6 @@ public class TextDisplayOnTriggerEnter : MonoBehaviour
     void ShowText()
     {
         triggered = true;
-        TextDisplayManager.Instance.ShowText(textDestination, textToDisplay.dialogueLines, textHoldTime);
+        TextDisplayManager.Instance.ShowText(textDestination, textToDisplay.dialogueLines);
     }
 }

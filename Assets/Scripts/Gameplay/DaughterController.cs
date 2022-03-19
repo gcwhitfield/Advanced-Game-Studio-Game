@@ -16,9 +16,11 @@ public class DaughterController : PlayerController
 
     [HideInInspector]
     public bool hidden;
+    bool isNearHiddenSpot = false;
 
     public GameObject flashlight;
     private Vector3 prevLookDirection;
+
 
     private new void Start()
     {
@@ -37,6 +39,7 @@ public class DaughterController : PlayerController
     {
         hidden = true;
         animator.SetBool("Hide", true);
+        TextDisplayManager.Instance.DaughterContinueToNextLine();
     }
 
     // called when the daughter presses the "Collect" key
@@ -60,11 +63,11 @@ public class DaughterController : PlayerController
 
     private void OnTriggerEnter(Collider other)
     {
-        // TO-DO: press some button to trigger
         // detect only hide spot
         if (other.gameObject.CompareTag("HiddenSpot"))
         {
-            Hide();
+            isNearHiddenSpot = true;
+            TextDisplayManager.Instance.ShowText(TextDisplayManager.TextType.DAUGHTER, "Press Q to HIDE");
             return;
         }
 
@@ -73,6 +76,7 @@ public class DaughterController : PlayerController
         {
             Debug.Log("Collectable has been set");
             collectableObject = c;
+            return;
         }
     }
 
@@ -81,6 +85,7 @@ public class DaughterController : PlayerController
         if (other.gameObject.CompareTag("HiddenSpot"))
         {
             hidden = false;
+            isNearHiddenSpot = false;
             animator.SetBool("Hide", false);
         }
 

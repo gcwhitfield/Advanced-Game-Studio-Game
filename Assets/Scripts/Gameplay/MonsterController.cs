@@ -64,16 +64,15 @@ public class MonsterController : MonoBehaviour
         {
             // TO-DO: attack player, let character die
             // rotation toward player
-            FaceTarget();
         }
     }
 
-    private void FaceTarget()
-    {
-        Vector3 direction = (player.position - transform.position).normalized;
-        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
-        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5);
-    }
+    //private void FaceTarget()
+    //{
+    //    Vector3 direction = (player.position - transform.position).normalized;
+    //    Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+    //    transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5);
+    //}
 
     //Patrol function
     private void Patrol()

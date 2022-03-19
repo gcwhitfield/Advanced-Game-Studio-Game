@@ -23,15 +23,14 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
 
     public void ShowTestText()
     {
-        ShowText(TextType.FATHER, "Bagels are my favorite food! :^)", 5.0f);
+        ShowText(TextType.FATHER, "Bagels are my favorite food! :^)");
     }
 
-    public void ShowText(TextType type, string text, float textHoldTime)
+    public void ShowText(TextType type, string text)
     {
         ScrollingTextParams textParams;
         textParams.type = type;
         textParams.text = text;
-        textParams.textHoldTime = textHoldTime;
         StartCoroutine("DisplayScrollingText", textParams);
     }
 
@@ -39,7 +38,6 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
     {
         public TextType type; // the location to display the text on the screen
         public string text; // the text to display
-        public float textHoldTime; // the duration to hold the text on the screen
     }
 
     // this function will be called from DaughterController.cs. when the player presses their
