@@ -38,8 +38,6 @@ public class FatherController : PlayerController
         // play the lantern sound
         AudioManager.Instance.LanternWalkingAudio(gameObject, movement);
 
-        Debug.DrawRay(gameObject.transform.position, lookDirection * 10.0f, Color.white, 1.0f);
-
         Vector2 movement2 = new Vector2(movement.x, movement.z).normalized; //getting movement vector from playercontroller.cs
         float newhor = movement2[0]; //horizontal portion of unit vector
         float newver = movement2[1];

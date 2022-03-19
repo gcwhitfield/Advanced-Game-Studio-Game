@@ -8,7 +8,7 @@ public class ToonPostProcessBlit : MonoBehaviour
     [SerializeField] private Material toonPostProcessMaterial;
 
     [Range(1, 10)] public int lightLevels;
-    [Range(1, 40)] public int colorLevels;
+    [Range(1, 255)] public int colorLevels;
     [Range(0, 1)] public float brightnessOffset;
     [Range(0, 2)] public float lightSpreadFactor;
     [Range(0, 5)] public float exposure;
