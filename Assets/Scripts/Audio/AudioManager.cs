@@ -12,6 +12,12 @@ public class AudioManager : MonoBehaviour
     public EventReference ambientAudio;
     public EventReference themeAudio;
     public EventReference lanternWalkingAduio;
+    public EventReference wolfShowUp;
+    public EventReference wolfBite;
+    public EventReference pickUp;
+    public EventReference inputCode;
+    public EventReference monsterApproach;
+    public EventReference bone;
     //public EventReference lanternLaunchAduio;
 
     private float footstepTimer = 0.0f;
@@ -74,7 +80,33 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void LanternLanuchAudio()
+    public void WolfShowUpAudio(GameObject gb)
     {
+        PlayAudio(wolfShowUp, gb);
+    }
+
+    public void WolfBiteAudio(GameObject gb)
+    {
+        PlayAudio(wolfBite, gb);
+    }
+
+    public void PickUpAudio(GameObject gb)
+    {
+        PlayAudio(pickUp, gb);
+    }
+
+    public void InputCodeAudio(GameObject gb)
+    {
+        PlayAudio(inputCode, gb);
+    }
+
+    public void MonsterApproachAudio(GameObject gb)
+    {
+        PlayAudio(monsterApproach, gb);
+    }
+
+    public void BoneAudio(GameObject gb)
+    {
+        PlayAudio(bone, gb);
     }
 }
