@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{7d2b5ba4-d4f0-4a83-8d51-372df7bfdc5a}">
+	<object class="AudioFile" id="{d7d9fe78-708c-431a-8800-3317c4921181}">
 		<property name="assetPath">
-			<value>Character/lantern-walking.wav</value>
+			<value>Character/inputCode.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>44.0999985</value>
+			<value>48</value>
 		</property>
 		<property name="channelCount">
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>0.59999999999999998</value>
+			<value>0.504</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{de5a1372-2fca-4e83-aa22-7cbf9527f0c0}</destination>

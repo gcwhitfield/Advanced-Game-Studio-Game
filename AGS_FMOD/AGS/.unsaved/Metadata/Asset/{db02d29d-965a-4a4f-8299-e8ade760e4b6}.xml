@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
 	<object class="EncodableAsset" id="{db02d29d-965a-4a4f-8299-e8ade760e4b6}">
-		<property name="assetPath">
-			<value>Lantern/</value>
-		</property>
+		<property name="assetPath" />
 		<relationship name="masterAssetFolder">
 			<destination>{de5a1372-2fca-4e83-aa22-7cbf9527f0c0}</destination>
 		</relationship>
