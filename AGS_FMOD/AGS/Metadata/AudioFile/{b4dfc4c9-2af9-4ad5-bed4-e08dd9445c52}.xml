@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{b4dfc4c9-2af9-4ad5-bed4-e08dd9445c52}">
+		<property name="assetPath">
+			<value>Wolf/wolf-howl.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>8.0303174603174607</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{de5a1372-2fca-4e83-aa22-7cbf9527f0c0}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -49,6 +49,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "InputCode",
+                    "type": "Button",
+                    "id": "72b3a2fa-b6ff-4f2a-b4da-6e009c556d34",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -258,6 +267,94 @@
                     "processors": "",
                     "groups": "",
                     "action": "Confirm",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4f7a7383-38a2-4333-a479-b08b6fc49e05",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InputCode",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "79db2d22-38ef-497d-bcc1-1d7a201852b6",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InputCode",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "16db54e0-78a1-4f3a-8346-e254d5d3122e",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InputCode",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c96f055f-5697-4d5b-bbf5-a70223303112",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InputCode",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2efe916e-33e8-4fa2-8745-9df24dc401cd",
+                    "path": "<Keyboard>/h",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InputCode",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a77887cd-c757-4359-92b6-7f6ca4321b45",
+                    "path": "<Keyboard>/j",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InputCode",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "80b2fa27-744a-4b56-8b74-1107aaf71841",
+                    "path": "<Keyboard>/k",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InputCode",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9cb25741-e919-4f53-8626-e86dea3b4554",
+                    "path": "<Keyboard>/l",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InputCode",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

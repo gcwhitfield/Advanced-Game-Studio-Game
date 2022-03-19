@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEngine.InputSystem.InputAction;
 
 public class FatherController : PlayerController
 {
@@ -108,11 +109,11 @@ public class FatherController : PlayerController
                 animator.SetBool("RunSE", true);
             }
         }
-
     }
 
     public void Shoot()
     {
+        animator.SetTrigger("Shoot");
         // OLD shooting code (instantiates bullet prefab)
         float rayLength = 3.0f;
         RaycastHit hit;
@@ -127,5 +128,31 @@ public class FatherController : PlayerController
 
         // play the shooting sound
         AudioManager.Instance.ShootAudio(gameObject);
+    }
+
+    public void InputCode(CallbackContext context)
+    {
+        if (context.ReadValue<float>() > 0)
+        {
+            string button = context.control.ToString();
+            //Debug.Log(button);
+            if (button.Contains("/Keyboard/h"))
+            {
+                Debug.Log("h pressed");
+            }
+            if (button.Contains("/Keyboard/j"))
+            {
+                Debug.Log("j pressed");
+            }
+            if (button.Contains("/Keyboard/k"))
+            {
+                Debug.Log("k pressed");
+            }
+            if (button.Contains("/Keyboard/l"))
+            {
+                Debug.Log("l pressed");
+            }
+        }
+        // play some input sound
     }
 }

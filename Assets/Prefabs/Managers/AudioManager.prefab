@@ -78,3 +78,45 @@ MonoBehaviour:
       Data3: 1211098044
       Data4: -196068592
     Path: event:/SFX/LanternWalking
+  wolfShowUp:
+    Guid:
+      Data1: -1195359851
+      Data2: 1195333273
+      Data3: 1864840121
+      Data4: -236824586
+    Path: event:/SFX/WolfShowup
+  wolfBite:
+    Guid:
+      Data1: 518049092
+      Data2: 1170112011
+      Data3: 345761451
+      Data4: -365935400
+    Path: event:/SFX/WolfBite
+  pickUp:
+    Guid:
+      Data1: -60686210
+      Data2: 1116766640
+      Data3: -1629700167
+      Data4: 549045290
+    Path: event:/SFX/PickUp
+  inputCode:
+    Guid:
+      Data1: 1602020193
+      Data2: 1075503894
+      Data3: -1928159599
+      Data4: 1713648862
+    Path: event:/SFX/InputCode
+  monsterApproach:
+    Guid:
+      Data1: 527473997
+      Data2: 1128209640
+      Data3: -2136911191
+      Data4: -624224165
+    Path: event:/SFX/MonsterApproach
+  bone:
+    Guid:
+      Data1: 1170169608
+      Data2: 1322737305
+      Data3: -1596489054
+      Data4: -396831555
+    Path: event:/SFX/Bone
