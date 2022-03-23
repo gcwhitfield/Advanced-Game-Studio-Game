@@ -8,12 +8,6 @@ public class DaughterController : PlayerController
 {
     public static DaughterController Instance { get; private set; }
 
-    // 'collectableObject' is a refernece to the item that the daughter can currently collect
-    // if it is null, then the daughter is not standing nearby any collectbale objects
-    // if it is not null, then 'collectableObject' will refer to the Collectable component that
-    // she can collect.
-    private Collectable collectableObject = null;
-
     [HideInInspector]
     public bool hidden;
     bool isNearHiddenSpot = false;
@@ -42,27 +36,16 @@ public class DaughterController : PlayerController
         TextDisplayManager.Instance.DaughterContinueToNextLine();
     }
 
-    // called when the daughter presses the "Collect" key
-    public void Collect()
-    {
-        Debug.Log("Collect");
-        if (collectableObject)
-        {
-            collectableObject.Collect();
-            Destroy(collectableObject.gameObject);
-            collectableObject = null;
-        }
-    }
-
     // called when the player presses the submit button
     public new void Submit()
     {
         TextDisplayManager.Instance.DaughterContinueToNextLine();
-        Debug.Log("Continue!");
     }
 
-    private void OnTriggerEnter(Collider other)
+    private new void OnTriggerEnter(Collider other)
     {
+        base.OnTriggerEnter(other);
+       
         // detect only hide spot
         if (other.gameObject.CompareTag("HiddenSpot"))
         {
@@ -70,29 +53,17 @@ public class DaughterController : PlayerController
             TextDisplayManager.Instance.ShowText(TextDisplayManager.TextType.DAUGHTER, "Press Q to HIDE");
             return;
         }
-
-        Collectable c = other.GetComponent<Collectable>();
-        if (c)
-        {
-            Debug.Log("Collectable has been set");
-            collectableObject = c;
-            return;
-        }
     }
 
-    private void OnTriggerExit(Collider other)
+    private new void OnTriggerExit(Collider other)
     {
+        base.OnTriggerExit(other);
+
         if (other.gameObject.CompareTag("HiddenSpot"))
         {
             hidden = false;
             isNearHiddenSpot = false;
             animator.SetBool("Hide", false);
-        }
-
-        Collectable c = other.GetComponent<Collectable>();
-        if (c)
-        {
-            collectableObject = null;
         }
     }
 

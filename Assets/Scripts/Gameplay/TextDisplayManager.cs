@@ -17,8 +17,8 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
     public enum TextType
     {
         FATHER, // text only on father's side
-        DAUGHTER, // text only on daughter's side
-        CENTER // text in the center of screen [not yet implemented]
+        DAUGHTER // text only on daughter's side
+        // CENTER // text in the center of screen [not yet implemented]
     };
 
     public void ShowTestText()
@@ -69,8 +69,6 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
 
     IEnumerator DisplayScrollingText(ScrollingTextParams textParams)
     {
-        Debug.Log("Display scrolling text called");
-
         Animator animator = null;
         TMP_Text text = null;
         switch(textParams.type)
@@ -83,9 +81,6 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
                 animator = daughterTextAnimator;
                 text = daughterText;
                 break;
-            case TextType.CENTER:
-                // not implemented
-                yield break;
         }
 
         if (!animator) // log warning if animator not found

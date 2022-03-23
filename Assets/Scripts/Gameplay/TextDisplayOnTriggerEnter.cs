@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // when the player collides with this object, text will display to the screen
-public class TextDisplayOnTriggerEnter : MonoBehaviour
+public class TextDisplayOnTriggerEnter : Interactable
 {
     [System.Serializable]
     public enum ActivationTrigger
@@ -20,37 +20,63 @@ public class TextDisplayOnTriggerEnter : MonoBehaviour
     public ActivationTrigger activationTrigger;
     public DialogueEvent textToDisplay;
 
+    public bool onlyShowTextOnce = true;
+    public bool eraseTextIfPlayerLeaves = false;
+
     bool triggered = false;
 
-    private void OnTriggerEnter(Collider other)
+    private new void OnTriggerEnter(Collider other)
     {
-        if (!triggered)
+        if (!triggered || !onlyShowTextOnce)
         {
             if (other.gameObject.tag == "Player")
             {
+                PlayerController p = other.gameObject.GetComponent<PlayerController>();
                 switch(activationTrigger)
                 {
                     case ActivationTrigger.ON_DAUGHTER_ENTER:
                         if (other.gameObject.GetComponent<DaughterController>())
                         {
                             ShowText();
+                            p.ExecuteUponSubmit(TextDisplayManager.Instance.DaughterContinueToNextLine);
+                            ExecuteTriggerEvents();
                         }
                         break;
                     case ActivationTrigger.ON_FATHER_ENTER:
                         if (other.gameObject.GetComponent<FatherController>())
                         {
                             ShowText();
+                            p.ExecuteUponSubmit(TextDisplayManager.Instance.FatherContinueToNextLine);
+                            ExecuteTriggerEvents();
                         }
                         break;
                     case ActivationTrigger.ON_EITHER_ENTER:
                         ShowText();
+                        p.ExecuteUponSubmit(TextDisplayManager.Instance.FatherContinueToNextLine);
+                        ExecuteTriggerEvents();
                         break;
                 }
             }
-
         }
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            if (eraseTextIfPlayerLeaves)
+            {
+                if (other.GetComponent<DaughterController>() && activationTrigger == ActivationTrigger.ON_DAUGHTER_ENTER)
+                {
+                    TextDisplayManager.Instance.DaughterContinueToNextLine();
+                }
+                else if (other.GetComponent<FatherController>() && activationTrigger == ActivationTrigger.ON_FATHER_ENTER)
+                {
+                    TextDisplayManager.Instance.FatherContinueToNextLine();
+                }
+            }
+        }
+    }
     void ShowText()
     {
         triggered = true;
