@@ -7,8 +7,9 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
     public delegate void Event();
-    Event triggerEvents;
-    Event interactEvents;
+    Event triggerEvents = null;
+    Event interactEvents = null;
+    protected PlayerController player;
 
     protected void ExecuteInteractionEvents()
     {
@@ -52,7 +53,21 @@ public class Interactable : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            ExecuteTriggerEvents();
+            ExecuteTriggerEvents(); 
+            player = other.gameObject.GetComponent<PlayerController>();
+            player.ExecuteUponSubmit(ExecuteInteractionEvents);
+        }
+    }
+
+    protected void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            if (player)
+            {
+                player.CancelExecuteUponSubmit(ExecuteInteractionEvents);
+                player = null;
+            }
         }
     }
 }

@@ -31,15 +31,18 @@ public class DaughterController : PlayerController
     // called when the daughter presses the "Hide" key
     public void Hide()
     {
-        hidden = true;
-        animator.SetBool("Hide", true);
-        TextDisplayManager.Instance.DaughterContinueToNextLine();
+        if (isNearHiddenSpot)
+        {
+            hidden = true;
+            animator.SetBool("Hide", true);
+            TextDisplayManager.Instance.DaughterContinueToNextLine();
+        }
     }
 
     // called when the player presses the submit button
     public new void Submit()
     {
-        TextDisplayManager.Instance.DaughterContinueToNextLine();
+        base.Submit();
     }
 
     private new void OnTriggerEnter(Collider other)

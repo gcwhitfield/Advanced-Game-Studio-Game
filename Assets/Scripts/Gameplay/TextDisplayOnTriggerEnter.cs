@@ -60,8 +60,9 @@ public class TextDisplayOnTriggerEnter : Interactable
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private new void OnTriggerExit(Collider other)
     {
+        base.OnTriggerExit(other);
         if (other.tag == "Player")
         {
             if (eraseTextIfPlayerLeaves)

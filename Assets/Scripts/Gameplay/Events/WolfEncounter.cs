@@ -11,11 +11,14 @@ public class WolfEncounter : MonoBehaviour
     bool fatherHasCollectedBone = false;
     bool daugherHasHidden = false;
     bool fatherHasThrownBone = false;
+    bool daughterHasReachedInvisibleTrigger = false;
 
-    public Interactable daughterHideSpot;
+    public List<Interactable> daughterHideSpots;
     public Collectable fatherBone;
+    public Interactable daughterWolfInvisibleTrigger; // this is an invisible trigger that the daughter must
+    // reach before hiding 
 
-    MonsterController wolfController;
+    public GameObject wolf;
 
     // called when the father collects bone
     public void OnFatherCollectBone()
@@ -35,17 +38,24 @@ public class WolfEncounter : MonoBehaviour
     {
         Debug.Log("Father has thrown bone");
         fatherHasThrownBone = true;
+        TextDisplayManager.Instance.FatherContinueToNextLine();
         // TODO: Add bone throwing to father
+    }
+
+    public void OnDaughterInvisibleTriggerReached()
+    {
+        Debug.Log("Daughter has reached invisible trigger");
+        daughterHasReachedInvisibleTrigger = true;
     }
 
     private void Start()
     {
-        if (!daughterHideSpot || !fatherBone || !wolfController)
+        if (daughterHideSpots.Count < 1 || !fatherBone || !wolf || !daughterWolfInvisibleTrigger)
         {
             Debug.LogError("All public variables must be set in the Inspector before executing the wolf encounter!");
         } else
         {
-            StartCoroutine("WolfEncounter");
+            StartCoroutine("DoWolfEncounter");
         }
     }
 
@@ -54,8 +64,12 @@ public class WolfEncounter : MonoBehaviour
         // step 1) the father must collect the bone and the daughter must hide
         Debug.Log("Begin step 1");
         fatherBone.ExecuteOnInteract(OnFatherCollectBone);
-        daughterHideSpot.ExecuteOnInteract(OnDaughterHide);
-        while (!fatherHasCollectedBone && !daugherHasHidden)
+        daughterWolfInvisibleTrigger.ExecuteOnTriggerEnter(OnDaughterInvisibleTriggerReached);
+        foreach (Interactable i in daughterHideSpots)
+        {
+            i.ExecuteOnInteract(OnDaughterHide);
+        }
+        while (!fatherHasCollectedBone || !daugherHasHidden || !daughterHasReachedInvisibleTrigger)
         {
             yield return new WaitForSeconds(0.2f);
         }
@@ -70,7 +84,9 @@ public class WolfEncounter : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
         }
 
+        TextDisplayManager.Instance.ShowText(TextDisplayManager.TextType.DAUGHTER, "The wolf leaves");
+        DaughterController.Instance.ExecuteUponSubmit(TextDisplayManager.Instance.DaughterContinueToNextLine);
         // step 3) the wolf runs away from the daughter. The wolf goes to the bone
-        wolfController.gameObject.SetActive(false);
+        wolf.gameObject.SetActive(false);
     }
 }

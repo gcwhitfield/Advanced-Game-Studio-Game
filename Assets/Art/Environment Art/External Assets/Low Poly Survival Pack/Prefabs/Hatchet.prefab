@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4358391048080092}
   - component: {fileID: 33361806133899168}
   - component: {fileID: 23708334674745128}
-  - component: {fileID: 64153334305523408}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -82,20 +81,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &64153334305523408
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1030794853742330}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300002, guid: 6424d5d72f9814524a71cf1d7c48e172, type: 3}
 --- !u!1 &1074686504929496
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,7 +92,6 @@ GameObject:
   - component: {fileID: 4740583797443406}
   - component: {fileID: 33252445765384978}
   - component: {fileID: 23512952735407686}
-  - component: {fileID: 64678512828663694}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -178,20 +162,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &64678512828663694
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1074686504929496}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 6424d5d72f9814524a71cf1d7c48e172, type: 3}
 --- !u!1 &1917468586814384
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,7 +187,7 @@ Transform:
   m_GameObject: {fileID: 1917468586814384}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.2707405, y: 6.2378736, z: 0.7378135}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4358391048080092}
   - {fileID: 4740583797443406}
