@@ -12,6 +12,9 @@ public class FatherController : PlayerController
     public GameObject bulletPrefab;
     public float bulletForce = 20.0f;
 
+    private int codeInputCount = 0;
+    private bool inputCodeFlag = true;
+
     private void Awake()
     {
         if (!Instance) Instance = this;
@@ -132,27 +135,54 @@ public class FatherController : PlayerController
 
     public void InputCode(CallbackContext context)
     {
-        if (context.ReadValue<float>() > 0)
+        if (context.ReadValue<float>() > 0 && inputCodeFlag)
         {
             string button = context.control.ToString();
             //Debug.Log(button);
             if (button.Contains("/Keyboard/h"))
             {
                 Debug.Log("h pressed");
+                codeInputCount++;
             }
             if (button.Contains("/Keyboard/j"))
             {
                 Debug.Log("j pressed");
+                codeInputCount++;
             }
             if (button.Contains("/Keyboard/k"))
             {
                 Debug.Log("k pressed");
+                codeInputCount++;
             }
             if (button.Contains("/Keyboard/l"))
             {
                 Debug.Log("l pressed");
+                codeInputCount++;
             }
+
+            if (codeInputCount > 3)
+            {
+                codeInputCount = 0;
+                for (int i = 1; i < 4; i++)
+                {
+                    GameObject asterisk = GameObject.Find("Asterisk" + i);
+                    if (asterisk != null)
+                    {
+                        asterisk.gameObject.GetComponent<UnityEngine.UI.Image>().enabled = false;
+                    }
+                }
+            }
+            else
+            {
+                GameObject asterisk = GameObject.Find("Asterisk" + codeInputCount);
+                if (asterisk != null)
+                {
+                    asterisk.GetComponent<UnityEngine.UI.Image>().enabled = true;
+                }
+            }
+
+            // play some input sound
+            AudioManager.Instance.InputCodeAudio(gameObject);
         }
-        // play some input sound
     }
 }
