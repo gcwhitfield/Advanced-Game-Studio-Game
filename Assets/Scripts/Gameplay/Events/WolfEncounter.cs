@@ -8,16 +8,16 @@ using UnityEngine;
 // 3) the father needs to throw the bone to distract the wolf
 public class WolfEncounter : MonoBehaviour
 {
-    bool fatherHasCollectedBone = false;
-    bool daugherHasHidden = false;
-    bool fatherHasThrownBone = false;
-    bool daughterHasReachedInvisibleTrigger = false;
+    private bool fatherHasCollectedBone = false;
+    private bool daugherHasHidden = false;
+    private bool fatherHasThrownBone = false;
+    private bool daughterHasReachedInvisibleTrigger = false;
 
     public List<Interactable> daughterHideSpots;
     public List<GameObject> hideRings;
     public Collectable fatherBone;
     public Interactable daughterWolfInvisibleTrigger; // this is an invisible trigger that the daughter must
-    // reach before hiding 
+    // reach before hiding
 
     public GameObject wolf;
 
@@ -26,6 +26,9 @@ public class WolfEncounter : MonoBehaviour
     {
         fatherHasCollectedBone = true;
         Debug.Log("Father has collected bone");
+
+        // play audio
+        AudioManager.Instance.PickUpAudio(FatherController.Instance.gameObject);
     }
 
     // called when the daughter hides
@@ -48,7 +51,8 @@ public class WolfEncounter : MonoBehaviour
             g.SetActive(false);
         }
 
-
+        // play audio
+        AudioManager.Instance.BoneAudio(FatherController.Instance.gameObject);
     }
 
     public void OnDaughterInvisibleTriggerReached()
@@ -61,6 +65,9 @@ public class WolfEncounter : MonoBehaviour
         {
             g.SetActive(true);
         }
+
+        // play audio
+        AudioManager.Instance.WolfShowUpAudio(DaughterController.Instance.gameObject);
     }
 
     private void Start()
@@ -68,13 +75,14 @@ public class WolfEncounter : MonoBehaviour
         if (daughterHideSpots.Count < 1 || !fatherBone || !wolf || !daughterWolfInvisibleTrigger)
         {
             Debug.LogError("All public variables must be set in the Inspector before executing the wolf encounter!");
-        } else
+        }
+        else
         {
             StartCoroutine("DoWolfEncounter");
         }
     }
 
-    IEnumerator DoWolfEncounter()
+    private IEnumerator DoWolfEncounter()
     {
         // step 1) the father must collect the bone and the daughter must hide
         Debug.Log("Begin step 1");

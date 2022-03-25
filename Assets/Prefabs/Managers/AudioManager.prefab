@@ -108,11 +108,11 @@ MonoBehaviour:
     Path: event:/SFX/InputCode
   monsterApproach:
     Guid:
-      Data1: 527473997
-      Data2: 1128209640
-      Data3: -2136911191
-      Data4: -624224165
-    Path: event:/SFX/MonsterApproach
+      Data1: -2106177457
+      Data2: 1321991333
+      Data3: -747692654
+      Data4: -650308757
+    Path: event:/SFX/MonsterAround
   bone:
     Guid:
       Data1: 1170169608
@@ -120,3 +120,24 @@ MonoBehaviour:
       Data3: -1596489054
       Data4: -396831555
     Path: event:/SFX/Bone
+  wolfChase:
+    Guid:
+      Data1: 1190448568
+      Data2: 1224446519
+      Data3: 1937202872
+      Data4: 1286655723
+    Path: event:/SFX/WolfChase
+  menuHover:
+    Guid:
+      Data1: -1548714277
+      Data2: 1098947441
+      Data3: -695071841
+      Data4: 193969452
+    Path: event:/SFX/MenuHover
+  menuEnter:
+    Guid:
+      Data1: -1287928117
+      Data2: 1328630445
+      Data3: -664317562
+      Data4: -440724098
+    Path: event:/SFX/MenuEnter

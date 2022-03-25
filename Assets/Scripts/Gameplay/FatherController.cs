@@ -12,6 +12,11 @@ public class FatherController : PlayerController
     public GameObject bulletPrefab;
     public float bulletForce = 20.0f;
 
+    private int codeInputCount = 0;
+    private bool inputCodeFlag = true;
+    private string CODE = "BXY";
+    private string code;
+
     private void Awake()
     {
         if (!Instance) Instance = this;
@@ -132,27 +137,65 @@ public class FatherController : PlayerController
 
     public void InputCode(CallbackContext context)
     {
-        if (context.ReadValue<float>() > 0)
+        if (context.ReadValue<float>() > 0 && inputCodeFlag)
         {
             string button = context.control.ToString();
             //Debug.Log(button);
             if (button.Contains("/Keyboard/h"))
             {
                 Debug.Log("h pressed");
+                codeInputCount++;
+                code += "X";
             }
             if (button.Contains("/Keyboard/j"))
             {
                 Debug.Log("j pressed");
+                codeInputCount++;
+                code += "A";
             }
             if (button.Contains("/Keyboard/k"))
             {
                 Debug.Log("k pressed");
+                codeInputCount++;
+                code += "B";
             }
-            if (button.Contains("/Keyboard/l"))
+            if (button.Contains("/Keyboard/u"))
             {
-                Debug.Log("l pressed");
+                Debug.Log("u pressed");
+                codeInputCount++;
+                code += "Y";
             }
+
+            GameObject asterisk = GameObject.Find("Asterisk" + codeInputCount);
+            if (asterisk != null)
+            {
+                asterisk.GetComponent<UnityEngine.UI.Image>().enabled = true;
+            }
+
+            if (codeInputCount > 2)
+            {
+                codeInputCount = 0;
+                for (int i = 1; i < 4; i++)
+                {
+                    asterisk = GameObject.Find("Asterisk" + i);
+                    if (asterisk != null)
+                    {
+                        asterisk.gameObject.GetComponent<UnityEngine.UI.Image>().enabled = false;
+                    }
+                }
+
+                if (code.Contains(CODE))
+                {
+                    Debug.Log("Code is correct");
+                }
+                else
+                {
+                    Debug.Log("Code is wrong");
+                }
+            }
+
+            // play some input sound
+            AudioManager.Instance.InputCodeAudio(gameObject);
         }
-        // play some input sound
     }
 }
