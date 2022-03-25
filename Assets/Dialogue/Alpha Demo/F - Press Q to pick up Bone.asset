@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7984a56cf210c45089808c923f475e10, type: 3}
   m_Name: F - Press Q to pick up Bone
   m_EditorClassIdentifier: 
-  dialogueLines: Press Q to pick up bone
+  dialogueLines: 'Press B to investigat
+
+    You have picked up a BONE'
