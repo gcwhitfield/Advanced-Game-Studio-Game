@@ -194,7 +194,6 @@ public class FatherController : PlayerController
                 }
             }
 
-
             // play some input sound
             AudioManager.Instance.InputCodeAudio(gameObject);
         }
