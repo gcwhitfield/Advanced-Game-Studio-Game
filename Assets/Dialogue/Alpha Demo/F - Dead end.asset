@@ -10,8 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7984a56cf210c45089808c923f475e10, type: 3}
-  m_Name: F - Press Q to pick up Bone
+  m_Name: F - Dead end
   m_EditorClassIdentifier: 
-  dialogueLines: 'Press B to investigate
-
-    You have picked up a BONE'
+  dialogueLines: ... It's a dead end
