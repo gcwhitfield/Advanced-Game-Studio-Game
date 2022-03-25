@@ -18,6 +18,7 @@ public class AudioManager : MonoBehaviour
     public EventReference inputCode;
     public EventReference monsterApproach;
     public EventReference bone;
+    public EventReference wolfChase;
     //public EventReference lanternLaunchAduio;
 
     private float footstepTimer = 0.0f;
@@ -108,5 +109,10 @@ public class AudioManager : MonoBehaviour
     public void BoneAudio(GameObject gb)
     {
         PlayAudio(bone, gb);
+    }
+
+    public void WolfChaseAudio(GameObject gb)
+    {
+        PlayAudio(wolfChase, gb);
     }
 }

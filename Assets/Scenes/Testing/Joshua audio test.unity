@@ -1878,7 +1878,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 295366173201227478, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 57.72
+      value: 61.35
       objectReference: {fileID: 0}
     - target: {fileID: 295366173201227478, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1886,7 +1886,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 295366173201227478, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -167.15
+      value: -165.56
       objectReference: {fileID: 0}
     - target: {fileID: 295366173201227478, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10129,15 +10129,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8589097151914952798, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13
+      value: -125.17
       objectReference: {fileID: 0}
     - target: {fileID: 8589097151914952798, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 78.6
+      value: 13.1
       objectReference: {fileID: 0}
     - target: {fileID: 8589097151914952798, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 269.1
+      value: -66.66
       objectReference: {fileID: 0}
     - target: {fileID: 8589097151914952798, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10255,7 +10255,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1644284688
 Transform:
   m_ObjectHideFlags: 0
@@ -10264,7 +10264,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1644284687}
   m_LocalRotation: {x: -0, y: 0.99670285, z: -0, w: 0.081138864}
-  m_LocalPosition: {x: -14.49, y: -29.51, z: 176.66}
+  m_LocalPosition: {x: -43.6, y: 43.5, z: -275.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1633909607}
@@ -10289,86 +10289,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2073190016}
     m_Modifications:
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: shootAudio.Path
-      value: event:/SFX/Shoot
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: themeAudio.Path
-      value: event:/Music/Theme-sad
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: ambientAudio.Path
-      value: event:/Music/Ambient-Night
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: footStepAudio.Path
-      value: event:/SFX/FootSteps
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: shootAudio.Guid.Data1
-      value: 1160458788
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: shootAudio.Guid.Data2
-      value: 1093244894
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: shootAudio.Guid.Data3
-      value: -1273620589
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: shootAudio.Guid.Data4
-      value: 625665378
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: themeAudio.Guid.Data1
-      value: -1520312755
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: themeAudio.Guid.Data2
-      value: 1086289450
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: themeAudio.Guid.Data3
-      value: -624724077
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: themeAudio.Guid.Data4
-      value: 1985101665
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: ambientAudio.Guid.Data1
-      value: -837340117
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: ambientAudio.Guid.Data2
-      value: 1213720067
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: ambientAudio.Guid.Data3
-      value: 782525882
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: ambientAudio.Guid.Data4
-      value: 624324812
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: footStepAudio.Guid.Data1
-      value: -1133648932
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: footStepAudio.Guid.Data2
-      value: 1323326594
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: footStepAudio.Guid.Data3
-      value: -2088862807
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: footStepAudio.Guid.Data4
-      value: 1755499379
-      objectReference: {fileID: 0}
     - target: {fileID: 8557451002179679963, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
       propertyPath: m_RootOrder
       value: 1
