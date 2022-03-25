@@ -127,3 +127,17 @@ MonoBehaviour:
       Data3: 1937202872
       Data4: 1286655723
     Path: event:/SFX/WolfChase
+  menuHover:
+    Guid:
+      Data1: -1548714277
+      Data2: 1098947441
+      Data3: -695071841
+      Data4: 193969452
+    Path: event:/SFX/MenuHover
+  menuEnter:
+    Guid:
+      Data1: -1287928117
+      Data2: 1328630445
+      Data3: -664317562
+      Data4: -440724098
+    Path: event:/SFX/MenuEnter
