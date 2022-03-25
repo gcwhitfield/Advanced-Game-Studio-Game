@@ -17,7 +17,7 @@ public class FatherController : PlayerController
     private int codeInputCount = 0;
     private bool inputCodeFlag = true;
     private string CODE = "BXY";
-    private string code;
+    private string code = "";
 
     private void Awake()
     {
@@ -137,69 +137,72 @@ public class FatherController : PlayerController
         AudioManager.Instance.ShootAudio(gameObject);
     }
 
-    public void InputCode(CallbackContext context)
+    public IEnumerator InputCode(CallbackContext context)
     {
         if (context.ReadValue<float>() > 0 && inputCodeFlag)
         {
+            bool InputFlag = false;
             string button = context.control.ToString();
             //Debug.Log(button);
             if (button.Contains("/Keyboard/h"))
             {
                 Debug.Log("h pressed");
-                codeInputCount++;
+                InputFlag = true;
                 code += "X";
             }
             if (button.Contains("/Keyboard/j"))
             {
                 Debug.Log("j pressed");
-                codeInputCount++;
+                InputFlag = true;
                 code += "A";
             }
             if (button.Contains("/Keyboard/k"))
             {
                 Debug.Log("k pressed");
-                codeInputCount++;
+                InputFlag = true;
                 code += "B";
             }
             if (button.Contains("/Keyboard/u"))
             {
                 Debug.Log("u pressed");
-                codeInputCount++;
+                InputFlag = true;
                 code += "Y";
             }
 
-
-            GameObject asterisk;
-            if (codeInputCount > 3)
+            if (InputFlag)
             {
-                codeInputCount = 1;
-                for (int i = 0; i < 3; i++)
-                {
-                    asterisk = asterisks[i];
-                    if (asterisk != null)
-                    {
-                        asterisk.gameObject.GetComponent<UnityEngine.UI.Image>().enabled = false;
-                    }
-                }
-
-                if (code.Contains(CODE))
-                {
-                    Debug.Log("Code is correct");
-                }
-                else
-                {
-                    Debug.Log("Code is wrong");
-                }
-            }
-
-            asterisk = asterisks[codeInputCount - 1];
-            if (asterisk != null)
-            {
+                GameObject asterisk = asterisks[codeInputCount];
                 asterisk.GetComponent<UnityEngine.UI.Image>().enabled = true;
-            }
 
-            // play some input sound
-            AudioManager.Instance.InputCodeAudio(gameObject);
+                WaitForSeconds Wait = new WaitForSeconds(0.3f);
+                yield return Wait;
+
+                codeInputCount++;
+
+                if (codeInputCount > 2)
+                {
+                    codeInputCount = 0;
+                    for (int i = 0; i < 3; i++)
+                    {
+                        GameObject a = asterisks[i];
+                        a.gameObject.GetComponent<UnityEngine.UI.Image>().enabled = false;
+                    }
+
+                    if (code.Contains(CODE))
+                    {
+                        Debug.Log("Code is correct");
+                    }
+                    else
+                    {
+                        Debug.Log("Code is wrong");
+                    }
+                    code = "";
+                    codeInputUI.SetActive(false);
+                }
+
+                // play some input sound
+                AudioManager.Instance.InputCodeAudio(gameObject);
+            }
         }
     }
 }
