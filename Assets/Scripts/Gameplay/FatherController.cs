@@ -11,6 +11,8 @@ public class FatherController : PlayerController
     public Transform fireSpawn;
     public GameObject bulletPrefab;
     public float bulletForce = 20.0f;
+    public GameObject codeInputUI;
+    public List<GameObject> asterisks;
 
     private int codeInputCount = 0;
     private bool inputCodeFlag = true;
@@ -166,18 +168,14 @@ public class FatherController : PlayerController
                 code += "Y";
             }
 
-            GameObject asterisk = GameObject.Find("Asterisk" + codeInputCount);
-            if (asterisk != null)
-            {
-                asterisk.GetComponent<UnityEngine.UI.Image>().enabled = true;
-            }
 
-            if (codeInputCount > 2)
+            GameObject asterisk;
+            if (codeInputCount > 3)
             {
-                codeInputCount = 0;
-                for (int i = 1; i < 4; i++)
+                codeInputCount = 1;
+                for (int i = 0; i < 3; i++)
                 {
-                    asterisk = GameObject.Find("Asterisk" + i);
+                    asterisk = asterisks[i];
                     if (asterisk != null)
                     {
                         asterisk.gameObject.GetComponent<UnityEngine.UI.Image>().enabled = false;
@@ -192,6 +190,12 @@ public class FatherController : PlayerController
                 {
                     Debug.Log("Code is wrong");
                 }
+            }
+
+            asterisk = asterisks[codeInputCount - 1];
+            if (asterisk != null)
+            {
+                asterisk.GetComponent<UnityEngine.UI.Image>().enabled = true;
             }
 
             // play some input sound
