@@ -1,0 +1,2400 @@
+fileFormatVersion: 2
+guid: 9a2212e692228455a867db91fa1a53dc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3171475646078620745
+    second: monstersprite sheet x25_0
+  - first:
+      213: -6888104287003711379
+    second: monstersprite sheet x25_1
+  - first:
+      213: 4976754191614507067
+    second: monstersprite sheet x25_2
+  - first:
+      213: 3829159037561469309
+    second: monstersprite sheet x25_3
+  - first:
+      213: 3195537593567848305
+    second: monstersprite sheet x25_4
+  - first:
+      213: 2697138913842337812
+    second: monstersprite sheet x25_5
+  - first:
+      213: 6779248702980600797
+    second: monstersprite sheet x25_6
+  - first:
+      213: -457027916324580973
+    second: monstersprite sheet x25_7
+  - first:
+      213: 3280874131214787772
+    second: monstersprite sheet x25_8
+  - first:
+      213: -4676725124025517312
+    second: monstersprite sheet x25_9
+  - first:
+      213: 7281304125552792716
+    second: monstersprite sheet x25_10
+  - first:
+      213: 380027815315016721
+    second: monstersprite sheet x25_11
+  - first:
+      213: -7839560028439257029
+    second: monstersprite sheet x25_12
+  - first:
+      213: 5239221861817269787
+    second: monstersprite sheet x25_13
+  - first:
+      213: -6472881228377907422
+    second: monstersprite sheet x25_14
+  - first:
+      213: -6480218433733704584
+    second: monstersprite sheet x25_15
+  - first:
+      213: -7566694033964201775
+    second: monstersprite sheet x25_16
+  - first:
+      213: -275533200095571027
+    second: monstersprite sheet x25_17
+  - first:
+      213: 5159705456641626048
+    second: monstersprite sheet x25_18
+  - first:
+      213: 4095899420450453626
+    second: monstersprite sheet x25_19
+  - first:
+      213: -9206170290999650138
+    second: monstersprite sheet x25_20
+  - first:
+      213: 9196945447186961359
+    second: monstersprite sheet x25_21
+  - first:
+      213: 7266448200344706190
+    second: monstersprite sheet x25_22
+  - first:
+      213: -1738808892843825139
+    second: monstersprite sheet x25_23
+  - first:
+      213: -3816060795145498859
+    second: monstersprite sheet x25_24
+  - first:
+      213: 7608877294867352161
+    second: monstersprite sheet x25_25
+  - first:
+      213: -5865210383859288485
+    second: monstersprite sheet x25_26
+  - first:
+      213: 4315271625844803796
+    second: monstersprite sheet x25_27
+  - first:
+      213: -4053659869367595129
+    second: monstersprite sheet x25_28
+  - first:
+      213: -6410255969760988258
+    second: monstersprite sheet x25_29
+  - first:
+      213: 5258542893048134416
+    second: monstersprite sheet x25_30
+  - first:
+      213: 8107184477990314099
+    second: monstersprite sheet x25_31
+  - first:
+      213: -370330494846278221
+    second: monstersprite sheet x25_32
+  - first:
+      213: 1825080642008848019
+    second: monstersprite sheet x25_33
+  - first:
+      213: -7503578491588259808
+    second: monstersprite sheet x25_34
+  - first:
+      213: 5028125493102958211
+    second: monstersprite sheet x25_35
+  - first:
+      213: 5026897450955347684
+    second: monstersprite sheet x25_36
+  - first:
+      213: 1942676280890758096
+    second: monstersprite sheet x25_37
+  - first:
+      213: 2340880982866242729
+    second: monstersprite sheet x25_38
+  - first:
+      213: -4561315362887853894
+    second: monstersprite sheet x25_39
+  - first:
+      213: 2827564437246820446
+    second: monstersprite sheet x25_40
+  - first:
+      213: 5758580311024239429
+    second: monstersprite sheet x25_41
+  - first:
+      213: -3746088838773741526
+    second: monstersprite sheet x25_42
+  - first:
+      213: 3464181325700634954
+    second: monstersprite sheet x25_43
+  - first:
+      213: -597126393280590923
+    second: monstersprite sheet x25_44
+  - first:
+      213: -4911854885818310667
+    second: monstersprite sheet x25_45
+  - first:
+      213: 8745712147310144787
+    second: monstersprite sheet x25_46
+  - first:
+      213: 7906557101947493256
+    second: monstersprite sheet x25_47
+  - first:
+      213: 3532796671193403640
+    second: monstersprite sheet x25_48
+  - first:
+      213: 1451946647087539274
+    second: monstersprite sheet x25_49
+  - first:
+      213: 7113202445537358550
+    second: monstersprite sheet x25_50
+  - first:
+      213: 4121144084288216765
+    second: monstersprite sheet x25_51
+  - first:
+      213: 4388554576273958412
+    second: monstersprite sheet x25_52
+  - first:
+      213: 9126184224213187437
+    second: monstersprite sheet x25_53
+  - first:
+      213: 2166309541214296636
+    second: monstersprite sheet x25_54
+  - first:
+      213: -1836063774028834959
+    second: monstersprite sheet x25_55
+  - first:
+      213: 2064153432752524122
+    second: monstersprite sheet x25_56
+  - first:
+      213: -3012279429511389497
+    second: monstersprite sheet x25_57
+  - first:
+      213: -4777867103731000253
+    second: monstersprite sheet x25_58
+  - first:
+      213: 2343554545933974885
+    second: monstersprite sheet x25_59
+  - first:
+      213: -6929611937310500260
+    second: monstersprite sheet x25_60
+  - first:
+      213: -6065031136105312257
+    second: monstersprite sheet x25_61
+  - first:
+      213: 6043584238468576439
+    second: monstersprite sheet x25_62
+  - first:
+      213: -8190352381193189219
+    second: monstersprite sheet x25_63
+  - first:
+      213: 1749615454642387313
+    second: monstersprite sheet x25_64
+  - first:
+      213: -6891245234382673109
+    second: monstersprite sheet x25_65
+  - first:
+      213: -2577933391065402871
+    second: monstersprite sheet x25_66
+  - first:
+      213: -138267701700590956
+    second: monstersprite sheet x25_67
+  - first:
+      213: 1402555236179376992
+    second: monstersprite sheet x25_68
+  - first:
+      213: -3571599553093132012
+    second: monstersprite sheet x25_69
+  - first:
+      213: -5733560071661389502
+    second: monstersprite sheet x25_70
+  - first:
+      213: -4320646191306157612
+    second: monstersprite sheet x25_71
+  - first:
+      213: -1477195039038039324
+    second: monstersprite sheet x25_72
+  - first:
+      213: -8702797766950383770
+    second: monstersprite sheet x25_73
+  - first:
+      213: 4386106170268257490
+    second: monstersprite sheet x25_74
+  - first:
+      213: 1803117594644817974
+    second: monstersprite sheet x25_75
+  - first:
+      213: 6518464196337316063
+    second: monstersprite sheet x25_76
+  - first:
+      213: -1277259037397424571
+    second: monstersprite sheet x25_77
+  - first:
+      213: -1418858481793449674
+    second: monstersprite sheet x25_78
+  - first:
+      213: 6267883017514765885
+    second: monstersprite sheet x25_79
+  - first:
+      213: -8006671149825719011
+    second: monstersprite sheet x25_80
+  - first:
+      213: -7310924612789920244
+    second: monstersprite sheet x25_81
+  - first:
+      213: -5857819068795456907
+    second: monstersprite sheet x25_82
+  - first:
+      213: -376958979591776386
+    second: monstersprite sheet x25_83
+  - first:
+      213: -7339858394195509276
+    second: monstersprite sheet x25_84
+  - first:
+      213: 2707525147088291013
+    second: monstersprite sheet x25_85
+  - first:
+      213: 478541998227631713
+    second: monstersprite sheet x25_86
+  - first:
+      213: -3450692862304931298
+    second: monstersprite sheet x25_87
+  - first:
+      213: 1165550119811778899
+    second: monstersprite sheet x25_88
+  - first:
+      213: 4838098645316129589
+    second: monstersprite sheet x25_89
+  - first:
+      213: -91598167198853931
+    second: monstersprite sheet x25_90
+  - first:
+      213: 5132022360884515005
+    second: monstersprite sheet x25_91
+  - first:
+      213: -6592363344210177895
+    second: monstersprite sheet x25_92
+  - first:
+      213: 7664846698914528603
+    second: monstersprite sheet x25_93
+  - first:
+      213: 4093584853581536808
+    second: monstersprite sheet x25_94
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: monstersprite sheet x25_0
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 4522
+        width: 507
+        height: 446
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bb6eadf3b7acf3d0800000000000000
+      internalID: -3171475646078620745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_1
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 4525
+        width: 506
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d686c4d45a98860a0800000000000000
+      internalID: -6888104287003711379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_2
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 4523
+        width: 507
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b387e9db19bf01540800000000000000
+      internalID: 4976754191614507067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_3
+      rect:
+        serializedVersion: 2
+        x: 1906
+        y: 4522
+        width: 506
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d79f35e5bd7e32530800000000000000
+      internalID: 3829159037561469309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_4
+      rect:
+        serializedVersion: 2
+        x: 2525
+        y: 4522
+        width: 510
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 177a40bb284d85c20800000000000000
+      internalID: 3195537593567848305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_5
+      rect:
+        serializedVersion: 2
+        x: 3145
+        y: 4523
+        width: 509
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41894755d892e6520800000000000000
+      internalID: 2697138913842337812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_6
+      rect:
+        serializedVersion: 2
+        x: 3765
+        y: 4528
+        width: 511
+        height: 437
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd3bf2107cab41e50800000000000000
+      internalID: 6779248702980600797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_7
+      rect:
+        serializedVersion: 2
+        x: 4390
+        y: 4535
+        width: 506
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3915903188f48a9f0800000000000000
+      internalID: -457027916324580973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_8
+      rect:
+        serializedVersion: 2
+        x: 5016
+        y: 4535
+        width: 500
+        height: 427
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb463d7b3a1088d20800000000000000
+      internalID: 3280874131214787772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_9
+      rect:
+        serializedVersion: 2
+        x: 5642
+        y: 4522
+        width: 503
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00b705e274fe81fb0800000000000000
+      internalID: -4676725124025517312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_10
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 4022
+        width: 497
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c84192136836c0560800000000000000
+      internalID: 7281304125552792716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_11
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 4016
+        width: 497
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11c8e98d841264500800000000000000
+      internalID: 380027815315016721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_12
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 4010
+        width: 492
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b30e68d90b9443390800000000000000
+      internalID: -7839560028439257029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_13
+      rect:
+        serializedVersion: 2
+        x: 1915
+        y: 3997
+        width: 488
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1e3415568475b840800000000000000
+      internalID: 5239221861817269787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_14
+      rect:
+        serializedVersion: 2
+        x: 2550
+        y: 4000
+        width: 479
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22f9d3d41d4bb26a0800000000000000
+      internalID: -6472881228377907422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_15
+      rect:
+        serializedVersion: 2
+        x: 3185
+        y: 4019
+        width: 469
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8744d5e0ba3a116a0800000000000000
+      internalID: -6480218433733704584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_16
+      rect:
+        serializedVersion: 2
+        x: 3813
+        y: 4028
+        width: 467
+        height: 436
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d80f7dbdd3bdf690800000000000000
+      internalID: -7566694033964201775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_17
+      rect:
+        serializedVersion: 2
+        x: 4445
+        y: 4028
+        width: 458
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da31a7ca30c1d2cf0800000000000000
+      internalID: -275533200095571027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_18
+      rect:
+        serializedVersion: 2
+        x: 5067
+        y: 4028
+        width: 476
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cfc4c886c4fa9740800000000000000
+      internalID: 5159705456641626048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_19
+      rect:
+        serializedVersion: 2
+        x: 5693
+        y: 4028
+        width: 464
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a787da762de87d830800000000000000
+      internalID: 4095899420450453626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_20
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 3515
+        width: 457
+        height: 452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a8163f85ec1d3080800000000000000
+      internalID: -9206170290999650138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_21
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 3503
+        width: 439
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc3993e182d12af70800000000000000
+      internalID: 9196945447186961359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_22
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 3500
+        width: 436
+        height: 466
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8c9250932c97d460800000000000000
+      internalID: 7266448200344706190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_23
+      rect:
+        serializedVersion: 2
+        x: 1982
+        y: 3497
+        width: 433
+        height: 467
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d08e0c946828ed7e0800000000000000
+      internalID: -1738808892843825139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_24
+      rect:
+        serializedVersion: 2
+        x: 2608
+        y: 3503
+        width: 436
+        height: 461
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51fce08dce0aa0bc0800000000000000
+      internalID: -3816060795145498859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_25
+      rect:
+        serializedVersion: 2
+        x: 3233
+        y: 3509
+        width: 437
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16a8a1c0699289960800000000000000
+      internalID: 7608877294867352161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_26
+      rect:
+        serializedVersion: 2
+        x: 3853
+        y: 3512
+        width: 439
+        height: 452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5672292b369a9ea0800000000000000
+      internalID: -5865210383859288485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_27
+      rect:
+        serializedVersion: 2
+        x: 4454
+        y: 3509
+        width: 461
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d84dcf2eace2eb30800000000000000
+      internalID: 4315271625844803796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_28
+      rect:
+        serializedVersion: 2
+        x: 5040
+        y: 3504
+        width: 494
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78f861673d18eb7c0800000000000000
+      internalID: -4053659869367595129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_29
+      rect:
+        serializedVersion: 2
+        x: 5644
+        y: 3497
+        width: 513
+        height: 467
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e93b11398223a07a0800000000000000
+      internalID: -6410255969760988258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_30
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2996
+        width: 527
+        height: 470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01bf94876e81af840800000000000000
+      internalID: 5258542893048134416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_31
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 2998
+        width: 522
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3706c2b3451828070800000000000000
+      internalID: 8107184477990314099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_32
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 3005
+        width: 518
+        height: 461
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b5613580625cdaf0800000000000000
+      internalID: -370330494846278221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_33
+      rect:
+        serializedVersion: 2
+        x: 1881
+        y: 3009
+        width: 510
+        height: 457
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39611699c2df35910800000000000000
+      internalID: 1825080642008848019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_34
+      rect:
+        serializedVersion: 2
+        x: 2507
+        y: 3005
+        width: 513
+        height: 461
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 020de981e1fedd790800000000000000
+      internalID: -7503578491588259808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_35
+      rect:
+        serializedVersion: 2
+        x: 3142
+        y: 3005
+        width: 506
+        height: 458
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 386dc7eee7d77c540800000000000000
+      internalID: 5028125493102958211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_36
+      rect:
+        serializedVersion: 2
+        x: 3792
+        y: 3027
+        width: 485
+        height: 436
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e69286199023c540800000000000000
+      internalID: 5026897450955347684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_37
+      rect:
+        serializedVersion: 2
+        x: 4442
+        y: 3042
+        width: 461
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d31214e8c5c5fa10800000000000000
+      internalID: 1942676280890758096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_38
+      rect:
+        serializedVersion: 2
+        x: 5067
+        y: 3033
+        width: 464
+        height: 427
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aca535f9da7c7020800000000000000
+      internalID: 2340880982866242729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_39
+      rect:
+        serializedVersion: 2
+        x: 5693
+        y: 3014
+        width: 464
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab8998628d3f2b0c0800000000000000
+      internalID: -4561315362887853894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_40
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 2502
+        width: 460
+        height: 454
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e50cf95efd68d3720800000000000000
+      internalID: 2827564437246820446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_41
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 2495
+        width: 457
+        height: 458
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 543882958469aef40800000000000000
+      internalID: 5758580311024239429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_42
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 2502
+        width: 482
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28e5db7c08330cc0800000000000000
+      internalID: -3746088838773741526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_43
+      rect:
+        serializedVersion: 2
+        x: 1939
+        y: 2511
+        width: 467
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a499debcf8e331030800000000000000
+      internalID: 3464181325700634954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_44
+      rect:
+        serializedVersion: 2
+        x: 2559
+        y: 2511
+        width: 473
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bb008285b496b7f0800000000000000
+      internalID: -597126393280590923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_45
+      rect:
+        serializedVersion: 2
+        x: 3172
+        y: 2508
+        width: 489
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff5886610695dbb0800000000000000
+      internalID: -4911854885818310667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_46
+      rect:
+        serializedVersion: 2
+        x: 3786
+        y: 2508
+        width: 503
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d6d387cd20f5970800000000000000
+      internalID: 8745712147310144787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_47
+      rect:
+        serializedVersion: 2
+        x: 4405
+        y: 2514
+        width: 510
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88b1ce12bcbb9bd60800000000000000
+      internalID: 7906557101947493256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_48
+      rect:
+        serializedVersion: 2
+        x: 5031
+        y: 2520
+        width: 512
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f05a2adad3070130800000000000000
+      internalID: 3532796671193403640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_49
+      rect:
+        serializedVersion: 2
+        x: 5660
+        y: 2520
+        width: 509
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44e87468c9562410800000000000000
+      internalID: 1451946647087539274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_50
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 2013
+        width: 504
+        height: 449
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d2b1b5dfeb27b260800000000000000
+      internalID: 7113202445537358550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_51
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 2004
+        width: 503
+        height: 458
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbe933cb5be313930800000000000000
+      internalID: 4121144084288216765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_52
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 2004
+        width: 504
+        height: 461
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c066934b22747ec30800000000000000
+      internalID: 4388554576273958412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_53
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 2007
+        width: 506
+        height: 458
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b30070338b6ae70800000000000000
+      internalID: 9126184224213187437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_54
+      rect:
+        serializedVersion: 2
+        x: 2519
+        y: 2019
+        width: 507
+        height: 446
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3a1e95dc07401e10800000000000000
+      internalID: 2166309541214296636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_55
+      rect:
+        serializedVersion: 2
+        x: 3142
+        y: 2028
+        width: 503
+        height: 437
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1775c04b9bdf486e0800000000000000
+      internalID: -1836063774028834959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_56
+      rect:
+        serializedVersion: 2
+        x: 3764
+        y: 2023
+        width: 501
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b0e195c9855ac10800000000000000
+      internalID: 2064153432752524122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_57
+      rect:
+        serializedVersion: 2
+        x: 4390
+        y: 2010
+        width: 513
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ced1cf81db3236d0800000000000000
+      internalID: -3012279429511389497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_58
+      rect:
+        serializedVersion: 2
+        x: 5019
+        y: 2011
+        width: 518
+        height: 454
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34cd612fe2b91bdb0800000000000000
+      internalID: -4777867103731000253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_59
+      rect:
+        serializedVersion: 2
+        x: 5647
+        y: 2013
+        width: 519
+        height: 449
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56d752e517af58020800000000000000
+      internalID: 2343554545933974885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_60
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 1498
+        width: 526
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5a1d4d58a215df90800000000000000
+      internalID: -6929611937310500260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_61
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 1497
+        width: 506
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff42ccc05ea4dba0800000000000000
+      internalID: -6065031136105312257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_62
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 1506
+        width: 507
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b4b11838df1fd350800000000000000
+      internalID: 6043584238468576439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_63
+      rect:
+        serializedVersion: 2
+        x: 1924
+        y: 1525
+        width: 500
+        height: 436
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9884b557e5065e80800000000000000
+      internalID: -8190352381193189219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_64
+      rect:
+        serializedVersion: 2
+        x: 2559
+        y: 1528
+        width: 479
+        height: 433
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1793e737cf1e74810800000000000000
+      internalID: 1749615454642387313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_65
+      rect:
+        serializedVersion: 2
+        x: 3188
+        y: 1531
+        width: 476
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2b648088f06d50a0800000000000000
+      internalID: -6891245234382673109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_66
+      rect:
+        serializedVersion: 2
+        x: 3820
+        y: 1531
+        width: 466
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 902bde24d37593cd0800000000000000
+      internalID: -2577933391065402871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_67
+      rect:
+        serializedVersion: 2
+        x: 4442
+        y: 1522
+        width: 461
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4920a340246c41ef0800000000000000
+      internalID: -138267701700590956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_68
+      rect:
+        serializedVersion: 2
+        x: 5068
+        y: 1506
+        width: 457
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06bf5566e80e67310800000000000000
+      internalID: 1402555236179376992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_69
+      rect:
+        serializedVersion: 2
+        x: 5705
+        y: 1498
+        width: 449
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 411a0fd21212f6ec0800000000000000
+      internalID: -3571599553093132012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_70
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 997
+        width: 436
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24972461e7d4e60b0800000000000000
+      internalID: -5733560071661389502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_71
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 1000
+        width: 435
+        height: 461
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d15d074e2bf904c0800000000000000
+      internalID: -4320646191306157612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_72
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 1003
+        width: 439
+        height: 457
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea1b2240f2ff7be0800000000000000
+      internalID: -1477195039038039324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_73
+      rect:
+        serializedVersion: 2
+        x: 1979
+        y: 1000
+        width: 440
+        height: 458
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66f0cd45a83793780800000000000000
+      internalID: -8702797766950383770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_74
+      rect:
+        serializedVersion: 2
+        x: 2608
+        y: 1009
+        width: 433
+        height: 449
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc0df1c2549edc30800000000000000
+      internalID: 4386106170268257490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_75
+      rect:
+        serializedVersion: 2
+        x: 3227
+        y: 1006
+        width: 437
+        height: 453
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 638af0526e5f50910800000000000000
+      internalID: 1803117594644817974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_76
+      rect:
+        serializedVersion: 2
+        x: 3828
+        y: 1003
+        width: 455
+        height: 458
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd0b9c776ac367a50800000000000000
+      internalID: 6518464196337316063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_77
+      rect:
+        serializedVersion: 2
+        x: 4414
+        y: 1000
+        width: 492
+        height: 461
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 546e4c53ca3464ee0800000000000000
+      internalID: -1277259037397424571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_78
+      rect:
+        serializedVersion: 2
+        x: 5019
+        y: 1009
+        width: 506
+        height: 453
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 631c62e6ab33f4ce0800000000000000
+      internalID: -1418858481793449674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_79
+      rect:
+        serializedVersion: 2
+        x: 5626
+        y: 1024
+        width: 519
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3ecba0556efbf650800000000000000
+      internalID: 6267883017514765885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_80
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 542
+        width: 515
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d150549a20792e090800000000000000
+      internalID: -8006671149825719011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_81
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 548
+        width: 513
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e1ff2bcc06a8a90800000000000000
+      internalID: -7310924612789920244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_82
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 539
+        width: 516
+        height: 427
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 572ffedc798d4bea0800000000000000
+      internalID: -5857819068795456907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_83
+      rect:
+        serializedVersion: 2
+        x: 1882
+        y: 533
+        width: 517
+        height: 433
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e77d9862ec5c4caf0800000000000000
+      internalID: -376958979591776386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_84
+      rect:
+        serializedVersion: 2
+        x: 2517
+        y: 539
+        width: 509
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4efbe40cda5932a90800000000000000
+      internalID: -7339858394195509276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_85
+      rect:
+        serializedVersion: 2
+        x: 3166
+        y: 545
+        width: 485
+        height: 423
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c482a4b6cf039520800000000000000
+      internalID: 2707525147088291013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_86
+      rect:
+        serializedVersion: 2
+        x: 3816
+        y: 528
+        width: 464
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16ea676796f14a600800000000000000
+      internalID: 478541998227631713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_87
+      rect:
+        serializedVersion: 2
+        x: 4442
+        y: 511
+        width: 464
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e12b651df1dac10d0800000000000000
+      internalID: -3450692862304931298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_88
+      rect:
+        serializedVersion: 2
+        x: 5071
+        y: 505
+        width: 463
+        height: 461
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3598b4b98addc2010800000000000000
+      internalID: 1165550119811778899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_89
+      rect:
+        serializedVersion: 2
+        x: 5699
+        y: 505
+        width: 461
+        height: 461
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 533dd56a511642340800000000000000
+      internalID: 4838098645316129589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_90
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 14
+        width: 470
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d41906c3f39abef0800000000000000
+      internalID: -91598167198853931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_91
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 20
+        width: 482
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db012e7852b983740800000000000000
+      internalID: 5132022360884515005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_92
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 17
+        width: 482
+        height: 449
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 990db0e57783384a0800000000000000
+      internalID: -6592363344210177895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_93
+      rect:
+        serializedVersion: 2
+        x: 1912
+        y: 15
+        width: 503
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5d30aa66710f5a60800000000000000
+      internalID: 7664846698914528603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monstersprite sheet x25_94
+      rect:
+        serializedVersion: 2
+        x: 2522
+        y: 17
+        width: 522
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82e95af4cb55fc830800000000000000
+      internalID: 4093584853581536808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 25935ddd1f5cd471c9de635e44cc0438
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

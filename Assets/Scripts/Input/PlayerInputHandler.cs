@@ -24,11 +24,13 @@ public class PlayerInputHandler : MonoBehaviour
             {
                 player = FatherController.Instance;
             }
-            else {
+            else
+            {
                 player = DaughterController.Instance;
             }
         }
-        else {
+        else
+        {
             if (playerInput.playerIndex == DaughterController.Instance.playerIndex)
             {
                 player = DaughterController.Instance;
@@ -78,11 +80,15 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnCollect(CallbackContext context)
     {
-        // if player is "daughter"
-        if (player == DaughterController.Instance)
+        if(player == DaughterController.Instance)
         {
             DaughterController d = player as DaughterController;
-            d.Collect();
+            d.Submit();
+        }
+        else
+        {
+            FatherController f = player as FatherController;
+            f.Submit();
         }
     }
 
@@ -92,10 +98,20 @@ public class PlayerInputHandler : MonoBehaviour
         {
             DaughterController d = player as DaughterController;
             d.Submit();
-        } else
+        }
+        else
         {
             FatherController f = player as FatherController;
             f.Submit();
+        }
+    }
+
+    public void OnInputCode(CallbackContext context)
+    {
+        if (player == FatherController.Instance)
+        {
+            FatherController d = player as FatherController;
+            d.InputCode(context);
         }
     }
 }

@@ -1,0 +1,840 @@
+fileFormatVersion: 2
+guid: b06d8a1fdb2f14180b3d4d861982dc1f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9176688448616242965
+    second: wolfframes_part1_0
+  - first:
+      213: 5059577457899727807
+    second: wolfframes_part1_1
+  - first:
+      213: -7060213145173295390
+    second: wolfframes_part1_2
+  - first:
+      213: -2486351827916633618
+    second: wolfframes_part1_3
+  - first:
+      213: -4057636458440159038
+    second: wolfframes_part1_4
+  - first:
+      213: -6161812884926402905
+    second: wolfframes_part1_5
+  - first:
+      213: -3884985992623072374
+    second: wolfframes_part1_6
+  - first:
+      213: 9093502961250287596
+    second: wolfframes_part1_7
+  - first:
+      213: -4750021676977806794
+    second: wolfframes_part1_8
+  - first:
+      213: -103770110997150162
+    second: wolfframes_part1_9
+  - first:
+      213: -7744317974023609067
+    second: wolfframes_part1_10
+  - first:
+      213: 8474776996556659734
+    second: wolfframes_part1_11
+  - first:
+      213: 8969721767576481558
+    second: wolfframes_part1_12
+  - first:
+      213: 5959816333957051308
+    second: wolfframes_part1_13
+  - first:
+      213: -2745163715853066942
+    second: wolfframes_part1_14
+  - first:
+      213: 8551468442118916686
+    second: wolfframes_part1_15
+  - first:
+      213: -7456093964397460676
+    second: wolfframes_part1_16
+  - first:
+      213: -5429696595525489448
+    second: wolfframes_part1_17
+  - first:
+      213: -2604756384369360216
+    second: wolfframes_part1_18
+  - first:
+      213: -661812620427529606
+    second: wolfframes_part1_19
+  - first:
+      213: -5224742854726452025
+    second: wolfframes_part1_20
+  - first:
+      213: -3016431470901367204
+    second: wolfframes_part1_21
+  - first:
+      213: 6109627503705331491
+    second: wolfframes_part1_22
+  - first:
+      213: -5858989659863254168
+    second: wolfframes_part1_23
+  - first:
+      213: -5911929231541682492
+    second: wolfframes_part1_24
+  - first:
+      213: 5058472931753179654
+    second: wolfframes_part1_25
+  - first:
+      213: 5300532875304339475
+    second: wolfframes_part1_26
+  - first:
+      213: 1071850292961180623
+    second: wolfframes_part1_27
+  - first:
+      213: 5608813610418081479
+    second: wolfframes_part1_28
+  - first:
+      213: -5342396039352154449
+    second: wolfframes_part1_29
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wolfframes_part1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2160
+        width: 535.4
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be06cc5e97ad5a080800000000000000
+      internalID: -9176688448616242965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolfframes_part1_1
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 2160
+        width: 535.4
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbbefa324ea373640800000000000000
+      internalID: 5059577457899727807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolfframes_part1_2
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 2160
+        width: 535.4
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eef6631d85150e90800000000000000
+      internalID: -7060213145173295390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolfframes_part1_3
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 2160
+        width: 535.4
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee9c26e8f24be7dd0800000000000000
+      internalID: -2486351827916633618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolfframes_part1_4
+      rect:
+        serializedVersion: 2
+        x: 2140
+        y: 2160
+        width: 535.4
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c0100ba32160b7c0800000000000000
+      internalID: -4057636458440159038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolfframes_part1_5
+      rect:
+        serializedVersion: 2
+        x: 2675
+        y: 2160
+        width: 535.4
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ae698de3d7dc7aa0800000000000000
+      internalID: -6161812884926402905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolfframes_part1_6
+      rect:
+        serializedVersion: 2
+        x: 3210
+        y: 2160
+        width: 535.4
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8b5550c2d1c51ac0800000000000000
+      internalID: -3884985992623072374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolfframes_part1_7
+      rect:
+        serializedVersion: 2
+        x: 3745
+        y: 2160
+        width: 535.4
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef394983cc923e70800000000000000
+      internalID: 9093502961250287596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolfframes_part1_8
+      rect:
+        serializedVersion: 2
+        x: 4280
+        y: 2160
+        width: 535.4
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63225549378841eb0800000000000000
+      internalID: -4750021676977806794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolfframes_part1_9
+      rect:
+        serializedVersion: 2
+        x: 4815
+        y: 2160
+        width: 535.4
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2646b342a55f8ef0800000000000000
+      internalID: -103770110997150162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolfframes_part1_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 535.4
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51566a275d7a68490800000000000000
+      internalID: -7744317974023609067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolfframes_part1_11
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 1080
+        width: 535.4
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61c596ee6c47c9570800000000000000
+      internalID: 8474776996556659734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolfframes_part1_12
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 1080
+        width: 535.4
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f2c7a8c6ada7c70800000000000000
+      internalID: 8969721767576481558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolfframes_part1_13
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 1080
+        width: 535.4
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca3b418116585b250800000000000000
+      internalID: 5959816333957051308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolfframes_part1_14
+      rect:
+        serializedVersion: 2
+        x: 2140
+        y: 1080
+        width: 535.4
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24d594a152837e9d0800000000000000
+      internalID: -2745163715853066942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolfframes_part1_15
+      rect:
+        serializedVersion: 2
+        x: 2675
+        y: 1080
+        width: 535.4
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a06709d3beca670800000000000000
+      internalID: 8551468442118916686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolfframes_part1_16
+      rect:
+        serializedVersion: 2
+        x: 3210
+        y: 1080
+        width: 535.4
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c33c7202b02a68890800000000000000
+      internalID: -7456093964397460676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolfframes_part1_17
+      rect:
+        serializedVersion: 2
+        x: 3745
+        y: 1080
+        width: 535.4
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dc2e81d6b7d5a4b0800000000000000
+      internalID: -5429696595525489448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolfframes_part1_18
+      rect:
+        serializedVersion: 2
+        x: 4280
+        y: 1074
+        width: 535
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a2cb377edb0adbd0800000000000000
+      internalID: -2604756384369360216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolfframes_part1_19
+      rect:
+        serializedVersion: 2
+        x: 4815
+        y: 1080
+        width: 535.4
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a72fb8b9de4c0d6f0800000000000000
+      internalID: -661812620427529606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolfframes_part1_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 535.4
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ccf4453e0cfd77b0800000000000000
+      internalID: -5224742854726452025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolfframes_part1_21
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 0
+        width: 535.4
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5e6d971f8b7326d0800000000000000
+      internalID: -3016431470901367204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolfframes_part1_22
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 0
+        width: 535.4
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 327105c28d1c9c450800000000000000
+      internalID: 6109627503705331491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolfframes_part1_23
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 0
+        width: 535.4
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86bf92552ffa0bea0800000000000000
+      internalID: -5858989659863254168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolfframes_part1_24
+      rect:
+        serializedVersion: 2
+        x: 2140
+        y: 0
+        width: 535.4
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ceb5b8cfab94fda0800000000000000
+      internalID: -5911929231541682492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolfframes_part1_25
+      rect:
+        serializedVersion: 2
+        x: 2675
+        y: 0
+        width: 535.4
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60ab31b945e433640800000000000000
+      internalID: 5058472931753179654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolfframes_part1_26
+      rect:
+        serializedVersion: 2
+        x: 3210
+        y: 0
+        width: 535.4
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3188bc011964f8940800000000000000
+      internalID: 5300532875304339475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolfframes_part1_27
+      rect:
+        serializedVersion: 2
+        x: 3745
+        y: 0
+        width: 535.4
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcb795c992affde00800000000000000
+      internalID: 1071850292961180623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolfframes_part1_28
+      rect:
+        serializedVersion: 2
+        x: 4280
+        y: 0
+        width: 535.4
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ce885c034286dd40800000000000000
+      internalID: 5608813610418081479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wolfframes_part1_29
+      rect:
+        serializedVersion: 2
+        x: 4815
+        y: 0
+        width: 535.4
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa606f08b1ffbd5b0800000000000000
+      internalID: -5342396039352154449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

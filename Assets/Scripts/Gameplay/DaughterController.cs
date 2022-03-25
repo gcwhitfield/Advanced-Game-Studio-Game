@@ -8,17 +8,13 @@ public class DaughterController : PlayerController
 {
     public static DaughterController Instance { get; private set; }
 
-    // 'collectableObject' is a refernece to the item that the daughter can currently collect
-    // if it is null, then the daughter is not standing nearby any collectbale objects
-    // if it is not null, then 'collectableObject' will refer to the Collectable component that
-    // she can collect.
-    private Collectable collectableObject = null;
-
     [HideInInspector]
     public bool hidden;
+    bool isNearHiddenSpot = false;
 
     public GameObject flashlight;
     private Vector3 prevLookDirection;
+
 
     private new void Start()
     {
@@ -35,59 +31,42 @@ public class DaughterController : PlayerController
     // called when the daughter presses the "Hide" key
     public void Hide()
     {
-        hidden = true;
-        animator.SetBool("Hide", true);
-    }
-
-    // called when the daughter presses the "Collect" key
-    public void Collect()
-    {
-        Debug.Log("Collect");
-        if (collectableObject)
+        if (isNearHiddenSpot)
         {
-            collectableObject.Collect();
-            Destroy(collectableObject.gameObject);
-            collectableObject = null;
+            hidden = true;
+            animator.SetBool("Hide", true);
+            TextDisplayManager.Instance.DaughterContinueToNextLine();
         }
     }
 
     // called when the player presses the submit button
     public new void Submit()
     {
-        TextDisplayManager.Instance.DaughterContinueToNextLine();
-        Debug.Log("Continue!");
+        base.Submit();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private new void OnTriggerEnter(Collider other)
     {
-        // TO-DO: press some button to trigger
+        base.OnTriggerEnter(other);
+       
         // detect only hide spot
         if (other.gameObject.CompareTag("HiddenSpot"))
         {
-            Hide();
+            isNearHiddenSpot = true;
+            TextDisplayManager.Instance.ShowText("Press Q to HIDE", TextDisplayManager.TextType.DAUGHTER);
             return;
-        }
-
-        Collectable c = other.GetComponent<Collectable>();
-        if (c)
-        {
-            Debug.Log("Collectable has been set");
-            collectableObject = c;
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private new void OnTriggerExit(Collider other)
     {
+        base.OnTriggerExit(other);
+
         if (other.gameObject.CompareTag("HiddenSpot"))
         {
             hidden = false;
+            isNearHiddenSpot = false;
             animator.SetBool("Hide", false);
-        }
-
-        Collectable c = other.GetComponent<Collectable>();
-        if (c)
-        {
-            collectableObject = null;
         }
     }
 

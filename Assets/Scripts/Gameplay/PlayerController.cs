@@ -7,6 +7,13 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
+    [System.Serializable]
+    public enum PlayerType
+    {
+        FATHER,
+        DAUGHTER
+    };
+
     public Animator animator;
 
     [SerializeField]
@@ -17,6 +24,15 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController cc;
 
+    public delegate void PlayerEvent();
+    PlayerEvent events;
+
+    // 'collectableObject' is a refernece to the item that the player can currently collect
+    // if it is null, then the daughter is not standing nearby any collectbale objects
+    // if it is not null, then 'collectableObject' will refer to the Collectable component that
+    // she can collect.
+    private Collectable collectableObject = null;
+
     // the value of playerIndex will be set inside of DaughterController.cs or FatherController.cs
     public int playerIndex { get; set; }
 
@@ -24,10 +40,43 @@ public class PlayerController : MonoBehaviour
     protected Vector3 lookDirection; // the direction that the player is currently looking
     protected PlayerInput playerInput;
 
+
     protected void Start()
     {
         cc = GetComponent<CharacterController>();
         lookDirection = gameObject.transform.forward;
+    }
+
+    // called when the player presses the "Collect" key in gameplay
+    public void Collect()
+    {
+        Submit(); // the 'collect' does the same thing as the 'submit' action (for now) 
+    }
+
+    IEnumerator DestroyAfterSmallDelay(GameObject ob)
+    {
+        float smallDelay = 0.1f; // seconds
+        yield return new WaitForSeconds(smallDelay);
+        Destroy(ob);
+    }
+
+    protected void OnTriggerEnter(Collider other)
+    {
+        Collectable c = other.GetComponent<Collectable>();
+        if (c)
+        {
+            collectableObject = c;
+            return;
+        }
+    }
+
+    protected void OnTriggerExit(Collider other)
+    {
+        Collectable c = other.GetComponent<Collectable>();
+        if (c)
+        {
+            collectableObject = null;
+        }
     }
 
     public void Move(CallbackContext context)
@@ -36,8 +85,28 @@ public class PlayerController : MonoBehaviour
         movement = new Vector3(movement2D.x, 0, movement2D.y);
     }
 
+    // 'e' is a delegate that points to a void function. 'e' will get called
+    // the next time that the player hits the 'submit' key
+    public void ExecuteUponSubmit(PlayerEvent e)
+    {
+        events += e;
+    }
+
+    public void CancelExecuteUponSubmit(PlayerEvent e)
+    {
+        events -= e;
+    }
+
     // called when the player needs to confirm an action in the UI or in the environment
-    public void Submit() { } // function is overwritten by child class
+    public void Submit()
+    {
+        // call all of the functions in 'events'
+        if (events != null)
+        {
+            events();
+        }
+        events = null;
+    }
 
     // Update is called once per frame
     protected void Update()

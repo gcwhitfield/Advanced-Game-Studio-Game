@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{1bda5fc8-ee18-474d-aeb8-f5dc58de6c81}">
 		<property name="assetPath">
-			<value>Lantern/lantern.wav</value>
+			<value>Character/lantern.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
