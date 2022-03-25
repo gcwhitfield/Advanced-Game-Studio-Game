@@ -38,7 +38,6 @@ public class TextDisplayOnTriggerEnter : Interactable
                         if (other.gameObject.GetComponent<DaughterController>())
                         {
                             ShowText();
-                            p.ExecuteUponSubmit(TextDisplayManager.Instance.DaughterContinueToNextLine);
                             ExecuteTriggerEvents();
                         }
                         break;
@@ -46,13 +45,11 @@ public class TextDisplayOnTriggerEnter : Interactable
                         if (other.gameObject.GetComponent<FatherController>())
                         {
                             ShowText();
-                            p.ExecuteUponSubmit(TextDisplayManager.Instance.FatherContinueToNextLine);
                             ExecuteTriggerEvents();
                         }
                         break;
                     case ActivationTrigger.ON_EITHER_ENTER:
                         ShowText();
-                        p.ExecuteUponSubmit(TextDisplayManager.Instance.FatherContinueToNextLine);
                         ExecuteTriggerEvents();
                         break;
                 }
@@ -81,6 +78,6 @@ public class TextDisplayOnTriggerEnter : Interactable
     void ShowText()
     {
         triggered = true;
-        TextDisplayManager.Instance.ShowText(textDestination, textToDisplay.dialogueLines);
+        TextDisplayManager.Instance.ShowText(textToDisplay.dialogueLines, textDestination);
     }
 }

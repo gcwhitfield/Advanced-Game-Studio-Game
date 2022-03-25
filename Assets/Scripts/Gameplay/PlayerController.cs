@@ -89,7 +89,6 @@ public class PlayerController : MonoBehaviour
     // the next time that the player hits the 'submit' key
     public void ExecuteUponSubmit(PlayerEvent e)
     {
-        Debug.Log("Execute on submit: " + e.ToString());
         events += e;
     }
 
@@ -104,7 +103,6 @@ public class PlayerController : MonoBehaviour
         // call all of the functions in 'events'
         if (events != null)
         {
-            Debug.Log("Events being executed: " + events.ToString());
             events();
         }
         events = null;

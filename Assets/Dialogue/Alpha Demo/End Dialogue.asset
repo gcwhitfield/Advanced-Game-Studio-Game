@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7984a56cf210c45089808c923f475e10, type: 3}
+  m_Name: End Dialogue
+  m_EditorClassIdentifier: 
+  dialogueLines: "[DAUGHTER]\nyes woah omg ok lol\n[FATHER]\nlemons apples peaches
+    pears\ncabbages tomatoes bacon salt\n[DAUGHTER]\n123-432-2347 aksjdhqi38\nASJDHQ#&($!\n....
+    kompwa\n[FATHER]\nspaghetti 89\nalsko\n[DAUGHTER]\nalsdjaasd \nokok\n[FATHER]\nakdaskjdhaksd\n.....
+    and that's how I met your mother"

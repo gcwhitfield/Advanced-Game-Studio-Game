@@ -92,14 +92,14 @@ public class WolfEncounter : MonoBehaviour
         Debug.Log("Begin step 2");
         // step 2) display the "throw bone" text to father. Wait for the father
         // to throw the bone
-        TextDisplayManager.Instance.ShowText(TextDisplayManager.TextType.FATHER, "Press Q to throw bone");
+        TextDisplayManager.Instance.ShowText("Press Q to throw bone", TextDisplayManager.TextType.FATHER);
         FatherController.Instance.ExecuteUponSubmit(OnFatherThrowBone);
         while (!fatherHasThrownBone)
         {
             yield return new WaitForSeconds(0.2f);
         }
 
-        TextDisplayManager.Instance.ShowText(TextDisplayManager.TextType.DAUGHTER, "The wolf leaves");
+        TextDisplayManager.Instance.ShowText("The wolf leaves", TextDisplayManager.TextType.DAUGHTER);
         DaughterController.Instance.ExecuteUponSubmit(TextDisplayManager.Instance.DaughterContinueToNextLine);
         // step 3) the wolf runs away from the daughter. The wolf goes to the bone
         wolf.gameObject.SetActive(false);
