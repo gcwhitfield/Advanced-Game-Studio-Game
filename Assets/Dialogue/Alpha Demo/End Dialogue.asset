@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7984a56cf210c45089808c923f475e10, type: 3}
   m_Name: End Dialogue
   m_EditorClassIdentifier: 
-  dialogueLines: "[DAUGHTER]\nyes woah omg ok lol\n[FATHER]\nlemons apples peaches
-    pears\ncabbages tomatoes bacon salt\n[DAUGHTER]\n123-432-2347 aksjdhqi38\nASJDHQ#&($!\n....
-    kompwa\n[FATHER]\nspaghetti 89\nalsko\n[DAUGHTER]\nalsdjaasd \nokok\n[FATHER]\nakdaskjdhaksd\n.....
-    and that's how I met your mother"
+  dialogueLines: "[FATHER]\nYoung lady, you are in so much trouble.\n[DAUGHTER]\nDad,
+    you don\u2019t understand!\n[FATHER]\nI don\u2019t wanna hear it! Not another
+    word until we\u2019re out of these woods. You have no idea what is out here and
+    what it\u2019s capable of.\n[DAUGHTER]\n\u201Cit\u201D? What are you talking
+    about?\n[FATHER]\n\u2026I didn\u2019t say that. We\u2019re leaving. Now. Stay
+    close."
