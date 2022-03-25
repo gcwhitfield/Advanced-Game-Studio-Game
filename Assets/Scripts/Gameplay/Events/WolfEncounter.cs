@@ -14,6 +14,7 @@ public class WolfEncounter : MonoBehaviour
     bool daughterHasReachedInvisibleTrigger = false;
 
     public List<Interactable> daughterHideSpots;
+    public List<GameObject> hideRings;
     public Collectable fatherBone;
     public Interactable daughterWolfInvisibleTrigger; // this is an invisible trigger that the daughter must
     // reach before hiding 
@@ -39,13 +40,27 @@ public class WolfEncounter : MonoBehaviour
         Debug.Log("Father has thrown bone");
         fatherHasThrownBone = true;
         TextDisplayManager.Instance.FatherContinueToNextLine();
-        // TODO: Add bone throwing to father
+        // TODO: Add bone throwing animation
+
+        // deactivate the hide rings
+        foreach (GameObject g in hideRings)
+        {
+            g.SetActive(false);
+        }
+
+
     }
 
     public void OnDaughterInvisibleTriggerReached()
     {
         Debug.Log("Daughter has reached invisible trigger");
         daughterHasReachedInvisibleTrigger = true;
+
+        // activate all of the hide rings
+        foreach (GameObject g in hideRings)
+        {
+            g.SetActive(true);
+        }
     }
 
     private void Start()
