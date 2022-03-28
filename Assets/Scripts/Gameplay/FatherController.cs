@@ -39,6 +39,38 @@ public class FatherController : PlayerController
 
     public new void Update()
     {
+        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Father Shoot N"))
+        {
+          return;
+        }
+        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Father Shoot NW"))
+        {
+          return;
+        }
+        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Father Shoot E"))
+        {
+          return;
+        }
+        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Father Shoot NE"))
+        {
+          return;
+        }
+        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Father Shoot SE"))
+        {
+          return;
+        }
+        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Father Shoot SW"))
+        {
+          return;
+        }
+        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Father Shoot S"))
+        {
+          return;
+        }
+        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Father Shoot W"))
+        {
+          return;
+        }
         base.Update();
 
         // play the footstep audio
