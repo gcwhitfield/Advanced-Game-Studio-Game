@@ -102,12 +102,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5198279169488577233, guid: 7d6c8d4bffbcb47ea8dc2efc19534e13, type: 3}
+  m_Sprite: {fileID: 3291134435152523819, guid: e890b17d5a0e44b579e1cfe8c2cdea46, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.04, y: 9.84}
+  m_Size: {x: 4.1000004, y: 10.467345}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -209,15 +209,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7121009889559279133, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 132.90741
+      value: -34.3
       objectReference: {fileID: 0}
     - target: {fileID: 7121009889559279133, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.35248756
+      value: 47.1
       objectReference: {fileID: 0}
     - target: {fileID: 7121009889559279133, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -121.51349
+      value: -292.5
       objectReference: {fileID: 0}
     - target: {fileID: 7121009889559279133, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_LocalRotation.w
@@ -233,7 +233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7121009889559279133, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 1.4551915e-11
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7121009889559279133, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -290,6 +290,41 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7121009890443627916, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
   m_PrefabInstance: {fileID: 6153439282659239017}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &319620259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4014819054487939557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaeedd9d7766d4a0bab1d81414e7f0f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toonPostProcessMaterial: {fileID: 2100000, guid: 8bf3d00b5cc0d4e87944be63eb64325b, type: 2}
+  lightLevels: 2
+  colorLevels: 22
+  brightnessOffset: 0
+  lightSpreadFactor: 1.705
+  exposure: 1
+--- !u!114 &2545867755162200256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4014819054487939557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e11964c8077494d890e28dde7a6a8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spookyMonsterIsNearMaterial: {fileID: 2100000, guid: afacae278951b43a792fd5b7b16af4a4, type: 2}
+  color: {r: 0.6792453, g: 0, b: 0.05310199, a: 1}
+  intensity: 0
+  effectBeginDistance: 10
+  monster: {fileID: 0}
 --- !u!114 &5469928444540468469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,3 +357,8 @@ MonoBehaviour:
   fireSpawn: {fileID: 2059756972}
   bulletPrefab: {fileID: 3630579012413559642, guid: b747cc2e39c84eb4c86ca8baf28dd776, type: 3}
   bulletForce: 20
+  codeInputUI: {fileID: 0}
+  asterisks:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

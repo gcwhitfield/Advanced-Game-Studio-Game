@@ -72,15 +72,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2982010771401387420, guid: 4d6a54a90e8ff3c4fb691d5ed05a757c, type: 3}
+  m_Sprite: {fileID: -8138688840925973278, guid: 5d34efecce619414fa02c145bdae9765, type: 3}
   m_Color: {r: 0.7184941, g: 0.735849, b: 0.7313496, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.0100002, y: 7.03}
+  m_Size: {x: 3.6000001, y: 7.1000004}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &889826909
@@ -276,7 +276,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6882148641542900949, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.21
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6882148641542900949, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_LocalPosition.y
@@ -284,7 +284,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6882148641542900949, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.32
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6882148641542900949, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_LocalRotation.w
@@ -328,15 +328,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7121009889559279133, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.92
+      value: 48.4
       objectReference: {fileID: 0}
     - target: {fileID: 7121009889559279133, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 46.2
       objectReference: {fileID: 0}
     - target: {fileID: 7121009889559279133, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 37.6
+      value: -75.4
       objectReference: {fileID: 0}
     - target: {fileID: 7121009889559279133, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_LocalRotation.w
@@ -344,15 +344,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7121009889559279133, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7121009889559279133, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7121009889559279133, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7121009889559279133, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -381,6 +381,10 @@ PrefabInstance:
     - target: {fileID: 7121009889882229576, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121009890443627916, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7121009890443627918, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: field of view
@@ -451,3 +455,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attenuationObject: {fileID: 295366173201227497}
   ListenerNumber: -1
+--- !u!114 &242214210091223358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295366174211155271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaeedd9d7766d4a0bab1d81414e7f0f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toonPostProcessMaterial: {fileID: 2100000, guid: 8bf3d00b5cc0d4e87944be63eb64325b, type: 2}
+  lightLevels: 2
+  colorLevels: 22
+  brightnessOffset: 0
+  lightSpreadFactor: 1.698
+  exposure: 1
+--- !u!114 &2284917451066852294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295366174211155271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e11964c8077494d890e28dde7a6a8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spookyMonsterIsNearMaterial: {fileID: 2100000, guid: afacae278951b43a792fd5b7b16af4a4, type: 2}
+  color: {r: 0.6792453, g: 0, b: 0.05310199, a: 1}
+  intensity: 0
+  effectBeginDistance: 10
+  monster: {fileID: 0}
