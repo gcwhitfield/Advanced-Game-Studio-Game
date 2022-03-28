@@ -31,7 +31,7 @@ public class DaughterController : PlayerController
     // called when the daughter presses the "Hide" key
     public void Hide()
     {
-        if (isNearHiddenSpot)
+        if (isNearHiddenSpot && animator.GetFloat("Speed") < 0.01)
         {
             hidden = true;
             animator.SetBool("Hide", true);
@@ -48,7 +48,7 @@ public class DaughterController : PlayerController
     private new void OnTriggerEnter(Collider other)
     {
         base.OnTriggerEnter(other);
-       
+
         // detect only hide spot
         if (other.gameObject.CompareTag("HiddenSpot"))
         {
@@ -163,6 +163,12 @@ public class DaughterController : PlayerController
                 ResetAnimatorDirections();
                 animator.SetBool("RunSE", true);
             }
+        }
+        //if daughter moves, unhides
+        if (hidden == true && animator.GetFloat("Speed") > 0.01)
+        {
+          hidden = false;
+          animator.SetBool("Hide", false);
         }
     }
 }

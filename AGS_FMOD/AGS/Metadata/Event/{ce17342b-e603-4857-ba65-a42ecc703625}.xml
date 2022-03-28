@@ -151,7 +151,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{b309b780-72e9-4cd7-ab88-4f40565f1bf7}">
 		<property name="volume">
-			<value>4</value>
+			<value>3</value>
 		</property>
 		<property name="name">
 			<value>Owl</value>
@@ -190,7 +190,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{d3fa0bbd-b1f6-4ad1-ab50-bcd404d7014d}">
 		<property name="volume">
-			<value>-14</value>
+			<value>-10</value>
 		</property>
 		<property name="name">
 			<value>Insect</value>
@@ -243,7 +243,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{cca0edaf-2652-4959-9294-f619b3dd79f2}">
 		<property name="volume">
-			<value>-8.5</value>
+			<value>-6</value>
 		</property>
 		<property name="name">
 			<value>Quiet</value>
