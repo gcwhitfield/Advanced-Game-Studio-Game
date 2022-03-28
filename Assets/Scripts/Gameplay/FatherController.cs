@@ -13,11 +13,18 @@ public class FatherController : PlayerController
     public float bulletForce = 20.0f;
     public GameObject codeInputUI;
     public List<GameObject> asterisks;
+    public List<GameObject> recBox;
+
+    [HideInInspector]
+    public bool inputCodeFlag = true;
 
     private int codeInputCount = 0;
-    private bool inputCodeFlag = true;
-    private string CODE = "BXY";
+    private string CODE = "123";
     private string code = "";
+    private int numberCount = 1;
+    private Vector2 numberPos = new Vector2(0, 0);
+    private Vector2 moveLength;
+    private Vector3 recPosInit;
 
     private void Awake()
     {
@@ -39,37 +46,37 @@ public class FatherController : PlayerController
 
     public new void Update()
     {
-        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Father Shoot N"))
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Father Shoot N"))
         {
-          return;
+            return;
         }
-        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Father Shoot NW"))
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Father Shoot NW"))
         {
-          return;
+            return;
         }
-        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Father Shoot E"))
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Father Shoot E"))
         {
-          return;
+            return;
         }
-        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Father Shoot NE"))
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Father Shoot NE"))
         {
-          return;
+            return;
         }
-        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Father Shoot SE"))
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Father Shoot SE"))
         {
-          return;
+            return;
         }
-        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Father Shoot SW"))
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Father Shoot SW"))
         {
-          return;
+            return;
         }
-        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Father Shoot S"))
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Father Shoot S"))
         {
-          return;
+            return;
         }
-        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Father Shoot W"))
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Father Shoot W"))
         {
-          return;
+            return;
         }
         base.Update();
 
@@ -171,40 +178,40 @@ public class FatherController : PlayerController
 
     public IEnumerator InputCode(CallbackContext context)
     {
+        recPosInit = recBox[1].transform.position;
+        moveLength = recBox[2].transform.position - recPosInit;
         if (context.ReadValue<float>() > 0 && inputCodeFlag)
         {
-            bool InputFlag = false;
             string button = context.control.ToString();
-            //Debug.Log(button);
-            if (button.Contains("/Keyboard/h"))
+
+            Vector3 movement = new Vector2(0, 0);
+
+            if (button.Contains("/Keyboard/a"))
             {
-                Debug.Log("h pressed");
-                InputFlag = true;
-                code += "X";
+                movement = new Vector2(-1, 0);
             }
-            if (button.Contains("/Keyboard/j"))
+            if (button.Contains("/Keyboard/s"))
             {
-                Debug.Log("j pressed");
-                InputFlag = true;
-                code += "A";
+                movement = new Vector2(0, 1);
             }
-            if (button.Contains("/Keyboard/k"))
+            if (button.Contains("/Keyboard/d"))
             {
-                Debug.Log("k pressed");
-                InputFlag = true;
-                code += "B";
+                movement = new Vector2(1, 0);
             }
-            if (button.Contains("/Keyboard/u"))
+            if (button.Contains("/Keyboard/w"))
             {
-                Debug.Log("u pressed");
-                InputFlag = true;
-                code += "Y";
+                movement = new Vector2(0, -1);
             }
 
-            if (InputFlag)
+            NumPad(movement);
+            if (button.Contains("/Keyboard/k"))
             {
+                code += (numberCount + 1);
                 GameObject asterisk = asterisks[codeInputCount];
                 asterisk.GetComponent<UnityEngine.UI.Image>().enabled = true;
+
+                // play some input sound
+                AudioManager.Instance.InputCodeAudio(gameObject);
 
                 WaitForSeconds Wait = new WaitForSeconds(0.3f);
                 yield return Wait;
@@ -231,10 +238,18 @@ public class FatherController : PlayerController
                     code = "";
                     codeInputUI.SetActive(false);
                 }
-
-                // play some input sound
-                AudioManager.Instance.InputCodeAudio(gameObject);
             }
         }
+    }
+
+    private void NumPad(Vector2 movement)
+    {
+        numberPos += movement;
+        numberPos.x = numberPos.x > 2 ? 2 : numberPos.x;
+        numberPos.x = numberPos.x < 0 ? 0 : numberPos.x;
+        numberPos.y = numberPos.y > 2 ? 2 : numberPos.y;
+        numberPos.y = numberPos.y < 0 ? 0 : numberPos.y;
+        numberCount = (int)(numberPos.x + numberPos.y * 3);
+        recBox[0].transform.position = recPosInit + new Vector3(moveLength.x * numberPos.x, moveLength.y * numberPos.y);
     }
 }

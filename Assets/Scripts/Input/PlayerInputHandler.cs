@@ -110,9 +110,8 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if (player == FatherController.Instance)
         {
-            FatherController d = player as FatherController;
-            //d.InputCode(context);
-            StartCoroutine(d.InputCode(context));
+            FatherController f = player as FatherController;
+            StartCoroutine(f.InputCode(context));
         }
     }
 }
