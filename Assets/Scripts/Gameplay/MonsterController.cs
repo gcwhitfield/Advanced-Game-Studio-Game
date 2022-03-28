@@ -5,14 +5,22 @@ using UnityEngine.AI;
 
 public class MonsterController : MonoBehaviour
 {
+    [Header("Behavior")]
     public NavMeshAgent agent;
     public float LookRadius = 10f;
     public Transform[] waypoints;
+
+    [Header("References")]
+    public Interactable tentHidingSpot;
+
     private int waypointsIndex;
     private Vector3 waypointDestination;
+
     private Transform player;
     private float distance;
     private bool isPatrol;
+
+    
 
     // Start is called before the first frame update
     private void Start()
@@ -24,6 +32,12 @@ public class MonsterController : MonoBehaviour
         isPatrol = true;
         IterateWaypoints();
         MoveToDestination();
+        tentHidingSpot.ExecuteOnInteract(Destroy);
+    }
+
+    public void Destroy()
+    {
+        Destroy(this.gameObject);
     }
 
     // Update is called once per frame

@@ -58,16 +58,16 @@ Material:
     m_Floats:
     - _BrightnessOffset: 0
     - _BumpScale: 1
-    - _ColorLevels: 18
+    - _ColorLevels: 22
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Exposure: 1.07
+    - _Exposure: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _LightLevels: 2
-    - _LightSpreadFactor: 1.63
+    - _LightSpreadFactor: 1.698
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
