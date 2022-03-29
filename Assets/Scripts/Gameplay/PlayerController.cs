@@ -108,7 +108,9 @@ public class PlayerController : MonoBehaviour
         // call all of the functions in 'events'
         if (events != null)
         {
+            Debug.Log(events);
             events();
+            AudioManager.Instance.PickUpAudio(cc.gameObject);
         }
         events = null;
     }

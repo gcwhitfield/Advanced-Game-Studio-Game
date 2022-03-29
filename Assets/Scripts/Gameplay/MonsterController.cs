@@ -7,11 +7,14 @@ public class MonsterController : MonoBehaviour
 {
     [Header("Behavior")]
     public NavMeshAgent agent;
+
     public float LookRadius = 10f;
     public Transform[] waypoints;
 
     [Header("References")]
     public Interactable tentHidingSpot;
+
+    public GameObject hideRing;
 
     private int waypointsIndex;
     private Vector3 waypointDestination;
@@ -19,8 +22,6 @@ public class MonsterController : MonoBehaviour
     private Transform player;
     private float distance;
     private bool isPatrol;
-
-    
 
     // Start is called before the first frame update
     private void Start()
@@ -49,6 +50,7 @@ public class MonsterController : MonoBehaviour
             agent.stoppingDistance = 2.5f;
             Chase();
             isPatrol = false;
+            hideRing.SetActive(true);
         }
         else
         {
@@ -60,6 +62,7 @@ public class MonsterController : MonoBehaviour
                 isPatrol = true;
             }
             Patrol();
+            hideRing.SetActive(false);
         }
     }
 
