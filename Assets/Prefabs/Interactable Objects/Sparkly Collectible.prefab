@@ -53,17 +53,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7864051741110913097, guid: 7d78744fe50d74e059977de45942a9ca, type: 3}
       propertyPath: m_Name
-      value: SparklyCollectible
+      value: Sparkly Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7864051741110913092, guid: 7d78744fe50d74e059977de45942a9ca, type: 3}
     - {fileID: 7864051741110913095, guid: 7d78744fe50d74e059977de45942a9ca, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7d78744fe50d74e059977de45942a9ca, type: 3}
+--- !u!1 &7455672415481396745 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7864051741110913097, guid: 7d78744fe50d74e059977de45942a9ca, type: 3}
+  m_PrefabInstance: {fileID: 744615575674107456}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7455672415481396744 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7864051741110913096, guid: 7d78744fe50d74e059977de45942a9ca, type: 3}
   m_PrefabInstance: {fileID: 744615575674107456}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5196646212638140898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7455672415481396745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4046f78ac8d654fc181c999a6ed68083, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textDestination: 1
+  activationTrigger: 1
+  textToDisplay: {fileID: 11400000, guid: 38da7c81bb922cb44afd874e93c5d3d8, type: 2}
+  onlyShowTextOnce: 1
+  eraseTextIfPlayerLeaves: 1
 --- !u!1001 &5825426841072646935
 PrefabInstance:
   m_ObjectHideFlags: 0
