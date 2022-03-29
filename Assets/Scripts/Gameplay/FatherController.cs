@@ -16,7 +16,7 @@ public class FatherController : PlayerController
     public List<GameObject> recBox;
 
     [HideInInspector]
-    public bool inputCodeFlag = true;
+    public bool inputCodeFlag = false;
 
     private int codeInputCount = 0;
     private string CODE = "123";
@@ -30,6 +30,7 @@ public class FatherController : PlayerController
     {
         if (!Instance) Instance = this;
         else Destroy(gameObject);
+        inputCodeFlag = false;
     }
 
     private void ResetAnimatorDirections()
@@ -176,6 +177,18 @@ public class FatherController : PlayerController
         AudioManager.Instance.ShootAudio(gameObject);
     }
 
+    private new void OnTriggerEnter(Collider other)
+    {
+        base.OnTriggerEnter(other);
+
+        // detect only lock
+        if (other.gameObject.CompareTag("Lock"))
+        {
+            inputCodeFlag = true;
+            codeInputUI.SetActive(true);
+        }
+    }
+
     public IEnumerator InputCode(CallbackContext context)
     {
         recPosInit = recBox[1].transform.position;
@@ -229,13 +242,14 @@ public class FatherController : PlayerController
 
                     if (code.Contains(CODE))
                     {
-                        Debug.Log("Code is correct");
+                        AudioManager.Instance.LockCorrectAudio(gameObject);
                     }
                     else
                     {
-                        Debug.Log("Code is wrong");
+                        AudioManager.Instance.LockWrongAudio(gameObject);
                     }
                     code = "";
+                    inputCodeFlag = false;
                     codeInputUI.SetActive(false);
                 }
             }

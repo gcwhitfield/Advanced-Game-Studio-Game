@@ -6,6 +6,7 @@ TagManager:
   tags:
   - HiddenSpot
   - Monsters
+  - Lock
   layers:
   - Default
   - TransparentFX

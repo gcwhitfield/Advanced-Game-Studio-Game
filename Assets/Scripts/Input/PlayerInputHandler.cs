@@ -45,7 +45,18 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnMove(CallbackContext context)
     {
-        if (player)
+        if (player == FatherController.Instance)
+        {
+            if (!FatherController.Instance.inputCodeFlag)
+            {
+                player.Move(context);
+            }
+            else
+            {
+                player.Stop();
+            }
+        }
+        else if (player == DaughterController.Instance)
         {
             player.Move(context);
         }

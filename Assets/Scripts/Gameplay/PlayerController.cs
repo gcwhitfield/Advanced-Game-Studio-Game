@@ -25,7 +25,8 @@ public class PlayerController : MonoBehaviour
     private CharacterController cc;
 
     public delegate void PlayerEvent();
-    PlayerEvent events;
+
+    private PlayerEvent events;
 
     // 'collectableObject' is a refernece to the item that the player can currently collect
     // if it is null, then the daughter is not standing nearby any collectbale objects
@@ -40,7 +41,6 @@ public class PlayerController : MonoBehaviour
     protected Vector3 lookDirection; // the direction that the player is currently looking
     protected PlayerInput playerInput;
 
-
     protected void Start()
     {
         cc = GetComponent<CharacterController>();
@@ -50,10 +50,10 @@ public class PlayerController : MonoBehaviour
     // called when the player presses the "Collect" key in gameplay
     public void Collect()
     {
-        Submit(); // the 'collect' does the same thing as the 'submit' action (for now) 
+        Submit(); // the 'collect' does the same thing as the 'submit' action (for now)
     }
 
-    IEnumerator DestroyAfterSmallDelay(GameObject ob)
+    private IEnumerator DestroyAfterSmallDelay(GameObject ob)
     {
         float smallDelay = 0.1f; // seconds
         yield return new WaitForSeconds(smallDelay);
@@ -83,6 +83,11 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 movement2D = context.ReadValue<Vector2>();
         movement = new Vector3(movement2D.x, 0, movement2D.y);
+    }
+
+    public void Stop()
+    {
+        movement = new Vector3(0, 0, 0);
     }
 
     // 'e' is a delegate that points to a void function. 'e' will get called
@@ -127,8 +132,9 @@ public class PlayerController : MonoBehaviour
         // apply gravity
         if (!cc.isGrounded)
         {
-            movement.y += Physics.gravity.y/10;
-        } else
+            movement.y += Physics.gravity.y / 10;
+        }
+        else
         {
             movement.y = 0.0f;
         }
@@ -141,7 +147,5 @@ public class PlayerController : MonoBehaviour
         }
 
         // lerp camera position
-
-
     }
 }

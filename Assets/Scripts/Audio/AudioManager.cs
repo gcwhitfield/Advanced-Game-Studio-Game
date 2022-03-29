@@ -21,6 +21,8 @@ public class AudioManager : MonoBehaviour
     public EventReference wolfChase;
     public EventReference menuHover;
     public EventReference menuEnter;
+    public EventReference lockCorrect;
+    public EventReference lockWrong;
     //public EventReference lanternLaunchAduio;
 
     private float footstepTimer = 0.0f;
@@ -126,5 +128,15 @@ public class AudioManager : MonoBehaviour
     public void MenuEnterAudio(GameObject gb)
     {
         PlayAudio(menuEnter, gb);
+    }
+
+    public void LockCorrectAudio(GameObject gb)
+    {
+        PlayAudio(lockCorrect, gb);
+    }
+
+    public void LockWrongAudio(GameObject gb)
+    {
+        PlayAudio(lockWrong, gb);
     }
 }
