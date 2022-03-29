@@ -141,3 +141,17 @@ MonoBehaviour:
       Data3: -664317562
       Data4: -440724098
     Path: event:/SFX/MenuEnter
+  lockCorrect:
+    Guid:
+      Data1: -379184091
+      Data2: 1327011950
+      Data3: -850217042
+      Data4: 754184527
+    Path: event:/SFX/Correct
+  lockWrong:
+    Guid:
+      Data1: 1706299559
+      Data2: 1128501758
+      Data3: 1562007992
+      Data4: -1720751704
+    Path: event:/SFX/Wrong

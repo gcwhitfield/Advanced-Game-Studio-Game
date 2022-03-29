@@ -7,6 +7,8 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }
 
+    public string level;
+
     public EventReference shootAudio;
     public EventReference footStepAudio;
     public EventReference ambientAudio;
@@ -36,6 +38,10 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+        if (level.Contains("Menu"))
+        {
+            return;
+        }
         AmbientAudio();
     }
 
