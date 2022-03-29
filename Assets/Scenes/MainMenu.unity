@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 31206258}
   - component: {fileID: 31206257}
   - component: {fileID: 31206256}
+  - component: {fileID: 31206259}
   m_Layer: 5
   m_Name: OptionsButton
   m_TagString: Untagged
@@ -244,6 +245,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31206254}
   m_CullTransparentMesh: 1
+--- !u!114 &31206259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31206254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: MenuHoverAudio
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1327176034}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &441082730
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,6 +453,7 @@ GameObject:
   - component: {fileID: 788445189}
   - component: {fileID: 788445188}
   - component: {fileID: 788445187}
+  - component: {fileID: 788445190}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -487,6 +518,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &788445190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788445186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: 0}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: 
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!114 &796072844 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6122876950255075689, guid: 426ba0038da494420ba1c12f1b595106, type: 3}
@@ -784,6 +845,7 @@ GameObject:
   - component: {fileID: 985849737}
   - component: {fileID: 985849736}
   - component: {fileID: 985849735}
+  - component: {fileID: 985849739}
   - component: {fileID: 985849738}
   m_Layer: 5
   m_Name: BeginButton
@@ -936,6 +998,35 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &985849739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985849733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: MenuHoverAudio
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1327176034}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!224 &1110662232 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5078708487109840495, guid: f682e9b6fed4f4b398cc8352453e8c74, type: 3}
@@ -1327,6 +1418,7 @@ GameObject:
   - component: {fileID: 1721491593}
   - component: {fileID: 1721491592}
   - component: {fileID: 1721491591}
+  - component: {fileID: 1721491594}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -1436,6 +1528,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1721491589}
   m_CullTransparentMesh: 1
+--- !u!114 &1721491594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721491589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: MenuHoverAudio
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1327176034}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &5078708485999481399
 PrefabInstance:
   m_ObjectHideFlags: 0
