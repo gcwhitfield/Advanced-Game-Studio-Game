@@ -17,7 +17,7 @@ public class FadeObjectBlockingObject : MonoBehaviour
     private Camera Camera;
 
     [SerializeField]
-    private float FadedAlpha = 0.33f;
+    private float FadedAlpha = 0.03f;
 
     [SerializeField]
     private FadeMode FadingMode;
@@ -29,7 +29,7 @@ public class FadeObjectBlockingObject : MonoBehaviour
     private int FadeFPS = 30;
 
     [SerializeField]
-    private float FadeSpeed = 1;
+    private float FadeSpeed = 3;
 
     [Header("Read Only Data")]
     [SerializeField]
@@ -38,7 +38,10 @@ public class FadeObjectBlockingObject : MonoBehaviour
     private List<int> IndexesToClear = new List<int>();
     private Dictionary<FadingObject, Coroutine> RunningCoroutines = new Dictionary<FadingObject, Coroutine>();
 
-    private RaycastHit[] Hits = new RaycastHit[10];
+    private RaycastHit[] Hits = new RaycastHit[20];
+
+    private float radius = 1f;
+    private float threshold = 1.5f;
 
     private void Start()
     {
@@ -51,7 +54,8 @@ public class FadeObjectBlockingObject : MonoBehaviour
 
         while (true)
         {
-            int hits = Physics.RaycastNonAlloc(Camera.transform.position, (Player.transform.position - Camera.transform.position).normalized, Hits, Vector3.Distance(Camera.transform.position, Player.transform.position), LayerMask);
+            int hits = Physics.SphereCastNonAlloc(Camera.transform.position, radius, (Player.transform.position - Camera.transform.position).normalized, Hits, Vector3.Distance(Camera.transform.position, Player.transform.position) - threshold, LayerMask);
+            Debug.Log(hits);
             if (hits > 0)
             {
                 for (int i = 0; i < hits; i++)
@@ -237,5 +241,12 @@ public class FadeObjectBlockingObject : MonoBehaviour
     {
         Transparent,
         Fade
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Debug.DrawLine(Camera.transform.position, Player.transform.position);
+        Gizmos.DrawWireSphere(Player.transform.position, radius);
     }
 }
