@@ -8,7 +8,6 @@ public class Collectable : Interactable
 
     public void Collect()
     {
-        Debug.Log("Collect");
         // TODO: play the collection sound
         Destroy(gameObject);
     }

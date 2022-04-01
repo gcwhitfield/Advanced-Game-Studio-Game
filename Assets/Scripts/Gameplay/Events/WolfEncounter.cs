@@ -82,6 +82,17 @@ public class WolfEncounter : MonoBehaviour
         }
     }
 
+    private IEnumerator TellFatherToThrowBone()
+    {
+        float waitTime = 5.0f; // seconds
+        yield return new WaitForSeconds(waitTime);
+        if (!fatherHasThrownBone)
+        {
+            TextDisplayManager.Instance.ShowText("If only there was some way to make the wolf disappear...s", TextDisplayManager.TextType.FATHER);
+        }
+
+    }
+
     private IEnumerator DoWolfEncounter()
     {
         // step 1) the father must collect the bone and the daughter must hide
@@ -100,7 +111,7 @@ public class WolfEncounter : MonoBehaviour
         Debug.Log("Begin step 2");
         // step 2) display the "throw bone" text to father. Wait for the father
         // to throw the bone
-        TextDisplayManager.Instance.ShowText("Press Q to throw bone", TextDisplayManager.TextType.FATHER);
+        StartCoroutine("TellFatherToThrowBone");
         FatherController.Instance.ExecuteUponSubmit(OnFatherThrowBone);
         while (!fatherHasThrownBone)
         {

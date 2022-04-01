@@ -468,7 +468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toonPostProcessMaterial: {fileID: 2100000, guid: 8bf3d00b5cc0d4e87944be63eb64325b, type: 2}
-  lightLevels: 2
+  lightLevels: 3
   colorLevels: 22
   brightnessOffset: 0
   lightSpreadFactor: 1.698
