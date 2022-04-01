@@ -21,11 +21,13 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
         // CENTER // text in the center of screen [not yet implemented]
     };
 
-    public void ShowText(string text, TextType type = TextType.DAUGHTER)
+    public void ShowText(string text, TextType type = TextType.DAUGHTER, TMP_FontAsset font = null, int fontSize = 36)
     {
         ScrollingTextParams textParams;
         textParams.type = type;
         textParams.text = text;
+        textParams.font = font;
+        textParams.fontSize = fontSize;
         StartCoroutine("DisplayScrollingText", textParams);
     }
 
@@ -33,6 +35,8 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
     {
         public TextType type; // the location to display the text on the screen
         public string text; // the text to display
+        public TMP_FontAsset font;
+        public int fontSize;
     }
 
     // this function will be called from DaughterController.cs. when the player presses their
@@ -79,6 +83,14 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
                 break;
         }
 
+        if (textParams.font != null)
+        {
+          text.font = textParams.font;
+        }
+        if (textParams.fontSize != 0){
+          text.fontSize = textParams.fontSize;
+        }
+
         if (!animator) // log warning if animator not found
         {
             Debug.LogWarning("Animator for scrolling text not found. Not playing text animation...");
@@ -93,8 +105,8 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
         // create a list of lines based on the return character from input string
         char []separator = { '\n' };
         string []lines = textParams.text.Split(separator);
-        
-        // play the open animation    
+
+        // play the open animation
         animator.gameObject.SetActive(true);
         animator.SetTrigger("Open");
 
@@ -155,7 +167,7 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
             // 'continueToNextLine' will be set to true when the user presses their controller
             bool cont = false;
 
-            while (!cont) 
+            while (!cont)
             {
                 switch(textParams.type)
                 {

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 // when the player collides with this object, text will display to the screen
 public class TextDisplayOnTriggerEnter : Interactable
@@ -19,6 +20,8 @@ public class TextDisplayOnTriggerEnter : Interactable
     [Tooltip("This determines when the text display is triggered")]
     public ActivationTrigger activationTrigger;
     public DialogueEvent textToDisplay;
+    public TMP_FontAsset fontDisplay;
+    public int fontSize;
 
     public bool onlyShowTextOnce = true;
     public bool eraseTextIfPlayerLeaves = false;
@@ -78,6 +81,6 @@ public class TextDisplayOnTriggerEnter : Interactable
     void ShowText()
     {
         triggered = true;
-        TextDisplayManager.Instance.ShowText(textToDisplay.dialogueLines, textDestination);
+        TextDisplayManager.Instance.ShowText(textToDisplay.dialogueLines, textDestination, fontDisplay, fontSize);
     }
 }
