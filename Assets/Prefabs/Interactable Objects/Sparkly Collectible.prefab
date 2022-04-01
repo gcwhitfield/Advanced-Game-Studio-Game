@@ -84,8 +84,11 @@ MonoBehaviour:
   textDestination: 1
   activationTrigger: 1
   textToDisplay: {fileID: 11400000, guid: 38da7c81bb922cb44afd874e93c5d3d8, type: 2}
+  fontDisplay: {fileID: 0}
+  fontSize: 0
   onlyShowTextOnce: 1
   eraseTextIfPlayerLeaves: 1
+  onSubmit: 0
 --- !u!1001 &5825426841072646935
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -96,6 +99,18 @@ PrefabInstance:
     - target: {fileID: 992756891479030763, guid: 61c0668c850233f4dbc0799d5e40cc5d, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 992756891479030763, guid: 61c0668c850233f4dbc0799d5e40cc5d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 992756891479030763, guid: 61c0668c850233f4dbc0799d5e40cc5d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 992756891479030763, guid: 61c0668c850233f4dbc0799d5e40cc5d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 992756891479030763, guid: 61c0668c850233f4dbc0799d5e40cc5d, type: 3}
       propertyPath: m_LocalPosition.x
