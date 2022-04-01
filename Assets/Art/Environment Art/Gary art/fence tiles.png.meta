@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: 011238410c24d1c49adc8a7cfc3b7f34
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6618677585435877493
+    second: fence tiles_0
+  - first:
+      213: 8861306280118922859
+    second: fence tiles_2
+  - first:
+      213: -7943780329037651192
+    second: fence tiles_4
+  - first:
+      213: -3140804194111292621
+    second: fence tiles_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -37,11 +49,11 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 0
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -101,7 +113,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: fence tiles_0
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 180
+        width: 769
+        height: 1446
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f1145adcbb524a0800000000000000
+      internalID: -6618677585435877493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence tiles_2
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 449
+        width: 769
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6e2d60dc1fa9fa70800000000000000
+      internalID: 8861306280118922859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence tiles_4
+      rect:
+        serializedVersion: 2
+        x: 1916
+        y: 427
+        width: 674
+        height: 1147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 803a9f1f0e502c190800000000000000
+      internalID: -7943780329037651192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence tiles_5
+      rect:
+        serializedVersion: 2
+        x: 2717
+        y: 427
+        width: 704
+        height: 1105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33b70f4e93f9964d0800000000000000
+      internalID: -3140804194111292621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
