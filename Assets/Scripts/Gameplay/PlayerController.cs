@@ -28,6 +28,20 @@ public class PlayerController : MonoBehaviour
 
     private PlayerEvent events;
 
+    public GameObject inventory;
+    // called when the "ShowInventory" button is pressed
+    public void ShowInventory()
+    {
+        // toggle the inventory being on and off
+        if (inventory.activeSelf)
+        {
+            inventory.SetActive(false);
+        } else
+        {
+            inventory.SetActive(true);
+        }
+    }
+
     // 'collectableObject' is a refernece to the item that the player can currently collect
     // if it is null, then the daughter is not standing nearby any collectbale objects
     // if it is not null, then 'collectableObject' will refer to the Collectable component that
@@ -147,7 +161,5 @@ public class PlayerController : MonoBehaviour
             cc.Move(movement * moveSpeed * Time.deltaTime);
             lookDirection = movement;
         }
-
-        // lerp camera position
     }
 }

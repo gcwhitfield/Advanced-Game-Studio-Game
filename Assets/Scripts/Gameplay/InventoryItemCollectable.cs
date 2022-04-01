@@ -5,7 +5,7 @@ using UnityEngine;
 public class InventoryItemCollectable : Collectable
 {
     public string itemName;
-    public Texture2D itemIcon;
+    public Sprite itemIcon;
 
     public new void Collect()
     {

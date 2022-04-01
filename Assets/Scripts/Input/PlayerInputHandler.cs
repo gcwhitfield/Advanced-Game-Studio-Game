@@ -125,4 +125,9 @@ public class PlayerInputHandler : MonoBehaviour
             StartCoroutine(f.InputCode(context));
         }
     }
+
+    public void OnShowInventory(CallbackContext context)
+    {
+        player.ShowInventory();
+    }
 }

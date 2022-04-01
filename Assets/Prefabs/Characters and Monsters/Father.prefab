@@ -147,6 +147,10 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5182200223301226884, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5519051575353914596, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 0
@@ -263,9 +267,21 @@ PrefabInstance:
       propertyPath: m_TargetTexture
       value: 
       objectReference: {fileID: 8400000, guid: 2efb2f320c1b64ba1b2cf36fab29f2c4, type: 2}
+    - target: {fileID: 7121009890443627918, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+      propertyPath: near clip plane
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 7931825298783511303, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098057196228470827, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098057196228470827, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 65.399994
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7121009890443627919, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
@@ -290,6 +306,40 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7121009890443627916, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
   m_PrefabInstance: {fileID: 6153439282659239017}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5994897413245377623 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 456920763663956030, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+  m_PrefabInstance: {fileID: 6153439282659239017}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6537345629051514830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4014819055372325451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 864da863e1b2b4dd594ce727a1948c6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 6918751744163230094}
+  moveSpeed: 2
+  rotateSpeed: 0
+  inventory: {fileID: 5994897413245377623}
+  fireSpawn: {fileID: 2059756972}
+  bulletPrefab: {fileID: 3630579012413559642, guid: b747cc2e39c84eb4c86ca8baf28dd776, type: 3}
+  bulletForce: 20
+  codeInputUI: {fileID: 0}
+  asterisks:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  recBox:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  inputCodeFlag: 0
 --- !u!114 &319620259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,7 +357,7 @@ MonoBehaviour:
   colorLevels: 22
   brightnessOffset: 0
   lightSpreadFactor: 1.705
-  exposure: 1
+  exposure: 0.95
 --- !u!114 &2545867755162200256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,26 +389,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attenuationObject: {fileID: 4014819055372325451}
   ListenerNumber: -1
---- !u!114 &6537345629051514830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4014819055372325451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 864da863e1b2b4dd594ce727a1948c6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 6918751744163230094}
-  moveSpeed: 2
-  rotateSpeed: 0
-  fireSpawn: {fileID: 2059756972}
-  bulletPrefab: {fileID: 3630579012413559642, guid: b747cc2e39c84eb4c86ca8baf28dd776, type: 3}
-  bulletForce: 20
-  codeInputUI: {fileID: 0}
-  asterisks:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}

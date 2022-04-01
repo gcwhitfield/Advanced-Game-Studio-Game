@@ -246,6 +246,14 @@ PrefabInstance:
       propertyPath: m_Shadows.m_NormalBias
       value: 1.55
       objectReference: {fileID: 0}
+    - target: {fileID: 2951279561981959663, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2951279561981959663, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5519051575353914596, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.size
       value: 0
@@ -328,15 +336,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7121009889559279133, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 48.4
+      value: 76.94
       objectReference: {fileID: 0}
     - target: {fileID: 7121009889559279133, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 46.2
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 7121009889559279133, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -75.4
+      value: -346
       objectReference: {fileID: 0}
     - target: {fileID: 7121009889559279133, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_LocalRotation.w
@@ -394,6 +402,10 @@ PrefabInstance:
       propertyPath: m_TargetTexture
       value: 
       objectReference: {fileID: 8400000, guid: 4fde9b9516794439f8b63b174849b4ea, type: 2}
+    - target: {fileID: 7121009890443627918, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+      propertyPath: near clip plane
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 7233190210350384003, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_Name
       value: Spot Light
@@ -401,6 +413,26 @@ PrefabInstance:
     - target: {fileID: 7931825298783511303, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8955596609809777204, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+      propertyPath: m_Color.b
+      value: 0.18098079
+      objectReference: {fileID: 0}
+    - target: {fileID: 8955596609809777204, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+      propertyPath: m_Color.g
+      value: 0.18098079
+      objectReference: {fileID: 0}
+    - target: {fileID: 8955596609809777204, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+      propertyPath: m_Color.r
+      value: 0.7830189
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098057196228470827, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098057196228470827, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 65.399994
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
@@ -424,6 +456,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7121009890443627916, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
   m_PrefabInstance: {fileID: 7407208884293216459}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6961718673595338997 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 456920763663956030, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+  m_PrefabInstance: {fileID: 7407208884293216459}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8108555306124955871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -439,6 +476,7 @@ MonoBehaviour:
   animator: {fileID: 889826909}
   moveSpeed: 3
   rotateSpeed: 0
+  inventory: {fileID: 6961718673595338997}
   hidden: 0
   flashlight: {fileID: 192182608466979656}
 --- !u!114 &170107600359750971
@@ -472,7 +510,7 @@ MonoBehaviour:
   colorLevels: 22
   brightnessOffset: 0
   lightSpreadFactor: 1.698
-  exposure: 1
+  exposure: 0.92
 --- !u!114 &2284917451066852294
 MonoBehaviour:
   m_ObjectHideFlags: 0
