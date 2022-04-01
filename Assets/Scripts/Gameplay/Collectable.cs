@@ -6,9 +6,26 @@ public class Collectable : Interactable
 {
     public PlayerController.PlayerType collector;
 
+    public string itemName;
+    public Sprite itemIcon;
+
     public void Collect()
     {
         // TODO: play the collection sound
+        Inventory.InventoryItem i;
+        i.name = itemName;
+        i.icon = itemIcon;
+
+        Debug.Log("COLLECT CALLAED AUYA");
+        if (collector == PlayerController.PlayerType.DAUGHTER)
+        {
+            DaughterController.Instance.gameObject.GetComponent<Inventory>().Add(i);
+        }
+        else
+        {
+            FatherController.Instance.gameObject.GetComponent<Inventory>().Add(i);
+        }
+
         Destroy(gameObject);
     }
 

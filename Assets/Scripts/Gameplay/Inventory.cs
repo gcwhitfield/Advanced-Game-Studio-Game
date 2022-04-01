@@ -6,6 +6,7 @@ using UnityEngine.UI;
 // attach this component to Daughter and Father to give them an inventory
 public class Inventory : MonoBehaviour
 {
+    [System.Serializable]
     public struct InventoryItem
     {
         public string name;
