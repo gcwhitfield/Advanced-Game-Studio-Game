@@ -55,7 +55,7 @@ public class FadeObjectBlockingObject : MonoBehaviour
         while (true)
         {
             int hits = Physics.SphereCastNonAlloc(Camera.transform.position, radius, (Player.transform.position - Camera.transform.position).normalized, Hits, Vector3.Distance(Camera.transform.position, Player.transform.position) - threshold, LayerMask);
-            Debug.Log(hits);
+            //Debug.Log(hits);
             if (hits > 0)
             {
                 for (int i = 0; i < hits; i++)

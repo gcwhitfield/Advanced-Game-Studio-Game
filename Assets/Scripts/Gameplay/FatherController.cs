@@ -196,6 +196,7 @@ public class FatherController : PlayerController
         if (context.ReadValue<float>() > 0 && inputCodeFlag)
         {
             string button = context.control.ToString();
+            Debug.Log(button);
 
             Vector3 movement = new Vector2(0, 0);
 
