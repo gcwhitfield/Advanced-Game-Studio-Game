@@ -14,6 +14,7 @@ public class FatherController : PlayerController
     public GameObject codeInputUI;
     public List<GameObject> asterisks;
     public List<GameObject> recBox;
+    public Animator FenceArt;
 
     [HideInInspector]
     public bool inputCodeFlag = false;
@@ -200,25 +201,25 @@ public class FatherController : PlayerController
 
             Vector3 movement = new Vector2(0, 0);
 
-            if (button.Contains("/Keyboard/a"))
+            if (button.Contains("/Keyboard/a") || button.Contains("dpad/left"))
             {
                 movement = new Vector2(-1, 0);
             }
-            if (button.Contains("/Keyboard/s"))
+            if (button.Contains("/Keyboard/s") || button.Contains("dpad/down"))
             {
                 movement = new Vector2(0, 1);
             }
-            if (button.Contains("/Keyboard/d"))
+            if (button.Contains("/Keyboard/d") || button.Contains("dpad/right"))
             {
                 movement = new Vector2(1, 0);
             }
-            if (button.Contains("/Keyboard/w"))
+            if (button.Contains("/Keyboard/w") || button.Contains("dpad/up"))
             {
                 movement = new Vector2(0, -1);
             }
 
             NumPad(movement);
-            if (button.Contains("/Keyboard/k"))
+            if (button.Contains("/Keyboard/k") || button.Contains("buttonEast"))
             {
                 code += (numberCount + 1);
                 GameObject asterisk = asterisks[codeInputCount];
@@ -244,6 +245,7 @@ public class FatherController : PlayerController
                     if (code.Contains(CODE))
                     {
                         AudioManager.Instance.LockCorrectAudio(gameObject);
+                        FenceArt.SetTrigger("Open");
                     }
                     else
                     {
