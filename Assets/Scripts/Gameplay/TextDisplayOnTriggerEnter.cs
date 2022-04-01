@@ -25,6 +25,7 @@ public class TextDisplayOnTriggerEnter : Interactable
 
     public bool onlyShowTextOnce = true;
     public bool eraseTextIfPlayerLeaves = false;
+    public bool onSubmit= false;
 
     bool triggered = false;
 
@@ -40,14 +41,28 @@ public class TextDisplayOnTriggerEnter : Interactable
                     case ActivationTrigger.ON_DAUGHTER_ENTER:
                         if (other.gameObject.GetComponent<DaughterController>())
                         {
-                            ShowText();
+                            if(onSubmit)
+                            {
+                              DaughterController.Instance.ExecuteUponSubmit(ShowText);
+                            }
+                            else
+                            {
+                              ShowText();
+                            }
                             ExecuteTriggerEvents();
                         }
                         break;
                     case ActivationTrigger.ON_FATHER_ENTER:
                         if (other.gameObject.GetComponent<FatherController>())
                         {
+                          if(onSubmit)
+                          {
+                            FatherController.Instance.ExecuteUponSubmit(ShowText);
+                          }
+                          else
+                          {
                             ShowText();
+                          }
                             ExecuteTriggerEvents();
                         }
                         break;
