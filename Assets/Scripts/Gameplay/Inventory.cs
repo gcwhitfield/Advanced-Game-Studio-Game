@@ -22,10 +22,12 @@ public class Inventory : MonoBehaviour
 
         // create a new gameobject, insert into layout group
         GameObject g = new GameObject();
+        g.AddComponent<RectTransform>();
         Image img = g.AddComponent<Image>();
         img.sprite = i.icon;
         g.name = i.name;
-        g.transform.parent = inventoryLayoutGroup.transform;
+        LayoutElement l = g.AddComponent<LayoutElement>();
+        GameObject.Instantiate(g, inventoryLayoutGroup.transform);
     }
 
     public void Remove(InventoryItem i)
