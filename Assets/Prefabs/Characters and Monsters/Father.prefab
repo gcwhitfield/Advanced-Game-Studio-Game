@@ -324,7 +324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 6918751744163230094}
-  moveSpeed: 2
+  moveSpeed: 2.5
   rotateSpeed: 0
   inventory: {fileID: 5994897413245377623}
   fireSpawn: {fileID: 2059756972}
