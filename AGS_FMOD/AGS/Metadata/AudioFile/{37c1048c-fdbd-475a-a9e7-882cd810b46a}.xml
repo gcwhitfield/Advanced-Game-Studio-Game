@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{37c1048c-fdbd-475a-a9e7-882cd810b46a}">
+		<property name="assetPath">
+			<value>Voice/449438__purplereptar__man-sighing.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>22.120000000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{de5a1372-2fca-4e83-aa22-7cbf9527f0c0}</destination>
+		</relationship>
+	</object>
+</objects>

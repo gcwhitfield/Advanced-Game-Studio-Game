@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{66cecba0-5cf7-42b7-bc0e-3c31b7dd3aa4}">
+		<property name="assetPath">
+			<value>Voice/Unlock Open Close Chest Sound Effect.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>5.7119999999999997</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{de5a1372-2fca-4e83-aa22-7cbf9527f0c0}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -7,29 +7,21 @@ using UnityEngine;
 
 public class FadeObjectBlockingObject : MonoBehaviour
 {
-    [SerializeField]
-    private LayerMask LayerMask;
+    public LayerMask LayerMask;
+    public Transform Player;
+    public Camera Camera;
 
-    [SerializeField]
-    private Transform Player;
+    public float FadedAlphaFar = 0f;
+    public float FadedAlphaClose = 0.33f;
 
-    [SerializeField]
-    private Camera Camera;
+    public FadeMode FadingMode;
+    public float ChecksPerSecond = 10;
+    public int FadeFPS = 30;
+    public float FadeSpeed = 5;
 
-    [SerializeField]
-    private float FadedAlpha = 0.03f;
-
-    [SerializeField]
-    private FadeMode FadingMode;
-
-    [SerializeField]
-    private float ChecksPerSecond = 10;
-
-    [SerializeField]
-    private int FadeFPS = 30;
-
-    [SerializeField]
-    private float FadeSpeed = 3;
+    public float radius = 2f;
+    public float threshold = 4f;
+    public float closeDistance = 5f;
 
     [Header("Read Only Data")]
     [SerializeField]
@@ -39,9 +31,6 @@ public class FadeObjectBlockingObject : MonoBehaviour
     private Dictionary<FadingObject, Coroutine> RunningCoroutines = new Dictionary<FadingObject, Coroutine>();
 
     private RaycastHit[] Hits = new RaycastHit[20];
-
-    private float radius = 1f;
-    private float threshold = 1.5f;
 
     private void Start()
     {
@@ -99,6 +88,22 @@ public class FadeObjectBlockingObject : MonoBehaviour
                 if (fadingObject != null && fadingObject == ObjectsBlockingView[i])
                 {
                     objectIsBeingHit = true;
+
+                    if (fadingObject.Materials[0].color.a == FadedAlphaFar || fadingObject.Materials[0].color.a == FadedAlphaClose)
+                    {
+                        if (RunningCoroutines.ContainsKey(fadingObject))
+                        {
+                            if (RunningCoroutines[fadingObject] != null) // may be null if it's already ended
+                            {
+                                StopCoroutine(RunningCoroutines[fadingObject]);
+                            }
+
+                            RunningCoroutines.Remove(fadingObject);
+                        }
+
+                        RunningCoroutines.Add(fadingObject, StartCoroutine(FadingObjectUpdate(fadingObject)));
+                    }
+
                     break;
                 }
             }
@@ -145,7 +150,10 @@ public class FadeObjectBlockingObject : MonoBehaviour
 
         if (FadingObject.Materials[0].HasProperty("_Color"))
         {
-            while (FadingObject.Materials[0].color.a > FadedAlpha)
+            float distance = Vector3.Distance(FadingObject.transform.position, Player.transform.position);
+            float fadeAlpha = distance > closeDistance ? FadedAlphaFar : FadedAlphaClose;
+            FadingObject.targetAlpha = fadeAlpha;
+            while (FadingObject.Materials[0].color.a > fadeAlpha)
             {
                 for (int i = 0; i < FadingObject.Materials.Count; i++)
                 {
@@ -155,7 +163,7 @@ public class FadeObjectBlockingObject : MonoBehaviour
                             FadingObject.Materials[i].color.r,
                             FadingObject.Materials[i].color.g,
                             FadingObject.Materials[i].color.b,
-                            Mathf.Lerp(FadingObject.InitialAlpha, FadedAlpha, waitTime * ticks * FadeSpeed)
+                            Mathf.Lerp(FadingObject.InitialAlpha, fadeAlpha, waitTime * ticks * FadeSpeed)
                         );
                     }
                 }
@@ -180,6 +188,9 @@ public class FadeObjectBlockingObject : MonoBehaviour
 
         if (FadingObject.Materials[0].HasProperty("_Color"))
         {
+            float distance = Vector3.Distance(FadingObject.transform.position, Player.transform.position);
+            float fadeAlpha = distance > closeDistance ? FadedAlphaFar : FadedAlphaClose;
+            FadingObject.targetAlpha = FadingObject.InitialAlpha;
             while (FadingObject.Materials[0].color.a < FadingObject.InitialAlpha)
             {
                 for (int i = 0; i < FadingObject.Materials.Count; i++)
@@ -190,7 +201,7 @@ public class FadeObjectBlockingObject : MonoBehaviour
                             FadingObject.Materials[i].color.r,
                             FadingObject.Materials[i].color.g,
                             FadingObject.Materials[i].color.b,
-                            Mathf.Lerp(FadedAlpha, FadingObject.InitialAlpha, waitTime * ticks * FadeSpeed)
+                            Mathf.Lerp(fadeAlpha, FadingObject.InitialAlpha, waitTime * ticks * FadeSpeed)
                         );
                     }
                 }
@@ -220,6 +231,63 @@ public class FadeObjectBlockingObject : MonoBehaviour
         {
             StopCoroutine(RunningCoroutines[FadingObject]);
             RunningCoroutines.Remove(FadingObject);
+        }
+    }
+
+    private IEnumerator FadingObjectUpdate(FadingObject FadingObject)
+    {
+        float waitTime = 1f / FadeFPS;
+        WaitForSeconds Wait = new WaitForSeconds(waitTime);
+        int ticks = 1;
+
+        if (FadingObject.Materials[0].HasProperty("_Color"))
+        {
+            float distance = Vector3.Distance(FadingObject.transform.position, Player.transform.position);
+            float fadeAlpha = distance > closeDistance ? FadedAlphaFar : FadedAlphaClose;
+            if (fadeAlpha > FadedAlphaFar)
+            {
+                FadingObject.targetAlpha = FadedAlphaClose;
+                while (FadingObject.Materials[0].color.a < FadedAlphaClose)
+                {
+                    for (int i = 0; i < FadingObject.Materials.Count; i++)
+                    {
+                        if (FadingObject.Materials[i].HasProperty("_Color"))
+                        {
+                            FadingObject.Materials[i].color = new Color(
+                                FadingObject.Materials[i].color.r,
+                                FadingObject.Materials[i].color.g,
+                                FadingObject.Materials[i].color.b,
+                                Mathf.Lerp(FadingObject.Materials[i].color.a, FadedAlphaClose, waitTime * ticks * FadeSpeed)
+                            );
+                        }
+                    }
+
+                    ticks++;
+                    yield return Wait;
+                }
+            }
+            else if (fadeAlpha < FadedAlphaClose)
+            {
+                FadingObject.targetAlpha = FadedAlphaFar;
+                while (FadingObject.Materials[0].color.a > FadedAlphaFar)
+                {
+                    for (int i = 0; i < FadingObject.Materials.Count; i++)
+                    {
+                        if (FadingObject.Materials[i].HasProperty("_Color"))
+                        {
+                            FadingObject.Materials[i].color = new Color(
+                                FadingObject.Materials[i].color.r,
+                                FadingObject.Materials[i].color.g,
+                                FadingObject.Materials[i].color.b,
+                                Mathf.Lerp(FadingObject.Materials[i].color.a, FadedAlphaFar, waitTime * ticks * FadeSpeed)
+                            );
+                        }
+                    }
+
+                    ticks++;
+                    yield return Wait;
+                }
+            }
         }
     }
 

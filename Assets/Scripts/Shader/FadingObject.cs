@@ -12,6 +12,9 @@ public class FadingObject : MonoBehaviour, IEquatable<FadingObject>
     [HideInInspector]
     public float InitialAlpha;
 
+    [HideInInspector]
+    public float targetAlpha;
+
     private void Awake()
     {
         Position = transform.position;
@@ -25,6 +28,7 @@ public class FadingObject : MonoBehaviour, IEquatable<FadingObject>
         }
 
         InitialAlpha = Materials[0].color.a;
+        targetAlpha = InitialAlpha;
     }
 
     public bool Equals(FadingObject other)
