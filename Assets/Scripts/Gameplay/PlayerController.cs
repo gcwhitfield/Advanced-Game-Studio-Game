@@ -36,7 +36,8 @@ public class PlayerController : MonoBehaviour
         if (inventory.activeSelf)
         {
             inventory.SetActive(false);
-        } else
+        }
+        else
         {
             inventory.SetActive(true);
         }
@@ -124,7 +125,6 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log(events);
             events();
-            AudioManager.Instance.PickUpAudio(cc.gameObject);
         }
         events = null;
     }
