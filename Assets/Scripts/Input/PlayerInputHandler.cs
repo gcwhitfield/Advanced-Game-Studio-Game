@@ -94,12 +94,12 @@ public class PlayerInputHandler : MonoBehaviour
         if (player == DaughterController.Instance)
         {
             DaughterController d = player as DaughterController;
-            d.Submit();
+            d.Submit(collectFlag: true);
         }
         else
         {
             FatherController f = player as FatherController;
-            f.Submit();
+            f.Submit(collectFlag: true);
         }
     }
 
