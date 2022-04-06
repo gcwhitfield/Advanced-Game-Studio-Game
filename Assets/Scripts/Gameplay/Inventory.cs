@@ -6,18 +6,41 @@ using UnityEngine.UI;
 // attach this component to Daughter and Father to give them an inventory
 public class Inventory : MonoBehaviour
 {
-    [System.Serializable]
-    public struct InventoryItem
-    {
-        public string name;
-        public Sprite icon;
-    };
+    //[System.Serializable]
+    //public struct InventoryItem
+    //{
+    //    public string name;
+    //    public Sprite icon;
+    //};
     public List<InventoryItem> inventory;
 
     public HorizontalLayoutGroup inventoryLayoutGroup;
+    PlayerController player;
+
+    protected int currSelected;
+
+    private void Start()
+    {
+        // get a reference to the player component that this Inventory is attached to
+        if (gameObject.GetComponent<DaughterController>())
+        {
+            player = DaughterController.Instance;
+        } else
+        {
+            player = FatherController.Instance;
+        }
+    }
+
 
     public void Add(InventoryItem i)
     {
+        if (gameObject.GetComponent<FatherController>())
+        {
+            i.player = FatherController.Instance;
+        } else
+        {
+            i.player = DaughterController.Instance;
+        }
         inventory.Add(i);
 
         // create a new gameobject, insert into layout group
@@ -25,7 +48,7 @@ public class Inventory : MonoBehaviour
         g.AddComponent<RectTransform>();
         Image img = g.AddComponent<Image>();
         img.sprite = i.icon;
-        g.name = i.name;
+        g.name = i.itemName;
         LayoutElement l = g.AddComponent<LayoutElement>();
         GameObject.Instantiate(g, inventoryLayoutGroup.transform);
     }
@@ -55,5 +78,37 @@ public class Inventory : MonoBehaviour
                 break;
             }
         }
+    }
+
+    // called from PlayerController when the player presses directional pad 
+    public void IncrementSelection()
+    {
+        currSelected++;
+        currSelected %= inventory.Count;
+    }
+
+    // called from PlayerController when the player presses the directional pad
+    public void DecrementSelection()
+    {
+        currSelected--;
+        currSelected %= inventory.Count;
+    }
+
+    // called from PlayerController when the inventory is opened
+    public void OnShowInventory()
+    {
+        
+    }
+
+    // called from PlayerController when the inventory is hidden
+    public void OnHideInventory()
+    {
+        
+    }
+
+    // called wen the item is used
+    public void UseItem()
+    {
+
     }
 }

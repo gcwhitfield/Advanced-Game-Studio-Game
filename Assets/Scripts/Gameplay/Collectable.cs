@@ -12,8 +12,8 @@ public class Collectable : Interactable
     public void Collect()
     {
         // TODO: play the collection sound
-        Inventory.InventoryItem i;
-        i.name = itemName;
+        InventoryItem i = new InventoryItem();
+        i.itemName = itemName;
         i.icon = itemIcon;
 
         Debug.Log("COLLECT CALLAED AUYA");
