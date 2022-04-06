@@ -125,10 +125,6 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log(events);
             events();
-            if (collectFlag)
-            {
-                AudioManager.Instance.PickUpAudio(cc.gameObject);
-            }
         }
         events = null;
     }
