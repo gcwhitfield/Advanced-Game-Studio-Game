@@ -118,7 +118,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // called when the player needs to confirm an action in the UI or in the environment
-    public void Submit(bool collectFlag = false)
+    public void Submit()
     {
         // call all of the functions in 'events'
         if (events != null)
