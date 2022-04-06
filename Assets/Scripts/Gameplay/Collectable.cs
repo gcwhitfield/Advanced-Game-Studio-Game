@@ -20,10 +20,12 @@ public class Collectable : Interactable
         if (collector == PlayerController.PlayerType.DAUGHTER)
         {
             DaughterController.Instance.gameObject.GetComponent<Inventory>().Add(i);
+            AudioManager.Instance.PickUpAudio(DaughterController.Instance.gameObject);
         }
         else
         {
             FatherController.Instance.gameObject.GetComponent<Inventory>().Add(i);
+            AudioManager.Instance.PickUpAudio(FatherController.Instance.gameObject);
         }
 
         Destroy(gameObject);
@@ -37,6 +39,17 @@ public class Collectable : Interactable
         {
             player = other.gameObject.GetComponent<PlayerController>();
             player.ExecuteUponSubmit(Collect);
+        }
+    }
+
+    private new void OnTriggerExit(Collider other)
+    {
+        base.OnTriggerExit(other);
+
+        if (other.tag == "Player")
+        {
+            player = other.gameObject.GetComponent<PlayerController>();
+            player.CancelExecuteUponSubmit(Collect);
         }
     }
 }

@@ -36,7 +36,8 @@ public class PlayerController : MonoBehaviour
         if (inventory.activeSelf)
         {
             inventory.SetActive(false);
-        } else
+        }
+        else
         {
             inventory.SetActive(true);
         }
@@ -117,14 +118,17 @@ public class PlayerController : MonoBehaviour
     }
 
     // called when the player needs to confirm an action in the UI or in the environment
-    public void Submit()
+    public void Submit(bool collectFlag = false)
     {
         // call all of the functions in 'events'
         if (events != null)
         {
             Debug.Log(events);
             events();
-            AudioManager.Instance.PickUpAudio(cc.gameObject);
+            if (collectFlag)
+            {
+                AudioManager.Instance.PickUpAudio(cc.gameObject);
+            }
         }
         events = null;
     }
