@@ -12,7 +12,7 @@ public class FadeObjectBlockingObject : MonoBehaviour
     public Camera Camera;
 
     public float FadedAlphaFar = 0f;
-    public float FadedAlphaClose = 0.2f;
+    public float FadedAlphaClose = 0.25f;
 
     public FadeMode FadingMode;
     public float ChecksPerSecond = 10;

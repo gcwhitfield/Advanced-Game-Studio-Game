@@ -130,4 +130,13 @@ public class PlayerInputHandler : MonoBehaviour
     {
         player.ShowInventory();
     }
+
+    public void OnKeyLock(CallbackContext context)
+    {
+        if (player == DaughterController.Instance)
+        {
+            DaughterController f = player as DaughterController;
+            StartCoroutine(f.KeyLock(context));
+        }
+    }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.AI;
+using static UnityEngine.InputSystem.InputAction;
 
 public class DaughterController : PlayerController
 {
@@ -13,6 +14,8 @@ public class DaughterController : PlayerController
     bool isNearHiddenSpot = false;
 
     public GameObject flashlight;
+
+    public Transform keyMoving;
     private Vector3 prevLookDirection;
 
 
@@ -33,6 +36,7 @@ public class DaughterController : PlayerController
     {
         if (isNearHiddenSpot && animator.GetFloat("Speed") < 0.01)
         {
+            Debug.Log("Hidden Function works");
             hidden = true;
             animator.SetBool("Hide", true);
             TextDisplayManager.Instance.DaughterContinueToNextLine();
@@ -167,8 +171,17 @@ public class DaughterController : PlayerController
         //if daughter moves, unhides
         if (hidden == true && animator.GetFloat("Speed") > 0.01)
         {
-          hidden = false;
-          animator.SetBool("Hide", false);
+            hidden = false;
+            animator.SetBool("Hide", false);
         }
+    }
+
+    public IEnumerator KeyLock(CallbackContext context)
+    {
+
+
+
+        WaitForSeconds Wait = new WaitForSeconds(0.3f);
+        yield return Wait;
     }
 }
