@@ -203,5 +203,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  debugMode: 0
+  debugMode: 1
   fatherOn: 0

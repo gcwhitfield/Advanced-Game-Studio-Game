@@ -34,7 +34,6 @@ public class PlayerInputHandler : MonoBehaviour
             if (playerInput.playerIndex == DaughterController.Instance.playerIndex)
             {
                 player = DaughterController.Instance;
-                //player = FatherController.Instance;
             }
             else
             {
@@ -59,6 +58,14 @@ public class PlayerInputHandler : MonoBehaviour
         else if (player == DaughterController.Instance)
         {
             player.Move(context);
+            if (!DaughterController.Instance.keyLockFlag)
+            {
+                player.Move(context);
+            }
+            else
+            {
+                player.Stop();
+            }
         }
         else
         {
@@ -136,7 +143,7 @@ public class PlayerInputHandler : MonoBehaviour
         if (player == DaughterController.Instance)
         {
             DaughterController f = player as DaughterController;
-            StartCoroutine(f.KeyLock(context));
+            f.KeyLock(context);
         }
     }
 }

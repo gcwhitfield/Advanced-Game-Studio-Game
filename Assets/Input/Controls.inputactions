@@ -60,15 +60,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "KeyLock",
-                    "type": "Button",
-                    "id": "771b806c-5cbd-4afc-9f8a-8c7a78d3043f",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "ShowInventory",
                     "type": "Button",
                     "id": "319a29ec-805a-4d73-a893-aee98ab6d091",
@@ -76,6 +67,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "KeyLock",
+                    "type": "Value",
+                    "id": "771b806c-5cbd-4afc-9f8a-8c7a78d3043f",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
