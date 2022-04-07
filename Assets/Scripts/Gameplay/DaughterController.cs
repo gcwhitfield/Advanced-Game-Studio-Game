@@ -178,10 +178,21 @@ public class DaughterController : PlayerController
 
     public IEnumerator KeyLock(CallbackContext context)
     {
+        float keySpeed = 1.0f;
+        string button = context.control.ToString();
+        Debug.Log(button);
+        if (button.Contains("/Keyboard/k") || button.Contains("buttonEast"))
+        {
+            Debug.Log("Selected");
+        }
+        else
+        {
+            Vector2 movement2D = context.ReadValue<Vector2>();
+            movement = new Vector3(movement2D.x, 0, movement2D.y);
+            keyMoving.Translate(movement * keySpeed * Time.deltaTime);
+        }
 
-
-
-        WaitForSeconds Wait = new WaitForSeconds(0.3f);
+        WaitForSeconds Wait = new WaitForSeconds(0.01f);
         yield return Wait;
     }
 }
