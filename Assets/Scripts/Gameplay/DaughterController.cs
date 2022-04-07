@@ -16,7 +16,7 @@ public class DaughterController : PlayerController
 
     public GameObject flashlight;
 
-    public Transform keyTransform;
+    public GameObject keyMove;
 
     public GameObject keyLockUI;
 
@@ -30,12 +30,13 @@ public class DaughterController : PlayerController
     private float keySpeed = 10.0f;
     private Vector2 borderLB;
     private Vector2 borderRT;
-    private float borderBias = 4f;
+    private Vector2 borderBias = new Vector2(2f, 5f);
 
     private new void Start()
     {
         base.Start();
         prevLookDirection = lookDirection;
+        GetEdges();
     }
 
     private void Awake()
@@ -197,9 +198,9 @@ public class DaughterController : PlayerController
 
         if (keyMovement != Vector3.zero)
         {
-            keyTransform.Translate(keyMovement * keySpeed * Time.deltaTime);
-            getEdges();
-            keyTransform.position = new Vector3(Mathf.Max(Mathf.Min(keyTransform.position.x, borderRT.x), borderLB.x), Mathf.Max(Mathf.Min(keyTransform.position.y, borderRT.y), borderLB.y), keyTransform.position.z);
+            Transform t = keyMove.transform;
+            t.Translate(keyMovement * keySpeed * Time.deltaTime);
+            t.position = new Vector3(Mathf.Max(Mathf.Min(t.position.x, borderRT.x), borderLB.x), Mathf.Max(Mathf.Min(t.position.y, borderRT.y), borderLB.y), t.position.z);
         }
     }
 
@@ -219,17 +220,35 @@ public class DaughterController : PlayerController
             {
                 Vector2 keyMovement2D = context.ReadValue<Vector2>();
                 keyMovement = new Vector3(keyMovement2D.x, keyMovement2D.y, 0);
+                AddForce();
             }
         }
     }
 
-    private void getEdges()
+    private void GetEdges()
     {
         Transform t = keyBG.transform;
         RectTransform rt = keyBG.GetComponent<RectTransform>();
-        borderRT.x = t.position.x + rt.rect.width * t.lossyScale.x / 2f - borderBias;
-        borderRT.y = t.position.y + rt.rect.height * t.lossyScale.y / 2f - borderBias;
-        borderLB.x = t.position.x - rt.rect.width * t.lossyScale.x / 2f + borderBias;
-        borderLB.y = t.position.y - rt.rect.height * t.lossyScale.y / 2f + borderBias;
+        borderRT.x = t.position.x + rt.rect.width * t.lossyScale.x / 2f - borderBias.x;
+        borderRT.y = t.position.y + rt.rect.height * t.lossyScale.y / 2f - borderBias.y;
+        borderLB.x = t.position.x - rt.rect.width * t.lossyScale.x / 2f + borderBias.x;
+        borderLB.y = t.position.y - rt.rect.height * t.lossyScale.y / 2f + borderBias.y;
     }
+
+    //private void AddForce()
+    //{
+    //    float forceRange = 50f;
+    //    Rigidbody rb = keyMove.GetComponent<Rigidbody>();
+    //    Vector3 force = new Vector3(Random.Range(-forceRange, forceRange), Random.Range(-forceRange, forceRange), 0);
+    //    rb.AddForce(force);
+    //    //Debug.Log(rb.velocity);
+    //    LoseForce();
+    //}
+
+    //private void LoseForce()
+    //{
+    //    Rigidbody rb = keyMove.GetComponent<Rigidbody>();
+    //    rb.AddForce(new Vector3(0, 0, 0));
+    //    rb.velocity = new Vector3(0, 0, 0);
+    //}
 }
