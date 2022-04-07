@@ -17,9 +17,7 @@ public class DaughterController : PlayerController
     public GameObject flashlight;
 
     public GameObject keyMove;
-
     public GameObject keyLockUI;
-
     public GameObject keyBG;
 
     [HideInInspector]
@@ -31,6 +29,7 @@ public class DaughterController : PlayerController
     private Vector2 borderLB;
     private Vector2 borderRT;
     private Vector2 borderBias = new Vector2(2f, 5f);
+    private float forceStrength = 0.6f;
 
     private new void Start()
     {
@@ -220,7 +219,7 @@ public class DaughterController : PlayerController
             {
                 Vector2 keyMovement2D = context.ReadValue<Vector2>();
                 keyMovement = new Vector3(keyMovement2D.x, keyMovement2D.y, 0);
-                AddForce();
+                DisturbKeyMovement();
             }
         }
     }
@@ -235,20 +234,9 @@ public class DaughterController : PlayerController
         borderLB.y = t.position.y - rt.rect.height * t.lossyScale.y / 2f + borderBias.y;
     }
 
-    //private void AddForce()
-    //{
-    //    float forceRange = 50f;
-    //    Rigidbody rb = keyMove.GetComponent<Rigidbody>();
-    //    Vector3 force = new Vector3(Random.Range(-forceRange, forceRange), Random.Range(-forceRange, forceRange), 0);
-    //    rb.AddForce(force);
-    //    //Debug.Log(rb.velocity);
-    //    LoseForce();
-    //}
-
-    //private void LoseForce()
-    //{
-    //    Rigidbody rb = keyMove.GetComponent<Rigidbody>();
-    //    rb.AddForce(new Vector3(0, 0, 0));
-    //    rb.velocity = new Vector3(0, 0, 0);
-    //}
+    private void DisturbKeyMovement()
+    {
+        Vector3 force = new Vector3(Random.Range(-1, 1), Random.Range(-1, 1), 0) * forceStrength;
+        keyMovement += force;
+    }
 }
