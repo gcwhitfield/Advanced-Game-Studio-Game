@@ -17,7 +17,10 @@ public class Inventory : MonoBehaviour
     public VerticalLayoutGroup inventoryLayoutGroup;
     PlayerController player;
 
-    protected int currSelected;
+    // this is the inventory item prefab that gets instantiated into the inventoryLayoutGroup
+    public GameObject InventoryItemUIPrefab;
+
+    protected int currSelected = 0;
 
     private void Start()
     {
@@ -44,13 +47,12 @@ public class Inventory : MonoBehaviour
         inventory.Add(i);
 
         // create a new gameobject, insert into layout group
-        GameObject g = new GameObject();
-        g.AddComponent<RectTransform>();
-        Image img = g.AddComponent<Image>();
+        GameObject g = GameObject.Instantiate(InventoryItemUIPrefab, inventoryLayoutGroup.transform);
+        Image img = g.transform.Find("Img").GetComponent<Image>();
         img.sprite = i.icon;
         g.name = i.itemName;
-        LayoutElement l = g.AddComponent<LayoutElement>();
-        GameObject.Instantiate(g, inventoryLayoutGroup.transform);
+
+        ShowSelectedItem();
     }
 
     public void Remove(InventoryItem i)
@@ -80,13 +82,36 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    // displays the selection box around the item that is currently selected in the inventory
+    void ShowSelectedItem()
+    {
+        if (inventory.Count > 0)
+        {
+            Debug.Log("Inventory size: " + inventory.Count.ToString() + " : currSeleted " + currSelected.ToString());
+            foreach (Transform t in inventoryLayoutGroup.transform)
+            {
+                if (t.name != inventory[currSelected].itemName)
+                {
+                    t.Find("SelectionBox").gameObject.GetComponent<Image>().enabled = false;
+                } else
+                {
+                    t.Find("SelectionBox").gameObject.GetComponent<Image>().enabled = true;
+                }
+            }
+        }
+    }
+
     // called from PlayerController when the player presses directional pad 
     public void IncrementSelection()
     {
         if (inventory.Count > 0)
         {
             currSelected++;
-            currSelected %= inventory.Count;
+            if (currSelected >= inventory.Count)
+            {
+                currSelected = 0;
+            }
+            ShowSelectedItem();
         }
     }
 
@@ -96,7 +121,11 @@ public class Inventory : MonoBehaviour
         if (inventory.Count > 0)
         {
             currSelected--;
-            currSelected %= inventory.Count;
+            if (currSelected < 0)
+            {
+                currSelected = inventory.Count - 1;
+            }
+            ShowSelectedItem();
         }
     }
 

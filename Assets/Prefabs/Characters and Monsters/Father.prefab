@@ -318,6 +318,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7121009890443627916, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
   m_PrefabInstance: {fileID: 6153439282659239017}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &299161706461642860 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5855732368595051525, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+  m_PrefabInstance: {fileID: 6153439282659239017}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &6537345629051514830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,7 +338,7 @@ MonoBehaviour:
   animator: {fileID: 6918751744163230094}
   moveSpeed: 2.5
   rotateSpeed: 0
-  inventoryDisplay: {fileID: 0}
+  inventoryDisplay: {fileID: 299161706461642860}
   fireSpawn: {fileID: 2059756972}
   bulletPrefab: {fileID: 3630579012413559642, guid: b747cc2e39c84eb4c86ca8baf28dd776, type: 3}
   bulletForce: 20
