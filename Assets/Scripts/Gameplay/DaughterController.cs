@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.AI;
+using static UnityEngine.InputSystem.InputAction;
 
 public class DaughterController : PlayerController
 {
@@ -10,16 +11,31 @@ public class DaughterController : PlayerController
 
     [HideInInspector]
     public bool hidden;
-    bool isNearHiddenSpot = false;
+
+    private bool isNearHiddenSpot = false;
 
     public GameObject flashlight;
-    private Vector3 prevLookDirection;
 
+    public GameObject keyMove;
+    public GameObject keyLockUI;
+    public GameObject keyBG;
+
+    [HideInInspector]
+    public bool keyLockFlag = false;
+
+    private Vector3 prevLookDirection;
+    private Vector3 keyMovement;
+    private float keySpeed = 10.0f;
+    private Vector2 borderLB;
+    private Vector2 borderRT;
+    private Vector2 borderBias = new Vector2(2f, 5f);
+    private float forceStrength = 0.6f;
 
     private new void Start()
     {
         base.Start();
         prevLookDirection = lookDirection;
+        GetEdges();
     }
 
     private void Awake()
@@ -33,6 +49,7 @@ public class DaughterController : PlayerController
     {
         if (isNearHiddenSpot && animator.GetFloat("Speed") < 0.01)
         {
+            Debug.Log("Hidden Function works");
             hidden = true;
             animator.SetBool("Hide", true);
             TextDisplayManager.Instance.DaughterContinueToNextLine();
@@ -68,6 +85,12 @@ public class DaughterController : PlayerController
             isNearHiddenSpot = false;
             animator.SetBool("Hide", false);
         }
+
+        if (other.gameObject.CompareTag("KeyLock"))
+        {
+            keyLockFlag = true;
+            keyLockUI.SetActive(true);
+        }
     }
 
     private void ResetAnimatorDirections()
@@ -87,6 +110,7 @@ public class DaughterController : PlayerController
         base.Update(); // calls PlayerController.Update()
 
         // set flashlight look direction. Use Lerp to smoothly transition rotation
+
         Quaternion desiredRotation = Quaternion.Euler(new Vector3(0, Mathf.Rad2Deg * Mathf.Atan2(lookDirection.x, lookDirection.z), 0));
         Quaternion currRotation = flashlight.transform.rotation;
         flashlight.transform.rotation = Quaternion.Lerp(currRotation, desiredRotation, 0.5f);
@@ -167,8 +191,52 @@ public class DaughterController : PlayerController
         //if daughter moves, unhides
         if (hidden == true && animator.GetFloat("Speed") > 0.01)
         {
-          hidden = false;
-          animator.SetBool("Hide", false);
+            hidden = false;
+            animator.SetBool("Hide", false);
         }
+
+        if (keyMovement != Vector3.zero)
+        {
+            Transform t = keyMove.transform;
+            t.Translate(keyMovement * keySpeed * Time.deltaTime);
+            t.position = new Vector3(Mathf.Max(Mathf.Min(t.position.x, borderRT.x), borderLB.x), Mathf.Max(Mathf.Min(t.position.y, borderRT.y), borderLB.y), t.position.z);
+        }
+    }
+
+    public void KeyLock(CallbackContext context)
+    {
+        string button = context.control.ToString();
+        if (keyLockFlag)
+        {
+            if (button.Contains("/Keyboard/k") || button.Contains("buttonEast"))
+            {
+                if (context.ReadValue<float>() > 0)
+                {
+                    Debug.Log("Selected");
+                }
+            }
+            else
+            {
+                Vector2 keyMovement2D = context.ReadValue<Vector2>();
+                keyMovement = new Vector3(keyMovement2D.x, keyMovement2D.y, 0);
+                DisturbKeyMovement();
+            }
+        }
+    }
+
+    private void GetEdges()
+    {
+        Transform t = keyBG.transform;
+        RectTransform rt = keyBG.GetComponent<RectTransform>();
+        borderRT.x = t.position.x + rt.rect.width * t.lossyScale.x / 2f - borderBias.x;
+        borderRT.y = t.position.y + rt.rect.height * t.lossyScale.y / 2f - borderBias.y;
+        borderLB.x = t.position.x - rt.rect.width * t.lossyScale.x / 2f + borderBias.x;
+        borderLB.y = t.position.y - rt.rect.height * t.lossyScale.y / 2f + borderBias.y;
+    }
+
+    private void DisturbKeyMovement()
+    {
+        Vector3 force = new Vector3(Random.Range(-1, 1), Random.Range(-1, 1), 0) * forceStrength;
+        keyMovement += force;
     }
 }

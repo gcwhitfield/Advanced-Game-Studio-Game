@@ -33,7 +33,7 @@ public class MonsterController : MonoBehaviour
         isPatrol = true;
         IterateWaypoints();
         MoveToDestination();
-        tentHidingSpot.ExecuteOnInteract(Destroy);
+        //tentHidingSpot.ExecuteOnInteract(Destroy);
     }
 
     public void Destroy()
@@ -58,8 +58,7 @@ public class MonsterController : MonoBehaviour
             if (!isPatrol)
             {
                 agent.stoppingDistance = 0.5f;
-                MoveToDestination();
-                isPatrol = true;
+                MoveAway();
             }
             Patrol();
             hideRing.SetActive(false);
@@ -107,10 +106,16 @@ public class MonsterController : MonoBehaviour
         agent.SetDestination(waypointDestination);
     }
 
+    private void MoveAway()
+    {
+      waypointDestination = waypoints[waypoints.Length-1].position;
+      agent.SetDestination(waypointDestination);
+    }
+
     private void IterateWaypoints()
     {
         waypointsIndex++;
-        if (waypointsIndex >= waypoints.Length)
+        if (waypointsIndex >= waypoints.Length-1)
         {
             waypointsIndex = 0;
         }

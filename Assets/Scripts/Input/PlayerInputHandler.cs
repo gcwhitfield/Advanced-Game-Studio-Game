@@ -34,7 +34,6 @@ public class PlayerInputHandler : MonoBehaviour
             if (playerInput.playerIndex == DaughterController.Instance.playerIndex)
             {
                 player = DaughterController.Instance;
-                //player = FatherController.Instance;
             }
             else
             {
@@ -59,6 +58,14 @@ public class PlayerInputHandler : MonoBehaviour
         else if (player == DaughterController.Instance)
         {
             player.Move(context);
+            if (!DaughterController.Instance.keyLockFlag)
+            {
+                player.Move(context);
+            }
+            else
+            {
+                player.Stop();
+            }
         }
         else
         {
@@ -94,12 +101,12 @@ public class PlayerInputHandler : MonoBehaviour
         if (player == DaughterController.Instance)
         {
             DaughterController d = player as DaughterController;
-            d.Submit(collectFlag: true);
+            d.Submit();
         }
         else
         {
             FatherController f = player as FatherController;
-            f.Submit(collectFlag: true);
+            f.Submit();
         }
     }
 
@@ -134,5 +141,14 @@ public class PlayerInputHandler : MonoBehaviour
     public void OnNavigateInventory(CallbackContext context)
     {
         player.NagivateInventory(context);
+    }
+
+    public void OnKeyLock(CallbackContext context)
+    {
+        if (player == DaughterController.Instance)
+        {
+            DaughterController f = player as DaughterController;
+            f.KeyLock(context);
+        }
     }
 }

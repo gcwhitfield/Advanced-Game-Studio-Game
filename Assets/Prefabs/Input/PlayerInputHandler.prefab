@@ -157,7 +157,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8163137030412972246}
         m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
-        m_MethodName: OnToggleInventory
+        m_MethodName: OnShowInventory
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -173,7 +173,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8163137030412972246}
         m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
-        m_MethodName: OnNavigateInventory
+        m_MethodName: OnKeyLock
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -183,8 +183,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: ba68cecf-a55f-41c7-bad9-e5ef2850a3b0
-    m_ActionName: PlayMovement/NavigateInventory
+    m_ActionId: 771b806c-5cbd-4afc-9f8a-8c7a78d3043f
+    m_ActionName: PlayMovement/KeyLock[/XboxGamepadMacOS/buttonEast,/XboxGamepadMacOS1/buttonEast,/Keyboard/k,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/XboxGamepadMacOS/dpad/up,/XboxGamepadMacOS1/dpad/up,/XboxGamepadMacOS/dpad/down,/XboxGamepadMacOS1/dpad/down,/XboxGamepadMacOS/dpad/left,/XboxGamepadMacOS1/dpad/left,/XboxGamepadMacOS/dpad/right,/XboxGamepadMacOS1/dpad/right]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayMovement
@@ -203,5 +203,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  debugMode: 0
+  debugMode: 1
   fatherOn: 0
