@@ -8,6 +8,7 @@ public class Collectable : Interactable
 
     public string itemName;
     public Sprite itemIcon;
+    public InventoryItemUseEvents.UseEvent useEvent;
 
     public void Collect()
     {
@@ -15,7 +16,7 @@ public class Collectable : Interactable
         InventoryItem i = new InventoryItem();
         i.itemName = itemName;
         i.icon = itemIcon;
-
+        i.ExecuteUponUse(InventoryItemUseEvents.GetEvent(useEvent));
         Debug.Log("COLLECT CALLAED AUYA");
         if (collector == PlayerController.PlayerType.DAUGHTER)
         {

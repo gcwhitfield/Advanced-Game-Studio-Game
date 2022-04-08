@@ -34,7 +34,6 @@ public class Inventory : MonoBehaviour
         }
     }
 
-
     public void Add(InventoryItem i)
     {
         if (gameObject.GetComponent<FatherController>())
@@ -68,6 +67,7 @@ public class Inventory : MonoBehaviour
                 break;
             }
         }
+        DecrementSelection();
     }
 
     public void Remove(string itemName)
@@ -80,6 +80,7 @@ public class Inventory : MonoBehaviour
                 break;
             }
         }
+        DecrementSelection();
     }
 
     // displays the selection box around the item that is currently selected in the inventory
@@ -87,7 +88,6 @@ public class Inventory : MonoBehaviour
     {
         if (inventory.Count > 0)
         {
-            Debug.Log("Inventory size: " + inventory.Count.ToString() + " : currSeleted " + currSelected.ToString());
             foreach (Transform t in inventoryLayoutGroup.transform)
             {
                 if (t.name != inventory[currSelected].itemName)
@@ -144,10 +144,11 @@ public class Inventory : MonoBehaviour
     // called wen the item is used
     public void UseItem()
     {
-        if (inventory[currSelected])
+        if (inventory[currSelected] != null)
         {
                 inventory[currSelected].Use();
                 Remove(inventory[currSelected]);
+                ShowSelectedItem();
         } else
         {
             Debug.LogError("Inventory current seletion is null!");

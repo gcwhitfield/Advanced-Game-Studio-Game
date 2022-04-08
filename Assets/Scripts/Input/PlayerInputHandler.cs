@@ -75,52 +75,64 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnShoot(CallbackContext context)
     {
-        // if player is "father"
-        if (player == FatherController.Instance)
+        if (context.started)
         {
-            if (context.ReadValueAsButton())
+            // if player is "father"
+            if (player == FatherController.Instance)
             {
-                FatherController f = player as FatherController;
-                f.Shoot();
+                if (context.ReadValueAsButton())
+                {
+                    FatherController f = player as FatherController;
+                    f.Shoot();
+                }
             }
         }
     }
 
     public void OnHide(CallbackContext context)
     {
-        // if player is "daughter"
-        if (player == DaughterController.Instance)
+        if (context.started)
         {
-            DaughterController d = player as DaughterController;
-            d.Hide();
+            // if player is "daughter"
+            if (player == DaughterController.Instance)
+            {
+                DaughterController d = player as DaughterController;
+                d.Hide();
+            }
         }
     }
 
     public void OnCollect(CallbackContext context)
     {
-        if (player == DaughterController.Instance)
+        if (context.started)
         {
-            DaughterController d = player as DaughterController;
-            d.Submit();
-        }
-        else
-        {
-            FatherController f = player as FatherController;
-            f.Submit();
+            if (player == DaughterController.Instance)
+            {
+                DaughterController d = player as DaughterController;
+                d.Submit();
+            }
+            else
+            {
+                FatherController f = player as FatherController;
+                f.Submit();
+            }
         }
     }
 
     public void OnSubmit(CallbackContext context)
     {
-        if (player == DaughterController.Instance)
+        if (context.started)
         {
-            DaughterController d = player as DaughterController;
-            d.Submit();
-        }
-        else
-        {
-            FatherController f = player as FatherController;
-            f.Submit();
+            if (player == DaughterController.Instance)
+            {
+                DaughterController d = player as DaughterController;
+                d.Submit();
+            }
+            else
+            {
+                FatherController f = player as FatherController;
+                f.Submit();
+            }
         }
     }
 
@@ -135,12 +147,18 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnToggleInventory(CallbackContext context)
     {
-        player.ToggleInventory();
+        if (context.started)
+        {
+            player.ToggleInventory();
+        }
     }
 
     public void OnNavigateInventory(CallbackContext context)
     {
-        player.NagivateInventory(context);
+        if (context.started)
+        {
+            player.NagivateInventory(context);
+        }
     }
 
     public void OnKeyLock(CallbackContext context)
