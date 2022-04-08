@@ -126,8 +126,13 @@ public class PlayerInputHandler : MonoBehaviour
         }
     }
 
-    public void OnShowInventory(CallbackContext context)
+    public void OnToggleInventory(CallbackContext context)
     {
-        player.ShowInventory();
+        player.ToggleInventory();
+    }
+
+    public void OnNavigateInventory(CallbackContext context)
+    {
+        player.NagivateInventory(context);
     }
 }

@@ -5,6 +5,7 @@ using static UnityEngine.InputSystem.InputAction;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(Inventory))]
 public class PlayerController : MonoBehaviour
 {
     [System.Serializable]
@@ -28,18 +29,35 @@ public class PlayerController : MonoBehaviour
 
     private PlayerEvent events;
 
-    public GameObject inventory;
+    public GameObject inventoryDisplay;
+    protected Inventory inventory;
+
     // called when the "ShowInventory" button is pressed
-    public void ShowInventory()
+    public void ToggleInventory()
     {
         // toggle the inventory being on and off
-        if (inventory.activeSelf)
+        if (inventoryDisplay.activeSelf)
         {
-            inventory.SetActive(false);
+            inventory.OnHideInventory();
+            inventoryDisplay.SetActive(false);
         }
         else
         {
-            inventory.SetActive(true);
+            inventoryDisplay.SetActive(true);
+            inventory.OnShowInventory();
+        }
+    }
+
+    // called when the player presses the inventory navigation buttons on the gamepad or the keyboard
+    public void NagivateInventory(CallbackContext context)
+    {
+        float val = context.ReadValue<float>();
+        if (val > 0)
+        {
+            inventory.IncrementSelection();
+        } else if (val < 0)
+        {
+            inventory.DecrementSelection();
         }
     }
 
@@ -60,6 +78,12 @@ public class PlayerController : MonoBehaviour
     {
         cc = GetComponent<CharacterController>();
         lookDirection = gameObject.transform.forward;
+
+        inventory = gameObject.GetComponent<Inventory>();
+        if (!inventory)
+        {
+            Debug.LogWarning("The Inventory Component should be attached to the player GameObject!");
+        }
     }
 
     // called when the player presses the "Collect" key in gameplay
@@ -125,10 +149,10 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log(events);
             events();
-            if (collectFlag)
-            {
-                AudioManager.Instance.PickUpAudio(cc.gameObject);
-            }
+            //if (collectFlag)
+            //{
+            //    AudioManager.Instance.PickUpAudio(cc.gameObject);
+            //}
         }
         events = null;
     }

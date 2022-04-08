@@ -157,7 +157,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8163137030412972246}
         m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
-        m_MethodName: OnShowInventory
+        m_MethodName: OnToggleInventory
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -169,6 +169,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 319a29ec-805a-4d73-a893-aee98ab6d091
     m_ActionName: PlayMovement/ShowInventory[/Keyboard/tab]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8163137030412972246}
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
+        m_MethodName: OnNavigateInventory
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ba68cecf-a55f-41c7-bad9-e5ef2850a3b0
+    m_ActionName: PlayMovement/NavigateInventory
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayMovement

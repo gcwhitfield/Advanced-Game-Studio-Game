@@ -275,6 +275,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8913255703476018645, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913255703476018645, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1280
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913255703476018645, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 720
+      objectReference: {fileID: 0}
     - target: {fileID: 9098057196228470827, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
@@ -306,11 +318,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7121009890443627916, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
   m_PrefabInstance: {fileID: 6153439282659239017}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5994897413245377623 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 456920763663956030, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
-  m_PrefabInstance: {fileID: 6153439282659239017}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &6537345629051514830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,7 +333,7 @@ MonoBehaviour:
   animator: {fileID: 6918751744163230094}
   moveSpeed: 2.5
   rotateSpeed: 0
-  inventory: {fileID: 5994897413245377623}
+  inventoryDisplay: {fileID: 0}
   fireSpawn: {fileID: 2059756972}
   bulletPrefab: {fileID: 3630579012413559642, guid: b747cc2e39c84eb4c86ca8baf28dd776, type: 3}
   bulletForce: 20
@@ -339,6 +346,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  FenceArt: {fileID: 0}
   inputCodeFlag: 0
 --- !u!114 &319620259
 MonoBehaviour:

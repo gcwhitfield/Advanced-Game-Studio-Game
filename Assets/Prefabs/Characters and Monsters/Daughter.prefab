@@ -476,7 +476,7 @@ MonoBehaviour:
   animator: {fileID: 889826909}
   moveSpeed: 3.1
   rotateSpeed: 0
-  inventory: {fileID: 6961718673595338997}
+  inventoryDisplay: {fileID: 6961718673595338997}
   hidden: 0
   flashlight: {fileID: 192182608466979656}
 --- !u!114 &170107600359750971
