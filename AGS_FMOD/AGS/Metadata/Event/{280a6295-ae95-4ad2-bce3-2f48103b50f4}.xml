@@ -158,13 +158,13 @@
 	</object>
 	<object class="SingleSound" id="{809c8d7e-7b90-48b5-87cf-b253ae59fb87}">
 		<property name="length">
-			<value>0.61999999999999988</value>
+			<value>0.61997916666666664</value>
 		</property>
-		<property name="timelockedOffset">
-			<value>10.56999999999999</value>
+		<property name="pitch">
+			<value>-2.60000014</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{7acb5946-fc10-466e-a9e4-d2a8b41359bc}</destination>
+			<destination>{00133d71-09fa-4377-9b65-7eb586a5e330}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{b5aa956e-48dd-4e32-9e87-109437b31dfb}">
@@ -277,10 +277,10 @@
 	</object>
 	<object class="AutomationPoint" id="{861e4cc6-1218-415e-878c-d7883603bfcb}">
 		<property name="position">
-			<value>0.35000000000000003</value>
+			<value>0.25</value>
 		</property>
 		<property name="value">
-			<value>-4</value>
+			<value>-9</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{62efe848-2a88-4ad9-be0e-42c3041fd4fb}">
