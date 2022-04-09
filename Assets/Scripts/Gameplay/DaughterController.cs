@@ -226,7 +226,6 @@ public class DaughterController : PlayerController
     public void KeyLock(CallbackContext context)
     {
         string button = context.control.ToString();
-        Debug.Log(context);
         if (keyLockFlag)
         {
             if (button.Contains("/Keyboard/k") || button.Contains("buttonEast"))
