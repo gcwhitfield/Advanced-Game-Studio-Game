@@ -38,7 +38,7 @@ public class DaughterController : PlayerController
     private Vector2 borderBias = new Vector2(2f, 5f);
     private float forceStrength = 0.6f;
     private bool keySelected = false;
-    private float unlockThreshold = 2.5f;
+    private float unlockThreshold = 2f;
     private int keyIndex = 0;
     private int lockIndex = 0;
     private Vector3 keyInitialPos;
@@ -317,13 +317,15 @@ public class DaughterController : PlayerController
                 //fade out animation
                 StartCoroutine(FadeOutLockChain(lockObjects[lockIndex], keyObjects[keyIndex], chainObjects[lockIndex]));
 
-                lockIndex++;
-                lockPos = locksPos[lockIndex];
-
                 keyObjects.RemoveAt(keyIndex);
                 keyHints.RemoveAt(keyIndex);
                 keyIndex = 0;
-                keyHints[keyIndex].SetActive(true);
+                lockIndex++;
+                if (keyObjects.Count > 0)
+                {
+                    keyHints[keyIndex].SetActive(true);
+                    lockPos = locksPos[lockIndex];
+                }
             }
 
             //else Reset key
@@ -334,6 +336,10 @@ public class DaughterController : PlayerController
                 keyTransform.position = keyInitialPos;
                 keyHints[keyIndex].SetActive(true);
             }
+        }
+        if (keyObjects.Count == 0)
+        {
+            StartCoroutine(FadeOutUI());
         }
     }
 
@@ -373,5 +379,16 @@ public class DaughterController : PlayerController
             }
             yield return wait;
         }
+    }
+
+    private IEnumerator FadeOutUI()
+    {
+        //play unlock all chain audio
+
+        WaitForSeconds wait = new WaitForSeconds(0.7f);
+        yield return wait;
+
+        keyLockFlag = false;
+        keyLockUI.SetActive(false);
     }
 }
