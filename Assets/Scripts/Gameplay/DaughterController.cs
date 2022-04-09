@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.AI;
+using UnityEngine.UI;
 using static UnityEngine.InputSystem.InputAction;
 
 public class DaughterController : PlayerController
@@ -18,7 +19,7 @@ public class DaughterController : PlayerController
 
     public List<GameObject> keyObjects = new List<GameObject>();
     public List<GameObject> keyHints = new List<GameObject>();
-    public List<GameObject> chainObejcts = new List<GameObject>();
+    public List<GameObject> chainObjects = new List<GameObject>();
     public List<GameObject> lockObjects = new List<GameObject>();
     public List<Transform> locksPos = new List<Transform>();
     public GameObject keyLockUI;
@@ -37,7 +38,7 @@ public class DaughterController : PlayerController
     private Vector2 borderBias = new Vector2(2f, 5f);
     private float forceStrength = 0.6f;
     private bool keySelected = false;
-    private float unlockThreshold = 1f;
+    private float unlockThreshold = 2.5f;
     private int keyIndex = 0;
     private int lockIndex = 0;
     private Vector3 keyInitialPos;
@@ -242,11 +243,13 @@ public class DaughterController : PlayerController
             }
             else
             {
+                //Debug.Log(keyMovement);
                 Vector2 keyMovement2D = context.ReadValue<Vector2>();
                 if (keySelected)
                 {
                     keyMovement = new Vector3(keyMovement2D.x, keyMovement2D.y, 0);
-                    DisturbKeyMovement();
+                    if (keyMovement2D.magnitude > 0)
+                        DisturbKeyMovement();
                 }
                 else
                 {
@@ -305,14 +308,17 @@ public class DaughterController : PlayerController
         if (Vector3.Distance(lockPos.position, keyTransform.position) < unlockThreshold)
         {
             keySelected = false;
+            keyMovement = new Vector3(0, 0, 0);
             //if key match lock
             if (lockObjects[lockIndex].tag == keyObjects[keyIndex].tag)
             {
                 //play audio
 
+                //fade out animation
+                StartCoroutine(FadeOutLockChain(lockObjects[lockIndex], keyObjects[keyIndex], chainObjects[lockIndex]));
+
                 lockIndex++;
                 lockPos = locksPos[lockIndex];
-                //fade out animation
 
                 keyObjects.RemoveAt(keyIndex);
                 keyHints.RemoveAt(keyIndex);
@@ -339,5 +345,33 @@ public class DaughterController : PlayerController
         if (inputCounter == 2)
             return true;
         return false;
+    }
+
+    private IEnumerator FadeOutLockChain(GameObject locker, GameObject key, GameObject chain)
+    {
+        float fadeSpeed = 3f;
+        float waitTime = 1f / 30f;
+        float ticks = 1;
+        float ticksChain = 1;
+        WaitForSeconds wait = new WaitForSeconds(waitTime);
+        // fade lock and key
+
+        while (chain.GetComponent<Image>().color.a > 0)
+        {
+            Color cL = locker.GetComponent<Image>().color;
+            Color cK = key.GetComponent<Image>().color;
+            key.GetComponent<Image>().color = new Color(cL.r, cL.g, cL.b, Mathf.Lerp(cL.a, 0, waitTime * ticks * fadeSpeed));
+            locker.GetComponent<Image>().color = new Color(cK.r, cK.g, cK.b, Mathf.Lerp(cK.a, 0, waitTime * ticks * fadeSpeed));
+            ticks++;
+
+            //fade chain after lock and key
+            if (locker.GetComponent<Image>().color.a <= 0 && key.GetComponent<Image>().color.a <= 0)
+            {
+                Color cC = chain.GetComponent<Image>().color;
+                chain.GetComponent<Image>().color = new Color(cC.r, cC.g, cC.b, Mathf.Lerp(cC.a, 0, waitTime * ticksChain * fadeSpeed));
+                ticksChain++;
+            }
+            yield return wait;
+        }
     }
 }

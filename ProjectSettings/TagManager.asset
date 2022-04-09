@@ -8,6 +8,10 @@ TagManager:
   - Monsters
   - Lock
   - KeyLock
+  - KeyLockPair1
+  - KeyLockPair2
+  - KeyLockPair3
+  - KeyLockPair4
   layers:
   - Default
   - TransparentFX
