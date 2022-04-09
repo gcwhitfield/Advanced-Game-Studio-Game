@@ -226,6 +226,7 @@ public class DaughterController : PlayerController
     public void KeyLock(CallbackContext context)
     {
         string button = context.control.ToString();
+        Debug.Log(context);
         if (keyLockFlag)
         {
             if (button.Contains("/Keyboard/k") || button.Contains("buttonEast"))
@@ -253,7 +254,7 @@ public class DaughterController : PlayerController
                 }
                 else
                 {
-                    if (FilterFirstInput())
+                    if (context.phase.ToString().Contains("Performed"))
                     {
                         if (keyMovement2D.x > 0)
                         {
@@ -288,7 +289,6 @@ public class DaughterController : PlayerController
     private void moveKeyHint(int i)
     {
         keyHints[keyIndex].SetActive(false);
-
         int index = keyIndex + i;
         if (index < 0)
         {
@@ -309,6 +309,7 @@ public class DaughterController : PlayerController
         {
             keySelected = false;
             keyMovement = new Vector3(0, 0, 0);
+            inputCounter = 0;
             //if key match lock
             if (lockObjects[lockIndex].tag == keyObjects[keyIndex].tag)
             {
@@ -343,16 +344,6 @@ public class DaughterController : PlayerController
         }
     }
 
-    private bool FilterFirstInput()
-    {
-        inputCounter++;
-        if (inputCounter > 2)
-            inputCounter = 0;
-        if (inputCounter == 2)
-            return true;
-        return false;
-    }
-
     private IEnumerator FadeOutLockChain(GameObject locker, GameObject key, GameObject chain)
     {
         float fadeSpeed = 3f;
@@ -383,10 +374,10 @@ public class DaughterController : PlayerController
 
     private IEnumerator FadeOutUI()
     {
-        //play unlock all chain audio
-
-        WaitForSeconds wait = new WaitForSeconds(0.7f);
+        WaitForSeconds wait = new WaitForSeconds(0.9f);
         yield return wait;
+
+        //play unlock all chain audio
 
         keyLockFlag = false;
         keyLockUI.SetActive(false);
