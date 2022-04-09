@@ -456,11 +456,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7121009890443627916, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
   m_PrefabInstance: {fileID: 7407208884293216459}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6961718673595338997 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 456920763663956030, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
-  m_PrefabInstance: {fileID: 7407208884293216459}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8108555306124955871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -476,9 +471,37 @@ MonoBehaviour:
   animator: {fileID: 889826909}
   moveSpeed: 3.1
   rotateSpeed: 0
-  inventoryDisplay: {fileID: 6961718673595338997}
+  inventoryDisplay: {fileID: 0}
   hidden: 0
   flashlight: {fileID: 192182608466979656}
+  keyObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  keyHints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  chainObejcts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  lockObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  locksPos:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  keyLockUI: {fileID: 0}
+  keyBG: {fileID: 0}
+  keyLockFlag: 0
 --- !u!114 &170107600359750971
 MonoBehaviour:
   m_ObjectHideFlags: 0

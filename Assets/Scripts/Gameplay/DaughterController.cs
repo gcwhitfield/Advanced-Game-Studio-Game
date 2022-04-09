@@ -16,7 +16,11 @@ public class DaughterController : PlayerController
 
     public GameObject flashlight;
 
-    public GameObject keyMove;
+    public List<GameObject> keyObjects = new List<GameObject>();
+    public List<GameObject> keyHints = new List<GameObject>();
+    public List<GameObject> chainObejcts = new List<GameObject>();
+    public List<GameObject> lockObjects = new List<GameObject>();
+    public List<Transform> locksPos = new List<Transform>();
     public GameObject keyLockUI;
     public GameObject keyBG;
 
@@ -24,17 +28,30 @@ public class DaughterController : PlayerController
     public bool keyLockFlag = false;
 
     private Vector3 prevLookDirection;
+    private Transform keyTransform;
+    private Transform lockPos;
     private Vector3 keyMovement;
     private float keySpeed = 10.0f;
     private Vector2 borderLB;
     private Vector2 borderRT;
     private Vector2 borderBias = new Vector2(2f, 5f);
     private float forceStrength = 0.6f;
+    private bool keySelected = false;
+    private float unlockThreshold = 1f;
+    private int keyIndex = 0;
+    private int lockIndex = 0;
+    private Vector3 keyInitialPos;
+    private int inputCounter = 0;
 
     private new void Start()
     {
         base.Start();
         prevLookDirection = lookDirection;
+
+        keyTransform = keyObjects[0].transform;
+        keyInitialPos = keyTransform.position;
+        keyHints[0].SetActive(true);
+        lockPos = locksPos[0];
         GetEdges();
     }
 
@@ -195,11 +212,13 @@ public class DaughterController : PlayerController
             animator.SetBool("Hide", false);
         }
 
-        if (keyMovement != Vector3.zero)
+        if (keyMovement != Vector3.zero && keySelected)
         {
-            Transform t = keyMove.transform;
+            Transform t = keyTransform;
             t.Translate(keyMovement * keySpeed * Time.deltaTime);
             t.position = new Vector3(Mathf.Max(Mathf.Min(t.position.x, borderRT.x), borderLB.x), Mathf.Max(Mathf.Min(t.position.y, borderRT.y), borderLB.y), t.position.z);
+
+            CheckKeyLock();
         }
     }
 
@@ -212,14 +231,37 @@ public class DaughterController : PlayerController
             {
                 if (context.ReadValue<float>() > 0)
                 {
-                    Debug.Log("Selected");
+                    if (keyObjects.Count > 0)
+                    {
+                        keySelected = true;
+                        keyTransform = keyObjects[keyIndex].transform;
+                        keyInitialPos = keyTransform.position;
+                        keyHints[keyIndex].SetActive(false);
+                    }
                 }
             }
             else
             {
                 Vector2 keyMovement2D = context.ReadValue<Vector2>();
-                keyMovement = new Vector3(keyMovement2D.x, keyMovement2D.y, 0);
-                DisturbKeyMovement();
+                if (keySelected)
+                {
+                    keyMovement = new Vector3(keyMovement2D.x, keyMovement2D.y, 0);
+                    DisturbKeyMovement();
+                }
+                else
+                {
+                    if (FilterFirstInput())
+                    {
+                        if (keyMovement2D.x > 0)
+                        {
+                            moveKeyHint(1);
+                        }
+                        else if (keyMovement2D.x < 0)
+                        {
+                            moveKeyHint(-1);
+                        }
+                    }
+                }
             }
         }
     }
@@ -238,5 +280,64 @@ public class DaughterController : PlayerController
     {
         Vector3 force = new Vector3(Random.Range(-1, 1), Random.Range(-1, 1), 0) * forceStrength;
         keyMovement += force;
+    }
+
+    private void moveKeyHint(int i)
+    {
+        keyHints[keyIndex].SetActive(false);
+
+        int index = keyIndex + i;
+        if (index < 0)
+        {
+            index = 0;
+        }
+        else if (index > keyHints.Count - 1)
+        {
+            index = keyHints.Count - 1;
+        }
+        keyIndex = index;
+
+        keyHints[keyIndex].SetActive(true);
+    }
+
+    private void CheckKeyLock()
+    {
+        if (Vector3.Distance(lockPos.position, keyTransform.position) < unlockThreshold)
+        {
+            keySelected = false;
+            //if key match lock
+            if (lockObjects[lockIndex].tag == keyObjects[keyIndex].tag)
+            {
+                //play audio
+
+                lockIndex++;
+                lockPos = locksPos[lockIndex];
+                //fade out animation
+
+                keyObjects.RemoveAt(keyIndex);
+                keyHints.RemoveAt(keyIndex);
+                keyIndex = 0;
+                keyHints[keyIndex].SetActive(true);
+            }
+
+            //else Reset key
+            else
+            {
+                //play wrong audio
+
+                keyTransform.position = keyInitialPos;
+                keyHints[keyIndex].SetActive(true);
+            }
+        }
+    }
+
+    private bool FilterFirstInput()
+    {
+        inputCounter++;
+        if (inputCounter > 2)
+            inputCounter = 0;
+        if (inputCounter == 2)
+            return true;
+        return false;
     }
 }

@@ -12,8 +12,8 @@ public class FatherController : PlayerController
     public GameObject bulletPrefab;
     public float bulletForce = 20.0f;
     public GameObject codeInputUI;
-    public List<GameObject> asterisks;
-    public List<GameObject> recBox;
+    public List<GameObject> asterisks = new List<GameObject>();
+    public List<GameObject> recBox = new List<GameObject>();
     public Animator FenceArt;
 
     [HideInInspector]
