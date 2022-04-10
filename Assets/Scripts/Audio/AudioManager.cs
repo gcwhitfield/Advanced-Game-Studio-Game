@@ -25,6 +25,11 @@ public class AudioManager : MonoBehaviour
     public EventReference menuEnter;
     public EventReference lockCorrect;
     public EventReference lockWrong;
+    public EventReference keyCorrect;
+    public EventReference keyWrong;
+    public EventReference keyPick;
+    public EventReference keyRotate;
+    public EventReference keyUnlock;
     //public EventReference lanternLaunchAduio;
 
     private float footstepTimer = 0.0f;
@@ -144,5 +149,30 @@ public class AudioManager : MonoBehaviour
     public void LockWrongAudio(GameObject gb)
     {
         PlayAudio(lockWrong, gb);
+    }
+
+    public void KeyCorrectAudio(GameObject gb)
+    {
+        PlayAudio(keyCorrect, gb);
+    }
+
+    public void KeyWrongAudio(GameObject gb)
+    {
+        PlayAudio(keyWrong, gb);
+    }
+
+    public void KeyUnlockAudio(GameObject gb)
+    {
+        PlayAudio(keyUnlock, gb);
+    }
+
+    public void KeyPickAudio(GameObject gb)
+    {
+        PlayAudio(keyPick, gb);
+    }
+
+    public void KeyRotateAudio(GameObject gb)
+    {
+        PlayAudio(keyRotate, gb);
     }
 }

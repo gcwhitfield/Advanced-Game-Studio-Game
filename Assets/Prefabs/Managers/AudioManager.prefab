@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fd917575b882aa439535d10ccc0dbee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 
   shootAudio:
     Guid:
       Data1: 1160458788
@@ -155,3 +156,38 @@ MonoBehaviour:
       Data3: 1562007992
       Data4: -1720751704
     Path: event:/SFX/Wrong
+  keyCorrect:
+    Guid:
+      Data1: -1277917104
+      Data2: 1101674057
+      Data3: -1408662910
+      Data4: 859581803
+    Path: event:/SFX/KeyCorrect
+  keyWrong:
+    Guid:
+      Data1: 240119065
+      Data2: 1341200371
+      Data3: 540365955
+      Data4: -1215059357
+    Path: event:/SFX/KeyWrong
+  keyPick:
+    Guid:
+      Data1: -1052763846
+      Data2: 1306746550
+      Data3: -1653475911
+      Data4: 228335648
+    Path: event:/SFX/KeyPick
+  keyRotate:
+    Guid:
+      Data1: 1548962728
+      Data2: 1263682898
+      Data3: 1511999616
+      Data4: 772455063
+    Path: event:/SFX/KeyRotate
+  keyUnlock:
+    Guid:
+      Data1: -921476132
+      Data2: 1243302227
+      Data3: 640218045
+      Data4: 1396096973
+    Path: event:/SFX/Unlock

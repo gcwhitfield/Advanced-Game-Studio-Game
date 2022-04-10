@@ -238,12 +238,12 @@ public class DaughterController : PlayerController
                         keyTransform = keyObjects[keyIndex].transform;
                         keyInitialPos = keyTransform.position;
                         keyHints[keyIndex].SetActive(false);
+                        AudioManager.Instance.KeyPickAudio(gameObject);
                     }
                 }
             }
             else
             {
-                //Debug.Log(keyMovement);
                 Vector2 keyMovement2D = context.ReadValue<Vector2>();
                 if (keySelected)
                 {
@@ -300,6 +300,8 @@ public class DaughterController : PlayerController
         keyIndex = index;
 
         keyHints[keyIndex].SetActive(true);
+
+        AudioManager.Instance.KeyRotateAudio(gameObject);
     }
 
     private void CheckKeyLock()
@@ -313,7 +315,7 @@ public class DaughterController : PlayerController
             if (lockObjects[lockIndex].tag == keyObjects[keyIndex].tag)
             {
                 //play audio
-
+                AudioManager.Instance.KeyUnlockAudio(gameObject);
                 //fade out animation
                 StartCoroutine(FadeOutLockChain(lockObjects[lockIndex], keyObjects[keyIndex], chainObjects[lockIndex]));
 
@@ -332,6 +334,7 @@ public class DaughterController : PlayerController
             else
             {
                 //play wrong audio
+                AudioManager.Instance.KeyWrongAudio(gameObject);
 
                 keyTransform.position = keyInitialPos;
                 keyHints[keyIndex].SetActive(true);
@@ -339,6 +342,7 @@ public class DaughterController : PlayerController
         }
         if (keyObjects.Count == 0)
         {
+            AudioManager.Instance.KeyCorrectAudio(gameObject);
             StartCoroutine(FadeOutUI());
         }
     }
