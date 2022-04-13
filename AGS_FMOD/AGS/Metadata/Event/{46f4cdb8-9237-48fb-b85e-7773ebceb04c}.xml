@@ -216,7 +216,7 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>-2</value>
+			<value>9</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{5a3144ae-938e-407d-9bd6-16528ae09535}">
@@ -229,18 +229,18 @@
 	</object>
 	<object class="AutomationPoint" id="{e22edd18-7814-4ab5-93e7-a3317aebed95}">
 		<property name="position">
-			<value>22.524219590958023</value>
+			<value>15</value>
 		</property>
 		<property name="value">
-			<value>-17</value>
+			<value>-3</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{f01ecbc2-f43e-4bed-81f0-72924293a9d2}">
 		<property name="position">
-			<value>22.524250840958022</value>
+			<value>15.000020833333334</value>
 		</property>
 		<property name="value">
-			<value>-80</value>
+			<value>-54</value>
 		</property>
 	</object>
 	<object class="Automator" id="{3dc4f831-f317-4475-a67b-c44734eccb0a}">
@@ -256,25 +256,16 @@
 			<destination>{a08539e6-36ed-4f58-9e4e-1bd6b14470b4}</destination>
 		</relationship>
 		<relationship name="automationPoints">
-			<destination>{339ad763-25af-4747-8c21-33b3ba1b4a26}</destination>
 			<destination>{af8bbef1-31c8-4d04-90a1-7de575f5ac1c}</destination>
 			<destination>{514fc59f-8ad7-41e4-a118-f6d4603821c2}</destination>
 		</relationship>
 	</object>
-	<object class="AutomationPoint" id="{339ad763-25af-4747-8c21-33b3ba1b4a26}">
-		<property name="position">
-			<value>12</value>
-		</property>
-		<property name="value">
-			<value>1.13999999</value>
-		</property>
-	</object>
 	<object class="AutomationPoint" id="{af8bbef1-31c8-4d04-90a1-7de575f5ac1c}">
 		<property name="position">
-			<value>22.600000000000001</value>
+			<value>15.000020833333334</value>
 		</property>
 		<property name="value">
-			<value>0.74000001</value>
+			<value>0.919999957</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{514fc59f-8ad7-41e4-a118-f6d4603821c2}">
@@ -282,7 +273,7 @@
 			<value>0.03229278794402584</value>
 		</property>
 		<property name="value">
-			<value>1.38</value>
+			<value>1.45999992</value>
 		</property>
 	</object>
 </objects>
