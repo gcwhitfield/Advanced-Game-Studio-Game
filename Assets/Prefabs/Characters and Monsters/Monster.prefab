@@ -168,7 +168,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 0}
   LookRadius: 10
-  waypoints: []
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   tentHidingSpot: {fileID: 0}
   hideRing: {fileID: 0}
 --- !u!95 &4232721481474873485
