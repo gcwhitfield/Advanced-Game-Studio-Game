@@ -75,10 +75,6 @@ public class MonsterController : MonoBehaviour
                 }
             }
         }
-        else
-        {
-            Debug.Log("Frozen");
-        }
     }
 
     //Draw the search range
@@ -144,6 +140,7 @@ public class MonsterController : MonoBehaviour
             if (level == 3)
             {
                 isFrozen = true;
+                agent.isStopped = true;
             }
         }
     }
@@ -153,6 +150,7 @@ public class MonsterController : MonoBehaviour
         if (other.gameObject.CompareTag("LightCone"))
         {
             isFrozen = false;
+            agent.isStopped = false;
         }
     }
 }
