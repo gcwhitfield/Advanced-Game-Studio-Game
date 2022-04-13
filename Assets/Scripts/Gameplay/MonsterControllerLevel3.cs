@@ -24,7 +24,7 @@ public class MonsterControllerLevel3 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currState = MonsterState.WAITING;
+        currState = MonsterState.ATTACKING;
     }
 
     // called when the father shoots the monster
@@ -60,8 +60,16 @@ public class MonsterControllerLevel3 : MonoBehaviour
                 break;
             case MonsterState.RETREATING:
                 // choose a random retreat spot to move towards
-                int r = Random.Range(0, retreatSpots.Count);
-                target = retreatSpots[r].position;
+                if (retreatSpots.Count > 0)
+                {
+                    int r = Random.Range(0, retreatSpots.Count);
+                    target = retreatSpots[r].position;
+                } else // choose a random position within 10 units to go to
+                {
+                    float d = 10.0f;
+                    target = new Vector3(Random.Range(-1.0f, 1.0f), 0, Random.Range(-1.0f, 1.0f)) * d +
+                            FatherController.Instance.transform.position;
+                }
                 float dist = Vector3.Distance(target, transform.position);
                 if (dist < 1)
                 {
