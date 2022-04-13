@@ -1944,6 +1944,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1271654466}
     m_Modifications:
+    - target: {fileID: 110756672844532173, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a759ca6d1c6b604aa56577db3a6ffe1, type: 2}
+    - target: {fileID: 163541946970300858, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 295366172609831811, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.206
@@ -2007,6 +2015,50 @@ PrefabInstance:
     - target: {fileID: 295366174211155269, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
       propertyPath: near clip plane
       value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156261634477073739, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.9500146
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156261634477073739, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5799974
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156261634477073739, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.7999905
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156261634477073739, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156261634477073739, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156261634477073739, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156261634477073739, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156261634477073739, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156261634477073739, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963584246796484593, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
+      propertyPath: m_Name
+      value: Light Cone
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963584246796484593, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2284917451066852294, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
       propertyPath: monster

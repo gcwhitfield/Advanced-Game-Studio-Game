@@ -16,6 +16,7 @@ public class DaughterController : PlayerController
     private bool isNearHiddenSpot = false;
 
     public GameObject flashlight;
+    public GameObject lightCone;
 
     public List<GameObject> keyObjects = new List<GameObject>();
     public List<GameObject> keyHints = new List<GameObject>();
@@ -132,6 +133,10 @@ public class DaughterController : PlayerController
         Quaternion desiredRotation = Quaternion.Euler(new Vector3(0, Mathf.Rad2Deg * Mathf.Atan2(lookDirection.x, lookDirection.z), 0));
         Quaternion currRotation = flashlight.transform.rotation;
         flashlight.transform.rotation = Quaternion.Lerp(currRotation, desiredRotation, 0.5f);
+
+        Quaternion desiredConeRotation = Quaternion.Euler(new Vector3(0, Mathf.Rad2Deg * Mathf.Atan2(lookDirection.x, lookDirection.z), 90));
+        Quaternion currConeRotation = lightCone.transform.rotation;
+        lightCone.transform.rotation = Quaternion.Lerp(currConeRotation, desiredConeRotation, 0.5f);
 
         // footstep audio
         AudioManager.Instance.FootstepAudio(gameObject, movement, moveSpeed);
