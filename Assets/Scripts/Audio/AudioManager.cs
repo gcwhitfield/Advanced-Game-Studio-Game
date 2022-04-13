@@ -12,7 +12,6 @@ public class AudioManager : MonoBehaviour
     public EventReference shootAudio;
     public EventReference footStepAudio;
     public EventReference ambientAudio;
-    public EventReference themeAudio;
     public EventReference lanternWalkingAduio;
     public EventReference wolfShowUp;
     public EventReference wolfBite;
@@ -31,6 +30,8 @@ public class AudioManager : MonoBehaviour
     public EventReference keyPick;
     public EventReference keyRotate;
     public EventReference keyUnlock;
+    public EventReference themeEmo;
+    public EventReference cutScene;
     //public EventReference lanternLaunchAduio;
 
     private float footstepTimer = 0.0f;
@@ -181,5 +182,15 @@ public class AudioManager : MonoBehaviour
     public void MenuThemeAudio()
     {
         PlayAudio(menuTheme, gameObject);
+    }
+
+    public void CutSceneAudio()
+    {
+        PlayAudio(cutScene, gameObject);
+    }
+
+    public void ThemeEmoAudio()
+    {
+        PlayAudio(themeEmo, gameObject);
     }
 }
