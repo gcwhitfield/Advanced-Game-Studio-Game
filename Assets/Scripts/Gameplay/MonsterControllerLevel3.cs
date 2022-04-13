@@ -5,30 +5,32 @@ using UnityEngine.AI;
 
 public class MonsterControllerLevel3 : MonoBehaviour
 {
-    enum MonsterState
+    private enum MonsterState
     {
         ATTACKING,
         RETREATING,
         WAITING
     };
 
-    MonsterState currState;
+    private MonsterState currState;
 
     public NavMeshAgent navMeshAgent;
     public List<Transform> retreatSpots;
 
     // when this is set to 'true', the monster can attack. If this is set to false, then
     // the monster's attack is currently on cooldown and it can not attack yet
-    bool canAttack = true; 
+    private bool canAttack = true;
+
+    private bool isFrozen = false;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         currState = MonsterState.WAITING;
     }
 
     // called when the father shoots the monster
-    void OnMonsterAttacked()
+    private void OnMonsterAttacked()
     {
         // TODO: play the monster attacked sound
         currState = MonsterState.RETREATING;
@@ -58,6 +60,7 @@ public class MonsterControllerLevel3 : MonoBehaviour
                 }
 
                 break;
+
             case MonsterState.RETREATING:
                 // choose a random retreat spot to move towards
                 int r = Random.Range(0, retreatSpots.Count);
@@ -68,17 +71,39 @@ public class MonsterControllerLevel3 : MonoBehaviour
                     currState = MonsterState.ATTACKING;
                 }
                 break;
+
             case MonsterState.WAITING:
                 target = transform.position;
                 break;
         }
 
-        navMeshAgent.SetDestination(target);
+        if (!isFrozen)
+        {
+            navMeshAgent.SetDestination(target);
+        }
     }
 
-    IEnumerator ResetAttackAfterCooldown(float cooldownTime)
+    private IEnumerator ResetAttackAfterCooldown(float cooldownTime)
     {
         yield return new WaitForSeconds(cooldownTime);
         canAttack = true;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("LightCone"))
+        {
+            isFrozen = true;
+            navMeshAgent.isStopped = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("LightCone"))
+        {
+            isFrozen = false;
+            navMeshAgent.isStopped = false;
+        }
     }
 }
