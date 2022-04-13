@@ -65,13 +65,6 @@ MonoBehaviour:
       Data3: 782525882
       Data4: 624324812
     Path: event:/Music/Ambient-Night
-  themeAudio:
-    Guid:
-      Data1: -1520312755
-      Data2: 1086289450
-      Data3: -624724077
-      Data4: 1985101665
-    Path: event:/Music/Theme-sad
   lanternWalkingAduio:
     Guid:
       Data1: 671769237
@@ -142,6 +135,13 @@ MonoBehaviour:
       Data3: -664317562
       Data4: -440724098
     Path: event:/SFX/MenuEnter
+  menuTheme:
+    Guid:
+      Data1: 34719267
+      Data2: 1334631857
+      Data3: 593071017
+      Data4: 1527391020
+    Path: event:/Music/MenuTheme
   lockCorrect:
     Guid:
       Data1: -379184091
@@ -191,3 +191,17 @@ MonoBehaviour:
       Data3: 640218045
       Data4: 1396096973
     Path: event:/SFX/Unlock
+  themeEmo:
+    Guid:
+      Data1: -262617230
+      Data2: 1313475985
+      Data3: 1504655755
+      Data4: -74601269
+    Path: event:/Music/Theme
+  cutScene:
+    Guid:
+      Data1: -716952960
+      Data2: 1211126874
+      Data3: -807730762
+      Data4: 1235757810
+    Path: event:/Music/CutScene

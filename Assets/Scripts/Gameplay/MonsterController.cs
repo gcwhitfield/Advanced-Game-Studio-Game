@@ -50,7 +50,10 @@ public class MonsterController : MonoBehaviour
             agent.stoppingDistance = 2.5f;
             Chase();
             isPatrol = false;
-            hideRing.SetActive(true);
+            if (hideRing != null)
+            {
+                hideRing.SetActive(true);
+            }
         }
         else
         {
@@ -61,7 +64,10 @@ public class MonsterController : MonoBehaviour
                 MoveAway();
             }
             Patrol();
-            hideRing.SetActive(false);
+            if (hideRing != null)
+            {
+                hideRing.SetActive(false);
+            }
         }
     }
 
@@ -108,14 +114,14 @@ public class MonsterController : MonoBehaviour
 
     private void MoveAway()
     {
-      waypointDestination = waypoints[waypoints.Length-1].position;
-      agent.SetDestination(waypointDestination);
+        waypointDestination = waypoints[waypoints.Length - 1].position;
+        agent.SetDestination(waypointDestination);
     }
 
     private void IterateWaypoints()
     {
         waypointsIndex++;
-        if (waypointsIndex >= waypoints.Length-1)
+        if (waypointsIndex >= waypoints.Length - 1)
         {
             waypointsIndex = 0;
         }
