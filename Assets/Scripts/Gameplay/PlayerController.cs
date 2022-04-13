@@ -187,7 +187,7 @@ public class PlayerController : MonoBehaviour
         if (movement != Vector3.zero)
         {
             cc.Move(movement * moveSpeed * Time.deltaTime);
-            lookDirection = movement;
+            lookDirection = movement.normalized;
         }
     }
 }

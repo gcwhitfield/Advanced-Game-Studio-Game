@@ -23,6 +23,8 @@ public class MonsterControllerLevel3 : MonoBehaviour
 
     private bool isFrozen = false;
 
+    Vector3 target = Vector3.zero; // 'target' is the location that the navmesh will move towards
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -30,16 +32,29 @@ public class MonsterControllerLevel3 : MonoBehaviour
     }
 
     // called when the father shoots the monster
-    private void OnMonsterAttacked()
+    public void OnMonsterAttacked()
     {
         // TODO: play the monster attacked sound
         currState = MonsterState.RETREATING;
+
+        // choose a random retreat spot to move towards
+        if (retreatSpots.Count > 0)
+        {
+            int r = Random.Range(0, retreatSpots.Count);
+            target = retreatSpots[r].position;
+        }
+        else // choose a random position within 10 units to go to
+        {
+            float d = 10.0f;
+            target = new Vector3(Random.Range(-1.0f, 1.0f), 0, Random.Range(-1.0f, 1.0f)) * d +
+                    FatherController.Instance.transform.position;
+            Debug.Log(target);
+        }
     }
 
     private void Update()
     {
-        Vector3 target = Vector3.zero; // 'target' is the location that the navmesh will move towards
-
+        Debug.Log("Monster state: " + currState.ToString());
         switch (currState)
         {
             case MonsterState.ATTACKING:
@@ -62,19 +77,9 @@ public class MonsterControllerLevel3 : MonoBehaviour
                 break;
 
             case MonsterState.RETREATING:
-                // choose a random retreat spot to move towards
-                if (retreatSpots.Count > 0)
-                {
-                    int r = Random.Range(0, retreatSpots.Count);
-                    target = retreatSpots[r].position;
-                } else // choose a random position within 10 units to go to
-                {
-                    float d = 10.0f;
-                    target = new Vector3(Random.Range(-1.0f, 1.0f), 0, Random.Range(-1.0f, 1.0f)) * d +
-                            FatherController.Instance.transform.position;
-                }
                 float dist = Vector3.Distance(target, transform.position);
-                if (dist < 1)
+                Debug.Log("dist: " + dist.ToString());
+                if (dist < 3)
                 {
                     currState = MonsterState.ATTACKING;
                 }

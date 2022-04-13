@@ -220,4 +220,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   debugMode: 1
-  fatherOn: 0
+  fatherOn: 1

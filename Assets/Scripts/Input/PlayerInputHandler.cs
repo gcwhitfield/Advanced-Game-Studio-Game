@@ -71,6 +71,7 @@ public class PlayerInputHandler : MonoBehaviour
         {
             Debug.LogError("Instance of player not set in PlayerInputHandler");
         }
+        
     }
 
     public void OnShoot(CallbackContext context)

@@ -29,7 +29,6 @@ public class DaughterController : PlayerController
     [HideInInspector]
     public bool keyLockFlag = false;
 
-    private Vector3 prevLookDirection;
     private Transform keyTransform;
     private Transform lockPos;
     private Vector3 keyMovement;
@@ -48,7 +47,6 @@ public class DaughterController : PlayerController
     private new void Start()
     {
         base.Start();
-        prevLookDirection = lookDirection;
 
         keyTransform = keyObjects[0].transform;
         keyInitialPos = keyTransform.position;

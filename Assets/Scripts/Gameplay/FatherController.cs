@@ -162,20 +162,28 @@ public class FatherController : PlayerController
     public void Shoot()
     {
         animator.SetTrigger("Shoot");
-        // OLD shooting code (instantiates bullet prefab)
         float rayLength = 3.0f;
         RaycastHit hit;
         if (Physics.Raycast(gameObject.transform.position, lookDirection * rayLength, out hit))
         {
+            Debug.Log("Hit name: " + hit.transform.name);
             DestroyableBranches branches = hit.transform.GetComponent<DestroyableBranches>();
             if (branches)
             {
                 branches.DestroyBranches();
             }
+            MonsterControllerLevel3 monster = hit.transform.GetComponent<MonsterControllerLevel3>();
+            if (monster)
+            {
+                monster.OnMonsterAttacked();
+            }
         }
 
         // play the shooting sound
         AudioManager.Instance.ShootAudio(gameObject);
+
+        // if we hit monster (in level 3) then tell the monster to go away
+
     }
 
     private new void OnTriggerEnter(Collider other)
