@@ -55,7 +55,8 @@ public class PlayerController : MonoBehaviour
         if (val > 0)
         {
             inventory.IncrementSelection();
-        } else if (val < 0)
+        }
+        else if (val < 0)
         {
             inventory.DecrementSelection();
         }
@@ -122,6 +123,10 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 movement2D = context.ReadValue<Vector2>();
         movement = new Vector3(movement2D.x, 0, movement2D.y);
+        if (context.phase.ToString().Contains("Performed"))
+        {
+            lookDirection = movement;
+        }
     }
 
     public void Stop()
@@ -187,7 +192,7 @@ public class PlayerController : MonoBehaviour
         if (movement != Vector3.zero)
         {
             cc.Move(movement * moveSpeed * Time.deltaTime);
-            lookDirection = movement;
+            //lookDirection = movement;
         }
     }
 }
