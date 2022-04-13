@@ -142,6 +142,13 @@ MonoBehaviour:
       Data3: -664317562
       Data4: -440724098
     Path: event:/SFX/MenuEnter
+  menuTheme:
+    Guid:
+      Data1: 34719267
+      Data2: 1334631857
+      Data3: 593071017
+      Data4: 1527391020
+    Path: event:/Music/MenuTheme
   lockCorrect:
     Guid:
       Data1: -379184091

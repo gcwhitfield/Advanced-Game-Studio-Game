@@ -23,6 +23,7 @@ public class AudioManager : MonoBehaviour
     public EventReference wolfChase;
     public EventReference menuHover;
     public EventReference menuEnter;
+    public EventReference menuTheme;
     public EventReference lockCorrect;
     public EventReference lockWrong;
     public EventReference keyCorrect;
@@ -45,6 +46,7 @@ public class AudioManager : MonoBehaviour
     {
         if (level.Contains("Menu"))
         {
+            MenuThemeAudio();
             return;
         }
         AmbientAudio();
@@ -174,5 +176,10 @@ public class AudioManager : MonoBehaviour
     public void KeyRotateAudio(GameObject gb)
     {
         PlayAudio(keyRotate, gb);
+    }
+
+    public void MenuThemeAudio()
+    {
+        PlayAudio(menuTheme, gameObject);
     }
 }
