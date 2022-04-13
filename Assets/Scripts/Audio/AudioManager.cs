@@ -32,6 +32,7 @@ public class AudioManager : MonoBehaviour
     public EventReference keyUnlock;
     public EventReference themeEmo;
     public EventReference cutScene;
+    public EventReference monsterAttackBeast;
     //public EventReference lanternLaunchAduio;
 
     private float footstepTimer = 0.0f;
@@ -192,5 +193,10 @@ public class AudioManager : MonoBehaviour
     public void ThemeEmoAudio()
     {
         PlayAudio(themeEmo, gameObject);
+    }
+
+    public void MonsterAttackBeastAudio(GameObject gb)
+    {
+        PlayAudio(monsterAttackBeast, gb);
     }
 }

@@ -205,3 +205,10 @@ MonoBehaviour:
       Data3: -807730762
       Data4: 1235757810
     Path: event:/Music/CutScene
+  monsterAttackBeast:
+    Guid:
+      Data1: -1227443534
+      Data2: 1222942407
+      Data3: 1865465277
+      Data4: 2129381166
+    Path: event:/SFX/MonsterAttackBeast
