@@ -178,6 +178,7 @@ MonoBehaviour:
   - {fileID: 0}
   tentHidingSpot: {fileID: 0}
   hideRing: {fileID: 0}
+  level: 0
 --- !u!95 &4232721481474873485
 Animator:
   serializedVersion: 3

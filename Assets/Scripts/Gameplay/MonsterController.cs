@@ -16,12 +16,15 @@ public class MonsterController : MonoBehaviour
 
     public GameObject hideRing;
 
+    public int level;
+
     private int waypointsIndex;
     private Vector3 waypointDestination;
 
     private Transform player;
     private float distance;
     private bool isPatrol;
+    private bool isFrozen = false;
 
     // Start is called before the first frame update
     private void Start()
@@ -44,30 +47,37 @@ public class MonsterController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        distance = Vector3.Distance(player.position, transform.position);
-        if (distance <= LookRadius && !DaughterController.Instance.hidden)
+        if (!isFrozen)
         {
-            agent.stoppingDistance = 2.5f;
-            Chase();
-            isPatrol = false;
-            if (hideRing != null)
+            distance = Vector3.Distance(player.position, transform.position);
+            if (distance <= LookRadius && !DaughterController.Instance.hidden)
             {
-                hideRing.SetActive(true);
+                agent.stoppingDistance = 2.5f;
+                Chase();
+                isPatrol = false;
+                if (hideRing != null)
+                {
+                    hideRing.SetActive(true);
+                }
+            }
+            else
+            {
+                //agent.ResetPath();
+                if (!isPatrol)
+                {
+                    agent.stoppingDistance = 0.5f;
+                    MoveAway();
+                }
+                Patrol();
+                if (hideRing != null)
+                {
+                    hideRing.SetActive(false);
+                }
             }
         }
         else
         {
-            //agent.ResetPath();
-            if (!isPatrol)
-            {
-                agent.stoppingDistance = 0.5f;
-                MoveAway();
-            }
-            Patrol();
-            if (hideRing != null)
-            {
-                hideRing.SetActive(false);
-            }
+            Debug.Log("Frozen");
         }
     }
 
@@ -124,6 +134,25 @@ public class MonsterController : MonoBehaviour
         if (waypointsIndex >= waypoints.Length - 1)
         {
             waypointsIndex = 0;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("LightCone"))
+        {
+            if (level == 3)
+            {
+                isFrozen = true;
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("LightCone"))
+        {
+            isFrozen = false;
         }
     }
 }

@@ -12,6 +12,7 @@ TagManager:
   - KeyLockPair2
   - KeyLockPair3
   - KeyLockPair4
+  - LightCone
   layers:
   - Default
   - TransparentFX
