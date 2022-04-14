@@ -740,3 +740,4 @@ MonoBehaviour:
   intensity: 0
   effectBeginDistance: 10
   monster: {fileID: 0}
+  affector: 1

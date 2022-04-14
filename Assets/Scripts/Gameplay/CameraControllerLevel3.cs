@@ -21,14 +21,15 @@ public class CameraControllerLevel3: MonoBehaviour
                 (FatherController.Instance.transform.position.z +
                     DaughterController.Instance.transform.position.z) / 2.0f
             );
-        clearingCheckpoint.ExecuteOnInteract(OnClearingCheckpointReached);
+        clearingCheckpoint.ExecuteOnTriggerEnter(OnClearingCheckpointReached);
 
     }
 
     // this function is called when the clearing checkpoint has been hit
-    void OnClearingCheckpointReached()
+    public void OnClearingCheckpointReached()
     {
         checkpointReached = true;
+        Debug.Log("Clearing chekpoint has been reached!");
     }
 
     void Update()
@@ -54,6 +55,6 @@ public class CameraControllerLevel3: MonoBehaviour
             newRotation = clearingCheckpoint.transform.rotation;
         }
         transform.position = Vector3.Lerp(oldPosition, newPosition + offset, 1.0f-movementDampening);
-        transform.rotation = Quaternion.Lerp(oldRotation, newRotation, 1.0f - movementDampening);
+        transform.rotation = Quaternion.Lerp(oldRotation, newRotation, 1.0f-movementDampening);
     }
 }

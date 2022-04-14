@@ -20,9 +20,32 @@ public class MonsterIsNearBlit : MonoBehaviour
     float maxIntensity = 0.22f; // clamps the value of "_Intensity" inside of the shader
     // between 0 and maxIntensity
 
+    [System.Serializable]
+    public enum Affector
+    {
+        FATHER, // the father
+        DAUGHTER, // the daughter
+        PARENT // the parent of the gameobject that this component is attached to
+    };
+
+    public Affector affector;
+
     private void FixedUpdate()
     {
-        float dist = Vector3.Distance(gameObject.transform.parent.position, monster.transform.position);
+        Vector3 other = gameObject.transform.parent.position;
+        switch (affector)
+        {
+            case Affector.DAUGHTER:
+                other = DaughterController.Instance.transform.position;
+                break;
+            case Affector.FATHER:
+                other = FatherController.Instance.transform.position;
+                break;
+            case Affector.PARENT:
+                other = gameObject.transform.parent.position;
+                break;
+        }
+        float dist = Vector3.Distance(other, monster.transform.position);
         if (dist < effectBeginDistance)
         {
             intensity = (effectBeginDistance - dist) / effectBeginDistance;
