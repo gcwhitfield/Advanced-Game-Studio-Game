@@ -28,8 +28,8 @@ public class CameraControllerLevel3: MonoBehaviour
     // this function is called when the clearing checkpoint has been hit
     public void OnClearingCheckpointReached()
     {
-        checkpointReached = true;
-        Debug.Log("Clearing chekpoint has been reached!");
+        //checkpointReached = true;
+        //Debug.Log("Clearing chekpoint has been reached!");
     }
 
     void Update()
