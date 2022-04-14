@@ -388,6 +388,7 @@ MonoBehaviour:
   intensity: 0
   effectBeginDistance: 10
   monster: {fileID: 0}
+  affector: 0
 --- !u!114 &5469928444540468469
 MonoBehaviour:
   m_ObjectHideFlags: 0
