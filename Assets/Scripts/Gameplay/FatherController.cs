@@ -20,7 +20,7 @@ public class FatherController : PlayerController
     public bool inputCodeFlag = false;
 
     private int codeInputCount = 0;
-    private string CODE = "123";
+    private string CODE = "347";
     private string code = "";
     private int numberCount = 1;
     private Vector2 numberPos = new Vector2(0, 0);
