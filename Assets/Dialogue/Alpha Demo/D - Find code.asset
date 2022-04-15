@@ -12,9 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7984a56cf210c45089808c923f475e10, type: 3}
   m_Name: D - Find code
   m_EditorClassIdentifier: 
-  dialogueLines: 'Press B to investigate
-
-    Some sort of code...
-
-    BXY... what
-    could it mean?'
+  dialogueLines: "Some sort of code...\n what could it mean?"

@@ -648,6 +648,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7121009890443627916, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
   m_PrefabInstance: {fileID: 7407208884293216459}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4001462202945457358 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5855732368595051525, guid: 0f97791ff0dee4201957b9914c514892, type: 3}
+  m_PrefabInstance: {fileID: 7407208884293216459}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8108555306124955871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -663,7 +668,7 @@ MonoBehaviour:
   animator: {fileID: 889826909}
   moveSpeed: 3.1
   rotateSpeed: 0
-  inventoryDisplay: {fileID: 0}
+  inventoryDisplay: {fileID: 4001462202945457358}
   hidden: 0
   flashlight: {fileID: 192182608466979656}
   lightCone: {fileID: 5103319816779237560}

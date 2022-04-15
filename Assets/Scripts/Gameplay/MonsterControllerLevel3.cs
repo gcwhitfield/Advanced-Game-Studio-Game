@@ -23,7 +23,7 @@ public class MonsterControllerLevel3 : MonoBehaviour
 
     private bool isFrozen = false;
 
-    Vector3 target = Vector3.zero; // 'target' is the location that the navmesh will move towards
+    private Vector3 target = Vector3.zero; // 'target' is the location that the navmesh will move towards
 
     // Start is called before the first frame update
     private void Start()
@@ -34,7 +34,8 @@ public class MonsterControllerLevel3 : MonoBehaviour
     // called when the father shoots the monster
     public void OnMonsterAttacked()
     {
-        // TODO: play the monster attacked sound
+        // TODO: play the monster being attacked sound by father
+        AudioManager.Instance.MonsterGetBeatAudio(gameObject);
         currState = MonsterState.RETREATING;
 
         // choose a random retreat spot to move towards
@@ -54,7 +55,7 @@ public class MonsterControllerLevel3 : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("Monster state: " + currState.ToString());
+        //Debug.Log("Monster state: " + currState.ToString());
         switch (currState)
         {
             case MonsterState.ATTACKING:
@@ -67,6 +68,7 @@ public class MonsterControllerLevel3 : MonoBehaviour
                     if (Vector3.Distance(transform.position, FatherController.Instance.transform.position) < attackDist)
                     {
                         // TODO: play the attack sound
+                        AudioManager.Instance.MonsterAttackBeastAudio(FatherController.Instance.gameObject);
                         // TODO: play the damage animation
                         Debug.Log("The father has been attacked!");
                         canAttack = false;

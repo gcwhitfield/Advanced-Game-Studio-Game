@@ -43,8 +43,11 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            inventoryDisplay.SetActive(true);
-            inventory.OnShowInventory();
+            if ((this == FatherController.Instance && !FatherController.Instance.inputCodeFlag) || (this == DaughterController.Instance && !DaughterController.Instance.keyLockFlag))
+            {
+                inventoryDisplay.SetActive(true);
+                inventory.OnShowInventory();
+            }
         }
     }
 
@@ -125,7 +128,7 @@ public class PlayerController : MonoBehaviour
         movement = new Vector3(movement2D.x, 0, movement2D.y);
         if (context.phase.ToString().Contains("Performed"))
         {
-            lookDirection = movement;
+            lookDirection = movement.normalized;
         }
     }
 
@@ -192,7 +195,7 @@ public class PlayerController : MonoBehaviour
         if (movement != Vector3.zero)
         {
             cc.Move(movement * moveSpeed * Time.deltaTime);
-            lookDirection = movement.normalized;
+            //lookDirection = movement.normalized;
         }
     }
 }

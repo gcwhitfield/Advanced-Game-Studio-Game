@@ -12,6 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7984a56cf210c45089808c923f475e10, type: 3}
   m_Name: D - Hazmat
   m_EditorClassIdentifier: 
-  dialogueLines: 'You found a torn hazmat suit
-
-    What''s this junk...?'
+  dialogueLines: What's this junk...? This yellow fabric looks uncomfy though

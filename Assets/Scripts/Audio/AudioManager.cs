@@ -33,6 +33,7 @@ public class AudioManager : MonoBehaviour
     public EventReference themeEmo;
     public EventReference cutScene;
     public EventReference monsterAttackBeast;
+    public EventReference monsterGetBeat;
     //public EventReference lanternLaunchAduio;
 
     private float footstepTimer = 0.0f;
@@ -46,9 +47,17 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+        FMOD.Studio.Bus MasterBus;
+        MasterBus = FMODUnity.RuntimeManager.GetBus("Bus:/");
+        MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.IMMEDIATE);
         if (level.Contains("Menu"))
         {
             MenuThemeAudio();
+            return;
+        }
+        if (level.Contains("CutScene"))
+        {
+            CutSceneAudio();
             return;
         }
         AmbientAudio();
@@ -62,6 +71,10 @@ public class AudioManager : MonoBehaviour
         //footStepInstance.set3DAttributes(RuntimeUtils.To3DAttributes(gb.transform.position));
         audioInstance.start();
         audioInstance.release();
+    }
+
+    public void StopAll()
+    {
     }
 
     public void ShootAudio(GameObject gb)
@@ -198,5 +211,10 @@ public class AudioManager : MonoBehaviour
     public void MonsterAttackBeastAudio(GameObject gb)
     {
         PlayAudio(monsterAttackBeast, gb);
+    }
+
+    public void MonsterGetBeatAudio(GameObject gb)
+    {
+        PlayAudio(monsterGetBeat, gb);
     }
 }

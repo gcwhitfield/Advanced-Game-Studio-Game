@@ -212,3 +212,10 @@ MonoBehaviour:
       Data3: 1865465277
       Data4: 2129381166
     Path: event:/SFX/MonsterAttackBeast
+  monsterGetBeat:
+    Guid:
+      Data1: -1111293303
+      Data2: 1297124034
+      Data3: -1025271143
+      Data4: -754397563
+    Path: event:/SFX/MonsterScream

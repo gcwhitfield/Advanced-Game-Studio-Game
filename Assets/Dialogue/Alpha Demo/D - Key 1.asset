@@ -12,6 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7984a56cf210c45089808c923f475e10, type: 3}
   m_Name: D - Key 1
   m_EditorClassIdentifier: 
-  dialogueLines: 'You found a key
-
-    What''s this doin here? I wonder what it unlocks'
+  dialogueLines: What's this key doing here? I wonder what it unlocks

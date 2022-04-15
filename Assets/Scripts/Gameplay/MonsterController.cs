@@ -34,6 +34,8 @@ public class MonsterController : MonoBehaviour
         waypointsIndex = 0;
         agent.stoppingDistance = 0.5f;
         isPatrol = true;
+        //Asumi code next line
+        InvokeRepeating("SnapArt", 0.5f, 0.04167f);
         IterateWaypoints();
         MoveToDestination();
         //tentHidingSpot.ExecuteOnInteract(Destroy);
@@ -101,6 +103,12 @@ public class MonsterController : MonoBehaviour
     //    Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
     //    transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5);
     //}
+
+    //asumi function below
+    private void SnapArt()
+    {
+        transform.position += new Vector3(Random.Range(-0.2f, 0.2f), 0, Random.Range(-0.2f, 0.2f));
+    }
 
     //Patrol function
     private void Patrol()

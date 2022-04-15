@@ -79,7 +79,7 @@ SpriteRenderer:
   m_Size: {x: 5.0712376, y: 4.46}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &8589097151914952786
@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 0}
+  art: {fileID: 0}
   LookRadius: 10
   waypoints:
   - {fileID: 0}

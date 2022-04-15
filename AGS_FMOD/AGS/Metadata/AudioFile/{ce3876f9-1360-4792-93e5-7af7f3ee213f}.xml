@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{ce3876f9-1360-4792-93e5-7af7f3ee213f}">
+		<property name="assetPath">
+			<value>Monster/MonsterScream.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4.0800000000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{de5a1372-2fca-4e83-aa22-7cbf9527f0c0}</destination>
+		</relationship>
+	</object>
+</objects>

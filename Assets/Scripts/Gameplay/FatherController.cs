@@ -26,6 +26,7 @@ public class FatherController : PlayerController
     private Vector2 numberPos = new Vector2(0, 0);
     private Vector2 moveLength;
     private Vector3 recPosInit;
+    private GameObject fenceGb;
 
     private void Awake()
     {
@@ -183,7 +184,6 @@ public class FatherController : PlayerController
         AudioManager.Instance.ShootAudio(gameObject);
 
         // if we hit monster (in level 3) then tell the monster to go away
-
     }
 
     private new void OnTriggerEnter(Collider other)
@@ -193,6 +193,7 @@ public class FatherController : PlayerController
         // detect only lock
         if (other.gameObject.CompareTag("Lock"))
         {
+            fenceGb = gameObject;
             inputCodeFlag = true;
             codeInputUI.SetActive(true);
         }
@@ -252,6 +253,7 @@ public class FatherController : PlayerController
 
                     if (code.Contains(CODE))
                     {
+                        fenceGb.tag = "Untagged";
                         AudioManager.Instance.LockCorrectAudio(gameObject);
                         FenceArt.SetTrigger("Open");
                     }
