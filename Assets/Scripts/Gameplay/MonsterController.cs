@@ -7,7 +7,7 @@ public class MonsterController : MonoBehaviour
 {
     [Header("Behavior")]
     public NavMeshAgent agent;
-    
+
     public GameObject art;
 
     public float LookRadius = 10f;
@@ -27,7 +27,6 @@ public class MonsterController : MonoBehaviour
     private float distance;
     private bool isPatrol;
     private bool isFrozen = false;
-
 
     // Start is called before the first frame update
     private void Start()
@@ -110,7 +109,7 @@ public class MonsterController : MonoBehaviour
     //asumi function below
     private void SnapArt()
     {
-        art.transform.position = agent.transform.position;
+        gameObject.transform.position = agent.transform.position;
     }
 
     //Patrol function
