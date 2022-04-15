@@ -17,7 +17,6 @@ public class Collectable : Interactable
         i.itemName = itemName;
         i.icon = itemIcon;
         i.ExecuteUponUse(InventoryItemUseEvents.GetEvent(useEvent));
-        Debug.Log("COLLECT CALLAED AUYA");
         if (collector == PlayerController.PlayerType.DAUGHTER)
         {
             DaughterController.Instance.gameObject.GetComponent<Inventory>().Add(i);

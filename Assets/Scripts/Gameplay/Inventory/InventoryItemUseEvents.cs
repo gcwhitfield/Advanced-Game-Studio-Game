@@ -11,7 +11,8 @@ public static class InventoryItemUseEvents
 
     public static void BoneUseEvent()
     {
-        // play the bone throw sound
+        // tell the wolf encounter that the father has used the bone
+        WolfEncounter.Instance.OnFatherThrowBone();
     }
 
     public static InventoryItem.UseEvent GetEvent(UseEvent e)

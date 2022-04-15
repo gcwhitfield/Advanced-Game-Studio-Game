@@ -6,7 +6,7 @@ using UnityEngine;
 // 1) the father collects the bone
 // 2) the daughter encounters the wolf and goes to hide
 // 3) the father needs to throw the bone to distract the wolf
-public class WolfEncounter : MonoBehaviour
+public class WolfEncounter : Singleton<WolfEncounter>
 {
     private bool fatherHasCollectedBone = false;
     private bool daugherHasHidden = false;

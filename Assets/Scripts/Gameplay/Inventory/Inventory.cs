@@ -36,6 +36,10 @@ public class Inventory : MonoBehaviour
 
     public void Add(InventoryItem i)
     {
+        if (i == null)
+        {
+            Debug.Log("INVENTORY ITEM IN ADD IN NULL");
+        }
         if (gameObject.GetComponent<FatherController>())
         {
             i.player = FatherController.Instance;
@@ -61,7 +65,7 @@ public class Inventory : MonoBehaviour
         // remove object from the inventory layout group
         foreach (Transform t in inventoryLayoutGroup.transform)
         {
-            if (t.name == i.name)
+            if (t.name == i.itemName)
             {
                 Destroy(t.gameObject);
                 break;
@@ -74,7 +78,7 @@ public class Inventory : MonoBehaviour
     {
         foreach (InventoryItem i in inventory)
         {
-            if (i.name == itemName)
+            if (i.itemName == itemName)
             {
                 inventory.Remove(i);
                 break;
@@ -151,6 +155,7 @@ public class Inventory : MonoBehaviour
                 ShowSelectedItem();
         } else
         {
+            Debug.Log("Inventory count" + inventory.Count.ToString() + " : " + inventory[currSelected].ToString());
             Debug.LogError("Inventory current seletion is null!");
         }
     }
