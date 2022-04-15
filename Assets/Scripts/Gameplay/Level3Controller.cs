@@ -10,6 +10,9 @@ public class Level3Controller : Singleton<Level3Controller>
     public GameObject dualScreen;
 
     public Interactable clearingEntranceInteractable;
+    public Interactable levelCompletedInteractable;
+
+    public string nextLevel;
 
     // this coroutine is called when the clearing is reached in Level 3
     IEnumerator DoClearingReached()
@@ -44,14 +47,20 @@ public class Level3Controller : Singleton<Level3Controller>
 
     // this function is called when the player collides with the invisible clearing
     // checkpoint interactable in Level 3
-    void OnClearingReached()
+    public void OnClearingReached()
     {
         StartCoroutine("DoClearingReached");
+    }
+
+    public void OnLevelCompleted()
+    {
+        SceneTransitionManager.Instance.TransitionToScene(nextLevel);
     }
 
     // Start is called before the first frame update
     void Start()
     {
         clearingEntranceInteractable.ExecuteOnTriggerEnter(OnClearingReached);
+        levelCompletedInteractable.ExecuteOnTriggerEnter(OnLevelCompleted);
     }
 }

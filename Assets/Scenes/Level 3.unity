@@ -1236,6 +1236,8 @@ MonoBehaviour:
   daughterScreen: {fileID: 1319585296}
   dualScreen: {fileID: 897905252}
   clearingEntranceInteractable: {fileID: 961746178}
+  levelCompletedInteractable: {fileID: 0}
+  nextLevel: FinalCutscene
 --- !u!1 &465783533
 GameObject:
   m_ObjectHideFlags: 0
@@ -3062,6 +3064,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &982631908
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 982631909}
+  - component: {fileID: 982631911}
+  - component: {fileID: 982631910}
+  m_Layer: 0
+  m_Name: LevelCompletedCheckpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &982631909
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982631908}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -133.38}
+  m_LocalScale: {x: 28.816833, y: 10.764891, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2134774679}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &982631910
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982631908}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &982631911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982631908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52cbc3bf0d3d049ada6eeae4c6a22778, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1081076118 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1661433190094162301, guid: 80e8c622581a5b74092304a3553a4ffd, type: 3}
@@ -6182,6 +6241,7 @@ Transform:
   - {fileID: 406975978}
   - {fileID: 833564429}
   - {fileID: 768503311}
+  - {fileID: 982631909}
   m_Father: {fileID: 580157367}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
