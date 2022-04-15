@@ -3954,11 +3954,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4512776908498601901, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4512776908498601901, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
       propertyPath: m_SortingLayerID
-      value: 1091769773
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6537345629051514830, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
       propertyPath: FenceArt

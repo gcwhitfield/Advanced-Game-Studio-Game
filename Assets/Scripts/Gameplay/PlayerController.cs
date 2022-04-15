@@ -43,8 +43,11 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            inventoryDisplay.SetActive(true);
-            inventory.OnShowInventory();
+            if ((this == FatherController.Instance && !FatherController.Instance.inputCodeFlag) || (this == DaughterController.Instance && !DaughterController.Instance.keyLockFlag))
+            {
+                inventoryDisplay.SetActive(true);
+                inventory.OnShowInventory();
+            }
         }
     }
 
