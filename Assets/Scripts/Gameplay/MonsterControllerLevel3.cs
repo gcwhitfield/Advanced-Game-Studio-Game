@@ -35,6 +35,7 @@ public class MonsterControllerLevel3 : MonoBehaviour
     public void OnMonsterAttacked()
     {
         // TODO: play the monster being attacked sound by father
+        AudioManager.Instance.MonsterGetBeatAudio(gameObject);
         currState = MonsterState.RETREATING;
 
         // choose a random retreat spot to move towards
