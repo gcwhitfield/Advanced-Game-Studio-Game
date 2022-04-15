@@ -231,6 +231,7 @@ public class DaughterController : PlayerController
         string button = context.control.ToString();
         if (keyLockFlag)
         {
+            Debug.Log(context);
             if (button.Contains("/Keyboard/k") || button.Contains("buttonEast"))
             {
                 if (context.ReadValue<float>() > 0)
