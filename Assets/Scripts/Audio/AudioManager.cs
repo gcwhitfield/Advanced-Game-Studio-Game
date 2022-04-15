@@ -60,6 +60,11 @@ public class AudioManager : MonoBehaviour
             CutSceneAudio();
             return;
         }
+        if (level.Contains("Level 3"))
+        {
+            // TODO: play level 3 chase music
+            //PlayAudio(wolfChase, FatherController.Instance.gameObject);
+        }
         AmbientAudio();
     }
 
