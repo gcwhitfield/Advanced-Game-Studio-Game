@@ -2456,7 +2456,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961746175}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -337.2}
+  m_LocalPosition: {x: 0, y: 0, z: -165}
   m_LocalScale: {x: 28.816833, y: 10.764891, z: 1}
   m_Children: []
   m_Father: {fileID: 2134774679}
@@ -3954,11 +3954,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4512776908498601901, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4512776908498601901, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
       propertyPath: m_SortingLayerID
-      value: 1091769773
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6537345629051514830, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
       propertyPath: FenceArt
