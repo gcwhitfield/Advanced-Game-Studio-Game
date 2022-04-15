@@ -122,5 +122,6 @@ public class WolfEncounter : Singleton<WolfEncounter>
         DaughterController.Instance.ExecuteUponSubmit(TextDisplayManager.Instance.DaughterContinueToNextLine);
         // step 3) the wolf runs away from the daughter. The wolf goes to the bone
         wolf.gameObject.SetActive(false);
+        daughterWolfInvisibleTrigger.gameObject.SetActive(false);
     }
 }
