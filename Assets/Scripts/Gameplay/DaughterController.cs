@@ -42,6 +42,7 @@ public class DaughterController : PlayerController
     private int keyIndex = 0;
     private int lockIndex = 0;
     private Vector3 keyInitialPos;
+    private GameObject fenceGb;
     private int inputCounter = 0;
 
     private new void Start()
@@ -105,6 +106,7 @@ public class DaughterController : PlayerController
 
         if (other.gameObject.CompareTag("KeyLock"))
         {
+            fenceGb = other.gameObject;
             keyLockFlag = true;
             keyLockUI.SetActive(true);
         }
@@ -345,6 +347,7 @@ public class DaughterController : PlayerController
         }
         if (keyObjects.Count == 0)
         {
+            fenceGb.tag = "Untagged";
             AudioManager.Instance.KeyCorrectAudio(gameObject);
             StartCoroutine(FadeOutUI());
         }
