@@ -43,7 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fd917575b882aa439535d10ccc0dbee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 
+  level: Level 2
+  monster: {fileID: 0}
+  wolf: {fileID: 0}
   shootAudio:
     Guid:
       Data1: 1160458788
@@ -219,3 +221,10 @@ MonoBehaviour:
       Data3: -1025271143
       Data4: -754397563
     Path: event:/SFX/MonsterScream
+  monsterChase:
+    Guid:
+      Data1: 1446074207
+      Data2: 1157466876
+      Data3: 1336938639
+      Data4: 688567211
+    Path: event:/SFX/MonsterChase

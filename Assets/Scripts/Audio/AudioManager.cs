@@ -9,6 +9,9 @@ public class AudioManager : MonoBehaviour
 
     public string level;
 
+    public GameObject monster;
+    public GameObject wolf;
+
     public EventReference shootAudio;
     public EventReference footStepAudio;
     public EventReference ambientAudio;
@@ -34,6 +37,7 @@ public class AudioManager : MonoBehaviour
     public EventReference cutScene;
     public EventReference monsterAttackBeast;
     public EventReference monsterGetBeat;
+    public EventReference monsterChase;
     //public EventReference lanternLaunchAduio;
 
     private float footstepTimer = 0.0f;
@@ -64,8 +68,17 @@ public class AudioManager : MonoBehaviour
         {
             // TODO: play level 3 chase music
             //PlayAudio(wolfChase, FatherController.Instance.gameObject);
+            MonsterChaseAudio(monster);
+            return;
         }
-        AmbientAudio();
+        if (level.Contains("Level 2"))
+        {
+            WolfChaseAudio(wolf);
+            MonsterApproachAudio(monster);
+            AmbientAudio();
+            return;
+        }
+
     }
 
     private void PlayAudio(EventReference audio, GameObject gb)
@@ -76,6 +89,16 @@ public class AudioManager : MonoBehaviour
         //footStepInstance.set3DAttributes(RuntimeUtils.To3DAttributes(gb.transform.position));
         audioInstance.start();
         audioInstance.release();
+    }
+
+    private void PlayAudioNoRelease(EventReference audio, GameObject gb)
+    {
+        FMOD.Studio.EventInstance audioInstance;
+        audioInstance = RuntimeManager.CreateInstance(audio);
+        RuntimeManager.AttachInstanceToGameObject(audioInstance, gb.transform);
+        //footStepInstance.set3DAttributes(RuntimeUtils.To3DAttributes(gb.transform.position));
+        audioInstance.start();
+
     }
 
     public void StopAll()
@@ -140,7 +163,7 @@ public class AudioManager : MonoBehaviour
 
     public void MonsterApproachAudio(GameObject gb)
     {
-        PlayAudio(monsterApproach, gb);
+        PlayAudioNoRelease(monsterApproach, gb);
     }
 
     public void BoneAudio(GameObject gb)
@@ -150,7 +173,7 @@ public class AudioManager : MonoBehaviour
 
     public void WolfChaseAudio(GameObject gb)
     {
-        PlayAudio(wolfChase, gb);
+        PlayAudioNoRelease(wolfChase, gb);
     }
 
     public void MenuHoverAudio(GameObject gb)
@@ -221,5 +244,10 @@ public class AudioManager : MonoBehaviour
     public void MonsterGetBeatAudio(GameObject gb)
     {
         PlayAudio(monsterGetBeat, gb);
+    }
+
+    public void MonsterChaseAudio(GameObject gb)
+    {
+        PlayAudioNoRelease(monsterChase, gb);
     }
 }
