@@ -20,5 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalCutscene.unity
     guid: 677fab37f333f44ab82d820adeafea75
+  - enabled: 1
+    path: Assets/Scenes/TutorialCutscene.unity
+    guid: 1e613d28b63834437b9ecc276e21e1ce
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: c3ff04ae074e44c43973e3cacdca01f1, type: 2}
