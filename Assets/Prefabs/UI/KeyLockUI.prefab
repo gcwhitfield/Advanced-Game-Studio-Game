@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6327294931086749364}
   m_Layer: 5
   m_Name: Key2
-  m_TagString: KeyLockPair2
+  m_TagString: KeyLockPair4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1172,7 +1172,7 @@ GameObject:
   - component: {fileID: 6281579010161723130}
   m_Layer: 5
   m_Name: Key4
-  m_TagString: KeyLockPair4
+  m_TagString: KeyLockPair2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
