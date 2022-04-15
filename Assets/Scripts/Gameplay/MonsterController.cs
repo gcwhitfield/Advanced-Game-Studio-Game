@@ -8,8 +8,6 @@ public class MonsterController : MonoBehaviour
     [Header("Behavior")]
     public NavMeshAgent agent;
 
-    public GameObject art;
-
     public float LookRadius = 10f;
     public Transform[] waypoints;
 
@@ -109,7 +107,7 @@ public class MonsterController : MonoBehaviour
     //asumi function below
     private void SnapArt()
     {
-        gameObject.transform.position = agent.transform.position;
+        transform.position += new Vector3(Random.Range(-0.2f, 0.2f), 0, Random.Range(-0.2f, 0.2f));
     }
 
     //Patrol function
