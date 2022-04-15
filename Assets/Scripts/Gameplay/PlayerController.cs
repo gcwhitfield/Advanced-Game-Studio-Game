@@ -128,7 +128,7 @@ public class PlayerController : MonoBehaviour
         movement = new Vector3(movement2D.x, 0, movement2D.y);
         if (context.phase.ToString().Contains("Performed"))
         {
-            lookDirection = movement;
+            lookDirection = movement.normalized;
         }
     }
 
@@ -195,7 +195,7 @@ public class PlayerController : MonoBehaviour
         if (movement != Vector3.zero)
         {
             cc.Move(movement * moveSpeed * Time.deltaTime);
-            lookDirection = movement.normalized;
+            //lookDirection = movement.normalized;
         }
     }
 }
