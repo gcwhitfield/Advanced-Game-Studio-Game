@@ -7,6 +7,8 @@ public class MonsterController : MonoBehaviour
 {
     [Header("Behavior")]
     public NavMeshAgent agent;
+    
+    public GameObject art;
 
     public float LookRadius = 10f;
     public Transform[] waypoints;
@@ -26,6 +28,7 @@ public class MonsterController : MonoBehaviour
     private bool isPatrol;
     private bool isFrozen = false;
 
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -34,6 +37,8 @@ public class MonsterController : MonoBehaviour
         waypointsIndex = 0;
         agent.stoppingDistance = 0.5f;
         isPatrol = true;
+        //Asumi code next line
+        InvokeRepeating("SnapArt", 0.5f, 0.04167f);
         IterateWaypoints();
         MoveToDestination();
         //tentHidingSpot.ExecuteOnInteract(Destroy);
@@ -101,6 +106,12 @@ public class MonsterController : MonoBehaviour
     //    Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
     //    transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5);
     //}
+
+    //asumi function below
+    private void SnapArt()
+    {
+        art.transform.position = agent.transform.position;
+    }
 
     //Patrol function
     private void Patrol()
