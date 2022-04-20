@@ -6,7 +6,8 @@ public static class InventoryItemUseEvents
 {
     public enum UseEvent
     {
-        BONE
+        BONE,
+        NONE
     };
 
     public static void BoneUseEvent()
@@ -15,13 +16,17 @@ public static class InventoryItemUseEvents
         WolfEncounter.Instance.OnFatherThrowBone();
     }
 
+    // an empty event
+    public static void NoneUseEvent() { }
+
     public static InventoryItem.UseEvent GetEvent(UseEvent e)
     {
         switch(e)
         {
             case UseEvent.BONE:
                 return BoneUseEvent;
+            default:
+                return NoneUseEvent;
         }
-        return BoneUseEvent;
     }
 }
