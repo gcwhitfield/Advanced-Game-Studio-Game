@@ -90,7 +90,6 @@ public class WolfEncounter : Singleton<WolfEncounter>
         {
             TextDisplayManager.Instance.ShowText("If only there was some way to make the wolf disappear...s", TextDisplayManager.TextType.FATHER);
         }
-
     }
 
     private IEnumerator DoWolfEncounter()
@@ -123,5 +122,6 @@ public class WolfEncounter : Singleton<WolfEncounter>
         // step 3) the wolf runs away from the daughter. The wolf goes to the bone
         wolf.gameObject.SetActive(false);
         daughterWolfInvisibleTrigger.gameObject.SetActive(false);
+        AudioManager.Instance.WolfChaseAudioStop(wolf.gameObject);
     }
 }

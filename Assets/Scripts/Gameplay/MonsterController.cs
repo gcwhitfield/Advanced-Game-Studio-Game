@@ -107,7 +107,7 @@ public class MonsterController : MonoBehaviour
     //asumi function below
     private void SnapArt()
     {
-        transform.position += new Vector3(Random.Range(-0.2f, 0.2f), 0, Random.Range(-0.2f, 0.2f));
+        transform.position += new Vector3(Random.Range(-0.3f, 0.3f), 0, Random.Range(-0.3f, 0.3f));
     }
 
     //Patrol function

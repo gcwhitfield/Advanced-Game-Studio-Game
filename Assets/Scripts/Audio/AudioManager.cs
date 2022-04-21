@@ -67,7 +67,6 @@ public class AudioManager : MonoBehaviour
         if (level.Contains("Level 3"))
         {
             // TODO: play level 3 chase music
-            //PlayAudio(wolfChase, FatherController.Instance.gameObject);
             MonsterChaseAudio(monster);
             return;
         }
@@ -78,7 +77,6 @@ public class AudioManager : MonoBehaviour
             AmbientAudio();
             return;
         }
-
     }
 
     private void PlayAudio(EventReference audio, GameObject gb)
@@ -98,11 +96,6 @@ public class AudioManager : MonoBehaviour
         RuntimeManager.AttachInstanceToGameObject(audioInstance, gb.transform);
         //footStepInstance.set3DAttributes(RuntimeUtils.To3DAttributes(gb.transform.position));
         audioInstance.start();
-
-    }
-
-    public void StopAll()
-    {
     }
 
     public void ShootAudio(GameObject gb)
@@ -163,17 +156,12 @@ public class AudioManager : MonoBehaviour
 
     public void MonsterApproachAudio(GameObject gb)
     {
-        PlayAudioNoRelease(monsterApproach, gb);
+        PlayAudio(monsterApproach, gb);
     }
 
     public void BoneAudio(GameObject gb)
     {
         PlayAudio(bone, gb);
-    }
-
-    public void WolfChaseAudio(GameObject gb)
-    {
-        PlayAudioNoRelease(wolfChase, gb);
     }
 
     public void MenuHoverAudio(GameObject gb)
@@ -248,6 +236,22 @@ public class AudioManager : MonoBehaviour
 
     public void MonsterChaseAudio(GameObject gb)
     {
-        PlayAudioNoRelease(monsterChase, gb);
+        PlayAudio(monsterChase, gb);
+    }
+
+    private FMOD.Studio.EventInstance wolfInstance;
+
+    public void WolfChaseAudio(GameObject gb)
+    {
+        wolfInstance = RuntimeManager.CreateInstance(wolfChase);
+        RuntimeManager.AttachInstanceToGameObject(wolfInstance, gb.transform);
+        //footStepInstance.set3DAttributes(RuntimeUtils.To3DAttributes(gb.transform.position));
+        wolfInstance.start();
+        wolfInstance.release();
+    }
+
+    public void WolfChaseAudioStop(GameObject gb)
+    {
+        wolfInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 }

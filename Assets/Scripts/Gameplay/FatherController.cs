@@ -193,7 +193,7 @@ public class FatherController : PlayerController
         // detect only lock
         if (other.gameObject.CompareTag("Lock"))
         {
-            fenceGb = gameObject;
+            fenceGb = other.gameObject;
             inputCodeFlag = true;
             codeInputUI.SetActive(true);
         }
