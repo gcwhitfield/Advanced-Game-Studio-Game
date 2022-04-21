@@ -266,6 +266,10 @@ public class FatherController : PlayerController
                     codeInputUI.SetActive(false);
                 }
             }
+            else
+            {
+                AudioManager.Instance.LockHoverAudio(gameObject);
+            }
         }
     }
 

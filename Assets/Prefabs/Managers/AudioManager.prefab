@@ -150,14 +150,21 @@ MonoBehaviour:
       Data2: 1327011950
       Data3: -850217042
       Data4: 754184527
-    Path: event:/SFX/Correct
+    Path: event:/SFX/NumCorrect
   lockWrong:
     Guid:
       Data1: 1706299559
       Data2: 1128501758
       Data3: 1562007992
       Data4: -1720751704
-    Path: event:/SFX/Wrong
+    Path: event:/SFX/NumWrong
+  lockHover:
+    Guid:
+      Data1: -603492005
+      Data2: 1129532066
+      Data3: 1252296087
+      Data4: -495880964
+    Path: event:/SFX/NumHover
   keyCorrect:
     Guid:
       Data1: -1277917104

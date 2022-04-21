@@ -28,6 +28,7 @@ public class AudioManager : MonoBehaviour
     public EventReference menuTheme;
     public EventReference lockCorrect;
     public EventReference lockWrong;
+    public EventReference lockHover;
     public EventReference keyCorrect;
     public EventReference keyWrong;
     public EventReference keyPick;
@@ -182,6 +183,11 @@ public class AudioManager : MonoBehaviour
     public void LockWrongAudio(GameObject gb)
     {
         PlayAudio(lockWrong, gb);
+    }
+
+    public void LockHoverAudio(GameObject gb)
+    {
+        PlayAudio(lockHover, gb);
     }
 
     public void KeyCorrectAudio(GameObject gb)
