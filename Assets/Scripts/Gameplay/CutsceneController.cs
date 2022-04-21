@@ -47,6 +47,7 @@ public class CutsceneController : Singleton<CutsceneController>
         SceneTransitionManager.Instance.sceneTransitionAnimator.SetTrigger("Open");
         yield return new WaitForSeconds(0.05f);
         t = SceneTransitionManager.Instance.sceneTransitionAnimator.GetCurrentAnimatorClipInfo(0).Length;
+        t += extraWaitTime;
         while (t > 0)
         {
             t -= Time.deltaTime;

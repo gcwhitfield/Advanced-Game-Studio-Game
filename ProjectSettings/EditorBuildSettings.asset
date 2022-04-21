@@ -23,5 +23,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TutorialCutscene.unity
     guid: 1e613d28b63834437b9ecc276e21e1ce
+  - enabled: 1
+    path: Assets/Scenes/IntroductionCutscene.unity
+    guid: d76b966714b7a40658843366ee8bc0d5
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: 08229c7aaa21143d2a608fa726208cef
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: c3ff04ae074e44c43973e3cacdca01f1, type: 2}

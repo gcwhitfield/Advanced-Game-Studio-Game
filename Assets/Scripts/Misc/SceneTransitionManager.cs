@@ -42,10 +42,11 @@ public class SceneTransitionManager : Singleton<SceneTransitionManager>
 
             // wait for the clip to complete before transitioning to the next scene
             float animTime = sceneTransitionAnimator.GetCurrentAnimatorClipInfo(0)[0].clip.length;
-            float t = 0;
-            while (t < animTime + 0.25f) // wait an extra quater-second
+            float extraWaitTime = 1.0f; // wait an extra second
+            float t = animTime + extraWaitTime;
+            while (t > 0)
             {
-                t += Time.deltaTime;
+                t -= Time.deltaTime;
                 yield return null;
             }
 

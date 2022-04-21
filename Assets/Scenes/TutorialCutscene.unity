@@ -1201,7 +1201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec43f1b813c6d446798708399e720995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: IntroductionCutscene
+  nextScene: Level 1
   panels:
   - {fileID: 101920156}
   - {fileID: 1871258362}
