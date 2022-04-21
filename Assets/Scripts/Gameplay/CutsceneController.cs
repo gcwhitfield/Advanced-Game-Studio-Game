@@ -33,6 +33,8 @@ public class CutsceneController : Singleton<CutsceneController>
         SceneTransitionManager.Instance.sceneTransitionAnimator.SetTrigger("Close");
         yield return new WaitForSeconds(0.05f);
         float t = SceneTransitionManager.Instance.sceneTransitionAnimator.GetCurrentAnimatorClipInfo(0).Length;
+        float extraWaitTime = 1.0f; // wait a little extra to ensure that the animation has finished playing
+        t += extraWaitTime;
         while (t > 0)
         {
             t -= Time.deltaTime;
