@@ -63223,11 +63223,11 @@ PrefabInstance:
     - target: {fileID: 6537345629051514830, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
       propertyPath: recBox.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1695537107}
     - target: {fileID: 6537345629051514830, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
       propertyPath: recBox.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1720501334}
     - target: {fileID: 6537345629051514830, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
       propertyPath: asterisks.Array.data[0]
       value: 
@@ -76394,6 +76394,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 423888, guid: d537224908c5f444f86c9e57e0c7234c, type: 3}
   m_PrefabInstance: {fileID: 1695170479}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1695537107 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5231056494258317062, guid: 72cb48bf98ec14aca8de33f98cac9930, type: 3}
+  m_PrefabInstance: {fileID: 178846689}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1697454728
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -77452,6 +77457,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 423888, guid: d537224908c5f444f86c9e57e0c7234c, type: 3}
   m_PrefabInstance: {fileID: 1718148886}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1720501334 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2398030030791198029, guid: 72cb48bf98ec14aca8de33f98cac9930, type: 3}
+  m_PrefabInstance: {fileID: 178846689}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1720882492
 PrefabInstance:

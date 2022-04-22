@@ -163,9 +163,10 @@ public class FatherController : PlayerController
     public void Shoot()
     {
         animator.SetTrigger("Shoot");
-        float rayLength = 3.0f;
+        float rayLength = 10.0f;
         RaycastHit hit;
         Vector3 offset = new Vector3(0.0f, 1.0f, 0.0f);
+        //Debug.DrawRay(gameObject.transform.position + offset, lookDirection * rayLength, Color.white, 1, true);
         if (Physics.Raycast(gameObject.transform.position + offset, lookDirection * rayLength, out hit))
         {
             DestroyableBranches branches = hit.transform.GetComponent<DestroyableBranches>();
