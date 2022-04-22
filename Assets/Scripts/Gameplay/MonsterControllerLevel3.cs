@@ -15,6 +15,10 @@ public class MonsterControllerLevel3 : MonoBehaviour
     private MonsterState currState;
 
     public NavMeshAgent navMeshAgent;
+
+    // when the players touch these triggers, the monster is garunteed to come attack
+    public List<Interactable> monsterAttackTriggers;
+
     public List<Transform> retreatSpots;
 
     // when this is set to 'true', the monster can attack. If this is set to false, then
@@ -29,6 +33,11 @@ public class MonsterControllerLevel3 : MonoBehaviour
     private void Start()
     {
         currState = MonsterState.ATTACKING;
+
+        foreach(Interactable i in monsterAttackTriggers)
+        {
+            i.ExecuteOnTriggerEnter(Attack);
+        }
     }
 
     // called when the father shoots the monster
@@ -53,9 +62,15 @@ public class MonsterControllerLevel3 : MonoBehaviour
         }
     }
 
+    // call this function to make the monster attack the father
+    public void Attack()
+    {
+        currState = MonsterState.ATTACKING;
+    }
+
     private void Update()
     {
-        //Debug.Log("Monster state: " + currState.ToString());
+        Debug.Log("Monster state: " + currState.ToString());
         switch (currState)
         {
             case MonsterState.ATTACKING:
@@ -80,7 +95,7 @@ public class MonsterControllerLevel3 : MonoBehaviour
 
             case MonsterState.RETREATING:
                 float dist = Vector3.Distance(target, transform.position);
-                Debug.Log("dist: " + dist.ToString());
+                //Debug.Log("dist: " + dist.ToString());
                 if (dist < 3)
                 {
                     currState = MonsterState.ATTACKING;

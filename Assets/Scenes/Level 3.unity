@@ -5333,6 +5333,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 130523853}
   m_CullTransparentMesh: 1
+--- !u!108 &132624470 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 7493554385301782219, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
+  m_PrefabInstance: {fileID: 1342091116}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &134132590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7613,16 +7618,6 @@ PrefabInstance:
 --- !u!4 &178846690 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6266169646460711757, guid: 72cb48bf98ec14aca8de33f98cac9930, type: 3}
-  m_PrefabInstance: {fileID: 178846689}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &178846691 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2484958118815671856, guid: 72cb48bf98ec14aca8de33f98cac9930, type: 3}
-  m_PrefabInstance: {fileID: 178846689}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &178846692 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2963656330498871022, guid: 72cb48bf98ec14aca8de33f98cac9930, type: 3}
   m_PrefabInstance: {fileID: 178846689}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &178846693 stripped
@@ -18379,6 +18374,7 @@ MonoBehaviour:
   fatherScreen: {fileID: 489295458}
   daughterScreen: {fileID: 1319585296}
   dualScreen: {fileID: 897905252}
+  daughterLight: {fileID: 132624470}
   clearingEntranceInteractable: {fileID: 961746178}
   levelCompletedInteractable: {fileID: 982631911}
   nextLevel: FinalCutscene
@@ -58638,6 +58634,24 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!1 &1342091123 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 295366172609831810, guid: 8cf3f411088f94159b67b8336ddf74c7, type: 3}
+  m_PrefabInstance: {fileID: 1342091116}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1342091124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342091123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ce8c7e6cd6364185830db6da39d9899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transformToLookAt: {fileID: 726987698}
 --- !u!1001 &1343438772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62922,7 +62936,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4014819055372325492, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -74.42
+      value: -74.69
       objectReference: {fileID: 0}
     - target: {fileID: 4014819055372325492, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -63015,11 +63029,11 @@ PrefabInstance:
     - target: {fileID: 6537345629051514830, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
       propertyPath: recBox.Array.data[1]
       value: 
-      objectReference: {fileID: 178846692}
+      objectReference: {fileID: 0}
     - target: {fileID: 6537345629051514830, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
       propertyPath: recBox.Array.data[2]
       value: 
-      objectReference: {fileID: 178846691}
+      objectReference: {fileID: 0}
     - target: {fileID: 6537345629051514830, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
       propertyPath: asterisks.Array.data[0]
       value: 
@@ -63032,6 +63046,14 @@ PrefabInstance:
       propertyPath: asterisks.Array.data[2]
       value: 
       objectReference: {fileID: 178846694}
+    - target: {fileID: 7391636475874530711, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9846684
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391636475874530711, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.17443663
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
 --- !u!4 &1454190876 stripped
@@ -63119,6 +63141,24 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!1 &1454190882 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4014819056123113248, guid: c1111fabb88b1432492d86fe2954540e, type: 3}
+  m_PrefabInstance: {fileID: 1454190875}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1454190883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454190882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ce8c7e6cd6364185830db6da39d9899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transformToLookAt: {fileID: 726987698}
 --- !u!1001 &1455952650
 PrefabInstance:
   m_ObjectHideFlags: 0

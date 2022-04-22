@@ -8,6 +8,7 @@ public class Level3Controller : Singleton<Level3Controller>
     public GameObject fatherScreen;
     public GameObject daughterScreen;
     public GameObject dualScreen;
+    public Light daughterLight;
 
     public Interactable clearingEntranceInteractable;
     public Interactable levelCompletedInteractable;
@@ -32,6 +33,10 @@ public class Level3Controller : Singleton<Level3Controller>
             fatherScreen.SetActive(true);
             daughterScreen.SetActive(true);
             dualScreen.SetActive(false);
+
+            // disable daughter's flashlight
+            daughterLight.enabled = false;
+
             // step 3) fade the screen back in, wait for the animation to finish
             SceneTransitionManager.Instance.sceneTransitionAnimator.SetTrigger("Open");
             yield return new WaitForSeconds(0.1f);

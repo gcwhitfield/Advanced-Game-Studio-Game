@@ -4,6 +4,7 @@ using UnityEngine;
 
 // a gameobject with the "Interactable" component will execute the functions in 'events' when a player
 // collides with the object.
+[System.Serializable]
 public class Interactable : MonoBehaviour
 {
     public delegate void Event();
