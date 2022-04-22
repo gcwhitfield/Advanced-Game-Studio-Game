@@ -43,7 +43,7 @@ public class MonsterControllerLevel3 : MonoBehaviour
     // called when the father shoots the monster
     public void OnMonsterAttacked()
     {
-        // TODO: play the monster being attacked sound by father
+        // play the monster being attacked sound by father
         AudioManager.Instance.MonsterGetBeatAudio(gameObject);
         currState = MonsterState.RETREATING;
 
@@ -82,7 +82,7 @@ public class MonsterControllerLevel3 : MonoBehaviour
                 {
                     if (Vector3.Distance(transform.position, FatherController.Instance.transform.position) < attackDist)
                     {
-                        // TODO: play the attack sound
+                        // play the attack sound
                         AudioManager.Instance.MonsterAttackBeastAudio(FatherController.Instance.gameObject);
                         // TODO: play the damage animation
                         Debug.Log("The father has been attacked!");

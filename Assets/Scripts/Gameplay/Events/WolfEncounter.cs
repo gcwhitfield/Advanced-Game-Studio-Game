@@ -122,6 +122,6 @@ public class WolfEncounter : Singleton<WolfEncounter>
         // step 3) the wolf runs away from the daughter. The wolf goes to the bone
         wolf.gameObject.SetActive(false);
         daughterWolfInvisibleTrigger.gameObject.SetActive(false);
-        AudioManager.Instance.WolfChaseAudioStop(wolf.gameObject);
+        AudioManager.Instance.WolfChaseAudioStop();
     }
 }

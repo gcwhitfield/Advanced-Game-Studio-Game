@@ -230,8 +230,8 @@ MonoBehaviour:
     Path: event:/SFX/MonsterScream
   monsterChase:
     Guid:
-      Data1: 1446074207
-      Data2: 1157466876
-      Data3: 1336938639
-      Data4: 688567211
+      Data1: -616618488
+      Data2: 1221525806
+      Data3: -2009464692
+      Data4: -1273939008
     Path: event:/SFX/MonsterChase

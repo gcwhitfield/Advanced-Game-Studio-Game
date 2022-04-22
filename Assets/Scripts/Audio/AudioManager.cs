@@ -67,8 +67,8 @@ public class AudioManager : MonoBehaviour
         }
         if (level.Contains("Level 3"))
         {
-            // TODO: play level 3 chase music
-            MonsterChaseAudio(monster);
+            // play level 3 chase music
+            MonsterChaseAudio();
             return;
         }
         if (level.Contains("Level 2"))
@@ -240,9 +240,9 @@ public class AudioManager : MonoBehaviour
         PlayAudio(monsterGetBeat, gb);
     }
 
-    public void MonsterChaseAudio(GameObject gb)
+    public void MonsterChaseAudio()
     {
-        PlayAudio(monsterChase, gb);
+        PlayAudio(monsterChase, gameObject);
     }
 
     private FMOD.Studio.EventInstance wolfInstance;
@@ -256,7 +256,7 @@ public class AudioManager : MonoBehaviour
         wolfInstance.release();
     }
 
-    public void WolfChaseAudioStop(GameObject gb)
+    public void WolfChaseAudioStop()
     {
         wolfInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
