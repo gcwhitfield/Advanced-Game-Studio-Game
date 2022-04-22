@@ -40044,7 +40044,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
       propertyPath: lockWrong.Path
-      value: event:/SFX/Wrong
+      value: event:/SFX/NumWrong
       objectReference: {fileID: 0}
     - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
       propertyPath: shootAudio.Path
@@ -40056,7 +40056,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
       propertyPath: lockCorrect.Path
-      value: event:/SFX/Correct
+      value: event:/SFX/NumCorrect
       objectReference: {fileID: 0}
     - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
       propertyPath: ambientAudio.Path
