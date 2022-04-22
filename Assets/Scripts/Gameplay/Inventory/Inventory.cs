@@ -34,6 +34,19 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    // returns true if the inventory has the item with the given name
+    public bool Contains(string item)
+    {
+        foreach (InventoryItem i in inventory)
+        {
+            if (i.itemName == item)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public void Add(InventoryItem i)
     {
         if (i == null)
@@ -151,8 +164,11 @@ public class Inventory : MonoBehaviour
         if (inventory[currSelected] != null)
         {
                 inventory[currSelected].Use();
-                Remove(inventory[currSelected]);
-                ShowSelectedItem();
+                if (inventory[currSelected].deleteFromInventoryOnUse)
+                {
+                    Remove(inventory[currSelected]);
+                    ShowSelectedItem();
+                }
         } else
         {
             Debug.Log("Inventory count" + inventory.Count.ToString() + " : " + inventory[currSelected].ToString());

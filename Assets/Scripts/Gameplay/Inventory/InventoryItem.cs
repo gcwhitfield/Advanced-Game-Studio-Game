@@ -14,6 +14,8 @@ public class InventoryItem
     public InventoryItem() { }
     ~InventoryItem() { }
 
+    public bool deleteFromInventoryOnUse = true;
+
     public void ExecuteUponUse(UseEvent e)
     {
         useEvents += e;

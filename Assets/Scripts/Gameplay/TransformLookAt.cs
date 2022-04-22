@@ -14,6 +14,7 @@ public class TransformLookAt : MonoBehaviour
     {
         if (transformToLookAt != null)
         {
+            Debug.Log("Looking at transform");
             transform.LookAt(transform);
         } else
         {
