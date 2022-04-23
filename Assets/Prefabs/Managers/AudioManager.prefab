@@ -235,3 +235,10 @@ MonoBehaviour:
       Data3: -2009464692
       Data4: -1273939008
     Path: event:/SFX/MonsterChase
+  happyTheme:
+    Guid:
+      Data1: 1061375964
+      Data2: 1087690160
+      Data3: -1388233810
+      Data4: -1178821650
+    Path: event:/Music/HappyTheme

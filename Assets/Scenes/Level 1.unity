@@ -5010,7 +5010,7 @@ MonoBehaviour:
   FadingMode: 0
   ChecksPerSecond: 10
   FadeFPS: 30
-  FadeSpeed: 10
+  FadeSpeed: 5
   radius: 2
   threshold: 4
   closeDistance: 2
@@ -5037,7 +5037,7 @@ MonoBehaviour:
   FadingMode: 0
   ChecksPerSecond: 10
   FadeFPS: 30
-  FadeSpeed: 10
+  FadeSpeed: 5
   radius: 2
   threshold: 4
   closeDistance: 2
@@ -5130,7 +5130,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.0754717, g: 0.0754717, b: 0.0754717, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -40042,6 +40042,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1024954862}
     m_Modifications:
+    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
+      propertyPath: level
+      value: Level 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
       propertyPath: lockWrong.Path
       value: event:/SFX/NumWrong
