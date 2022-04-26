@@ -91,6 +91,12 @@ public class DaughterController : PlayerController
             TextDisplayManager.Instance.ShowText("Press Q to HIDE", TextDisplayManager.TextType.DAUGHTER);
             return;
         }
+
+        if (other.gameObject.CompareTag("KeyLock"))
+        {
+            fenceGb = other.gameObject;
+            gameObject.GetComponent<PlayerController>().ExecuteUponSubmit(OpenKeyLockUI);
+        }
     }
 
     private new void OnTriggerExit(Collider other)
@@ -106,10 +112,15 @@ public class DaughterController : PlayerController
 
         if (other.gameObject.CompareTag("KeyLock"))
         {
-            fenceGb = other.gameObject;
-            keyLockFlag = true;
-            keyLockUI.SetActive(true);
+            fenceGb = null;
+            gameObject.GetComponent<PlayerController>().CancelExecuteUponSubmit(OpenKeyLockUI);
         }
+    }
+
+    public void OpenKeyLockUI()
+    {
+        keyLockFlag = true;
+        keyLockUI.SetActive(true);
     }
 
     private void ResetAnimatorDirections()

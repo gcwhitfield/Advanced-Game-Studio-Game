@@ -195,9 +195,25 @@ public class FatherController : PlayerController
         if (other.gameObject.CompareTag("Lock"))
         {
             fenceGb = other.gameObject;
-            inputCodeFlag = true;
-            codeInputUI.SetActive(true);
+            gameObject.GetComponent<PlayerController>().ExecuteUponSubmit(OpenCodeUI);
         }
+    }
+
+    private new void OnTriggerExit(Collider other)
+    {
+        base.OnTriggerExit(other);
+        // detect only lock
+        if (other.gameObject.CompareTag("Lock"))
+        {
+            fenceGb = null;
+            gameObject.GetComponent<PlayerController>().CancelExecuteUponSubmit(OpenCodeUI);
+        }
+    }
+
+    public void OpenCodeUI()
+    {
+        inputCodeFlag = true;
+        codeInputUI.SetActive(true);
     }
 
     public IEnumerator InputCode(CallbackContext context)
