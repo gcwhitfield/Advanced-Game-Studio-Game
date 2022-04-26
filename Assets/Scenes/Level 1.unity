@@ -1051,7 +1051,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -200.49994, y: 0}
+  m_AnchoredPosition: {x: -200.49997, y: 0}
   m_SizeDelta: {x: 1, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &23959908
@@ -19914,11 +19914,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2719899805604500886, guid: b3f5e35385e14441d98edcd25e240021, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -239.98993
+      value: -239.98996
       objectReference: {fileID: 0}
     - target: {fileID: 2719899805604500886, guid: b3f5e35385e14441d98edcd25e240021, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -162.21588
+      value: -162.21587
       objectReference: {fileID: 0}
     - target: {fileID: 2719899805604500905, guid: b3f5e35385e14441d98edcd25e240021, type: 3}
       propertyPath: m_IsActive
@@ -19938,7 +19938,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6477643346231392857, guid: b3f5e35385e14441d98edcd25e240021, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -162.22003
+      value: -162.22002
       objectReference: {fileID: 0}
     - target: {fileID: 6477643346231392870, guid: b3f5e35385e14441d98edcd25e240021, type: 3}
       propertyPath: m_IsActive
@@ -40047,60 +40047,8 @@ PrefabInstance:
       value: Level 1
       objectReference: {fileID: 0}
     - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: lockWrong.Path
-      value: event:/SFX/NumWrong
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: shootAudio.Path
-      value: event:/SFX/Shoot
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
       propertyPath: themeAudio.Path
       value: event:/Music/Theme-sad
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: lockCorrect.Path
-      value: event:/SFX/NumCorrect
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: ambientAudio.Path
-      value: event:/Music/Ambient-Night
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: footStepAudio.Path
-      value: event:/SFX/FootSteps
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: lockWrong.Guid.Data1
-      value: 1706299559
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: lockWrong.Guid.Data2
-      value: 1128501758
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: lockWrong.Guid.Data3
-      value: 1562007992
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: lockWrong.Guid.Data4
-      value: -1720751704
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: shootAudio.Guid.Data1
-      value: 1160458788
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: shootAudio.Guid.Data2
-      value: 1093244894
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: shootAudio.Guid.Data3
-      value: -1273620589
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: shootAudio.Guid.Data4
-      value: 625665378
       objectReference: {fileID: 0}
     - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
       propertyPath: themeAudio.Guid.Data1
@@ -40117,54 +40065,6 @@ PrefabInstance:
     - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
       propertyPath: themeAudio.Guid.Data4
       value: 1985101665
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: lockCorrect.Guid.Data1
-      value: -379184091
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: lockCorrect.Guid.Data2
-      value: 1327011950
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: lockCorrect.Guid.Data3
-      value: -850217042
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: lockCorrect.Guid.Data4
-      value: 754184527
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: ambientAudio.Guid.Data1
-      value: -837340117
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: ambientAudio.Guid.Data2
-      value: 1213720067
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: ambientAudio.Guid.Data3
-      value: 782525882
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: ambientAudio.Guid.Data4
-      value: 624324812
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: footStepAudio.Guid.Data1
-      value: -1133648932
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: footStepAudio.Guid.Data2
-      value: 1323326594
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: footStepAudio.Guid.Data3
-      value: -2088862807
-      objectReference: {fileID: 0}
-    - target: {fileID: 4598134660860885412, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
-      propertyPath: footStepAudio.Guid.Data4
-      value: 1755499379
       objectReference: {fileID: 0}
     - target: {fileID: 8557451002179679963, guid: 0e208d8bb4e6d405898e09832eba7bc1, type: 3}
       propertyPath: m_RootOrder

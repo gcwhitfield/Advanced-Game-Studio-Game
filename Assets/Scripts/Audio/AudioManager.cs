@@ -36,6 +36,8 @@ public class AudioManager : MonoBehaviour
     public EventReference keyUnlock;
     public EventReference themeEmo;
     public EventReference cutScene;
+    public EventReference cutScene2;
+    public EventReference cutScene3;
     public EventReference monsterAttackBeast;
     public EventReference monsterGetBeat;
     public EventReference monsterChase;
@@ -61,9 +63,19 @@ public class AudioManager : MonoBehaviour
             MenuThemeAudio();
             return;
         }
-        if (level.Contains("CutScene"))
+        if (level.Contains("CutScene 1"))
         {
             CutSceneAudio();
+            return;
+        }
+        if (level.Contains("CutScene 2"))
+        {
+            CutScene2Audio();
+            return;
+        }
+        if (level.Contains("CutScene 3"))
+        {
+            CutScene3Audio();
             return;
         }
         if (level.Contains("Level 3"))
@@ -229,6 +241,16 @@ public class AudioManager : MonoBehaviour
     public void CutSceneAudio()
     {
         PlayAudio(cutScene, gameObject);
+    }
+
+    public void CutScene2Audio()
+    {
+        PlayAudio(cutScene2, gameObject);
+    }
+
+    public void CutScene3Audio()
+    {
+        PlayAudio(cutScene3, gameObject);
     }
 
     public void ThemeEmoAudio()
