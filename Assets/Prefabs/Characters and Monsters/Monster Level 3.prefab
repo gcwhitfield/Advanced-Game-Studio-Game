@@ -7,6 +7,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1696745284041596360, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
+      propertyPath: m_Size.x
+      value: 5.0012207
+      objectReference: {fileID: 0}
+    - target: {fileID: 1696745284041596360, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
+      propertyPath: m_Size.y
+      value: 4.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 1696745284041596360, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3280874131214787772, guid: 69cff5b440dae4c4ba19731930d65f91, type: 3}
+    - target: {fileID: 1696745284041596360, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8589097151914952786, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
       propertyPath: m_Name
       value: Monster Level 3
@@ -58,6 +74,34 @@ PrefabInstance:
     - target: {fileID: 8589097151914952793, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
       propertyPath: waypoints.Array.data[6]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589097151914952797, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
+      propertyPath: m_Height
+      value: 3.4572372
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589097151914952797, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
+      propertyPath: m_Radius
+      value: 1.6098003
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589097151914952797, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589097151914952797, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589097151914952797, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589097151914952797, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
+      propertyPath: m_Center.z
+      value: -0.19806099
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589097151914952797, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8589097151914952798, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
       propertyPath: m_RootOrder
@@ -126,10 +170,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1.76
+  m_Radius: 1.7261152
   m_Height: 4.98
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0.033885002}
 --- !u!114 &7575746987055708693
 MonoBehaviour:
   m_ObjectHideFlags: 0

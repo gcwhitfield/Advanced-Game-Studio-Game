@@ -21,22 +21,30 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
         // CENTER // text in the center of screen [not yet implemented]
     };
 
-    public void ShowText(string text, TextType type = TextType.DAUGHTER, TMP_FontAsset font = null, int fontSize = 36)
+    public delegate void TextCompletedEvent();
+
+    public void ShowText(string text, TextType type = TextType.DAUGHTER, TMP_FontAsset font = null, int fontSize = 36, TextCompletedEvent completedEvent = null, bool isCutscene = false)
     {
         ScrollingTextParams textParams;
         textParams.type = type;
         textParams.text = text;
         textParams.font = font;
         textParams.fontSize = fontSize;
+        textParams.textCompletedEvent = completedEvent;
+        textParams.isCutscene = isCutscene;
         StartCoroutine("DisplayScrollingText", textParams);
     }
 
     struct ScrollingTextParams
     {
+        public bool isCutscene; // when set to true, the text will advance if either
+        // player gives input (used for cutscenes)
         public TextType type; // the location to display the text on the screen
         public string text; // the text to display
         public TMP_FontAsset font;
         public int fontSize;
+        public TextCompletedEvent textCompletedEvent; // this function gets executed when the next has
+        // finished displaying
     }
 
     // this function will be called from DaughterController.cs. when the player presses their
@@ -107,6 +115,8 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
         string []lines = textParams.text.Split(separator);
 
         // play the open animation
+        fatherTextAnimator.Rebind();
+        daughterTextAnimator.Rebind();
         animator.gameObject.SetActive(true);
         animator.SetTrigger("Open");
 
@@ -156,10 +166,16 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
             switch (textParams.type)
             {
                 case TextType.FATHER:
-                    FatherController.Instance.ExecuteUponSubmit(FatherContinueToNextLine);
+                    if (FatherController.Instance)
+                    {
+                        FatherController.Instance.ExecuteUponSubmit(FatherContinueToNextLine);
+                    }
                     break;
                 case TextType.DAUGHTER:
-                    DaughterController.Instance.ExecuteUponSubmit(DaughterContinueToNextLine);
+                    if (DaughterController.Instance)
+                    {
+                        DaughterController.Instance.ExecuteUponSubmit(DaughterContinueToNextLine);
+                    }
                     break;
             }
 
@@ -212,6 +228,12 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
         {
             animator.Rebind();
             animator.gameObject.SetActive(false);
+        }
+
+        // execute the 'text completed' event
+        if (textParams.textCompletedEvent != null)
+        {
+            textParams.textCompletedEvent();
         }
     }
 }

@@ -1203,8 +1203,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextScene: Level 1
   panels:
-  - {fileID: 101920156}
-  - {fileID: 1871258362}
+  - panelGameObject: {fileID: 101920156}
+    dialogue: {fileID: 0}
+  - panelGameObject: {fileID: 1871258362}
+    dialogue: {fileID: 0}
 --- !u!1 &1850829253
 GameObject:
   m_ObjectHideFlags: 0

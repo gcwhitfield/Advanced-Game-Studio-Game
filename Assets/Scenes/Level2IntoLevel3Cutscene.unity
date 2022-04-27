@@ -516,9 +516,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextScene: Level 3
   panels:
-  - {fileID: 1660603370}
-  - {fileID: 278722410}
-  - {fileID: 1499729934}
+  - panelGameObject: {fileID: 0}
+    dialogue: {fileID: 0}
+  - panelGameObject: {fileID: 0}
+    dialogue: {fileID: 0}
+  - panelGameObject: {fileID: 0}
+    dialogue: {fileID: 0}
 --- !u!1 &770785463
 GameObject:
   m_ObjectHideFlags: 0

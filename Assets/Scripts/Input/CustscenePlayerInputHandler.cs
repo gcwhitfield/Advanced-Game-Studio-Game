@@ -13,7 +13,7 @@ public class CustscenePlayerInputHandler : MonoBehaviour
     {
         if (context.started)
         {
-            CutsceneController.Instance.ContinueToNextScreen();
+            CutsceneController.Instance.OnBButtonHit();
         }
     }
 }

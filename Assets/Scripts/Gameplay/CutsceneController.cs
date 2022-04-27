@@ -7,20 +7,55 @@ public class CutsceneController : Singleton<CutsceneController>
     public string nextScene; // the scene to transition to once the custscene has ended
 
     int currPanel = 0;
-    public List<GameObject> panels;
+
+    [System.Serializable]
+    public struct panelInfo
+    {
+        public GameObject panelGameObject;
+        public DialogueEvent dialogue;
+    };
+
+    public delegate void CutsceneDialogueCompletedEvent();
+    CutsceneDialogueCompletedEvent events = null;
+
+    public List<panelInfo> panels;
+
+    public void ExecuteOnDialogueCompleted(CutsceneDialogueCompletedEvent e)
+    {
+        events += e;
+    }
+
+    public void CancelExecuteOnDialogueCompleted(CutsceneDialogueCompletedEvent e)
+    {
+        events -= e;
+    }
 
     void ShowCurrentPanel()
     {
-        foreach (GameObject g in panels)
+        foreach (panelInfo p in panels)
         {
-            g.SetActive(false);
+            p.panelGameObject.SetActive(false);
         }
-        panels[currPanel].SetActive(true);
+        panels[currPanel].panelGameObject.SetActive(true);
     }
 
     private void Start()
     {
-        ShowCurrentPanel(); 
+        ShowCurrentPanel();
+        TextDisplayManager.Instance.ShowText(panels[currPanel].dialogue.dialogueLines, completedEvent: ContinueToNextScreen);
+    }
+
+    // this function is called whe the B button is pressed
+    public void OnBButtonHit()
+    {
+        if (panels[currPanel].dialogue != null)
+        {
+            TextDisplayManager.Instance.DaughterContinueToNextLine();
+            TextDisplayManager.instance.FatherContinueToNextLine();
+        } else
+        {
+            ContinueToNextScreen();
+        }
     }
 
     // shows the fading animation between different cutscene panels
@@ -53,7 +88,7 @@ public class CutsceneController : Singleton<CutsceneController>
             t -= Time.deltaTime;
             yield return null;
         }
-        
+        TextDisplayManager.Instance.ShowText(panels[currPanel].dialogue.dialogueLines, completedEvent: ContinueToNextScreen);
     }
 
     // when this function is called, the game will show the next panel in the cutscene. If there

@@ -22,8 +22,10 @@ public class Level1Fence : MonoBehaviour
         {
             if (other.gameObject.GetComponent<FatherController>())
             {
+                Debug.Log("Father has entered level 1 fence trigger");
                 if (i.Contains("Key"))
                 {
+                    Debug.Log("Father will execute level complete on trigger enter");
                     interactable.ExecuteOnInteract(Level1Controller.Instance.OnLevelCompleted);
                 }
             }
