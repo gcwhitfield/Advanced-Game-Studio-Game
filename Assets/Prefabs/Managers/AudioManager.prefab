@@ -214,6 +214,20 @@ MonoBehaviour:
       Data3: -807730762
       Data4: 1235757810
     Path: event:/Music/CutScene
+  cutScene2:
+    Guid:
+      Data1: -1114573781
+      Data2: 1175693912
+      Data3: 1342454162
+      Data4: -1291622624
+    Path: event:/Music/CutScene2
+  cutScene3:
+    Guid:
+      Data1: 1663370877
+      Data2: 1194183517
+      Data3: -1961885276
+      Data4: -48147576
+    Path: event:/Music/CutScene3
   monsterAttackBeast:
     Guid:
       Data1: -1227443534
@@ -235,3 +249,10 @@ MonoBehaviour:
       Data3: -2009464692
       Data4: -1273939008
     Path: event:/SFX/MonsterChase
+  happyTheme:
+    Guid:
+      Data1: 1061375964
+      Data2: 1087690160
+      Data3: -1388233810
+      Data4: -1178821650
+    Path: event:/Music/HappyTheme

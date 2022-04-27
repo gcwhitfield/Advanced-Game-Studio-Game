@@ -36,9 +36,12 @@ public class AudioManager : MonoBehaviour
     public EventReference keyUnlock;
     public EventReference themeEmo;
     public EventReference cutScene;
+    public EventReference cutScene2;
+    public EventReference cutScene3;
     public EventReference monsterAttackBeast;
     public EventReference monsterGetBeat;
     public EventReference monsterChase;
+    public EventReference happyTheme;
     //public EventReference lanternLaunchAduio;
 
     private float footstepTimer = 0.0f;
@@ -60,9 +63,19 @@ public class AudioManager : MonoBehaviour
             MenuThemeAudio();
             return;
         }
-        if (level.Contains("CutScene"))
+        if (level.Contains("CutScene 1"))
         {
             CutSceneAudio();
+            return;
+        }
+        if (level.Contains("CutScene 2"))
+        {
+            CutScene2Audio();
+            return;
+        }
+        if (level.Contains("CutScene 3"))
+        {
+            CutScene3Audio();
             return;
         }
         if (level.Contains("Level 3"))
@@ -76,6 +89,11 @@ public class AudioManager : MonoBehaviour
             WolfChaseAudio(wolf);
             MonsterApproachAudio(monster);
             AmbientAudio();
+            return;
+        }
+        if (level.Contains("Level 1"))
+        {
+            HappyThemeAudio();
             return;
         }
     }
@@ -225,6 +243,16 @@ public class AudioManager : MonoBehaviour
         PlayAudio(cutScene, gameObject);
     }
 
+    public void CutScene2Audio()
+    {
+        PlayAudio(cutScene2, gameObject);
+    }
+
+    public void CutScene3Audio()
+    {
+        PlayAudio(cutScene3, gameObject);
+    }
+
     public void ThemeEmoAudio()
     {
         PlayAudio(themeEmo, gameObject);
@@ -259,5 +287,10 @@ public class AudioManager : MonoBehaviour
     public void WolfChaseAudioStop()
     {
         wolfInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+    }
+
+    public void HappyThemeAudio()
+    {
+        PlayAudio(happyTheme, gameObject);
     }
 }
