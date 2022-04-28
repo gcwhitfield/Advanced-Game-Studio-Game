@@ -10,15 +10,16 @@ public class TransformLookAt : MonoBehaviour
     public Transform transformToLookAt;
 
     // Update is called once per frame
-    void LateUpdate()
+    private void LateUpdate()
     {
         if (transformToLookAt != null)
         {
-            Debug.Log("Looking at transform");
+            //Debug.Log("Looking at transform");
             transform.LookAt(transform);
-        } else
+        }
+        else
         {
-            Debug.LogError("Transform in TransformLookAt is null. " + name + " will not look at anything");
+            //Debug.LogError("Transform in TransformLookAt is null. " + name + " will not look at anything");
         }
     }
 }

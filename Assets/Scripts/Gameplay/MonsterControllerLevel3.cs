@@ -79,7 +79,7 @@ public class MonsterControllerLevel3 : MonoBehaviour
                         // TODO: play the damage animation
                         Debug.Log("The father has been attacked!");
                         canAttack = false;
-                        StartCoroutine("ResetAttackAfterCoolDown", 1.0f);
+                        StartCoroutine("ResetAttackAfterCooldown", 1.0f);
                     }
                 }
 
