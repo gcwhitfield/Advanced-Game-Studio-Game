@@ -79,7 +79,7 @@ public class MonsterControllerLevel3 : MonoBehaviour
                         // TODO: play the damage animation
                         Debug.Log("The father has been attacked!");
                         canAttack = false;
-                        StartCoroutine("ResetAttackAfterCooldown", 1.0f);
+                        StartCoroutine("ResetAttackAfterCooldown", 3.0f);
                     }
                 }
 
@@ -87,7 +87,7 @@ public class MonsterControllerLevel3 : MonoBehaviour
 
             case MonsterState.RETREATING:
                 float dist = Vector3.Distance(target, transform.position);
-                if (dist < 3.0f)
+                if (dist < 5.0f)
                 {
                     transform.position = new Vector3(Random.Range(-1.0f, 1.0f), 0, Random.Range(-1.0f, 1.0f)).normalized * retreatDistance +
                                 FatherController.Instance.transform.position;
@@ -110,12 +110,22 @@ public class MonsterControllerLevel3 : MonoBehaviour
         direction = new Vector3(direction.x, 0, direction.z).normalized;
         target = direction * retreatDistance + fatherPosition;
         navMeshAgent.speed = retreatSpeed;
+
+        StartCoroutine("ResetPositionAfterRetreat", 6.0f);
     }
 
     private IEnumerator ResetAttackAfterCooldown(float cooldownTime)
     {
         yield return new WaitForSeconds(cooldownTime);
         canAttack = true;
+    }
+
+    private IEnumerator ResetPositionAfterRetreat(float cooldownTime)
+    {
+        yield return new WaitForSeconds(cooldownTime);
+        transform.position = new Vector3(Random.Range(-1.0f, 1.0f), 0, Random.Range(-1.0f, 1.0f)).normalized * retreatDistance +
+                                FatherController.Instance.transform.position;
+        currState = MonsterState.ATTACKING;
     }
 
     private void OnTriggerEnter(Collider other)
