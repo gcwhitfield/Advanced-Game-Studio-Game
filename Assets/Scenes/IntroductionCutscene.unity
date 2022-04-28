@@ -651,7 +651,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2719899805604500886, guid: b3f5e35385e14441d98edcd25e240021, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -162.21588
+      value: -162.21587
       objectReference: {fileID: 0}
     - target: {fileID: 2719899805604500905, guid: b3f5e35385e14441d98edcd25e240021, type: 3}
       propertyPath: m_IsActive
@@ -671,7 +671,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6477643346231392857, guid: b3f5e35385e14441d98edcd25e240021, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -162.22003
+      value: -162.22002
       objectReference: {fileID: 0}
     - target: {fileID: 6477643346231392870, guid: b3f5e35385e14441d98edcd25e240021, type: 3}
       propertyPath: m_IsActive
@@ -887,10 +887,6 @@ MonoBehaviour:
   panels:
   - panelGameObject: {fileID: 2086153348}
     dialogue: {fileID: 11400000, guid: a67314b8c3a2a47a4b718de4bf3fd519, type: 2}
-  - panelGameObject: {fileID: 518127248}
-    dialogue: {fileID: 11400000, guid: fdae4aacf6cea462596b2aa2af72d0c6, type: 2}
-  - panelGameObject: {fileID: 1214376525}
-    dialogue: {fileID: 11400000, guid: b1f1faf4701a7422f94929d69cab0197, type: 2}
 --- !u!1001 &1126270260
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1648,7 +1644,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a9033ca319c024a59b61bba6c8426c64, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 572d9139230284e5eba74d3b9c79a70b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

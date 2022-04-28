@@ -12,29 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7984a56cf210c45089808c923f475e10, type: 3}
   m_Name: Panel 2
   m_EditorClassIdentifier: 
-  dialogueLines: '[DAUGHTER]
+  dialogueLines: '[FATHER]
 
-    Just dance
-
-    Gonna be okay, da-da-doo-doot-n
-
-    [FATHER]
-
-    Just
-    dance
-
-    Spin that record, babe, da-da-doo-doot-n
+    Honey, where are you!!! Come back!
 
     [DAUGHTER]
 
-    Just
-    dance
-
-    Gonna be okay
-
-    [FATHER]
-
-    Da-da-da-dance, dance, dance
-
-    Just,
-    j-j-just dance'
+    He
+    won''t find me here. I wonder what''s on the other side...'

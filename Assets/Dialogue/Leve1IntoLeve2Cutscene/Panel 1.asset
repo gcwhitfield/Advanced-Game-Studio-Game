@@ -12,21 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7984a56cf210c45089808c923f475e10, type: 3}
   m_Name: Panel 1
   m_EditorClassIdentifier: 
-  dialogueLines: '[DAUGHTER]
-
-    What''s goin'' on, on the floor?
-
-    [FATHER]
-
-    I
-    love this record, baby, but I can''t see straight anymore
-
-    [DAUGHTER]
-
-    Keep
-    it cool, what''s the name of this club?
-
-    [FATHER]
-
-    I can''t remember,
-    but it''s alright, a-alright'
+  dialogueLines: "[FATHER]\nHoney we have to head out, it\u2019s going to get late
+    soon.\n[DAUGHTER]\nBut dad, I\u2019m not done yet! I need to stay here longer.\n[FATHER]\nThis
+    isn\u2019t up for debate, come on.\n[DAUGHTER]\nYou never let me do what I want,
+    you know I\u2019m a big girl now, I should be able to stay here.\n[FATHER]\nThat's
+    just not true, you get plenty of freedom, but right now we need to head home.\n[DAUGHTER]\nNo.
+    you decide everything for me. When to sleep, what to eat, when I can go see my
+    friends. I'm staying here for longer and you can't stop me.\n[FATHER]\nNo, wait!
+    Don't go!"

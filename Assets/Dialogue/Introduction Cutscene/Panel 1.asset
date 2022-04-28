@@ -12,21 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7984a56cf210c45089808c923f475e10, type: 3}
   m_Name: Panel 1
   m_EditorClassIdentifier: 
-  dialogueLines: '[DAUGHTER]
-
-    wake up in the morning feelin like p diddy
-
-    [FATHER]
-
-    got
-    my glasses im out the door im gonna hit this city
-
-    [DAUGHTER]
-
-    before
-    i leave brush my teeth with a bottle of jack
-
-    [FATHER]
-
-    cause when i
-    leave for the night i aint comin back'
+  dialogueLines: "[FATHER]\nIt's such a nice day out! You ready to have a fun day?\n[DAUGHTER]\nYes!!
+    I can\u2019t wait to go out and explore everything here! I want to feed all the
+    squirrels.\n[FATHER]\nHaha okay sweetie, just don\u2019t go out too far, why
+    don\u2019t you go get some pinecones? I think I saw some to the left. The squirrels
+    will love you in no time.\n[DAUGHTER]\nOkay!\n[FATHER]\nCall out to me if anything
+    happens! I\u2019ll be looking around the area to the right."
