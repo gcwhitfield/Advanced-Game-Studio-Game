@@ -14,7 +14,6 @@ public class FatherController : PlayerController
     public GameObject codeInputUI;
     public List<GameObject> asterisks = new List<GameObject>();
     public List<GameObject> recBox = new List<GameObject>();
-    public Animator FenceArt;
 
     [HideInInspector]
     public bool inputCodeFlag = false;
@@ -272,7 +271,12 @@ public class FatherController : PlayerController
                     {
                         fenceGb.tag = "Untagged";
                         AudioManager.Instance.LockCorrectAudio(gameObject);
-                        FenceArt.SetTrigger("Open");
+                        Animator fenceArt = fenceGb.transform.GetChild(0).gameObject.GetComponent<Animator>();
+                        fenceArt.SetTrigger("Open");
+                        GameObject collider = fenceGb.transform.parent.gameObject.transform.GetChild(1).gameObject;
+                        collider.SetActive(false);
+                        GameObject sparkle = fenceGb.transform.parent.gameObject.transform.GetChild(2).gameObject;
+                        sparkle.SetActive(false);
                     }
                     else
                     {

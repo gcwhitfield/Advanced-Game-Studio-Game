@@ -2706,6 +2706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 62416142}
   - component: {fileID: 62416143}
+  - component: {fileID: 62416144}
   m_Layer: 0
   m_Name: Fence (1)
   m_TagString: Untagged
@@ -2778,6 +2779,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &62416144
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62416141}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.742148, y: 11.47, z: 0.2}
+  m_Center: {x: 0.000061035156, y: 0.000014305115, z: 0.00012207031}
 --- !u!1001 &64659812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5782,6 +5796,7 @@ GameObject:
   m_Component:
   - component: {fileID: 139971080}
   - component: {fileID: 139971081}
+  - component: {fileID: 139971082}
   m_Layer: 0
   m_Name: Fence (17)
   m_TagString: Untagged
@@ -5854,6 +5869,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &139971082
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139971079}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.742148, y: 11.47, z: 0.2}
+  m_Center: {x: -0.000061035156, y: 0.000005722046, z: 0.00012207031}
 --- !u!1001 &140760469
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16071,7 +16099,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7455672415481396744, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7455672415481396744, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
       propertyPath: m_LocalScale.x
@@ -16925,7 +16953,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7455672415481396744, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7455672415481396744, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
       propertyPath: m_LocalScale.x
@@ -17810,6 +17838,7 @@ GameObject:
   m_Component:
   - component: {fileID: 438078638}
   - component: {fileID: 438078639}
+  - component: {fileID: 438078640}
   m_Layer: 0
   m_Name: Fence (4)
   m_TagString: Untagged
@@ -17882,6 +17911,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &438078640
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438078637}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.742148, y: 11.47, z: 0.2}
+  m_Center: {x: 0, y: 0.000014305115, z: 0.00012207031}
 --- !u!1001 &440256277
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19346,6 +19388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 465783534}
   - component: {fileID: 465783535}
+  - component: {fileID: 465783536}
   m_Layer: 0
   m_Name: Fence (8)
   m_TagString: Untagged
@@ -19418,6 +19461,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &465783536
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465783533}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.742148, y: 11.47, z: 0.2}
+  m_Center: {x: 0.000061035156, y: 0.000014305115, z: 0.00012207031}
 --- !u!1001 &467853814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26022,6 +26078,7 @@ GameObject:
   m_Component:
   - component: {fileID: 642608284}
   - component: {fileID: 642608285}
+  - component: {fileID: 642608286}
   m_Layer: 0
   m_Name: Fence (11)
   m_TagString: Untagged
@@ -26094,6 +26151,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &642608286
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642608283}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.742148, y: 11.47, z: 0.2}
+  m_Center: {x: 0.000061035156, y: 0.000014305115, z: 0.00012207031}
 --- !u!1001 &643235228
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28015,6 +28085,72 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 423888, guid: d537224908c5f444f86c9e57e0c7234c, type: 3}
   m_PrefabInstance: {fileID: 674161359}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &674382064
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2134774679}
+    m_Modifications:
+    - target: {fileID: 188383749072692096, guid: 5f06b23cfaf07ff49973398ab19f29b3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2428405368770184240, guid: 5f06b23cfaf07ff49973398ab19f29b3, type: 3}
+      propertyPath: m_Name
+      value: KeyLock
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853685062171903317, guid: 5f06b23cfaf07ff49973398ab19f29b3, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853685062171903317, guid: 5f06b23cfaf07ff49973398ab19f29b3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.2995605
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853685062171903317, guid: 5f06b23cfaf07ff49973398ab19f29b3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.4482355
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853685062171903317, guid: 5f06b23cfaf07ff49973398ab19f29b3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -135.188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853685062171903317, guid: 5f06b23cfaf07ff49973398ab19f29b3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853685062171903317, guid: 5f06b23cfaf07ff49973398ab19f29b3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853685062171903317, guid: 5f06b23cfaf07ff49973398ab19f29b3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853685062171903317, guid: 5f06b23cfaf07ff49973398ab19f29b3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853685062171903317, guid: 5f06b23cfaf07ff49973398ab19f29b3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853685062171903317, guid: 5f06b23cfaf07ff49973398ab19f29b3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853685062171903317, guid: 5f06b23cfaf07ff49973398ab19f29b3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5f06b23cfaf07ff49973398ab19f29b3, type: 3}
+--- !u!4 &674382065 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2853685062171903317, guid: 5f06b23cfaf07ff49973398ab19f29b3, type: 3}
+  m_PrefabInstance: {fileID: 674382064}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &674868521
 PrefabInstance:
@@ -32158,7 +32294,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7455672415481396744, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7455672415481396744, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
       propertyPath: m_LocalScale.x
@@ -33509,6 +33645,7 @@ GameObject:
   m_Component:
   - component: {fileID: 791891765}
   - component: {fileID: 791891766}
+  - component: {fileID: 791891767}
   m_Layer: 0
   m_Name: Fence (9)
   m_TagString: Untagged
@@ -33581,6 +33718,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &791891767
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791891764}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.742148, y: 11.47, z: 0.2}
+  m_Center: {x: 0, y: 0.000014305115, z: 0.00012207031}
 --- !u!1001 &792243522
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35433,7 +35583,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7455672415481396744, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7455672415481396744, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
       propertyPath: m_LocalScale.x
@@ -39802,6 +39952,7 @@ GameObject:
   m_Component:
   - component: {fileID: 921450947}
   - component: {fileID: 921450948}
+  - component: {fileID: 921450949}
   m_Layer: 0
   m_Name: Fence (5)
   m_TagString: Untagged
@@ -39874,6 +40025,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &921450949
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921450946}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.742148, y: 11.47, z: 0.2}
+  m_Center: {x: 0, y: 0.000014305115, z: 0.00012207031}
 --- !u!1001 &924177531
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39906,12 +40070,16 @@ PrefabInstance:
       value: FenceLock
       objectReference: {fileID: 0}
     - target: {fileID: 1661433190094162291, guid: 80e8c622581a5b74092304a3553a4ffd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661433190094162291, guid: 80e8c622581a5b74092304a3553a4ffd, type: 3}
       propertyPath: m_TagString
       value: KeyLock
       objectReference: {fileID: 0}
     - target: {fileID: 1661433190094162301, guid: 80e8c622581a5b74092304a3553a4ffd, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1661433190094162301, guid: 80e8c622581a5b74092304a3553a4ffd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -40673,6 +40841,7 @@ GameObject:
   m_Component:
   - component: {fileID: 948341579}
   - component: {fileID: 948341580}
+  - component: {fileID: 948341581}
   m_Layer: 0
   m_Name: Fence (10)
   m_TagString: Untagged
@@ -40745,6 +40914,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &948341581
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948341578}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.742148, y: 11.47, z: 0.2}
+  m_Center: {x: 0, y: 0.000014305115, z: 0.00012207031}
 --- !u!1001 &949469253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42318,6 +42500,7 @@ GameObject:
   m_Component:
   - component: {fileID: 982015901}
   - component: {fileID: 982015902}
+  - component: {fileID: 982015903}
   m_Layer: 0
   m_Name: Fence (14)
   m_TagString: Untagged
@@ -42390,6 +42573,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &982015903
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982015900}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.742148, y: 11.47, z: 0.2}
+  m_Center: {x: 0.000061035156, y: 0.000011444092, z: 0.00012207031}
 --- !u!1 &982631908
 GameObject:
   m_ObjectHideFlags: 0
@@ -42420,7 +42616,7 @@ Transform:
   m_LocalScale: {x: 28.816833, y: 10.764891, z: 1}
   m_Children: []
   m_Father: {fileID: 2134774679}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &982631910
 BoxCollider:
@@ -47075,6 +47271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1100299874}
   - component: {fileID: 1100299875}
+  - component: {fileID: 1100299876}
   m_Layer: 0
   m_Name: Fence
   m_TagString: Untagged
@@ -47147,6 +47344,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &1100299876
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100299873}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.742148, y: 11.47, z: 0.2}
+  m_Center: {x: 0, y: 0.000014305115, z: 0.00012207031}
 --- !u!1001 &1103532629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47219,6 +47429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1104606613}
   - component: {fileID: 1104606614}
+  - component: {fileID: 1104606615}
   m_Layer: 0
   m_Name: Fence (13)
   m_TagString: Untagged
@@ -47291,6 +47502,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &1104606615
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104606612}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.742148, y: 11.47, z: 0.2}
+  m_Center: {x: 0, y: 0.000014305115, z: 0.00012207031}
 --- !u!1001 &1105086398
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56654,6 +56878,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1302522361}
   - component: {fileID: 1302522362}
+  - component: {fileID: 1302522363}
   m_Layer: 0
   m_Name: Fence (19)
   m_TagString: Untagged
@@ -56726,6 +56951,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &1302522363
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302522360}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.742148, y: 11.47, z: 0.2}
+  m_Center: {x: 0, y: 0.000005722046, z: 0.00012207031}
 --- !u!1001 &1304531390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61917,6 +62155,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1416018271}
   - component: {fileID: 1416018272}
+  - component: {fileID: 1416018273}
   m_Layer: 0
   m_Name: Fence (3)
   m_TagString: Untagged
@@ -61989,6 +62228,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &1416018273
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416018270}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.742148, y: 11.47, z: 0.2}
+  m_Center: {x: 0, y: 0.000014305115, z: 0.00012207031}
 --- !u!1001 &1417732496
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69015,6 +69267,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1560637014}
   - component: {fileID: 1560637015}
+  - component: {fileID: 1560637016}
   m_Layer: 0
   m_Name: Fence (18)
   m_TagString: Untagged
@@ -69087,6 +69340,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &1560637016
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560637013}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.742148, y: 11.47, z: 0.2}
+  m_Center: {x: 0.000061035156, y: 0.0000009536743, z: 0.00012207031}
 --- !u!1001 &1561357750
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70393,6 +70659,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1588539622}
   - component: {fileID: 1588539623}
+  - component: {fileID: 1588539624}
   m_Layer: 0
   m_Name: Fence (16)
   m_TagString: Untagged
@@ -70465,6 +70732,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &1588539624
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588539621}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.742148, y: 11.47, z: 0.2}
+  m_Center: {x: 0, y: 0.000016212463, z: 0.00012207031}
 --- !u!1001 &1589462974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -85207,6 +85487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1917126591}
   - component: {fileID: 1917126592}
+  - component: {fileID: 1917126593}
   m_Layer: 0
   m_Name: Fence (7)
   m_TagString: Untagged
@@ -85279,6 +85560,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &1917126593
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917126590}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.742148, y: 11.47, z: 0.2}
+  m_Center: {x: 0.000061035156, y: 0.000014305115, z: 0.00012207031}
 --- !u!1001 &1918212555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -90541,6 +90835,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2029886391}
   - component: {fileID: 2029886392}
+  - component: {fileID: 2029886393}
   m_Layer: 0
   m_Name: Fence (12)
   m_TagString: Untagged
@@ -90613,6 +90908,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &2029886393
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029886390}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.742148, y: 11.47, z: 0.2}
+  m_Center: {x: 0.000061035156, y: 0.000014305115, z: 0.00012207031}
 --- !u!1001 &2030128339
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -94038,6 +94346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2096012309}
   - component: {fileID: 2096012310}
+  - component: {fileID: 2096012311}
   m_Layer: 0
   m_Name: Fence (2)
   m_TagString: Untagged
@@ -94110,6 +94419,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &2096012311
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096012308}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.742148, y: 11.47, z: 0.2}
+  m_Center: {x: 0, y: 0.000014305115, z: 0.00012207031}
 --- !u!1001 &2096586609
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -95772,6 +96094,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2125656189}
   - component: {fileID: 2125656190}
+  - component: {fileID: 2125656191}
   m_Layer: 0
   m_Name: Fence (6)
   m_TagString: Untagged
@@ -95844,6 +96167,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &2125656191
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125656188}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.742148, y: 11.47, z: 0.2}
+  m_Center: {x: 0, y: 0.000014305115, z: 0.00012207031}
 --- !u!1001 &2127892926
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -96493,6 +96829,7 @@ Transform:
   m_Children:
   - {fileID: 961746176}
   - {fileID: 527328046}
+  - {fileID: 674382065}
   - {fileID: 1081076118}
   - {fileID: 422072217}
   - {fileID: 406975978}

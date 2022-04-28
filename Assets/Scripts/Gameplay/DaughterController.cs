@@ -360,6 +360,12 @@ public class DaughterController : PlayerController
         {
             fenceGb.tag = "Untagged";
             AudioManager.Instance.KeyCorrectAudio(gameObject);
+            Animator fenceArt = fenceGb.transform.GetChild(0).gameObject.GetComponent<Animator>();
+            fenceArt.SetTrigger("Open");
+            GameObject collider = fenceGb.transform.parent.gameObject.transform.GetChild(1).gameObject;
+            collider.SetActive(false);
+            GameObject sparkle = fenceGb.transform.parent.gameObject.transform.GetChild(2).gameObject;
+            sparkle.SetActive(false);
             StartCoroutine(FadeOutUI());
         }
     }
