@@ -387,6 +387,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2971706657988436791, guid: d342f42aa77f64826b968b3a6b636398, type: 3}
+      propertyPath: m_PlayerPrefab
+      value: 
+      objectReference: {fileID: 209795343292431002, guid: 44b2757e51ddf441c8ed071bae2d7275, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d342f42aa77f64826b968b3a6b636398, type: 3}
 --- !u!4 &428802217 stripped
@@ -394,128 +398,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2971706657988436790, guid: d342f42aa77f64826b968b3a6b636398, type: 3}
   m_PrefabInstance: {fileID: 428802216}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &684869289
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 684869292}
-  - component: {fileID: 684869291}
-  - component: {fileID: 684869290}
-  m_Layer: 0
-  m_Name: CutscenePlayerInputHandler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &684869290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 684869289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2490a6abd36044ffc88a02eda4978409, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &684869291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 684869289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: e879b1270a89e48018ea53693828d9ac, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 271318ac-c02d-47c6-b089-1cb54ca84e47
-    m_ActionName: PlayMovement/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 0aa6a1c8-e542-4682-9f91-01b2745b07ea
-    m_ActionName: PlayMovement/Hide[/Keyboard/q]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 16b679d6-e599-4421-8f87-2264aa5218fe
-    m_ActionName: PlayMovement/Shoot[/Keyboard/e]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: e6238423-07a0-4553-b767-67cf6d96e97d
-    m_ActionName: PlayMovement/Collect[/Keyboard/q]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 684869290}
-        m_TargetAssemblyTypeName: CustscenePlayerInputHandler, Assembly-CSharp
-        m_MethodName: OnBButtonHit
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 71806d05-bddd-4e5e-b88c-bf1c3f1aa083
-    m_ActionName: PlayMovement/Confirm[/Keyboard/q]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 72b3a2fa-b6ff-4f2a-b4da-6e009c556d34
-    m_ActionName: PlayMovement/InputCode[/Keyboard/k,/Keyboard/w,/Keyboard/a,/Keyboard/s,/Keyboard/d]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 319a29ec-805a-4d73-a893-aee98ab6d091
-    m_ActionName: PlayMovement/ToggleInventory[/Keyboard/tab]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 771b806c-5cbd-4afc-9f8a-8c7a78d3043f
-    m_ActionName: PlayMovement/KeyLock[/Keyboard/k,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: d7aefd6c-cbef-4242-af9c-4e5ccba38d2a
-    m_ActionName: PlayMovement/NavigateInventory[/Keyboard/downArrow,/Keyboard/upArrow]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: PlayMovement
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
---- !u!4 &684869292
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 684869289}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 218.57318, y: -82.13435, z: 488.76828}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &815195447
 GameObject:
   m_ObjectHideFlags: 0

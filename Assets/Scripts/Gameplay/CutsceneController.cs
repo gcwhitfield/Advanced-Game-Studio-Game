@@ -42,7 +42,13 @@ public class CutsceneController : Singleton<CutsceneController>
     private void Start()
     {
         ShowCurrentPanel();
-        TextDisplayManager.Instance.ShowText(panels[currPanel].dialogue.dialogueLines, completedEvent: ContinueToNextScreen);
+        if (panels.Count > 0)
+        {
+            if(panels[currPanel].dialogue != null)
+            {
+                TextDisplayManager.Instance.ShowText(panels[currPanel].dialogue.dialogueLines, completedEvent: ContinueToNextScreen);
+            }
+        }
     }
 
     // this function is called whe the B button is pressed
@@ -88,7 +94,12 @@ public class CutsceneController : Singleton<CutsceneController>
             t -= Time.deltaTime;
             yield return null;
         }
-        TextDisplayManager.Instance.ShowText(panels[currPanel].dialogue.dialogueLines, completedEvent: ContinueToNextScreen);
+
+        // show the dialogue lines for the current panel
+        if (panels[currPanel].dialogue != null)
+        {
+            TextDisplayManager.Instance.ShowText(panels[currPanel].dialogue.dialogueLines, completedEvent: ContinueToNextScreen);
+        }
     }
 
     // when this function is called, the game will show the next panel in the cutscene. If there

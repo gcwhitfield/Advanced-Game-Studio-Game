@@ -5406,8 +5406,8 @@ MonoBehaviour:
   nextScene: Level1IntoLevel2Cutscene
   daughterHideDisplayCheckpoint: {fileID: 1877165197}
   daughterHideRing: {fileID: 2041975906}
-  daughterIntructionsFont: {fileID: 0}
-  fatherIntructionsFont: {fileID: 0}
+  daughterIntructionsFont: {fileID: 11400000, guid: af97cd75ba444407e9f3e65e9a6f6085, type: 2}
+  fatherIntructionsFont: {fileID: 11400000, guid: af97cd75ba444407e9f3e65e9a6f6085, type: 2}
 --- !u!4 &157195703 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 423888, guid: d537224908c5f444f86c9e57e0c7234c, type: 3}
