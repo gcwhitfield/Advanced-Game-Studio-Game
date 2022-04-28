@@ -28,8 +28,8 @@ public class MonsterControllerLevel3 : MonoBehaviour
     private Vector3 target = Vector3.zero; // 'target' is the location that the navmesh will move towards
 
     private float retreatSpeed = 15.0f;
-    private float chaseSpeed = 5.0f;
-    private float retreatDistance = 35.0f;
+    private float chaseSpeed = 4.5f;
+    private float retreatDistance = 40.0f;
 
     // Start is called before the first frame update
     private void Start()
@@ -64,7 +64,7 @@ public class MonsterControllerLevel3 : MonoBehaviour
         {
             case MonsterState.ATTACKING:
                 target = FatherController.Instance.transform.position;
-                if (Vector3.Distance(target, transform.position) < 20.0f)
+                if (Vector3.Distance(target, transform.position) < 15.0f)
                 {
                     navMeshAgent.speed = chaseSpeed;
                 }

@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class Level3Controller : Singleton<Level3Controller>
 {
-
     [Header("Father and daughter screens")]
     public GameObject fatherScreen;
+
     public GameObject daughterScreen;
     public GameObject dualScreen;
 
     [Header("Gameplay object references")]
     public Light daughterLight;
+
     public Interactable clearingEntranceInteractable;
     public Interactable levelCompletedInteractable;
     public GameObject keysSparkle;
@@ -20,20 +21,21 @@ public class Level3Controller : Singleton<Level3Controller>
     public Interactable key3;
     public Interactable key4;
     public Collider fenceLockCollider; // the collider that is attached to the fence lock.
+
     // this collider should initially be DISABLED, which makes the player unable to interact with the
     // fence lock at first. Then, when the player collects all 4 keys, the fence lock will
     // get enabled and they can walk up to it to activate the fence lock UI
-    bool key1Collected = false;
-    bool key2Collected = false;
-    bool key3Collected = false;
-    bool key4Collected = false;
+    private bool key1Collected = false;
+
+    private bool key2Collected = false;
+    private bool key3Collected = false;
+    private bool key4Collected = false;
 
     [Header("Scene Management")]
     public string nextLevel;
 
-
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         clearingEntranceInteractable.ExecuteOnTriggerEnter(OnClearingReached);
         levelCompletedInteractable.ExecuteOnTriggerEnter(OnLevelCompleted);
@@ -70,7 +72,7 @@ public class Level3Controller : Singleton<Level3Controller>
     }
 
     // this coroutine is called when the clearing is reached in Level 3
-    IEnumerator DoClearingReached()
+    private IEnumerator DoClearingReached()
     {
         // change the camera from single screen to split screen
         {
@@ -110,6 +112,7 @@ public class Level3Controller : Singleton<Level3Controller>
             // active the fence lock. after the fence lock has been activated, the daughter
             // can walk up to the fence lock to use it
             fenceLockCollider.enabled = true;
+            keysSparkle.SetActive(true);
         }
         yield return null;
     }

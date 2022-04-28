@@ -18441,12 +18441,12 @@ MonoBehaviour:
   daughterLight: {fileID: 132624470}
   clearingEntranceInteractable: {fileID: 961746178}
   levelCompletedInteractable: {fileID: 982631911}
-  keysSparkle: {fileID: 0}
+  keysSparkle: {fileID: 674382066}
   key1: {fileID: 422072220}
   key2: {fileID: 406975981}
   key3: {fileID: 833564432}
   key4: {fileID: 768503314}
-  fenceLockCollider: {fileID: 924177532}
+  fenceLockCollider: {fileID: 539448295}
   nextLevel: FinalCutscene
 --- !u!1001 &451125843
 PrefabInstance:
@@ -21940,6 +21940,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 423888, guid: d537224908c5f444f86c9e57e0c7234c, type: 3}
   m_PrefabInstance: {fileID: 537201337}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &539448295 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 2911474302128546101, guid: 5f06b23cfaf07ff49973398ab19f29b3, type: 3}
+  m_PrefabInstance: {fileID: 674382064}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &539488621
 PrefabInstance:
@@ -28145,11 +28150,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2911474302128546101, guid: 5f06b23cfaf07ff49973398ab19f29b3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f06b23cfaf07ff49973398ab19f29b3, type: 3}
 --- !u!4 &674382065 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2853685062171903317, guid: 5f06b23cfaf07ff49973398ab19f29b3, type: 3}
+  m_PrefabInstance: {fileID: 674382064}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &674382066 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 188383749072692096, guid: 5f06b23cfaf07ff49973398ab19f29b3, type: 3}
   m_PrefabInstance: {fileID: 674382064}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &674868521
@@ -40139,11 +40153,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80e8c622581a5b74092304a3553a4ffd, type: 3}
---- !u!65 &924177532 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 1661433190094162290, guid: 80e8c622581a5b74092304a3553a4ffd, type: 3}
-  m_PrefabInstance: {fileID: 924177531}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &924377850
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55309,7 +55318,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1271654465}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 66.604034, y: 46.389915, z: -146.1}
+  m_LocalPosition: {x: 63.3, y: 47.11657, z: -299}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1454190876}
@@ -57219,6 +57228,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891462355}
     m_Modifications:
+    - target: {fileID: 2169287390216075799, guid: b204158aee35345429cd17be230a1253, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4369570311493629735, guid: b204158aee35345429cd17be230a1253, type: 3}
       propertyPath: EventReference.Path
       value: event:/SFX/MonsterChase
@@ -57238,6 +57251,10 @@ PrefabInstance:
     - target: {fileID: 4369570311493629735, guid: b204158aee35345429cd17be230a1253, type: 3}
       propertyPath: EventReference.Guid.Data4
       value: -1273939008
+      objectReference: {fileID: 0}
+    - target: {fileID: 6022971847339698882, guid: b204158aee35345429cd17be230a1253, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6022971847339698884, guid: b204158aee35345429cd17be230a1253, type: 3}
       propertyPath: m_RootOrder

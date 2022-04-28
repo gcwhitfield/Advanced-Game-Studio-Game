@@ -149,6 +149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8589097151914952793, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
+    - {fileID: 8589097151914952797, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
 --- !u!1 &6022971847339698888 stripped
 GameObject:
@@ -160,8 +161,21 @@ NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 8589097151914952792, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
   m_PrefabInstance: {fileID: 2641218939214471834}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &1472355592
-CapsuleCollider:
+--- !u!65 &7828804809765372618
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6022971847339698888}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.44, y: 3.35, z: 0.39}
+  m_Center: {x: 0.5680035, y: 0.4028442, z: -0.01}
+--- !u!65 &8631892394213551804
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -170,10 +184,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1.7261152
-  m_Height: 4.98
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0.033885002}
+  serializedVersion: 2
+  m_Size: {x: 5.04, y: 3.68, z: 1.6570393}
+  m_Center: {x: 0.53156847, y: 0.42831004, z: -0.100814305}
 --- !u!114 &7575746987055708693
 MonoBehaviour:
   m_ObjectHideFlags: 0
