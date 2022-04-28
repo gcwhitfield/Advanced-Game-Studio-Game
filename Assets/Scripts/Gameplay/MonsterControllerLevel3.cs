@@ -27,9 +27,9 @@ public class MonsterControllerLevel3 : MonoBehaviour
 
     private Vector3 target = Vector3.zero; // 'target' is the location that the navmesh will move towards
 
-    private float retreatSpeed = 10.0f;
-    private float chaseSpeed = 4.0f;
-    private float retreatDistance = 50.0f;
+    private float retreatSpeed = 15.0f;
+    private float chaseSpeed = 5.0f;
+    private float retreatDistance = 35.0f;
 
     // Start is called before the first frame update
     private void Start()
