@@ -59,7 +59,7 @@ public class MonsterControllerLevel3 : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("Monster state: " + currState.ToString());
+        //Debug.Log("Monster state: " + currState.ToString());
         switch (currState)
         {
             case MonsterState.ATTACKING:

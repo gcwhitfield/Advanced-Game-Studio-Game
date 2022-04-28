@@ -9,11 +9,13 @@ public class Level1Controller : Singleton<Level1Controller>
 
     [Header("Daughter")]
     public TextDisplayOnTriggerEnter daughterHideDisplayCheckpoint;
+
     public GameObject daughterHideRing;
 
     // this is the font that is used to display the level instructions dialogue at the
     // beginning of level 1
     public TMPro.TMP_FontAsset daughterIntructionsFont;
+
     public TMPro.TMP_FontAsset fatherIntructionsFont;
 
     private void Start()
@@ -23,9 +25,17 @@ public class Level1Controller : Singleton<Level1Controller>
         daughterHideDisplayCheckpoint.ExecuteOnTriggerEnter(ShowHideRing);
 
         //  show the level intructions text to the players at the start of the level
-        
+
         TextDisplayManager.Instance.ShowText("Collect pinecones and explore the area.", TextDisplayManager.TextType.DAUGHTER, daughterIntructionsFont);
         TextDisplayManager.Instance.ShowText("Find a way to open the fence gate.", TextDisplayManager.TextType.FATHER, fatherIntructionsFont);
+    }
+
+    private void Update()
+    {
+        if (DaughterController.Instance.hidden)
+        {
+            daughterHideRing.SetActive(false);
+        }
     }
 
     public void ShowHideRing()
@@ -38,5 +48,4 @@ public class Level1Controller : Singleton<Level1Controller>
     {
         SceneTransitionManager.Instance.TransitionToScene(nextScene);
     }
-
 }
