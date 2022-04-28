@@ -69,7 +69,7 @@ public class MonsterControllerLevel3 : MonoBehaviour
                     navMeshAgent.speed = chaseSpeed;
                 }
                 // if the father and the monster are close to each other, have the monster attack the father
-                float attackDist = 1;
+                float attackDist = 2.6f;
                 if (canAttack)
                 {
                     if (Vector3.Distance(transform.position, FatherController.Instance.transform.position) < attackDist)

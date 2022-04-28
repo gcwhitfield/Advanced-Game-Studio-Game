@@ -31,6 +31,18 @@ PrefabInstance:
       propertyPath: m_Speed
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 8589097151914952792, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
+      propertyPath: m_Height
+      value: 2.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589097151914952792, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
+      propertyPath: m_Radius
+      value: 0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589097151914952792, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
+      propertyPath: m_Acceleration
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8589097151914952793, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
       propertyPath: agent
       value: 
@@ -150,6 +162,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 8589097151914952793, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
     - {fileID: 8589097151914952797, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
+    - {fileID: 1730696919426143677, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
 --- !u!1 &6022971847339698888 stripped
 GameObject:
@@ -161,7 +174,7 @@ NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 8589097151914952792, guid: b446e415374e4ac4ba1806d73ae32f5d, type: 3}
   m_PrefabInstance: {fileID: 2641218939214471834}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &7828804809765372618
+--- !u!65 &4114330814942368907
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,8 +185,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.44, y: 3.35, z: 0.39}
-  m_Center: {x: 0.5680035, y: 0.4028442, z: -0.01}
+  m_Size: {x: 3.55, y: 3.83, z: 0.51}
+  m_Center: {x: 0.45, y: 0.46, z: 0}
 --- !u!65 &8631892394213551804
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -185,8 +198,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.04, y: 3.68, z: 1.6570393}
-  m_Center: {x: 0.53156847, y: 0.42831004, z: -0.100814305}
+  m_Size: {x: 4.01, y: 3.74, z: 0.39}
+  m_Center: {x: 0.48, y: 0.42831004, z: -0.100814305}
 --- !u!114 &7575746987055708693
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -57232,26 +57232,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4369570311493629735, guid: b204158aee35345429cd17be230a1253, type: 3}
-      propertyPath: EventReference.Path
-      value: event:/SFX/MonsterChase
-      objectReference: {fileID: 0}
-    - target: {fileID: 4369570311493629735, guid: b204158aee35345429cd17be230a1253, type: 3}
-      propertyPath: EventReference.Guid.Data1
-      value: -616618488
-      objectReference: {fileID: 0}
-    - target: {fileID: 4369570311493629735, guid: b204158aee35345429cd17be230a1253, type: 3}
-      propertyPath: EventReference.Guid.Data2
-      value: 1221525806
-      objectReference: {fileID: 0}
-    - target: {fileID: 4369570311493629735, guid: b204158aee35345429cd17be230a1253, type: 3}
-      propertyPath: EventReference.Guid.Data3
-      value: -2009464692
-      objectReference: {fileID: 0}
-    - target: {fileID: 4369570311493629735, guid: b204158aee35345429cd17be230a1253, type: 3}
-      propertyPath: EventReference.Guid.Data4
-      value: -1273939008
-      objectReference: {fileID: 0}
     - target: {fileID: 6022971847339698882, guid: b204158aee35345429cd17be230a1253, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -57320,6 +57300,26 @@ PrefabInstance:
       propertyPath: monsterAttackTriggers.Array.data[2]
       value: 
       objectReference: {fileID: 1322310316}
+    - target: {fileID: 8631892394213551804, guid: b204158aee35345429cd17be230a1253, type: 3}
+      propertyPath: m_Size.x
+      value: 4.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631892394213551804, guid: b204158aee35345429cd17be230a1253, type: 3}
+      propertyPath: m_Size.y
+      value: 3.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631892394213551804, guid: b204158aee35345429cd17be230a1253, type: 3}
+      propertyPath: m_Size.z
+      value: 0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631892394213551804, guid: b204158aee35345429cd17be230a1253, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631892394213551804, guid: b204158aee35345429cd17be230a1253, type: 3}
+      propertyPath: m_Center.x
+      value: 0.48
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b204158aee35345429cd17be230a1253, type: 3}
 --- !u!4 &1307258297 stripped
