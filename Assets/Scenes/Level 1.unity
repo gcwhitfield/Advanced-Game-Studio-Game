@@ -921,7 +921,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -200.49997, y: 0}
+  m_AnchoredPosition: {x: -200.49994, y: 0}
   m_SizeDelta: {x: 1, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &23959908
@@ -1511,16 +1511,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 511577612}
     m_Modifications:
     - target: {fileID: 5196646212638140898, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
+      propertyPath: onSubmit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5196646212638140898, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
       propertyPath: textToDisplay
       value: 
       objectReference: {fileID: 11400000, guid: 721435464b4d44e8da6d3705386e7544, type: 2}
     - target: {fileID: 6670090194791675274, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
       propertyPath: itemIcon
       value: 
-      objectReference: {fileID: 21300000, guid: cb8c8a3d6630a4940adb5dba3cad41cd, type: 3}
+      objectReference: {fileID: 21300000, guid: a5903c9d151224ffe857861272444c6f, type: 3}
     - target: {fileID: 6670090194791675274, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
       propertyPath: itemName
-      value: pinecone2
+      value: pinecone
       objectReference: {fileID: 0}
     - target: {fileID: 6670090194791675274, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
       propertyPath: useEvent
@@ -5402,6 +5406,8 @@ MonoBehaviour:
   nextScene: Level1IntoLevel2Cutscene
   daughterHideDisplayCheckpoint: {fileID: 1877165197}
   daughterHideRing: {fileID: 2041975906}
+  daughterIntructionsFont: {fileID: 0}
+  fatherIntructionsFont: {fileID: 0}
 --- !u!4 &157195703 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 423888, guid: d537224908c5f444f86c9e57e0c7234c, type: 3}
@@ -7763,13 +7769,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 511577612}
     m_Modifications:
     - target: {fileID: 5196646212638140898, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
+      propertyPath: onSubmit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5196646212638140898, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
       propertyPath: textToDisplay
       value: 
       objectReference: {fileID: 11400000, guid: 721435464b4d44e8da6d3705386e7544, type: 2}
     - target: {fileID: 6670090194791675274, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
       propertyPath: itemIcon
       value: 
-      objectReference: {fileID: 21300000, guid: cb8c8a3d6630a4940adb5dba3cad41cd, type: 3}
+      objectReference: {fileID: 21300000, guid: a5903c9d151224ffe857861272444c6f, type: 3}
     - target: {fileID: 6670090194791675274, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
       propertyPath: itemName
       value: pinecone
@@ -11134,16 +11144,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 511577612}
     m_Modifications:
     - target: {fileID: 5196646212638140898, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
+      propertyPath: onSubmit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5196646212638140898, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
       propertyPath: textToDisplay
       value: 
       objectReference: {fileID: 11400000, guid: 721435464b4d44e8da6d3705386e7544, type: 2}
     - target: {fileID: 6670090194791675274, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
       propertyPath: itemIcon
       value: 
-      objectReference: {fileID: 21300000, guid: cb8c8a3d6630a4940adb5dba3cad41cd, type: 3}
+      objectReference: {fileID: 21300000, guid: a5903c9d151224ffe857861272444c6f, type: 3}
     - target: {fileID: 6670090194791675274, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
       propertyPath: itemName
-      value: pinecone2
+      value: pinecone
       objectReference: {fileID: 0}
     - target: {fileID: 6670090194791675274, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
       propertyPath: useEvent
@@ -16244,11 +16258,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2719899805604500886, guid: b3f5e35385e14441d98edcd25e240021, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -239.98996
+      value: -239.98993
       objectReference: {fileID: 0}
     - target: {fileID: 2719899805604500886, guid: b3f5e35385e14441d98edcd25e240021, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -162.21587
+      value: -162.21588
       objectReference: {fileID: 0}
     - target: {fileID: 2719899805604500905, guid: b3f5e35385e14441d98edcd25e240021, type: 3}
       propertyPath: m_IsActive
@@ -16268,7 +16282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6477643346231392857, guid: b3f5e35385e14441d98edcd25e240021, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -162.22002
+      value: -162.22003
       objectReference: {fileID: 0}
     - target: {fileID: 6477643346231392870, guid: b3f5e35385e14441d98edcd25e240021, type: 3}
       propertyPath: m_IsActive
@@ -31789,16 +31803,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 511577612}
     m_Modifications:
     - target: {fileID: 5196646212638140898, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
+      propertyPath: onSubmit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5196646212638140898, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
       propertyPath: textToDisplay
       value: 
       objectReference: {fileID: 11400000, guid: 721435464b4d44e8da6d3705386e7544, type: 2}
     - target: {fileID: 6670090194791675274, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
       propertyPath: itemIcon
       value: 
-      objectReference: {fileID: 21300000, guid: cb8c8a3d6630a4940adb5dba3cad41cd, type: 3}
+      objectReference: {fileID: 21300000, guid: a5903c9d151224ffe857861272444c6f, type: 3}
     - target: {fileID: 6670090194791675274, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
       propertyPath: itemName
-      value: pinecone2
+      value: pinecone
       objectReference: {fileID: 0}
     - target: {fileID: 6670090194791675274, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
       propertyPath: useEvent
@@ -33219,16 +33237,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 511577612}
     m_Modifications:
     - target: {fileID: 5196646212638140898, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
+      propertyPath: onSubmit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5196646212638140898, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
       propertyPath: textToDisplay
       value: 
       objectReference: {fileID: 11400000, guid: 721435464b4d44e8da6d3705386e7544, type: 2}
     - target: {fileID: 6670090194791675274, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
       propertyPath: itemIcon
       value: 
-      objectReference: {fileID: 21300000, guid: cb8c8a3d6630a4940adb5dba3cad41cd, type: 3}
+      objectReference: {fileID: 21300000, guid: a5903c9d151224ffe857861272444c6f, type: 3}
     - target: {fileID: 6670090194791675274, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
       propertyPath: itemName
-      value: pinecone2
+      value: pinecone
       objectReference: {fileID: 0}
     - target: {fileID: 6670090194791675274, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
       propertyPath: useEvent
