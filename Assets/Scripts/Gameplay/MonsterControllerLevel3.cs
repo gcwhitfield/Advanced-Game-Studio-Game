@@ -48,20 +48,6 @@ public class MonsterControllerLevel3 : MonoBehaviour
         // play the monster being attacked sound by father
         AudioManager.Instance.MonsterGetBeatAudio(gameObject);
         currState = MonsterState.RETREATING;
-
-        // choose a random retreat spot to move towards
-        //if (retreatSpots.Count > 0)
-        //{
-        //    int r = Random.Range(0, retreatSpots.Count);
-        //    target = retreatSpots[r].position;
-        //}
-        //else // choose a random position within 10 units to go to
-        //{
-        //    float d = 10.0f;
-        //    target = new Vector3(Random.Range(-1.0f, 1.0f), 0, Random.Range(-1.0f, 1.0f)) * d +
-        //            FatherController.Instance.transform.position;
-        //    Debug.Log(target);
-        //}
         Retreat();
     }
 
@@ -101,7 +87,6 @@ public class MonsterControllerLevel3 : MonoBehaviour
 
             case MonsterState.RETREATING:
                 float dist = Vector3.Distance(target, transform.position);
-                //Debug.Log("dist: " + dist.ToString());
                 if (dist < 3.0f)
                 {
                     transform.position = new Vector3(Random.Range(-1.0f, 1.0f), 0, Random.Range(-1.0f, 1.0f)).normalized * retreatDistance +
