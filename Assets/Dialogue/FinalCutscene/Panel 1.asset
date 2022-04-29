@@ -12,10 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7984a56cf210c45089808c923f475e10, type: 3}
   m_Name: Panel 1
   m_EditorClassIdentifier: 
-  dialogueLines: '[DAUGHTER]
-
-    ooga
-
-    [FATHER]
-
-    booga'
+  dialogueLines: "[DAUGHTER]\nDad! It\u2019s open, I unlocked the gate!\n[FATHER]\nKeep
+    running! Get to the car, honey! Don\u2019t stop!"

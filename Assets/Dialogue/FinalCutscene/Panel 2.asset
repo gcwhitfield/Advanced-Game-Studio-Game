@@ -12,4 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7984a56cf210c45089808c923f475e10, type: 3}
   m_Name: Panel 2
   m_EditorClassIdentifier: 
-  dialogueLines: "[DAUGHTER]\nooga booga \n[FATHER]\nflooga loopa booga\n[DAUGHTER]\noog"
+  dialogueLines: '[DAUGHTER]
+
+    Dad, it''s getting closer!!
+
+    [FATHER]
+
+    It''s
+    ok! It''s too far away to get us.'

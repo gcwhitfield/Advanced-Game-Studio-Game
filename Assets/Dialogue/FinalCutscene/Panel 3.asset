@@ -12,18 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7984a56cf210c45089808c923f475e10, type: 3}
   m_Name: Panel 3
   m_EditorClassIdentifier: 
-  dialogueLines: '[FATHER]
+  dialogueLines: '[DAUGHTER]
 
-    loopa doops snoopa
-
-    [DAUGHTER]
-
-    KASDJhaskjdha
+    I don''t know about that!
 
     [FATHER]
 
-    q39*#&Q$RYEFHUA
-
-    [DAUGHTER]
-
-    :)'
+    I''m
+    trying to get this car to move! Hold on honey, just look at dad.'
