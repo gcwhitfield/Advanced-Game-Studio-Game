@@ -12,6 +12,7 @@ public class WolfEncounter : Singleton<WolfEncounter>
     private bool daugherHasHidden = false;
     private bool fatherHasThrownBone = false;
     private bool daughterHasReachedInvisibleTrigger = false;
+    private bool fatherPressTheButton = false;
 
     public List<Interactable> daughterHideSpots;
     public List<GameObject> hideRings;
@@ -40,19 +41,27 @@ public class WolfEncounter : Singleton<WolfEncounter>
 
     public void OnFatherThrowBone()
     {
-        Debug.Log("Father has thrown bone");
-        fatherHasThrownBone = true;
-        TextDisplayManager.Instance.FatherContinueToNextLine();
-        // TODO: Add bone throwing animation
-
-        // deactivate the hide rings
-        foreach (GameObject g in hideRings)
+        if (DaughterController.Instance.hidden)
         {
-            g.SetActive(false);
-        }
+            Debug.Log("Father has thrown bone");
+            fatherHasThrownBone = true;
+            TextDisplayManager.Instance.FatherContinueToNextLine();
+            // TODO: Add bone throwing animation
 
-        // play audio
-        AudioManager.Instance.BoneAudio(FatherController.Instance.gameObject);
+            // deactivate the hide rings
+            foreach (GameObject g in hideRings)
+            {
+                g.SetActive(false);
+            }
+
+            // play audio
+            AudioManager.Instance.BoneAudio(FatherController.Instance.gameObject);
+        }
+        else
+        {
+            Debug.Log("empty: not throw bone");
+            fatherPressTheButton = true;
+        }
     }
 
     public void OnDaughterInvisibleTriggerReached()
@@ -102,7 +111,7 @@ public class WolfEncounter : Singleton<WolfEncounter>
         {
             i.ExecuteOnInteract(OnDaughterHide);
         }
-        while (!fatherHasCollectedBone || !daugherHasHidden || !daughterHasReachedInvisibleTrigger)
+        while (!fatherHasCollectedBone || !DaughterController.Instance.hidden || !daughterHasReachedInvisibleTrigger)
         {
             yield return new WaitForSeconds(0.2f);
         }
@@ -114,6 +123,11 @@ public class WolfEncounter : Singleton<WolfEncounter>
         FatherController.Instance.ExecuteUponSubmit(OnFatherThrowBone);
         while (!fatherHasThrownBone)
         {
+            if (fatherPressTheButton)
+            {
+                fatherPressTheButton = false;
+                FatherController.Instance.ExecuteUponSubmit(OnFatherThrowBone);
+            }
             yield return new WaitForSeconds(0.2f);
         }
 

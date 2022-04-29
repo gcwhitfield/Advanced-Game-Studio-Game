@@ -67,7 +67,7 @@ public class DaughterController : PlayerController
     {
         if (isNearHiddenSpot && animator.GetFloat("Speed") < 0.01)
         {
-            Debug.Log("Hidden Function works");
+            //Debug.Log("Hidden Function works");
             hidden = true;
             animator.SetBool("Hide", true);
             TextDisplayManager.Instance.DaughterContinueToNextLine();

@@ -8,11 +8,10 @@ public class Collectable : Interactable
 
     public string itemName;
     public Sprite itemIcon;
-    public InventoryItemUseEvents.UseEvent useEvent;
+    public InventoryItemUseEvents.UseEvent useEvent = InventoryItemUseEvents.UseEvent.NONE;
 
     public void Collect()
     {
-        // TODO: play the collection sound
         InventoryItem i = new InventoryItem();
         i.itemName = itemName;
         i.icon = itemIcon;
@@ -37,8 +36,21 @@ public class Collectable : Interactable
 
         if (other.tag == "Player")
         {
-            player = other.gameObject.GetComponent<PlayerController>();
-            player.ExecuteUponSubmit(Collect);
+            if (collector == PlayerController.PlayerType.FATHER)
+            {
+                FatherController f = other.gameObject.GetComponent<FatherController>();
+                if (f != null)
+                {
+                    f.ExecuteUponSubmit(Collect);
+                }
+            } else if (collector == PlayerController.PlayerType.DAUGHTER)
+            {
+                DaughterController d = other.gameObject.GetComponent<DaughterController>();
+                if (d != null)
+                {
+                    d.ExecuteUponSubmit(Collect);
+                }
+            }
         }
     }
 
@@ -48,8 +60,22 @@ public class Collectable : Interactable
 
         if (other.tag == "Player")
         {
-            player = other.gameObject.GetComponent<PlayerController>();
-            player.CancelExecuteUponSubmit(Collect);
+            if (collector == PlayerController.PlayerType.FATHER)
+            {
+                FatherController f = other.gameObject.GetComponent<FatherController>();
+                if (f != null)
+                {
+                    f.CancelExecuteUponSubmit(Collect);
+                }
+            }
+            else if (collector == PlayerController.PlayerType.DAUGHTER)
+            {
+                DaughterController d = other.gameObject.GetComponent<DaughterController>();
+                if (d != null)
+                {
+                    d.CancelExecuteUponSubmit(Collect);
+                }
+            }
         }
     }
 }
