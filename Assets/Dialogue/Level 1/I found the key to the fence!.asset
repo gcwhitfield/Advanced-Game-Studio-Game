@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7984a56cf210c45089808c923f475e10, type: 3}
   m_Name: I found the key to the fence!
   m_EditorClassIdentifier: 
-  dialogueLines: I found the key to the fence!
+  dialogueLines: This looks similar to the lock I saw for the fence, I should check
+    it out.
