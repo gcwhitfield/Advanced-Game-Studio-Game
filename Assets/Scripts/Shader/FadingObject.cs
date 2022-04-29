@@ -15,6 +15,14 @@ public class FadingObject : MonoBehaviour, IEquatable<FadingObject>
     [HideInInspector]
     public float targetAlpha;
 
+    public FadeMode FadingMode;
+
+    public enum FadeMode
+    {
+        Transparent,
+        Fade
+    }
+
     private void Awake()
     {
         Position = transform.position;
@@ -29,6 +37,22 @@ public class FadingObject : MonoBehaviour, IEquatable<FadingObject>
 
         InitialAlpha = Materials[0].color.a;
         targetAlpha = InitialAlpha;
+
+        for (int i = 0; i < Materials.Count; i++)
+        {
+            if (FadingMode == FadeMode.Fade)
+            {
+                Materials[i].DisableKeyword("_ALPHABLEND_ON");
+            }
+            else
+            {
+                Materials[i].DisableKeyword("_ALPHAPREMULTIPLY_ON");
+            }
+            Materials[i].SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.One);
+            Materials[i].SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.Zero);
+            Materials[i].SetInt("_ZWrite", 1); // re-enable Z Writing
+            Materials[i].renderQueue = (int)UnityEngine.Rendering.RenderQueue.Geometry;
+        }
     }
 
     public bool Equals(FadingObject other)
