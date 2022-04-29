@@ -211,8 +211,15 @@ public class FatherController : PlayerController
 
     public void OpenCodeUI()
     {
-        inputCodeFlag = true;
         codeInputUI.SetActive(true);
+        StartCoroutine(DelayInputCodeButton());
+    }
+
+    private IEnumerator DelayInputCodeButton()
+    {
+        WaitForSeconds Wait = new WaitForSeconds(0.2f);
+        yield return Wait;
+        inputCodeFlag = true;
     }
 
     public IEnumerator InputCode(CallbackContext context)

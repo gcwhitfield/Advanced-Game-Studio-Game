@@ -29493,6 +29493,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 188383749072692101, guid: 5f06b23cfaf07ff49973398ab19f29b3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.33438706
+      objectReference: {fileID: 0}
+    - target: {fileID: 188383749072692101, guid: 5f06b23cfaf07ff49973398ab19f29b3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.33438706
+      objectReference: {fileID: 0}
+    - target: {fileID: 188383749072692101, guid: 5f06b23cfaf07ff49973398ab19f29b3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.33438706
+      objectReference: {fileID: 0}
+    - target: {fileID: 188383749072692101, guid: 5f06b23cfaf07ff49973398ab19f29b3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 188383749072692101, guid: 5f06b23cfaf07ff49973398ab19f29b3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.529
+      objectReference: {fileID: 0}
     - target: {fileID: 2428405368770184240, guid: 5f06b23cfaf07ff49973398ab19f29b3, type: 3}
       propertyPath: m_Name
       value: KeyLock

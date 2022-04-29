@@ -119,8 +119,15 @@ public class DaughterController : PlayerController
 
     public void OpenKeyLockUI()
     {
-        keyLockFlag = true;
         keyLockUI.SetActive(true);
+        StartCoroutine(DelayKeyLockButton());
+    }
+
+    private IEnumerator DelayKeyLockButton()
+    {
+        WaitForSeconds Wait = new WaitForSeconds(0.2f);
+        yield return Wait;
+        keyLockFlag = true;
     }
 
     private void ResetAnimatorDirections()
@@ -297,7 +304,7 @@ public class DaughterController : PlayerController
 
     private void DisturbKeyMovement()
     {
-        Vector3 force = new Vector3(Random.Range(-1, 1), Random.Range(-1, 1), 0) * forceStrength;
+        Vector3 force = new Vector3(Random.Range(-0.8f, 0.8f), Random.Range(-0.8f, 0.8f), 0) * forceStrength;
         keyMovement += force;
     }
 
