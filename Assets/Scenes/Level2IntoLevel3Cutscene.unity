@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.49641287, b: 0.5748173, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -616,12 +616,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextScene: Level 3
   panels:
-  - panelGameObject: {fileID: 0}
-    dialogue: {fileID: 0}
-  - panelGameObject: {fileID: 0}
-    dialogue: {fileID: 0}
-  - panelGameObject: {fileID: 0}
-    dialogue: {fileID: 0}
+  - panelGameObject: {fileID: 1660603370}
+    dialogue: {fileID: 11400000, guid: 62cbfdefbbead44068cd5f5dd261c9ab, type: 2}
+  - panelGameObject: {fileID: 278722410}
+    dialogue: {fileID: 11400000, guid: ef3ec8fd6d8ab4917ba366aff1c7f408, type: 2}
+  - panelGameObject: {fileID: 1499729934}
+    dialogue: {fileID: 11400000, guid: c41416c6f735d48e2ab34229a3f23b58, type: 2}
 --- !u!1 &770785463
 GameObject:
   m_ObjectHideFlags: 0

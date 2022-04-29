@@ -1713,6 +1713,7 @@ GameObject:
   m_Component:
   - component: {fileID: 47496265}
   - component: {fileID: 47496264}
+  - component: {fileID: 47496266}
   m_Layer: 0
   m_Name: fence tiles_2 (1)
   m_TagString: Untagged
@@ -1785,6 +1786,19 @@ Transform:
   m_Father: {fileID: 42340952}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &47496266
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47496263}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.0422425, y: 11.049999, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &47667562
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2167,6 +2181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 56395233}
   - component: {fileID: 56395232}
+  - component: {fileID: 56395234}
   m_Layer: 0
   m_Name: fence tiles_2 (20)
   m_TagString: Untagged
@@ -2239,6 +2254,19 @@ Transform:
   m_Father: {fileID: 42340952}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &56395234
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56395231}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.7421474, y: 11.469999, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &57043394 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 423888, guid: d537224908c5f444f86c9e57e0c7234c, type: 3}
@@ -2279,6 +2307,7 @@ GameObject:
   m_Component:
   - component: {fileID: 64730440}
   - component: {fileID: 64730439}
+  - component: {fileID: 64730441}
   m_Layer: 0
   m_Name: fence tiles_2 (17)
   m_TagString: Untagged
@@ -2351,6 +2380,19 @@ Transform:
   m_Father: {fileID: 42340952}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &64730441
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64730438}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.0422425, y: 11.049999, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &67094980
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12013,6 +12055,7 @@ GameObject:
   m_Component:
   - component: {fileID: 393071150}
   - component: {fileID: 393071149}
+  - component: {fileID: 393071151}
   m_Layer: 0
   m_Name: fence tiles_2 (3)
   m_TagString: Untagged
@@ -12085,6 +12128,19 @@ Transform:
   m_Father: {fileID: 42340952}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &393071151
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393071148}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.0422425, y: 11.049999, z: 0.2}
+  m_Center: {x: -0.00012207031, y: 0, z: 0}
 --- !u!4 &396347621 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 423888, guid: d537224908c5f444f86c9e57e0c7234c, type: 3}
@@ -14448,6 +14504,7 @@ GameObject:
   m_Component:
   - component: {fileID: 478981349}
   - component: {fileID: 478981348}
+  - component: {fileID: 478981350}
   m_Layer: 0
   m_Name: fence tiles_2 (19)
   m_TagString: Untagged
@@ -14520,6 +14577,19 @@ Transform:
   m_Father: {fileID: 42340952}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &478981350
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478981347}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.0422425, y: 11.049999, z: 0.2}
+  m_Center: {x: -0.00012207031, y: 0, z: 0}
 --- !u!1001 &479311219
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17267,6 +17337,7 @@ GameObject:
   m_Component:
   - component: {fileID: 569513499}
   - component: {fileID: 569513498}
+  - component: {fileID: 569513500}
   m_Layer: 0
   m_Name: fence tiles_2 (10)
   m_TagString: Untagged
@@ -17339,6 +17410,19 @@ Transform:
   m_Father: {fileID: 42340952}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &569513500
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569513497}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.7421474, y: 11.469999, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &569865571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20312,6 +20396,7 @@ GameObject:
   m_Component:
   - component: {fileID: 659373700}
   - component: {fileID: 659373699}
+  - component: {fileID: 659373701}
   m_Layer: 0
   m_Name: fence tiles_2 (15)
   m_TagString: Untagged
@@ -20384,6 +20469,19 @@ Transform:
   m_Father: {fileID: 42340952}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &659373701
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659373698}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.0422425, y: 11.049999, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &660353832 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 423888, guid: d537224908c5f444f86c9e57e0c7234c, type: 3}
@@ -22026,6 +22124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 723969934}
   - component: {fileID: 723969933}
+  - component: {fileID: 723969935}
   m_Layer: 0
   m_Name: fence tiles_2 (2)
   m_TagString: Untagged
@@ -22098,6 +22197,19 @@ Transform:
   m_Father: {fileID: 42340952}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &723969935
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723969932}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.7421474, y: 11.469999, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &726961998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24717,6 +24829,7 @@ GameObject:
   m_Component:
   - component: {fileID: 798358325}
   - component: {fileID: 798358324}
+  - component: {fileID: 798358326}
   m_Layer: 0
   m_Name: fence tiles_2 (18)
   m_TagString: Untagged
@@ -24789,6 +24902,19 @@ Transform:
   m_Father: {fileID: 42340952}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &798358326
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798358323}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.7421474, y: 11.469999, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &799444995
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30019,6 +30145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1003196147}
   - component: {fileID: 1003196146}
+  - component: {fileID: 1003196148}
   m_Layer: 0
   m_Name: fence tiles_2 (11)
   m_TagString: Untagged
@@ -30091,6 +30218,19 @@ Transform:
   m_Father: {fileID: 42340952}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1003196148
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003196145}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.0422425, y: 11.049999, z: 0.2}
+  m_Center: {x: 0.00012207031, y: 0, z: 0}
 --- !u!4 &1003368840 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 423888, guid: d537224908c5f444f86c9e57e0c7234c, type: 3}
@@ -33274,7 +33414,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7455672415481396744, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.130487
+      value: 12.58
       objectReference: {fileID: 0}
     - target: {fileID: 7455672415481396744, guid: d044806c0b3c14286b8e642f80e304cb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -36461,6 +36601,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1188465443}
   - component: {fileID: 1188465442}
+  - component: {fileID: 1188465444}
   m_Layer: 0
   m_Name: fence tiles_2 (14)
   m_TagString: Untagged
@@ -36533,6 +36674,19 @@ Transform:
   m_Father: {fileID: 42340952}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1188465444
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188465441}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.7421474, y: 11.469999, z: 0.2}
+  m_Center: {x: 0.00012207031, y: 0, z: 0}
 --- !u!1001 &1189106767
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37409,6 +37563,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1216926229}
   - component: {fileID: 1216926228}
+  - component: {fileID: 1216926230}
   m_Layer: 0
   m_Name: fence tiles_2 (6)
   m_TagString: Untagged
@@ -37481,6 +37636,19 @@ Transform:
   m_Father: {fileID: 42340952}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1216926230
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216926227}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.7421474, y: 11.469999, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1218906804 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 423888, guid: d537224908c5f444f86c9e57e0c7234c, type: 3}
@@ -37868,6 +38036,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1239087679}
   - component: {fileID: 1239087678}
+  - component: {fileID: 1239087680}
   m_Layer: 0
   m_Name: fence tiles_2 (12)
   m_TagString: Untagged
@@ -37940,6 +38109,19 @@ Transform:
   m_Father: {fileID: 42340952}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1239087680
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239087677}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.7421474, y: 11.469999, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1242989314 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 423888, guid: d537224908c5f444f86c9e57e0c7234c, type: 3}
@@ -39143,6 +39325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1286900376}
   - component: {fileID: 1286900375}
+  - component: {fileID: 1286900377}
   m_Layer: 0
   m_Name: fence tiles_2 (16)
   m_TagString: Untagged
@@ -39215,6 +39398,19 @@ Transform:
   m_Father: {fileID: 42340952}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1286900377
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286900374}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.7421474, y: 11.469999, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1287020707
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41712,6 +41908,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1377525929}
   - component: {fileID: 1377525928}
+  - component: {fileID: 1377525930}
   m_Layer: 0
   m_Name: fence tiles_2 (22)
   m_TagString: Untagged
@@ -41784,6 +41981,19 @@ Transform:
   m_Father: {fileID: 42340952}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1377525930
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377525927}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.7421474, y: 11.469999, z: 0.2}
+  m_Center: {x: -0.00012207031, y: 0, z: 0}
 --- !u!1001 &1379057691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43326,6 +43536,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1447962374}
   - component: {fileID: 1447962373}
+  - component: {fileID: 1447962375}
   m_Layer: 0
   m_Name: fence tiles_2 (21)
   m_TagString: Untagged
@@ -43398,6 +43609,19 @@ Transform:
   m_Father: {fileID: 42340952}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1447962375
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447962372}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.0422425, y: 11.049999, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1448743084 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 423888, guid: d537224908c5f444f86c9e57e0c7234c, type: 3}
@@ -47482,6 +47706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1600546993}
   - component: {fileID: 1600546992}
+  - component: {fileID: 1600546994}
   m_Layer: 0
   m_Name: fence tiles_2 (8)
   m_TagString: Untagged
@@ -47554,6 +47779,19 @@ Transform:
   m_Father: {fileID: 42340952}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1600546994
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600546991}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.7421474, y: 11.469999, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1600653951 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 423888, guid: d537224908c5f444f86c9e57e0c7234c, type: 3}
@@ -49985,6 +50223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1709082638}
   - component: {fileID: 1709082637}
+  - component: {fileID: 1709082639}
   m_Layer: 0
   m_Name: fence tiles_2 (7)
   m_TagString: Untagged
@@ -50057,6 +50296,19 @@ Transform:
   m_Father: {fileID: 42340952}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1709082639
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709082636}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.0422425, y: 11.049999, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1709952421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51021,6 +51273,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1736930619}
   - component: {fileID: 1736930618}
+  - component: {fileID: 1736930620}
   m_Layer: 0
   m_Name: fence tiles_2 (13)
   m_TagString: Untagged
@@ -51093,6 +51346,19 @@ Transform:
   m_Father: {fileID: 42340952}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1736930620
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736930617}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.0422425, y: 11.049999, z: 0.2}
+  m_Center: {x: -0.00012207031, y: 0, z: 0}
 --- !u!4 &1737995383 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 423888, guid: d537224908c5f444f86c9e57e0c7234c, type: 3}
@@ -51128,6 +51394,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1747256584}
   - component: {fileID: 1747256583}
+  - component: {fileID: 1747256585}
   m_Layer: 0
   m_Name: fence tiles_2 (5)
   m_TagString: Untagged
@@ -51200,6 +51467,19 @@ Transform:
   m_Father: {fileID: 42340952}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1747256585
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747256582}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.0422425, y: 11.049999, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1747390656
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51773,6 +52053,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1764953360}
   - component: {fileID: 1764953359}
+  - component: {fileID: 1764953361}
   m_Layer: 0
   m_Name: fence tiles_2 (9)
   m_TagString: Untagged
@@ -51845,6 +52126,19 @@ Transform:
   m_Father: {fileID: 42340952}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1764953361
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764953358}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.0422425, y: 11.049999, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1766106434
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59166,6 +59460,7 @@ GameObject:
   - component: {fileID: 2055400752}
   - component: {fileID: 2055400751}
   - component: {fileID: 2055400750}
+  - component: {fileID: 2055400753}
   m_Layer: 0
   m_Name: fence tiles_2
   m_TagString: Untagged
@@ -59275,6 +59570,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 13.31, y: 11.999999, z: 3.71}
   m_Center: {x: -0.000122006895, y: 0, z: -0.1}
+--- !u!65 &2055400753
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055400747}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.69245, y: 11.999999, z: 0.2}
+  m_Center: {x: -0.00012207031, y: 0, z: 0}
 --- !u!4 &2057081397 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 423888, guid: d537224908c5f444f86c9e57e0c7234c, type: 3}
@@ -60277,6 +60585,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2101772226}
   - component: {fileID: 2101772225}
+  - component: {fileID: 2101772227}
   m_Layer: 0
   m_Name: fence tiles_2 (4)
   m_TagString: Untagged
@@ -60349,6 +60658,19 @@ Transform:
   m_Father: {fileID: 42340952}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2101772227
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101772224}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.7421474, y: 11.469999, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2102209255
 PrefabInstance:
   m_ObjectHideFlags: 0
