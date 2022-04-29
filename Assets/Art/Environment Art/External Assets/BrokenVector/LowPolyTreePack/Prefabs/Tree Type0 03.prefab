@@ -114,4 +114,4 @@ MonoBehaviour:
   Materials: []
   InitialAlpha: 0
   targetAlpha: 0
-  FadingMode: 1
+  FadingMode: 0
