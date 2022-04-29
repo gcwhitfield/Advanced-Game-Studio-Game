@@ -9,6 +9,7 @@ public class Collectable : Interactable
     public string itemName;
     public Sprite itemIcon;
     public InventoryItemUseEvents.UseEvent useEvent = InventoryItemUseEvents.UseEvent.NONE;
+    public bool deleteFromInventoryOnUse = true;
 
     public void Collect()
     {
@@ -16,6 +17,7 @@ public class Collectable : Interactable
         i.itemName = itemName;
         i.icon = itemIcon;
         i.ExecuteUponUse(InventoryItemUseEvents.GetEvent(useEvent));
+        i.deleteFromInventoryOnUse = deleteFromInventoryOnUse;
         if (collector == PlayerController.PlayerType.DAUGHTER)
         {
             DaughterController.Instance.gameObject.GetComponent<Inventory>().Add(i);
