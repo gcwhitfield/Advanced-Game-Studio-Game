@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7984a56cf210c45089808c923f475e10, type: 3}
   m_Name: Panel 2
   m_EditorClassIdentifier: 
-  dialogueLines: "[FATHER]\nHoney! Oh thank god, you\u2019re safe!This is all my
+  dialogueLines: "[FATHER]\nHoney! Oh thank god, you\u2019re safe! This is all my
     fault, I\u2019m so sorry I should\u2019ve watched out more for you.\n[DAUGHTER]\nI\u2019m
     sorry for running away I was so scared I don\u2019t know what to do please don\u2019t
     leave me here.\n[FATHER]\nSlow down! I\u2019m not going anywhere.\nLet\u2019s
