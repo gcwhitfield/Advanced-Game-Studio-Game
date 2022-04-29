@@ -89,7 +89,7 @@ public class DaughterController : PlayerController
         if (other.gameObject.CompareTag("HiddenSpot"))
         {
             isNearHiddenSpot = true;
-            TextDisplayManager.Instance.ShowText("Press Q to HIDE", TextDisplayManager.TextType.DAUGHTER);
+            //TextDisplayManager.Instance.ShowText("Press Q to HIDE", TextDisplayManager.TextType.DAUGHTER);
             return;
         }
 

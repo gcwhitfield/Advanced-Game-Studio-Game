@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7984a56cf210c45089808c923f475e10, type: 3}
+  m_Name: Load in
+  m_EditorClassIdentifier: 
+  dialogueLines: "[FATHER]\nIt\u2019s such a nice day out! You ready to have a fun
+    day?\n[DAUGHTER]\nYes!! I can\u2019t wait to go out and explore everything here!
+    I want to feed all the squirrels.\n[FATHER]\nHaha okay sweetie, just don\u2019t
+    go out too far, why don\u2019t you go get some pinecones? I think I saw some
+    to the left. The squirrels will love you in no time.\n[DAUGHTER]\nOkay!\n[FATHER]\nCall
+    out to me if anything happens! I\u2019ll be looking around the area to the right.\n"

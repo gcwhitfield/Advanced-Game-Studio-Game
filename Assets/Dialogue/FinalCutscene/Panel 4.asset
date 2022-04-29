@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7984a56cf210c45089808c923f475e10, type: 3}
   m_Name: Panel 4
   m_EditorClassIdentifier: 
-  dialogueLines: "[DAUGHTER]\nyay omg we escaped\n[FATHER]\nthanks for saving us
-    \n[DAUGHTER]\nwow u r the best dad eva\n[FATHER]\nADSKA SJDHASKJD HASKJDJH ASKJDH"
+  dialogueLines: "[FATHER]\nSweetie it's leaving. We're ok.\nThis is my fault, I
+    shouldn't have argued with you back there, you're right. \nYou are a big girl.
+    Look at how you handled those keys!\n[DAUGHTER]\nThanks dad, but you were right
+    too. I still need help from you sometimes. \nBut can we please go home? And never
+    come back here again?\n[FATHER]\nAhaha you don't need to tell me twice."

@@ -97,7 +97,7 @@ public class WolfEncounter : Singleton<WolfEncounter>
         yield return new WaitForSeconds(waitTime);
         if (!fatherHasThrownBone)
         {
-            TextDisplayManager.Instance.ShowText("If only there was some way to make the wolf disappear...s", TextDisplayManager.TextType.FATHER);
+            TextDisplayManager.Instance.ShowText("If only there was some way to make the wolf disappear...", TextDisplayManager.TextType.FATHER);
         }
     }
 

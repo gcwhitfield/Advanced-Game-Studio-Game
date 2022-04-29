@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.49641287, b: 0.5748173, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -923,6 +923,22 @@ PrefabInstance:
       propertyPath: m_text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2719899805215524388, guid: b3f5e35385e14441d98edcd25e240021, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2719899805215524388, guid: b3f5e35385e14441d98edcd25e240021, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 87bebc9659c484bc49dd57c358397430, type: 2}
+    - target: {fileID: 2719899805215524388, guid: b3f5e35385e14441d98edcd25e240021, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2719899805215524388, guid: b3f5e35385e14441d98edcd25e240021, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2719899805604500886, guid: b3f5e35385e14441d98edcd25e240021, type: 3}
       propertyPath: m_SizeDelta.x
       value: -479.99
@@ -938,6 +954,22 @@ PrefabInstance:
     - target: {fileID: 2719899805604500905, guid: b3f5e35385e14441d98edcd25e240021, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477643345848445419, guid: b3f5e35385e14441d98edcd25e240021, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477643345848445419, guid: b3f5e35385e14441d98edcd25e240021, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 87bebc9659c484bc49dd57c358397430, type: 2}
+    - target: {fileID: 6477643345848445419, guid: b3f5e35385e14441d98edcd25e240021, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477643345848445419, guid: b3f5e35385e14441d98edcd25e240021, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6477643346231392857, guid: b3f5e35385e14441d98edcd25e240021, type: 3}
       propertyPath: m_SizeDelta.x

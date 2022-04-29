@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7984a56cf210c45089808c923f475e10, type: 3}
   m_Name: You can hide when a hiding spot is glowing
   m_EditorClassIdentifier: 
-  dialogueLines: You can HIDE whenever a location is glowing like this
+  dialogueLines: You can hide pressing B whenever a location is glowing like this

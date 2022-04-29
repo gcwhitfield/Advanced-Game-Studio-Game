@@ -12,21 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7984a56cf210c45089808c923f475e10, type: 3}
   m_Name: Panel 1
   m_EditorClassIdentifier: 
-  dialogueLines: '[FATHER]
-
-    Somebody once told me the world is gonna roll me
-
-    [DAUGHTER]
-
-    I
-    ain''t the sharpest tool in the shed
-
-    [FATHER]
-
-    She was looking kind
-    of dumb with her finger and her
-
-    [DAUGHTER]
-
-    Thumb in the shape of an
-    "L" on her forehead'
+  dialogueLines: "[DAUGHTER]\nDad!! Is that you? \n\n"
