@@ -23,7 +23,8 @@ public class Inventory : MonoBehaviour
         if (gameObject.GetComponent<DaughterController>())
         {
             player = DaughterController.Instance;
-        } else
+        }
+        else
         {
             player = FatherController.Instance;
         }
@@ -51,7 +52,8 @@ public class Inventory : MonoBehaviour
         if (gameObject.GetComponent<FatherController>())
         {
             i.player = FatherController.Instance;
-        } else
+        }
+        else
         {
             i.player = DaughterController.Instance;
         }
@@ -105,7 +107,8 @@ public class Inventory : MonoBehaviour
                 if (t.name != inventory[currSelected].itemName)
                 {
                     t.Find("SelectionBox").gameObject.GetComponent<Image>().enabled = false;
-                } else
+                }
+                else
                 {
                     t.Find("SelectionBox").gameObject.GetComponent<Image>().enabled = true;
                 }
@@ -158,13 +161,20 @@ public class Inventory : MonoBehaviour
     {
         if (inventory[currSelected] != null)
         {
-                inventory[currSelected].Use();
-                if (inventory[currSelected].deleteFromInventoryOnUse)
+            if (inventory[currSelected].itemName == "Bone")
+            {
+                if (WolfEncounter.Instance.fatherHasCollectedBone && DaughterController.Instance.hidden && WolfEncounter.Instance.daughterHasReachedInvisibleTrigger)
                 {
-                    Remove(inventory[currSelected]);
-                    ShowSelectedItem();
+                    inventory[currSelected].Use();
+                    if (inventory[currSelected].deleteFromInventoryOnUse)
+                    {
+                        Remove(inventory[currSelected]);
+                        ShowSelectedItem();
+                    }
                 }
-        } else
+            }
+        }
+        else
         {
             Debug.Log("Inventory count" + inventory.Count.ToString() + " : " + inventory[currSelected].ToString());
             Debug.LogError("Inventory current seletion is null!");

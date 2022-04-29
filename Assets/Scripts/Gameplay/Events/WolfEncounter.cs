@@ -8,10 +8,12 @@ using UnityEngine;
 // 3) the father needs to throw the bone to distract the wolf
 public class WolfEncounter : Singleton<WolfEncounter>
 {
-    private bool fatherHasCollectedBone = false;
+    [HideInInspector]
+    public bool fatherHasCollectedBone = false;
     private bool daugherHasHidden = false;
     private bool fatherHasThrownBone = false;
-    private bool daughterHasReachedInvisibleTrigger = false;
+    [HideInInspector]
+    public bool daughterHasReachedInvisibleTrigger = false;
     private bool fatherPressTheButton = false;
 
     public List<Interactable> daughterHideSpots;
@@ -120,7 +122,7 @@ public class WolfEncounter : Singleton<WolfEncounter>
         // step 2) display the "throw bone" text to father. Wait for the father
         // to throw the bone
         StartCoroutine("TellFatherToThrowBone");
-        FatherController.Instance.ExecuteUponSubmit(OnFatherThrowBone);
+        //FatherController.Instance.ExecuteUponSubmit(OnFatherThrowBone);
         while (!fatherHasThrownBone)
         {
             if (fatherPressTheButton)
