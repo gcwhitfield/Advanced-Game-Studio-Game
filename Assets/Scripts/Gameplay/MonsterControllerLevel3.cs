@@ -40,6 +40,7 @@ public class MonsterControllerLevel3 : MonoBehaviour
         {
             i.ExecuteOnTriggerEnter(Attack);
         }
+        InvokeRepeating("SnapArt", 0.5f, 0.04167f);
     }
 
     // called when the father shoots the monster
@@ -55,6 +56,11 @@ public class MonsterControllerLevel3 : MonoBehaviour
     public void Attack()
     {
         currState = MonsterState.ATTACKING;
+    }
+
+    private void SnapArt()
+    {
+        transform.position += new Vector3(Random.Range(-0.2f, 0.2f), 0, Random.Range(-0.2f, 0.2f));
     }
 
     private void Update()
@@ -111,7 +117,7 @@ public class MonsterControllerLevel3 : MonoBehaviour
         target = direction * retreatDistance + fatherPosition;
         navMeshAgent.speed = retreatSpeed;
 
-        StartCoroutine("ResetPositionAfterRetreat", 6.0f);
+        StartCoroutine("ResetPositionAfterRetreat", 7.0f);
     }
 
     private IEnumerator ResetAttackAfterCooldown(float cooldownTime)
