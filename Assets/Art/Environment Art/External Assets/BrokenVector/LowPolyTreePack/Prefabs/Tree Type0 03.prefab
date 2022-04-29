@@ -113,3 +113,5 @@ MonoBehaviour:
   Position: {x: 0, y: 0, z: 0}
   Materials: []
   InitialAlpha: 0
+  targetAlpha: 0
+  FadingMode: 0
