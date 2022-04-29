@@ -144,7 +144,7 @@ public class AudioManager : MonoBehaviour
     {
         if (movement != Vector3.zero)
         {
-            if (lanternTimer > 30)
+            if (lanternTimer > 45)
             {
                 PlayAudio(lanternWalkingAduio, gb);
                 lanternTimer = 0.0f;
