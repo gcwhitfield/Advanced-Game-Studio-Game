@@ -304,7 +304,7 @@ public class DaughterController : PlayerController
 
     private void DisturbKeyMovement()
     {
-        Vector3 force = new Vector3(Random.Range(-1, 1), Random.Range(-1, 1), 0) * forceStrength;
+        Vector3 force = new Vector3(Random.Range(-0.8f, 0.8f), Random.Range(-0.8f, 0.8f), 0) * forceStrength;
         keyMovement += force;
     }
 
