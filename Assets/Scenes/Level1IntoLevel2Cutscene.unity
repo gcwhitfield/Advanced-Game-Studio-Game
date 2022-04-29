@@ -528,6 +528,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2971706657988436790, guid: d342f42aa77f64826b968b3a6b636398, type: 3}
   m_PrefabInstance: {fileID: 470896568}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &470896570 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2971706657988436791, guid: d342f42aa77f64826b968b3a6b636398, type: 3}
+  m_PrefabInstance: {fileID: 470896568}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621567455fd1c4ceb811cc8a00b6a1a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &536461105
 GameObject:
   m_ObjectHideFlags: 0
@@ -1160,6 +1171,7 @@ MonoBehaviour:
     dialogue: {fileID: 11400000, guid: 4fb95297e4bbd4c6691d493060fc06e6, type: 2}
   - panelGameObject: {fileID: 350376625}
     dialogue: {fileID: 11400000, guid: 62650d08cd35f4a908ee30e009409ade, type: 2}
+  playerInputManager: {fileID: 470896570}
 --- !u!1001 &1431077040
 PrefabInstance:
   m_ObjectHideFlags: 0

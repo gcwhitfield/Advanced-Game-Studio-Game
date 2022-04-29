@@ -15,8 +15,9 @@ public class PlayerInputHandler : MonoBehaviour
     public bool debugMode = true;
     public bool fatherOn = false;
 
-    private void Awake()
+    private void Start()
     {
+        Debug.Log("Player Input awake");
         playerInput = GetComponent<PlayerInput>();
         if (debugMode)
         {
@@ -31,7 +32,7 @@ public class PlayerInputHandler : MonoBehaviour
         }
         else
         {
-            if (playerInput.playerIndex == DaughterController.Instance.playerIndex)
+            if (playerInput.playerIndex == DaughterController.playerIndex)
             {
                 player = DaughterController.Instance;
             }

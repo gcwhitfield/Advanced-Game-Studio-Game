@@ -8,6 +8,7 @@ using static UnityEngine.InputSystem.InputAction;
 
 public class DaughterController : PlayerController
 {
+    public static int playerIndex = 0;
     public static DaughterController Instance { get; private set; }
 
     [HideInInspector]

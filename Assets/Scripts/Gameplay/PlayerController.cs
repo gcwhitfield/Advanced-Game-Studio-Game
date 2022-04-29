@@ -71,9 +71,6 @@ public class PlayerController : MonoBehaviour
     // she can collect.
     private Collectable collectableObject = null;
 
-    // the value of playerIndex will be set inside of DaughterController.cs or FatherController.cs
-    public int playerIndex { get; set; }
-
     protected Vector3 movement; // the direction that the player is currently moving
     protected Vector3 lookDirection; // the direction that the player is currently looking
     protected PlayerInput playerInput;

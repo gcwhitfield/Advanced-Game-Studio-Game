@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using static UnityEngine.InputSystem.InputAction;
 
 public class Level1Controller : Singleton<Level1Controller>
 {
+    [Header("Player Input")]
+    public PlayerInputManager playerInputManager;
+
     [Header("Scene transition")]
     public string nextScene;
 
@@ -17,6 +22,30 @@ public class Level1Controller : Singleton<Level1Controller>
     public TMPro.TMP_FontAsset daughterIntructionsFont;
 
     public TMPro.TMP_FontAsset fatherIntructionsFont;
+
+
+    private void Awake()
+    {
+        // automatically join players when scene begins
+        bool fatherJoined = false;
+        foreach (InputDevice device in InputSystem.devices)
+        {
+            if (device.layout.Contains("Gamepad"))
+            {
+                if (!fatherJoined)
+                {
+                    playerInputManager.JoinPlayer(FatherController.playerIndex, 0, null, device);
+                    fatherJoined = true;
+                } else
+                {
+                    playerInputManager.JoinPlayer(DaughterController.playerIndex, 0, null, device);
+                    break;
+                }
+            }
+        }
+
+        //playerInputManager.JoinPlayer();
+    }
 
     private void Start()
     {

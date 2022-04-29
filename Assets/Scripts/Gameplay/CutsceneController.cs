@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CutsceneController : Singleton<CutsceneController>
 {
@@ -19,6 +20,30 @@ public class CutsceneController : Singleton<CutsceneController>
     CutsceneDialogueCompletedEvent events = null;
 
     public List<panelInfo> panels;
+
+    public PlayerInputManager playerInputManager;
+
+    private void Awake()
+    {
+        // automatically join players when scene begins
+        bool fatherJoined = false;
+        foreach (InputDevice device in InputSystem.devices)
+        {
+            if (device.layout.Contains("Gamepad"))
+            {
+                if (!fatherJoined)
+                {
+                    playerInputManager.JoinPlayer(FatherController.playerIndex, 0, null, device);
+                    fatherJoined = true;
+                }
+                else
+                {
+                    playerInputManager.JoinPlayer(DaughterController.playerIndex, 0, null, device);
+                    break;
+                }
+            }
+        }
+    }
 
     public void ExecuteOnDialogueCompleted(CutsceneDialogueCompletedEvent e)
     {

@@ -6,6 +6,8 @@ using static UnityEngine.InputSystem.InputAction;
 
 public class FatherController : PlayerController
 {
+
+    public static int playerIndex = 1;
     public static FatherController Instance { get; private set; }
 
     public Transform fireSpawn;
