@@ -147,17 +147,23 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnToggleInventory(CallbackContext context)
     {
-        if (context.started)
+        if ((player == FatherController.Instance && !FatherController.Instance.inputCodeFlag) || (player == DaughterController.Instance && !DaughterController.Instance.keyLockFlag))
         {
-            player.ToggleInventory();
+            if (context.started)
+            {
+                player.ToggleInventory();
+            }
         }
     }
 
     public void OnNavigateInventory(CallbackContext context)
     {
-        if (context.started)
+        if ((player == FatherController.Instance && !FatherController.Instance.inputCodeFlag) || (player == DaughterController.Instance && !DaughterController.Instance.keyLockFlag))
         {
-            player.NagivateInventory(context);
+            if (context.started)
+            {
+                player.NagivateInventory(context);
+            }
         }
     }
 

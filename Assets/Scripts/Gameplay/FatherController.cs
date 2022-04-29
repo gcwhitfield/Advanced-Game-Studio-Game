@@ -217,7 +217,7 @@ public class FatherController : PlayerController
 
     private IEnumerator DelayInputCodeButton()
     {
-        WaitForSeconds Wait = new WaitForSeconds(0.6f);
+        WaitForSeconds Wait = new WaitForSeconds(0.2f);
         yield return Wait;
         inputCodeFlag = true;
     }

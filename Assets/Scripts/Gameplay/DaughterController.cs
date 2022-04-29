@@ -125,7 +125,7 @@ public class DaughterController : PlayerController
 
     private IEnumerator DelayKeyLockButton()
     {
-        WaitForSeconds Wait = new WaitForSeconds(0.6f);
+        WaitForSeconds Wait = new WaitForSeconds(0.2f);
         yield return Wait;
         keyLockFlag = true;
     }
