@@ -119,8 +119,15 @@ public class DaughterController : PlayerController
 
     public void OpenKeyLockUI()
     {
-        keyLockFlag = true;
         keyLockUI.SetActive(true);
+        StartCoroutine(DelayKeyLockButton());
+    }
+
+    private IEnumerator DelayKeyLockButton()
+    {
+        WaitForSeconds Wait = new WaitForSeconds(0.6f);
+        yield return Wait;
+        keyLockFlag = true;
     }
 
     private void ResetAnimatorDirections()
