@@ -12,25 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7984a56cf210c45089808c923f475e10, type: 3}
   m_Name: Panel 3
   m_EditorClassIdentifier: 
-  dialogueLines: '[FATHER]
-
-    Well the years start coming and they don''t stop
-    coming
-
-    [DAUGHTER]
-
-    and they don''t stop coming
-
-    [FATHER]
-
-    and
-    they don''t stop coming
-
-    [DAIGHTER]
-
-    and they don''t stop coming
-
-    and
-    they don''t stop coming
-
-    and they don''t stop coming'
+  dialogueLines: "[FATHER]\n..What? Oh no. It can\u2019t be.. We need to leave. NOW.\r\n[DAUGHTER]\nI
+    think I hear something.\r\n"

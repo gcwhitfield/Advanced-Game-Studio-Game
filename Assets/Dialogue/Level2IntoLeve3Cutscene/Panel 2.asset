@@ -12,16 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7984a56cf210c45089808c923f475e10, type: 3}
   m_Name: Panel 2
   m_EditorClassIdentifier: 
-  dialogueLines: '[DAUGHTER]
-
-    Hey now you''re an All Star get your game on, go
-    play
-
-    Hey now you''re a Rock Star get the show on get paid
-
-    [FATHER]
-
-    (And
-    all that glitters is gold)
-
-    Only shooting stars break the mold'
+  dialogueLines: "[FATHER]\nHoney! Oh thank god, you\u2019re safe!This is all my
+    fault, I\u2019m so sorry I should\u2019ve watched out more for you.\n[DAUGHTER]\nI\u2019m
+    sorry for running away I was so scared I don\u2019t know what to do please don\u2019t
+    leave me here.\n[FATHER]\nSlow down! I\u2019m not going anywhere.\nLet\u2019s
+    go home, yeah? My lamp is about to run out of fuel and we don\u2019t want to
+    trip. \r\n[DAUGHTER]\nYou don\u2019t get it! There\u2019s a monster in here!
+    It looks like\u2026 meat! It looks like meat!"
