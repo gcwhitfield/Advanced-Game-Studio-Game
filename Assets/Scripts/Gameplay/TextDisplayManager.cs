@@ -10,8 +10,14 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
     [SerializeField] private Animator daughterTextAnimator;
     [SerializeField] private TMP_Text daughterText;
 
+
     bool daughterContinue = false;
     bool fatherContinue = false;
+
+    bool isPlayingFatherText = false;
+    bool isPlayingDaughterText = false;
+    bool closeFatherText = false;
+    bool closeDaughterText = false;
 
     [System.Serializable]
     public enum TextType
@@ -23,9 +29,45 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
 
     public delegate void TextCompletedEvent();
 
-    public void ShowText(string text, TextType type = TextType.DAUGHTER, TMP_FontAsset font = null, int fontSize = 36, TextCompletedEvent completedEvent = null, bool isCutscene = false)
+    void CloseFatherText()
+    {
+        closeFatherText = true;
+    }
+
+    void CloseDaughterText()
+    {
+        closeDaughterText = true;
+    }
+
+    public void ShowText(string text, TextType type = TextType.DAUGHTER, TMP_FontAsset font = null, int fontSize = 20, TextCompletedEvent completedEvent = null, bool isCutscene = false)
     {
         ScrollingTextParams textParams;
+        switch (type)
+        {
+            case TextType.FATHER:
+                if (isPlayingFatherText)
+                {
+                    CloseFatherText();
+                }
+                break;
+            case TextType.DAUGHTER:
+                if (isPlayingDaughterText)
+                {
+                    CloseDaughterText();
+                }
+                break;
+        }
+        if (text.Contains("[FATHER]") || text.Contains("[DAUGHTER]"))
+        {
+            if (isPlayingFatherText)
+            {
+                CloseFatherText();
+            }
+            if (isPlayingDaughterText)
+            {
+                CloseDaughterText();
+            }
+        }
         textParams.type = type;
         textParams.text = text;
         textParams.font = font;
@@ -76,7 +118,55 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
 
     IEnumerator DisplayScrollingText(ScrollingTextParams textParams)
     {
+        // wait for old father text to close before showing this one
+        if (textParams.type == TextType.FATHER)
+        {
+            while (isPlayingFatherText)
+            {
+                yield return null;
+            }
+        }
+        // wait for old daughter text to close before showing this one
+        if (textParams.type == TextType.DAUGHTER)
+        {
+            while (isPlayingDaughterText)
+            {
+                yield return null;
+            }
+        }
+
         bool isDualDialogue = false;
+
+        if (textParams.text.Contains("[FATHER]") || textParams.text.Contains("[DAUGHTER]"))
+        {
+            isDualDialogue = true;
+        }
+        // wait for old dual text to close before showing this one
+        if (isDualDialogue)
+        {
+            while (isPlayingFatherText || isPlayingDaughterText)
+            {
+                yield return null;
+            }
+        }
+
+        if (isDualDialogue)
+        {
+            isPlayingFatherText = true;
+            isPlayingDaughterText = true;
+        } else
+        {
+            switch (textParams.type)
+            {
+                case TextType.DAUGHTER:
+                    isPlayingDaughterText = true;
+                    break;
+                case TextType.FATHER:
+                    isPlayingFatherText = true;
+                    break;
+            }
+        }
+
         Animator animator = null;
         TMP_Text text = null;
         switch(textParams.type)
@@ -123,7 +213,7 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
         for (int l = 0; l < lines.Length; l++)
         {
             // display scrolling text
-            float timeBetweenChars = 0.05f; // in seconds
+            float timeBetweenChars = 0.03f; // in seconds
             text.text = "";
 
             // switch between father and daugher text if switch code given
@@ -155,6 +245,29 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
 
             for (int i = 0; i < lines[l].Length; i++)
             {
+                // close this current text window if another text window wants to play
+                if (closeDaughterText)
+                {
+                    if (textParams.type == TextType.DAUGHTER || isDualDialogue)
+                    {
+                        closeDaughterText = false;
+                        isPlayingDaughterText = false;
+                        if (isDualDialogue) isPlayingFatherText = false;
+                        yield break;
+                    }
+                }
+                if (closeFatherText)
+                {
+                    if (textParams.type == TextType.FATHER || isDualDialogue)
+                    {
+                        closeFatherText = false;
+                        isPlayingFatherText = false;
+                        if (isDualDialogue) isPlayingDaughterText = false;
+                        yield break;
+                    }
+                }
+
+                // show scrolling text
                 text.text = text.text + lines[l][i];
                 yield return new WaitForSeconds(timeBetweenChars);
             }
@@ -234,6 +347,24 @@ public class TextDisplayManager : Singleton<TextDisplayManager>
         if (textParams.textCompletedEvent != null)
         {
             textParams.textCompletedEvent();
+        }
+
+        if (isDualDialogue)
+        {
+            isPlayingFatherText = false;
+            isPlayingDaughterText = false;
+        }
+        else
+        {
+            switch (textParams.type)
+            {
+                case TextType.FATHER:
+                    isPlayingFatherText = false;
+                    break;
+                case TextType.DAUGHTER:
+                    isPlayingDaughterText = false;
+                    break;
+            }
         }
     }
 }

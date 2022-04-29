@@ -54,9 +54,8 @@ public class Level1Controller : Singleton<Level1Controller>
         daughterHideDisplayCheckpoint.ExecuteOnTriggerEnter(ShowHideRing);
 
         //  show the level intructions text to the players at the start of the level
-
-        TextDisplayManager.Instance.ShowText("Collect pinecones and explore the area.", TextDisplayManager.TextType.DAUGHTER, daughterIntructionsFont);
-        TextDisplayManager.Instance.ShowText("Find a way to open the fence gate.", TextDisplayManager.TextType.FATHER, fatherIntructionsFont);
+        //TextDisplayManager.Instance.ShowText("Collect pinecones and explore the area.", TextDisplayManager.TextType.DAUGHTER, daughterIntructionsFont);
+        //TextDisplayManager.Instance.ShowText("Find a way to open the fence gate.", TextDisplayManager.TextType.FATHER, fatherIntructionsFont);
     }
 
     private void Update()

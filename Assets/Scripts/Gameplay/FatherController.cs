@@ -226,6 +226,15 @@ public class FatherController : PlayerController
 
     public IEnumerator InputCode(CallbackContext context)
     {
+        if (recBox.Count == 0)
+        {
+            yield break;
+        }
+        if (recBox[0] == null)
+        {
+            yield break;
+        }
+
         recPosInit = recBox[1].transform.position;
         moveLength = recBox[2].transform.position - recPosInit;
         if (context.ReadValue<float>() > 0 && inputCodeFlag)

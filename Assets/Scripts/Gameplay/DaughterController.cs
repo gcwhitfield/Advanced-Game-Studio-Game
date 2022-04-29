@@ -50,10 +50,19 @@ public class DaughterController : PlayerController
     {
         base.Start();
 
-        keyTransform = keyObjects[0].transform;
-        keyInitialPos = keyTransform.position;
-        keyHints[0].SetActive(true);
-        lockPos = locksPos[0];
+        if (keyObjects.Count > 0)
+        {
+            keyTransform = keyObjects[0].transform;
+            keyInitialPos = keyTransform.position;
+        }
+        if (keyHints.Count > 0)
+        {
+            keyHints[0].SetActive(true);
+        }
+        if (locksPos.Count > 0)
+        {
+            lockPos = locksPos[0];
+        }
         GetEdges();
     }
 
@@ -295,6 +304,8 @@ public class DaughterController : PlayerController
 
     private void GetEdges()
     {
+        if (keyBG == null)
+            return;
         Transform t = keyBG.transform;
         RectTransform rt = keyBG.GetComponent<RectTransform>();
         borderRT.x = t.position.x + rt.rect.width * t.lossyScale.x / 2f - borderBias.x;
