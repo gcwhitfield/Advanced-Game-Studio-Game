@@ -57,7 +57,7 @@ public class AudioManager : MonoBehaviour
     {
         FMOD.Studio.Bus MasterBus;
         MasterBus = FMODUnity.RuntimeManager.GetBus("Bus:/");
-        MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         if (level.Contains("Menu"))
         {
             MenuThemeAudio();
