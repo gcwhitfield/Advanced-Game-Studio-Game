@@ -16,10 +16,13 @@ public class TransformLookAt : MonoBehaviour
         {
             //Debug.Log("Looking at transform");
             transform.LookAt(transform);
+            //transform.LookAt(transformToLookAt);
+            //transform.rotation = transformToLookAt.transform.rotation;
         }
         else
         {
             //Debug.LogError("Transform in TransformLookAt is null. " + name + " will not look at anything");
         }
+        //transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
     }
 }
